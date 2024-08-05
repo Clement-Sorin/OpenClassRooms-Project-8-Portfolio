@@ -2,11 +2,11 @@
 
 # Portfolio V2
 
-<img src="" alt="mon-vieux-grimoire homepage screenshot" width="800" />
+<img src="" alt="portfolio-landing page" width="800" />
 
 ## Description
 
-Last project of the web developper training from OpenClassrooms made to build my own porfolio
+Last project of the web developer training from OpenClassrooms made to build my own porfolio
 
 ## Technologies
 
