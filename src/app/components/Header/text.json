@@ -1,0 +1,19 @@
+{
+    "title": "Clément Sorin",
+    "techno": {
+        "fr": "Technologies",
+        "en": "Technologies"
+    },
+    "projects": {
+        "fr": "Projets",
+        "en": "Projects"
+    },
+    "profile": {
+        "fr": "Profil",
+        "en": "Profile"
+    },
+    "contact": {
+        "fr": "Contact",
+        "en": "Contact"
+    }
+}
