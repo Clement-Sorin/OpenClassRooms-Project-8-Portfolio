@@ -6,7 +6,7 @@ const Default = () => {
     return (
         <>
             <Header />
-            <main>
+            <main className="mt-24">
                 <Outlet />
             </main>
             <Footer />

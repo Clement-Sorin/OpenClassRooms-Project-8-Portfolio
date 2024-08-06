@@ -2,13 +2,13 @@ import { Link } from "react-router-dom"
 import text from "./text.json"
 import Language from "../Language/Language"
 import Theme from "../Theme/Theme"
-import { useAppContext } from "../../context/AppContext"
+import { useAppContext } from "../../contexts/AppContext"
 
 function Header() {
     const { language } = useAppContext()
 
     return (
-        <header className="h-24  flex items-center justify-between p-5 bg-light-grey+ dark:bg-dark-blue+">
+        <header className="h-24 fixed top-0 left-0 right-0 flex items-center justify-between p-5 bg-light-grey+ dark:bg-dark-blue+">
             <p className="text-2xl text-red dark:text-yellow font-heading font-semibold">
                 {text.title}
             </p>

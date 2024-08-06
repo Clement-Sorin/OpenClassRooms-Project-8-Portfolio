@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { useAppContext } from "../../context/AppContext"
+import { useAppContext } from "../../contexts/AppContext"
 
 function Language() {
     const { language, changeLanguage } = useAppContext()

@@ -4,10 +4,9 @@ import Home from "./pages/Home"
 import LegalNotice from "./pages/LegalNotice"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
 import Error404 from "./pages/Error404"
-import { AppProvider } from "./context/AppContext"
+import { AppProvider } from "./contexts/AppContext"
 
 function AppRoutes() {
-
     return (
         <AppProvider>
             <BrowserRouter>

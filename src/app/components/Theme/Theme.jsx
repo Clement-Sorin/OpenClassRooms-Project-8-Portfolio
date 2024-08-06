@@ -1,7 +1,7 @@
 import { ReactComponent as IconSun } from "../../../assets/icons/sun.svg"
 import { ReactComponent as IconDark } from "../../../assets/icons/dark.svg"
 import { Link } from "react-router-dom"
-import { useAppContext } from "../../context/AppContext"
+import { useAppContext } from "../../contexts/AppContext"
 
 function Theme() {
     const { theme, changeTheme } = useAppContext()
