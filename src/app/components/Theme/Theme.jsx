@@ -15,6 +15,11 @@ function Theme() {
                     stroke={theme === "light" ? "black" : "#F7F3F5"}
                     strokeWidth="2px"
                     fill={theme === "light" ? "black" : "#F7F3F5"}
+                    className={
+                        theme === "light"
+                            ? "transition-hover-svg-light"
+                            : "transition-hover-svg-dark"
+                    }
                 />
             </Link>
             <p className="dark:text-dark-text">/</p>
@@ -25,6 +30,11 @@ function Theme() {
                     stroke={theme === "light" ? "black" : "#F7F3F5"}
                     strokeWidth="0px"
                     fill={theme === "light" ? "black" : "#F7F3F5"}
+                    className={
+                        theme === "light"
+                            ? "transition-hover-svg-light"
+                            : "transition-hover-svg-dark"
+                    }
                 />
             </Link>
         </div>

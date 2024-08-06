@@ -9,3 +9,25 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Orbitron', sans-serif;
 }
+
+.transition-hover-light, .transition-hover-dark, .transition-hover-svg-light, .transition-hover-svg-dark {
+    transition: color 0.3s ease-out, stroke 0.3s ease-out, fill 0.3s ease-out;
+}
+
+.transition-hover-light:hover {
+    color: #E3170A;
+}
+
+.transition-hover-dark:hover {
+    color: #CFD11A;
+}
+
+.transition-hover-svg-light:hover {
+    stroke: #E3170A;
+    fill: #E3170A
+}
+
+.transition-hover-svg-dark:hover {
+    stroke: #CFD11A;
+    fill: #CFD11A
+}

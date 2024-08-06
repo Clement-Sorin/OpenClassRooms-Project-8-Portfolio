@@ -5,7 +5,7 @@ import Theme from "../Theme/Theme"
 import { useAppContext } from "../../contexts/AppContext"
 
 function Header() {
-    const { language } = useAppContext()
+    const { language, theme } = useAppContext()
 
     return (
         <header className="h-24 fixed top-0 left-0 right-0 flex items-center justify-between p-5 bg-light-grey+ dark:bg-dark-blue+">
@@ -13,16 +13,44 @@ function Header() {
                 {text.title}
             </p>
             <nav className="flex gap-20 dark:text-dark-text">
-                <Link to="#technologies">
+                <Link
+                    to="#technologies"
+                    className={
+                        theme === "light"
+                            ? "transition-hover-light"
+                            : "transition-hover-dark"
+                    }
+                >
                     {language === "fr" ? text.techno.fr : text.techno.en}
                 </Link>
-                <Link to="#projects">
+                <Link
+                    to="#projects"
+                    className={
+                        theme === "light"
+                            ? "transition-hover-light"
+                            : "transition-hover-dark"
+                    }
+                >
                     {language === "fr" ? text.projects.fr : text.projects.en}
                 </Link>
-                <Link to="#profile">
+                <Link
+                    to="#profile"
+                    className={
+                        theme === "light"
+                            ? "transition-hover-light"
+                            : "transition-hover-dark"
+                    }
+                >
                     {language === "fr" ? text.profile.fr : text.profile.en}
                 </Link>
-                <Link to="#contact">
+                <Link
+                    to="#contact"
+                    className={
+                        theme === "light"
+                            ? "transition-hover-light"
+                            : "transition-hover-dark"
+                    }
+                >
                     {language === "fr" ? text.contact.fr : text.contact.en}
                 </Link>
             </nav>

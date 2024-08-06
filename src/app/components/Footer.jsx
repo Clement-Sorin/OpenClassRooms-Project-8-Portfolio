@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer>
+        <footer className="h-96">
             <p>Test Footer</p>
         </footer>
     )

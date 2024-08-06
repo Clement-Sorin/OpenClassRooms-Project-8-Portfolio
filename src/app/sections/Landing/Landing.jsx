@@ -1,14 +1,17 @@
+import React from "react"
 import text from "./text.json"
-import "./styles.css"
 import photoLanding from "../../../assets/photos/ZFC_3183.jpg"
 import { useAppContext } from "../../contexts/AppContext"
+import "./styles.css"
+import ParticlesComponent from "../../components/Particles/particles"
 
 function Landing() {
     const { language } = useAppContext()
 
     return (
-        <section className="h-screen-minus-header bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+ p-10">
-            <div className="h-full flex items-center justify-center">
+        <section className="relative h-screen-minus-header bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+ p-10">
+            <ParticlesComponent className="particles h-full relative" />
+            <div className="relative z-10 h-full flex items-center justify-center">
                 <div className="flex items-center justify-evenly w-full">
                     <div className="container-title flex-col">
                         <h1 className="text-5xl text-red dark:text-yellow">
@@ -31,7 +34,7 @@ function Landing() {
                                 src={photoLanding}
                                 alt="Clement Sorin holding a laptop in his hands"
                                 className="p-3 photo-landing"
-                            ></img>
+                            />
                         </div>
                     </div>
                 </div>

@@ -54,3 +54,9 @@
 .custom-border-box:hover .photo-landing {
     filter: grayscale(0%);
 }
+
+.particles {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+   }
