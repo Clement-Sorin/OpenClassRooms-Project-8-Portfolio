@@ -7,6 +7,7 @@ import Error404 from "./pages/Error404"
 import { AppProvider } from "./context/AppContext"
 
 function AppRoutes() {
+
     return (
         <AppProvider>
             <BrowserRouter>

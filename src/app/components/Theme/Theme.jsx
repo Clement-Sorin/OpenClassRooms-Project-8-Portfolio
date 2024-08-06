@@ -1,21 +1,30 @@
 import { ReactComponent as IconSun } from "../../../assets/icons/sun.svg"
 import { ReactComponent as IconDark } from "../../../assets/icons/dark.svg"
 import { Link } from "react-router-dom"
+import { useAppContext } from "../../context/AppContext"
 
 function Theme() {
+    const { theme, changeTheme } = useAppContext()
+
     return (
         <div className="flex gap-2 items-center">
-            <Link to="">
-                <IconSun width={25} height={25} fill="black" />
+            <Link to="" onClick={() => changeTheme("light")}>
+                <IconSun
+                    width={25}
+                    height={25}
+                    stroke={theme === "light" ? "black" : "#F7F3F5"}
+                    strokeWidth="2px"
+                    fill={theme === "light" ? "black" : "#F7F3F5"}
+                />
             </Link>
-            <p>/</p>
-            <Link to="">
+            <p className="dark:text-dark-text">/</p>
+            <Link to="" onClick={() => changeTheme("dark")}>
                 <IconDark
-                    width={20}
-                    height={20}
-                    stroke="black"
-                    strokeWidth="5px"
-                    fill="black"
+                    width={25}
+                    height={25}
+                    stroke={theme === "light" ? "black" : "#F7F3F5"}
+                    strokeWidth="0px"
+                    fill={theme === "light" ? "black" : "#F7F3F5"}
                 />
             </Link>
         </div>

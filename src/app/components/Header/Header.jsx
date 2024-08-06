@@ -8,11 +8,11 @@ function Header() {
     const { language } = useAppContext()
 
     return (
-        <header className="h-24 bg-light-grey+ flex items-center justify-between p-5">
-            <p className="text-2xl text-red font-heading font-semibold">
+        <header className="h-24  flex items-center justify-between p-5 bg-light-grey+ dark:bg-dark-blue+">
+            <p className="text-2xl text-red dark:text-yellow font-heading font-semibold">
                 {text.title}
             </p>
-            <nav className="flex gap-20">
+            <nav className="flex gap-20 dark:text-dark-text">
                 <Link to="#technologies">
                     {language === "fr" ? text.techno.fr : text.techno.en}
                 </Link>

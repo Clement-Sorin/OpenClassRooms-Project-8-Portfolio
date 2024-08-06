@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from "react"
+import { createContext, useState, useContext, useEffect } from "react"
 
 const AppContext = createContext()
 
@@ -7,7 +7,18 @@ export const AppProvider = ({ children }) => {
     const [theme, setTheme] = useState("light")
 
     const changeLanguage = (lang) => setLanguage(lang)
-    const changeTheme = (theme) => setTheme(theme)
+
+    const changeTheme = (newTheme) => {
+        setTheme(newTheme)
+    }
+
+    useEffect(() => {
+        if (theme === "dark") {
+            document.documentElement.classList.add("dark")
+        } else {
+            document.documentElement.classList.remove("dark")
+        }
+    }, [theme])
 
     return (
         <AppContext.Provider
