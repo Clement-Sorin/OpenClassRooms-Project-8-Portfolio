@@ -4,8 +4,10 @@ import { useEffect, useMemo, useState } from "react"
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim" // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import { useAppContext } from "../../contexts/AppContext"
 
 const ParticlesComponent = (props) => {
+    const { theme } = useAppContext()
     const [init, setInit] = useState(false)
     // this should be run only once per application lifetime
     useEffect(() => {
@@ -28,35 +30,29 @@ const ParticlesComponent = (props) => {
 
     const options = useMemo(
         () => ({
-            background: {
-                color: {
-                    value: "linear-gradient(to right, #ff7e5f, #feb47b)", // Dégradé de gauche à droite
-                },
+            fullScreen: {
+                enable: false,
             },
+            fps_limit: 60,
             particles: {
                 number: {
-                    value: 80,
+                    value: 170,
                     density: {
                         enable: true,
-                        value_area: 800,
+                        value_area: 1890.508074044899,
                     },
                 },
                 color: {
-                    value: "#000",
+                    value: "#757780",
                 },
                 shape: {
                     type: "circle",
                     stroke: {
-                        width: 0,
-                        color: "#757780",
+                        width: 4,
+                        color: theme === "light" ? "#757780" : "#fff",
                     },
                     polygon: {
-                        nb_sides: 3,
-                    },
-                    image: {
-                        src: "https://commons.wikimedia.org/wiki/File:SVG_Circle.svg",
-                        width: 50,
-                        height: 50,
+                        nb_sides: 4,
                     },
                 },
                 opacity: {
@@ -70,25 +66,25 @@ const ParticlesComponent = (props) => {
                     },
                 },
                 size: {
-                    value: 4,
+                    value: 3,
                     random: true,
                     anim: {
                         enable: false,
-                        speed: 40,
+                        speed: 10,
                         size_min: 0.1,
                         sync: false,
                     },
                 },
-                line_linked: {
+                links: {
                     enable: true,
-                    distance: 150,
-                    color: "#ffffff",
-                    opacity: 0.4,
+                    distance: 230,
+                    color: theme === "light" ? "#757780" : "#fff",
+                    opacity: 0.2,
                     width: 1,
                 },
                 move: {
                     enable: true,
-                    speed: 2,
+                    speed: 0.7,
                     direction: "none",
                     random: false,
                     straight: false,
@@ -96,53 +92,35 @@ const ParticlesComponent = (props) => {
                     bounce: false,
                     attract: {
                         enable: false,
-                        rotateX: 2919.8923585627795,
+                        rotateX: 600,
                         rotateY: 1200,
                     },
                 },
             },
             interactivity: {
-                detect_on: "window",
                 events: {
-                    onhover: {
-                        enable: false,
-                        mode: "repulse",
-                    },
-                    onclick: {
+                    onClick: {
                         enable: true,
                         mode: "repulse",
                     },
-                    resize: true,
+                    onHover: {
+                        enable: true,
+                        mode: "grab",
+                    },
                 },
                 modes: {
-                    grab: {
-                        distance: 400,
-                        line_linked: {
-                            opacity: 1,
-                        },
-                    },
-                    bubble: {
-                        distance: 400,
-                        size: 40,
-                        duration: 2,
-                        opacity: 8,
-                        speed: 3,
-                    },
-                    repulse: {
-                        distance: 200,
-                        duration: 0.4,
-                    },
                     push: {
-                        particles_nb: 4,
+                        distance: 250,
+                        duration: 15,
                     },
-                    remove: {
-                        particles_nb: 2,
+                    grab: {
+                        distance: 200,
                     },
                 },
             },
             retina_detect: true,
         }),
-        []
+        [theme]
     )
 
     return <Particles id={props.id} init={particlesLoaded} options={options} />

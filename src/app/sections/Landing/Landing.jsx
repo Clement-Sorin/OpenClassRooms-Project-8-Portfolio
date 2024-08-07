@@ -10,7 +10,7 @@ function Landing() {
 
     return (
         <section className="relative h-screen-minus-header bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+ p-10">
-            <ParticlesComponent className="particles h-full relative" />
+            <ParticlesComponent className="particles" />
             <div className="relative z-10 h-full flex items-center justify-center">
                 <div className="flex items-center justify-evenly w-full">
                     <div className="container-title flex-col">
