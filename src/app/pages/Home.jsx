@@ -4,6 +4,7 @@ function Home() {
     return (
         <>
             <Landing />
+            <section id="section-2" className="h-[200px]"></section>
         </>
     )
 }
