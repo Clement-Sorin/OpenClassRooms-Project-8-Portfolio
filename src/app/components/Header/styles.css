@@ -1,8 +1,0 @@
-.transition-hover-text {
-    transition: color 0.3s ease-out, font-weight 0.3s ease-out;
-}
-
-.transition-hover-text:hover {
-    color: #E3170A;
-    ;
-}

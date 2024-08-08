@@ -1,0 +1,10 @@
+@keyframes moveY {
+    to {
+      transform: translateY(15px); /* Ajustez la valeur selon la distance que vous voulez parcourir */
+    }
+  }
+
+.arrow-scroll {
+    position:absolute;
+    animation: moveY 1.5s ease-in-out infinite alternate;
+}

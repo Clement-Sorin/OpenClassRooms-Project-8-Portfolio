@@ -8,7 +8,7 @@ function Header() {
     const { language, theme } = useAppContext()
 
     return (
-        <header className="h-24 fixed top-0 left-0 right-0 flex items-center justify-between p-5 bg-light-grey+ dark:bg-dark-blue+">
+        <header className="h-24 z-10 fixed top-0 left-0 right-0 flex items-center justify-between p-5 bg-light-grey+ dark:bg-dark-blue+">
             <p className="text-2xl text-red dark:text-yellow font-heading font-semibold">
                 {text.title}
             </p>

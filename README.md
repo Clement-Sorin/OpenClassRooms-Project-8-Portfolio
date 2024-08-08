@@ -10,15 +10,15 @@ Last project of the web developer training from OpenClassrooms made to build my 
 
 ## Technologies
 
-- React
-- Tailwind CSS
+-   React
+-   Tailwind CSS
 
 ## Libraries
 
-- React Router V6
-- 
+-   React Router V6
+-   tsparticles.js
 
-## Goal 
+## Goal
 
 Starting from scratch, I had to create my own portfolio.
 

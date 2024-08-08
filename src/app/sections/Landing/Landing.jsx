@@ -4,15 +4,16 @@ import photoLanding from "../../../assets/photos/ZFC_3183.jpg"
 import { useAppContext } from "../../contexts/AppContext"
 import "./styles.css"
 import ParticlesComponent from "../../components/Particles/particles"
+import IconScroll from "../../components/IconScroll/IconScroll"
 
 function Landing() {
     const { language } = useAppContext()
 
     return (
-        <section className="relative h-screen-minus-header bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+ p-10">
+        <section className="relative h-screen bottom-[96px] bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+">
             <ParticlesComponent className="particles" />
-            <div className="relative z-10 h-full flex items-center justify-center">
-                <div className="flex items-center justify-evenly w-full">
+            <div className="absolute h-screen bottom-[96px] w-full flex-col justify-center items-between">
+                <div className="flex pt-56 items-center justify-evenly h-full w-full">
                     <div className="container-title flex-col">
                         <h1 className="text-5xl text-red dark:text-yellow">
                             {text.title}
@@ -38,6 +39,7 @@ function Landing() {
                         </div>
                     </div>
                 </div>
+                <IconScroll className="" />
             </div>
         </section>
     )
