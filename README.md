@@ -26,6 +26,9 @@ For that, I need to :
 
 1. Design the mockup. I used Figma : https://www.figma.com/design/LcuJU4yq9tHdUQMbfPsSxw/Portfolio?node-id=0-1&t=Vfq9pxJWHckYqsC1-1
 2. Set up the front end environment using React, React Router and Tailwind CSS.
+3. Create a useContext to manage the languages and the themes, record the user preference into localStorage or read browser preference to set the app mode
+4. Make a custom hook for animations on scrolling, taking html tag ids in parameter
+5. Developping the page using the mockup and adapt to responsive
 
 ## Author
 
