@@ -1,14 +1,14 @@
-import { ReactComponent as IconSun } from "../../../assets/icons/sun.svg"
-import { ReactComponent as IconDark } from "../../../assets/icons/dark.svg"
+import { ReactComponent as IconSun } from "../../assets/icons/sun.svg"
+import { ReactComponent as IconDark } from "../../assets/icons/dark.svg"
 import { Link } from "react-router-dom"
-import { useAppContext } from "../../contexts/AppContext"
+import { useAppContext } from "../contexts/AppContext"
 
 function Theme() {
     const { theme, changeTheme } = useAppContext()
 
     return (
         <div className="flex gap-2 items-center">
-            <Link to="" onClick={() => changeTheme("light")}>
+            <button onClick={() => changeTheme("light")}>
                 <IconSun
                     width={25}
                     height={25}
@@ -21,9 +21,9 @@ function Theme() {
                             : "transition-hover-svg-dark"
                     }
                 />
-            </Link>
+            </button>
             <p className="dark:text-dark-text">/</p>
-            <Link to="" onClick={() => changeTheme("dark")}>
+            <button onClick={() => changeTheme("dark")}>
                 <IconDark
                     width={25}
                     height={25}
@@ -36,7 +36,7 @@ function Theme() {
                             : "transition-hover-svg-dark"
                     }
                 />
-            </Link>
+            </button>
         </div>
     )
 }

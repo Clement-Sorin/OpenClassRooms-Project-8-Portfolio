@@ -1,13 +1,11 @@
-import { Link } from "react-router-dom"
-import { useAppContext } from "../../contexts/AppContext"
+import { useAppContext } from "../contexts/AppContext"
 
 function Language() {
     const { language, changeLanguage, theme } = useAppContext()
 
     return (
         <div className="flex gap-2 items-center dark:text-dark-text">
-            <Link
-                to=""
+            <button
                 className={`${
                     language === "fr" ? "font-bold" : "font-normal"
                 } ${
@@ -18,10 +16,9 @@ function Language() {
                 onClick={() => changeLanguage("fr")}
             >
                 FR
-            </Link>
+            </button>
             <p>/</p>
-            <Link
-                to=""
+            <button
                 className={`${
                     language === "en" ? "font-bold" : "font-normal"
                 } ${
@@ -32,7 +29,7 @@ function Language() {
                 onClick={() => changeLanguage("en")}
             >
                 EN
-            </Link>
+            </button>
         </div>
     )
 }

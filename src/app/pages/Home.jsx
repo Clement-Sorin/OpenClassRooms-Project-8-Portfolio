@@ -1,4 +1,4 @@
-import Landing from "../sections/Landing/Landing"
+import Landing from "../sections/Landing"
 
 function Home() {
     return (

@@ -1,17 +1,15 @@
-import React from "react"
-import text from "./text.json"
-import photoLanding from "../../../assets/photos/ZFC_3183.jpg"
-import { useAppContext } from "../../contexts/AppContext"
-import "./styles.css"
-import ParticlesComponent from "../../components/Particles/particles"
-import IconScroll from "../../components/IconScroll/IconScroll"
+import text from "../../assets/texts/Landing.json"
+import photoLanding from "../../assets/photos/ZFC_3183.jpg"
+import { useAppContext } from "../contexts/AppContext"
+import Particles from "../vendors/particles"
+import IconScroll from "../components/IconScroll"
 
 function Landing() {
     const { language } = useAppContext()
 
     return (
         <section className="relative h-screen bottom-[96px] bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+">
-            <ParticlesComponent className="particles" />
+            <Particles className="particles" />
             <div className="absolute h-screen bottom-[96px] w-full flex-col justify-center items-between">
                 <div className="flex pt-56 items-center justify-evenly h-full w-full">
                     <div className="container-title flex-col">

@@ -2,13 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* --------------------- */
+/* -------GENERAL------- */
+/* --------------------- */
+
 body {
     font-family: 'Chakra Petch', sans-serif;
+    user-select: none;
 }
   
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Orbitron', sans-serif;
 }
+
+/*Color Theme Transition*/ 
 
 .transition-hover-light, .transition-hover-dark, .transition-hover-svg-light, .transition-hover-svg-dark {
     transition: color 0.3s ease-out, stroke 0.3s ease-out, fill 0.3s ease-out;
@@ -40,4 +47,105 @@ h1, h2, h3, h4, h5, h6 {
 .opa-100 {
     transition: opacity 0.3s ease-out;
     opacity: 100%;
+}
+
+/* --------------------- */
+/* -------SECTION------- */
+/* --------------------- */
+
+/* Landing */ 
+
+.container-title {
+    width: 450px;
+}
+
+.custom-border-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-border-box::before,
+.custom-border-box::after {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--border-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --border-color: theme('colors.lines-dark');
+    }
+  }
+  
+  :root {
+    --border-color: theme('colors.lines-light');
+  }
+
+.custom-border-box::before {
+    top: 0;
+    left: 0;
+    border-width: 1px 0 0 1px; 
+}
+
+.custom-border-box::after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 1px 1px 0; 
+}
+
+.container-photo-landing {
+    max-width: 550px;
+    max-height: 100%;
+}
+
+.photo-landing {
+    filter: grayscale(100%);
+    transition: filter 0.2s ease-in-out;
+}
+
+.custom-border-box:hover .photo-landing {
+    filter: grayscale(0%);
+}
+
+#tsparticles {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* --------------------- */
+/* -----COMPONENTS------ */
+/* --------------------- */
+
+/* Header */ 
+
+.shadow-head-100 {
+    transition: box-shadow 0.5s ease-out;
+    -webkit-box-shadow: 0px 2px 50px 2px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.1);
+}
+
+.shadow-head-0 {
+    transition: filter 0.3s ease-out;
+    filter: drop-shadow(0px 0px 0px #000000);
+}
+
+/* IconScroll */ 
+
+@keyframes moveY {
+    to {
+      transform: translateY(15px); /* Ajustez la valeur selon la distance que vous voulez parcourir */
+    }
+  }
+
+.arrow-scroll {
+    position:absolute;
+    animation: moveY 1.5s ease-in-out infinite alternate;
 }

@@ -1,7 +1,6 @@
-import { ReactComponent as ArrowScroll } from "../../../assets/icons/double-arrow-down-svgrepo-com.svg"
-import { useAppContext } from "../../contexts/AppContext"
-import "./styles.css"
-import useScrollAnchor from "../../hooks/useScrollAnchor"
+import { ReactComponent as ArrowScroll } from "../../assets/icons/arrow-scroll.svg"
+import { useAppContext } from "../contexts/AppContext"
+import useScrollAnchor from "../hooks/useScrollAnchor"
 
 function IconScroll() {
     const { theme } = useAppContext()

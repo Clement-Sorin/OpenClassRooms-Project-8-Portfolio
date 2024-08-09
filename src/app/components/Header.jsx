@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom"
-import text from "./text.json"
-import "./styles.css"
-import Language from "../Language/Language"
-import Theme from "../Theme/Theme"
-import { useAppContext } from "../../contexts/AppContext"
-import useScrollAnchor from "../../hooks/useScrollAnchor"
+import text from "../../assets/texts/Header.json"
+import { useAppContext } from "../contexts/AppContext"
+import useScrollAnchor from "../hooks/useScrollAnchor"
+import Language from "./Language"
+import Theme from "./Theme"
 
 function Header() {
     const { language, theme } = useAppContext()
