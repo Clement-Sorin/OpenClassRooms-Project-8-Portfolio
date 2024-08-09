@@ -56,7 +56,9 @@ export const AppProvider = ({ children }) => {
         if (!localStorage.getItem("theme")) {
             setTheme(prefersDarkTheme ? "dark" : "light")
         }
+    }, [])
 
+    useEffect(() => {
         document.documentElement.classList.toggle("dark", theme === "dark")
     }, [theme])
 
