@@ -152,6 +152,46 @@ h1, h2, h3, h4, h5, h6 {
     filter: drop-shadow(0px 0px 0px #000000);
 }
 
+/* Burger */
+
+.burg-top, .burg-mid, .burg-down {
+    width: 100%; 
+    height: 3px;
+    border-radius: 5px;
+}
+
+.burger-on {
+    transform: rotate(45deg) translateY(9px) translateX(5px);
+    transform-origin: center center;
+    transition: transform 0.3s ease-out;
+}
+
+.burger-on + .burg-mid  {
+    opacity: 0%;
+    transition: opacity 0.1s ease;
+}
+
+.burger-on + .burg-down  {
+    transform: rotate(-45deg) translateY(-9px) translateX(5px);
+    transform-origin:center center;
+    transition: transform 0.3s ease-out;
+}
+
+.burger-off {
+    transform: rotate(0deg) translateX(0px);
+    transition: transform 0.3s ease-out;
+}
+
+.burger-off + .burg-mid {
+    opacity: 1;
+    transition: opacity 0.1s ease;
+}
+
+.burger-off + .burg-down {
+    transform: rotate(0deg) translateX(0px);
+    transition: transform 0.3s ease-out;
+}
+
 /* IconScroll */ 
 
 @keyframes moveY {

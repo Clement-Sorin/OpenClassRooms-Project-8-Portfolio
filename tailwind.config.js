@@ -34,6 +34,13 @@ module.exports = {
             height: {
                 "screen-minus-header": "calc(100vh - 96px)",
             },
+            screens: {
+                sm: "480px",
+                md: "768px",
+                lg: "1024px",
+                xl: "1440px",
+                "2xl": "1920px",
+            },
         },
     },
     plugins: [],
