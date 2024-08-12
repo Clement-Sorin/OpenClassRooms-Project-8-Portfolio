@@ -24,6 +24,26 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Orbitron', sans-serif;
 }
 
+h1 {
+    font-size: 2.875rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
 .mw-auto {
     width: 100%;
     max-width: 1440px;
@@ -116,6 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 .container-photo-landing {
     max-width: 550px;
     max-height: 100%;
+    height: fit-content;
 }
 
 .photo-landing {
@@ -252,10 +273,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.3s ease-in-out;
 }
 
-.options-mob {
-
-}
-
 /* IconScroll */ 
 
 @keyframes moveY {
@@ -267,4 +284,19 @@ h1, h2, h3, h4, h5, h6 {
 .arrow-scroll {
     position:absolute;
     animation: moveY 1.5s ease-in-out infinite alternate;
+}
+
+/* --------------------- */
+/* ----Media-Queries---- */
+/* --------------------- */
+
+/* General */
+
+@media (max-width: 1024px)  {
+    h1 {
+        font-size: 2.25rem;
+    }
+    h2 {
+        font-size: 1.625rem;
+    }
 }

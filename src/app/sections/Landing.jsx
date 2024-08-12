@@ -8,15 +8,15 @@ function Landing() {
     const { language } = useAppContext()
 
     return (
-        <section className="fixed h-screen w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+">
+        <section className="fixed h-screen top-[80px] w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+">
             <Particles className="particles" />
-            <div className="h-screen bottom-[96px] mw-auto flex-col justify-center">
-                <div className="flex pb-24 items-center justify-evenly h-full w-full">
-                    <div className="container-title flex-col">
-                        <h1 className="text-5xl text-red dark:text-yellow">
+            <div className="h-screen mw-auto flex-col justify-center pb-24">
+                <div className="flex md:flex-nowrap flex-wrap md:gap-10 items-center md:justify-evenly  w-full h-full sm:p-10">
+                    <div className="container-title flex-col md:ml-10 max-w-96 min-w-80 md:min-w-64">
+                        <h1 className="text-4xl lg:text-5xl text-red dark:text-yellow">
                             {text.title}
                         </h1>
-                        <h2 className="text-3xl dark:text-dark-text flex justify-end">
+                        <h2 className="dark:text-dark-text flex justify-end">
                             {language === "fr"
                                 ? text.subtitle.fr
                                 : text.subtitle.en}
@@ -27,7 +27,7 @@ function Landing() {
                                 : text.description.en}
                         </p>
                     </div>
-                    <div className="container-photo-landing">
+                    <div className="container-photo-landing md:mr-10">
                         <div className="custom-border-box">
                             <img
                                 src={photoLanding}

@@ -51,7 +51,7 @@ function MenuMobile() {
                     <Navbar
                         navMob={"flex flex-col w-full gap-10 items-center"}
                     />
-                    <div className="flex flex-col gap-5 items-center options-mob pt-5 border-t-[1px] border-black border-lines-light dark:border-lines-dark">
+                    <div className="flex flex-col gap-10 items-center options-mob pt-10 border-t-[1px] border-black border-lines-light dark:border-lines-dark">
                         <Language />
                         <Theme />
                     </div>

@@ -3,15 +3,6 @@ module.exports = {
     darkMode: "class",
     theme: {
         extend: {
-            fontSize: {
-                sm: "0.875rem",
-                base: "1rem",
-                xl: "1.25rem",
-                "2xl": "1.5rem",
-                "3xl": "2rem",
-                "4xl": "2.875rem",
-                "5xl": "3.052rem",
-            },
             fontFamily: {
                 base: ["Chakra Petch", "sans-serif"],
                 heading: ["Orbitron", "sans-serif"],
