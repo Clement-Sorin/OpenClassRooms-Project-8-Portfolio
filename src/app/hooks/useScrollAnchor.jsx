@@ -11,7 +11,15 @@ const useScrollAnchor = (anchorId) => {
             const anchorPosition = anchorElement.getBoundingClientRect().top
             const viewportHeight = window.innerHeight
 
-            if (anchorPosition <= viewportHeight && anchorPosition >= 0) {
+            const isMobile = window.innerWidth <= 1024
+            const adjustedViewportHeight = isMobile
+                ? viewportHeight * 0.9
+                : viewportHeight
+
+            if (
+                anchorPosition <= adjustedViewportHeight &&
+                anchorPosition >= 0
+            ) {
                 setAnchorReached(true)
             } else {
                 setAnchorReached(false)
