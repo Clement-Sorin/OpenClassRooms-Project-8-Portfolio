@@ -291,7 +291,7 @@ p {
     height: 100%;
     width: 100%;
     background-color: #f5f5f5;
-    transform: translateY(-100px);
+    transform: translateY(-100vh);
     transition: transform 0.3s ease-in-out;
 }
 
