@@ -2,8 +2,8 @@ import useScrollAnchor from "../hooks/useScrollAnchor"
 import Language from "./Language"
 import Theme from "./Theme"
 import Burger from "./Burger"
-import Settings from "./Settings"
 import Navbar from "./Navbar"
+import MenuTablet from "./MenuTablet"
 
 function Header() {
     const firstScroll = useScrollAnchor("section-2")
@@ -27,7 +27,7 @@ function Header() {
                     <Language />
                     <Theme />
                 </div>
-                <Settings />
+                <MenuTablet />
                 <Burger />
             </div>
         </header>

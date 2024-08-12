@@ -152,6 +152,42 @@ h1, h2, h3, h4, h5, h6 {
     filter: drop-shadow(0px 0px 0px #000000);
 }
 
+/* Tablet Menu */ 
+
+.menu-tablet-on {
+    transform: rotate(90deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu-tablet-off {
+    transform: rotate(-90deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu-tablet-open {
+    position: fixed;
+    z-index: -1;
+    top: 5rem;
+    right: 0;
+    height: 100px;
+    width: 130px;
+    background-color: #f5f5f5;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-tablet-close {
+    position: fixed;
+    z-index: -1;
+    top: 5rem;
+    right: 0;
+    height: 100px;
+    width: 130px;
+    background-color: #f5f5f5;
+    transform: translateY(-100px);
+    transition: transform 0.3s ease-in-out;
+}
+
 /* Burger */
 
 .burg-top, .burg-mid, .burg-down {

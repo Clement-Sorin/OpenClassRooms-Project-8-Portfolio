@@ -11,7 +11,7 @@ function Burger() {
 
     return (
         <button
-            className="flex flex-col md:hidden w-8 gap-1 justify-around h-[25px]"
+            className="flex flex-col md:hidden w-8 gap-1 justify-around h-[25px] mr-5"
             onClick={handleToggle}
         >
             <div
