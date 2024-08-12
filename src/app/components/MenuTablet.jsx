@@ -10,7 +10,6 @@ function MenuTablet() {
 
     const handleToggle = () => {
         setToggleMenu((prevState) => !prevState)
-        console.log(toggleMenu)
     }
 
     return (
@@ -35,11 +34,11 @@ function MenuTablet() {
                 />
             </button>
             <div
-                className={
+                className={`${
                     toggleMenu === true
                         ? "menu-tablet-open dark:bg-dark-blue+"
                         : "menu-tablet-close dark:bg-dark-blue+"
-                }
+                } sm:hidden md:block lg:hidden`}
             >
                 <div
                     className={`w-full h-full flex-col  justify-evenly items-center ${

@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Burger */
+/* Menu Mobile */
 
 .burg-top, .burg-mid, .burg-down {
     width: 100%; 
@@ -226,6 +226,34 @@ h1, h2, h3, h4, h5, h6 {
 .burger-off + .burg-down {
     transform: rotate(0deg) translateX(0px);
     transition: transform 0.3s ease-out;
+}
+
+.menu-mobile-open {
+    position: fixed;
+    z-index: -1;
+    top: 5rem;
+    right: 0;
+    height: 500px;
+    width: 100%;
+    background-color: #f5f5f5;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-mobile-close {
+    position: fixed;
+    z-index: -1;
+    top: 5rem;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+    transform: translateY(-100px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.options-mob {
+
 }
 
 /* IconScroll */ 

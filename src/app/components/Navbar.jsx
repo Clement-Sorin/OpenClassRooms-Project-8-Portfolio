@@ -2,11 +2,11 @@ import { Link } from "react-router-dom"
 import { useAppContext } from "../contexts/AppContext"
 import text from "../../assets/texts/Header.json"
 
-function Navbar() {
+function Navbar({ navTabDesk, navMob }) {
     const { language, theme } = useAppContext()
 
     return (
-        <nav className="hidden md:flex max-w-[50%] w-full justify-evenly dark:text-dark-text">
+        <nav className={`${navTabDesk} ${navMob} dark:text-dark-text`}>
             <Link
                 to="#technologies"
                 className={
