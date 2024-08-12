@@ -1,10 +1,11 @@
 import Landing from "../sections/Landing"
+import Transition1 from "../sections/Transition1"
 
 function Home() {
     return (
         <>
             <Landing />
-            <section id="section-2" className="h-[200px]"></section>
+            <Transition1 />
         </>
     )
 }

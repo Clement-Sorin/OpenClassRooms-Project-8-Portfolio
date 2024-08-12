@@ -6,11 +6,11 @@ import MenuTablet from "./MenuTablet"
 import MenuMobile from "./MenuMobile"
 
 function Header() {
-    const firstScroll = useScrollAnchor("section-2")
+    const firstScroll = useScrollAnchor("transition-1")
 
     return (
         <header
-            className={`sm:h-12 md:h-20 lg:h-24 z-10 fixed top-0 left-0 right-0  p-5 bg-light-grey+ dark:bg-dark-blue+ ${
+            className={`sm:h-12 md:h-20 lg:h-24 z-10 fixed top-0 left-0 right-0  p-5 bg-light-grey+ dark:bg-dark-blue ${
                 !firstScroll ? "shadow-head-0" : "shadow-head-100"
             }`}
         >

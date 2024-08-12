@@ -160,6 +160,23 @@ p {
     position: fixed;
 }
 
+/* Transition 1 */
+
+.transition1-unscrolled {
+    width: 0;
+    transition: width 1300ms ease-in-out;
+}
+
+.transition1-scrolled {
+    width: 300vh;
+    aspect-ratio: 1 / 1;
+    transition: width 1300ms ease-in-out;
+}
+
+.mask-delayed {
+    transition-delay: 100ms;
+}
+
 /* --------------------- */
 /* -----COMPONENTS------ */
 /* --------------------- */

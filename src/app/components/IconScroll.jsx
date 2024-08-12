@@ -4,17 +4,17 @@ import useScrollAnchor from "../hooks/useScrollAnchor"
 
 function IconScroll() {
     const { theme } = useAppContext()
-    const firstScroll = useScrollAnchor("section-2")
+    const firstScroll = useScrollAnchor("transition-1")
 
     return (
         <div
-            className={`fixed bottom-2 md:bottom-6 left-[48%] right-0 w-full mx-auto ${
-                !firstScroll ? "opa-100" : "opa-0"
+            className={`fixed bottom-2 md:bottom-6 flex justify-center right-0 w-full mx-auto ${
+                firstScroll ? "opa-100" : "opa-0"
             }`}
         >
             <div
                 className={`w-[20px] h-[40px] md:w-[30px] md:h-[60px] border rounded-full opacity-90 ${
-                    theme === "light"
+                    !theme === "light"
                         ? "border-lines-light"
                         : "border-lines-dark"
                 } relative flex justify-center items-center`}
