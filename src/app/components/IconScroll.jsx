@@ -8,7 +8,7 @@ function IconScroll() {
 
     return (
         <div
-            className={`fixed bottom-6 left-[48%] right-0 w-full mx-auto ${
+            className={`fixed bottom-2 md:bottom-6 left-[48%] right-0 w-full mx-auto ${
                 !firstScroll ? "opa-100" : "opa-0"
             }`}
         >
