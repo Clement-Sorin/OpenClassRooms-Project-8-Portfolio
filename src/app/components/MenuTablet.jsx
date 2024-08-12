@@ -36,8 +36,8 @@ function MenuTablet() {
             <div
                 className={`${
                     toggleMenu === true
-                        ? "menu-tablet-open dark:bg-dark-blue+"
-                        : "menu-tablet-close dark:bg-dark-blue+"
+                        ? "menu-tablet-open dark:bg-dark-blue"
+                        : "menu-tablet-close dark:bg-dark-blue"
                 } sm:hidden md:block lg:hidden`}
             >
                 <div

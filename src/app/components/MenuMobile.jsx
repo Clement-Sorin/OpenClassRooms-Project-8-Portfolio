@@ -37,8 +37,8 @@ function MenuMobile() {
             <div
                 className={`${
                     toggleMenu === true
-                        ? "menu-mobile-open dark:bg-dark-blue+"
-                        : "menu-mobile-close dark:bg-dark-blue+"
+                        ? "menu-mobile-open dark:bg-dark-blue"
+                        : "menu-mobile-close dark:bg-dark-blue"
                 } sm:block md:hidden lg:hidden`}
             >
                 <div

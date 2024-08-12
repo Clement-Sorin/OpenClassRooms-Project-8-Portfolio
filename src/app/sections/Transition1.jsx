@@ -6,14 +6,17 @@ function Transition1() {
     const { theme } = useAppContext()
 
     return (
-        <div className="absolute flex justify-center w-full" id="transition-1">
+        <div
+            className="mt-[100vh] flex justify-center h-full w-full"
+            id="transition-1"
+        >
             <div
                 className={`fixed w-full bottom-[-40rem] z-8 rounded-full ${
                     theme === "light" ? "bg-light-grey+" : "bg-dark-blue"
                 }  ${
                     !firstScroll
                         ? "transition1-unscrolled"
-                        : "transition1-scrolled "
+                        : "transition1-scrolled"
                 }`}
             ></div>
             <div

@@ -6,7 +6,7 @@ const Default = () => {
     return (
         <div className="main-container">
             <Header />
-            <main className="relative overflow-scroll h-[105vh] w-full">
+            <main>
                 <Outlet />
             </main>
             <Footer />

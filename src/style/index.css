@@ -163,14 +163,15 @@ p {
 /* Transition 1 */
 
 .transition1-unscrolled {
-    width: 0;
     transition: width 1300ms ease-in-out;
+    width: 10vw;
+    aspect-ratio: 1 / 1
 }
 
 .transition1-scrolled {
-    width: 300vh;
-    aspect-ratio: 1 / 1;
     transition: width 1300ms ease-in-out;
+    width: 250vw;
+    aspect-ratio: 1 / 1;
 }
 
 .mask-delayed {
