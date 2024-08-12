@@ -26,7 +26,7 @@ module.exports = {
                 "screen-minus-header": "calc(100vh - 96px)",
             },
             screens: {
-                sm: "320px",
+                sm: "280px",
                 md: "768px",
                 lg: "1024px",
                 xl: "1440px",

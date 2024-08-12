@@ -170,7 +170,7 @@ p {
 
 .transition1-scrolled {
     transition: width 1300ms ease-in-out;
-    width: 250vw;
+    width: 400vw;
     aspect-ratio: 1 / 1;
 }
 
@@ -286,7 +286,7 @@ p {
 .menu-mobile-close {
     position: fixed;
     z-index: -1;
-    top: 5rem;
+    top: 3rem;
     right: 0;
     height: 100%;
     width: 100%;
@@ -299,7 +299,7 @@ p {
 
 @keyframes moveY {
     to {
-      transform: translateY(10px); /* Ajustez la valeur selon la distance que vous voulez parcourir */
+      transform: translateY(10px);
     }
   }
 
