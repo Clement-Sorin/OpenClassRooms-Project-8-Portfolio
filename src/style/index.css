@@ -90,6 +90,10 @@ p {
 
 /* Landing */ 
 
+.container-landing {
+    align-items: space-around;
+}
+
 .container-title {
     width: 450px;
 }
@@ -252,7 +256,7 @@ p {
 .menu-mobile-open {
     position: fixed;
     z-index: -1;
-    top: 5rem;
+    top: 3rem;
     right: 0;
     height: 500px;
     width: 100%;
@@ -277,7 +281,7 @@ p {
 
 @keyframes moveY {
     to {
-      transform: translateY(15px); /* Ajustez la valeur selon la distance que vous voulez parcourir */
+      transform: translateY(10px); /* Ajustez la valeur selon la distance que vous voulez parcourir */
     }
   }
 

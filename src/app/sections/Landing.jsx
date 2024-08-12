@@ -8,10 +8,10 @@ function Landing() {
     const { language } = useAppContext()
 
     return (
-        <section className="fixed h-screen top-[80px] w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+">
+        <section className="fixed h-screen sm:top-3 md:top-[80px] w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+">
             <Particles className="particles" />
             <div className="h-screen mw-auto flex-col justify-center pb-24">
-                <div className="flex md:flex-nowrap flex-wrap md:gap-10 gap-5  justify-center items-center md:justify-evenly  w-full h-full sm:p-10 sm:mb-20">
+                <div className="flex md:flex-nowrap flex-wrap md:gap-10 gap-5  justify-center items-center md:justify-evenly  w-full h-full sm:p-10 sm:mb-20 sm:mt-10">
                     <div className="container-title flex-col md:ml-10 max-w-96 lg:min-w-80 md:min-w-64">
                         <h1 className="text-4xl lg:text-5xl text-red dark:text-yellow">
                             {text.title}
