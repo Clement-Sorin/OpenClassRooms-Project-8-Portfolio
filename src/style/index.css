@@ -155,7 +155,14 @@ p {
     animation-delay: 1.6s;
 }
 
+.logo-techno {
+    transition: transform 0.4s ease-in-out;
+    
+}
 
+.container-beehive:hover .logo-techno {
+    transform: scale(1.1);
+}
 
 @media (prefers-color-scheme: dark) {
     :root {

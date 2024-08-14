@@ -24,7 +24,7 @@ function Technologies() {
                         id="vector-front-end"
                         className=" fade-in w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark"
                     />
-                    <div className="flex">
+                    <div className="w-full flex justify-center">
                         {technologiesFront.map(({ title, logo }) => (
                             <Beehives logo={logo} title={title} key={title} />
                         ))}
@@ -41,7 +41,7 @@ function Technologies() {
                     >
                         Back-end
                     </h2>
-                    <div className="flex">
+                    <div className="w-full flex justify-center">
                         {technologiesBack.map(({ title, logo }) => (
                             <Beehives logo={logo} title={title} key={title} />
                         ))}
