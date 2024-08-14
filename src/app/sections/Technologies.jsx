@@ -1,12 +1,13 @@
-import Transition1 from "../components/Transition1"
 import useScrollAnchor from "../hooks/useScrollAnchor"
 import { ReactComponent as VectorFront } from "../../assets/svgs/vector-front-end.svg"
 import { ReactComponent as VectorBack } from "../../assets/svgs/vector-back-end.svg"
-import { useAppContext } from "../contexts/AppContext"
+import technologiesFront from "../../assets/texts/TechnologiesFront.json"
+import technologiesBack from "../../assets/texts/TechnologiesBack.json"
+import Transition1 from "../components/Transition1"
+import Beehives from "../components/Beehives"
 
 function Technologies() {
     const firstScroll = useScrollAnchor("transition-1")
-    const { theme } = useAppContext()
 
     return (
         <section>
@@ -23,6 +24,11 @@ function Technologies() {
                         id="vector-front-end"
                         className=" fade-in w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark"
                     />
+                    <div className="flex">
+                        {technologiesFront.map(({ title, logo }) => (
+                            <Beehives logo={logo} title={title} key={title} />
+                        ))}
+                    </div>
                 </div>
                 <div id="back-end" className="flex flex-col items-end">
                     <VectorBack
@@ -35,6 +41,11 @@ function Technologies() {
                     >
                         Back-end
                     </h2>
+                    <div className="flex">
+                        {technologiesBack.map(({ title, logo }) => (
+                            <Beehives logo={logo} title={title} key={title} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

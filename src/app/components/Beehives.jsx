@@ -8,7 +8,7 @@ function Beehives({ logo, title }) {
                 <img
                     src={logo}
                     alt={title + " logo"}
-                    className="absolute max-w-[60%] max-h-[60%]"
+                    className="absolute max-w-[50%] max-h-[50%]"
                 />
             </div>
             <p>{title}</p>

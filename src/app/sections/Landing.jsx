@@ -1,12 +1,10 @@
 import text from "../../assets/texts/Landing.json"
-import photoLanding from "../../assets/photos/ZFC_3183.jpg"
+import photoLanding from "../../assets/photos/ZFC_3183.webp"
 import { useAppContext } from "../contexts/AppContext"
 import Particles from "../vendors/particles"
 import IconScroll from "../components/IconScroll"
-import useScrollAnchor from "../hooks/useScrollAnchor"
 
 function Landing() {
-    const firstScroll = useScrollAnchor("transition-1")
     const { language } = useAppContext()
 
     return (
