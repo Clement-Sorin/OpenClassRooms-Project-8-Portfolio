@@ -6,6 +6,9 @@
 /* -------GENERAL------- */
 /* --------------------- */
 
+*, button{
+    cursor: url("../assets/icons/cursor.png") 17 17, auto;
+}
 
 body {
     font-family: 'Chakra Petch', sans-serif;
