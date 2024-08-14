@@ -1,11 +1,14 @@
 import { ReactComponent as Beehive } from "../../assets/svgs/beehive.svg"
 import { useAppContext } from "../contexts/AppContext"
 
-function Beehives({ logo, title, className }) {
+function Beehives({ logo, title, className, delayAnim, index }) {
     const { theme } = useAppContext()
 
     return (
-        <div className={`mapped-technos ${className} flex flex-col`}>
+        <div
+            className={`mapped-technos ${className} fade-in flex flex-col`}
+            style={{ animationDelay: `${delayAnim + index * 280}ms` }}
+        >
             <div className="container-beehive relative flex items-center justify-center grayscale hover:grayscale-0">
                 <Beehive
                     className="beehive-techno w-full"

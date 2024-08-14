@@ -31,6 +31,8 @@ function Technologies() {
                                 title={item.title}
                                 key={index}
                                 className={index % 2 === 0 ? "even" : "odd"}
+                                delayAnim={1300}
+                                index={index}
                             />
                         ))}
                     </div>
@@ -53,6 +55,8 @@ function Technologies() {
                                 title={item.title}
                                 key={index}
                                 className={index % 2 === 0 ? "even" : "odd"}
+                                delayAnim={3000}
+                                index={index}
                             />
                         ))}
                     </div>
