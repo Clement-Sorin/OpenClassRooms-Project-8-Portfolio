@@ -17,8 +17,8 @@ const useScrollAnchor = (anchorId) => {
                 : viewportHeight
 
             if (
-                anchorPosition <= adjustedViewportHeight &&
-                anchorPosition >= 0
+                anchorPosition <= adjustedViewportHeight - 1 &&
+                anchorPosition >= +1
             ) {
                 setAnchorReached(true)
             } else {
