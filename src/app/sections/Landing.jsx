@@ -3,12 +3,16 @@ import photoLanding from "../../assets/photos/ZFC_3183.jpg"
 import { useAppContext } from "../contexts/AppContext"
 import Particles from "../vendors/particles"
 import IconScroll from "../components/IconScroll"
+import useScrollAnchor from "../hooks/useScrollAnchor"
 
 function Landing() {
+    const firstScroll = useScrollAnchor("transition-1")
     const { language } = useAppContext()
 
     return (
-        <section className="fixed h-screen sm:top-3 md:top-[80px] w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+">
+        <section
+            className={`fixed h-screen sm:top-3 md:top-[80px] w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+`}
+        >
             <Particles className="particles" />
             <div className="h-screen mw-auto flex-col justify-center pb-24">
                 <div className="flex md:flex-nowrap flex-wrap md:gap-10 gap-5  justify-center items-center md:justify-evenly  w-full h-full sm:p-10 sm:mb-20 sm:mt-10">

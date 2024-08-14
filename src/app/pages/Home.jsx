@@ -1,11 +1,11 @@
 import Landing from "../sections/Landing"
-import Transition1 from "../sections/Transition1"
+import Technologies from "../sections/Technologies"
 
 function Home() {
     return (
         <>
             <Landing />
-            <Transition1 />
+            <Technologies />
         </>
     )
 }

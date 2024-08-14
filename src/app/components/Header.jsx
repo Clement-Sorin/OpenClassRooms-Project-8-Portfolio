@@ -16,7 +16,7 @@ function Header() {
         >
             <div className="mw-auto h-full flex items-center justify-between">
                 <p
-                    className={`text-2xl text-red dark:text-yellow font-heading font-semibold  ${
+                    className={`text-2xl text-red dark:text-yellow font-heading ${
                         !firstScroll ? "opa-0" : "opa-100"
                     }`}
                 >
