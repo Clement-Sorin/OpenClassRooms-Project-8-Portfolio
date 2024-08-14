@@ -13,7 +13,7 @@ function Technologies() {
         <section>
             <Transition1 />
             <div className={`${firstScroll ? "technologies" : "hidden"} `}>
-                <div id="front-end" className="mb-10">
+                <div id="front-end">
                     <h2
                         id="title-front-end"
                         className="fade-in relative left-[8%] top-3 md:top-7 dark:text-dark-text"
@@ -24,9 +24,14 @@ function Technologies() {
                         id="vector-front-end"
                         className=" fade-in w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark"
                     />
-                    <div className="w-full flex justify-center">
-                        {technologiesFront.map(({ title, logo }) => (
-                            <Beehives logo={logo} title={title} key={title} />
+                    <div className="w-full flex justify-center mt-10 mb-24">
+                        {technologiesFront.map((item, index) => (
+                            <Beehives
+                                logo={item.logo}
+                                title={item.title}
+                                key={index}
+                                className={index % 2 === 0 ? "even" : "odd"}
+                            />
                         ))}
                     </div>
                 </div>
@@ -41,9 +46,14 @@ function Technologies() {
                     >
                         Back-end
                     </h2>
-                    <div className="w-full flex justify-center">
-                        {technologiesBack.map(({ title, logo }) => (
-                            <Beehives logo={logo} title={title} key={title} />
+                    <div className="w-full flex justify-center mb-20">
+                        {technologiesBack.map((item, index) => (
+                            <Beehives
+                                logo={item.logo}
+                                title={item.title}
+                                key={index}
+                                className={index % 2 === 0 ? "even" : "odd"}
+                            />
                         ))}
                     </div>
                 </div>

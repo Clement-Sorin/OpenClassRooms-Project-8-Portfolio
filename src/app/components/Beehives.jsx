@@ -1,11 +1,11 @@
 import { ReactComponent as Beehive } from "../../assets/svgs/beehive.svg"
 import { useAppContext } from "../contexts/AppContext"
 
-function Beehives({ logo, title }) {
+function Beehives({ logo, title, className }) {
     const { theme } = useAppContext()
 
     return (
-        <div className="flex flex-col">
+        <div className={`mapped-technos ${className} flex flex-col`}>
             <div className="container-beehive relative flex items-center justify-center grayscale hover:grayscale-0">
                 <Beehive
                     className="beehive-techno w-full"
@@ -18,7 +18,12 @@ function Beehives({ logo, title }) {
                     className="logo-techno absolute max-w-[50%] max-h-[50%]"
                 />
             </div>
-            <p>{title}</p>
+            <div
+                className={`line-${className} + " w-[10%] border border-${
+                    theme === "light" ? "lines-light" : "lines-dark"
+                }`}
+            ></div>
+            <p className="dark:text-dark-text">{title}</p>
         </div>
     )
 }

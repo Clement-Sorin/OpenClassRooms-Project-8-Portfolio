@@ -120,7 +120,7 @@ p {
 
 .technologies {
     position: fixed;
-    top: 100px;
+    top: 80px;
     width: 100%;
 }
 
@@ -157,11 +157,35 @@ p {
 
 .logo-techno {
     transition: transform 0.4s ease-in-out;
-    
 }
 
 .container-beehive:hover .logo-techno {
     transform: scale(1.1);
+}
+
+.odd {
+    transform: translateY(50%);
+}
+
+.mapped-technos {
+    margin-right: -3%;
+}
+
+.even p {
+    transform: translate(100%, -500%);
+}
+
+.odd p {
+    text-align: right;
+    transform : translate(-100%, -60%)
+}
+
+.line-even {
+    transform: translate(870%, -4500%) rotate(-40deg);
+}
+
+.line-odd {
+    transform: translate(40%, -900%) rotate(-40deg);
 }
 
 @media (prefers-color-scheme: dark) {
