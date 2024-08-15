@@ -162,22 +162,18 @@ p {
     animation-delay: 3s;
 }
 
-.logo-techno {
-    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
-    filter: grayscale(100%);
-}
-
 .container-beehive:hover .logo-techno {
     transform: scale(1.1);
     filter: grayscale(0);
 }
 
-.odd {
-    transform: translateY(50%);
+.logo-techno {
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+    filter: grayscale(100%);
 }
 
-.mapped-technos {
-    margin-right: -3%;
+.odd {
+    transform: translateY(50%);
 }
 
 .even p {

@@ -11,14 +11,15 @@ function Beehives({ logo, title, className, delayAnim, index }) {
         >
             <div className="container-beehive relative flex items-center justify-center">
                 <Beehive
-                    className="beehive-techno w-full"
+                    className="beehive-techno w-[200px]"
                     fill={theme === "light" ? "#F5F5F5" : "#F5F5F5"}
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                 />
                 <img
                     src={logo}
                     alt={title + " logo"}
-                    className="logo-techno absolute max-w-[50%] max-h-[50%]"
+                    className="logo-techno absolute max-w-[45%] max-h-[45%]"
+                    style={{ animationDelay: `${delayAnim + index * 280}ms` }}
                 />
             </div>
             <div
