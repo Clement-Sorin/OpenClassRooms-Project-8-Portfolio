@@ -42,11 +42,11 @@ function Technologies() {
                         id="vector-front-end"
                         className="fade-in w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark"
                     />
-                    <div className=" relative flex justify-center flex-wrap pt-10">
+                    <div className=" relative flex flex-col md:flex-row md:flex justify-center flex-wrap pt-10">
                         {groupedTechnologiesFront.map((group, groupIndex) => (
                             <div
                                 key={groupIndex}
-                                className="chunk-technos flex relative mb-16"
+                                className="chunk-technos flex flex-col md:flex-row relative md:mb-16"
                             >
                                 {group.map((item, index) => {
                                     const globalIndex = groupIndex * 3 + index

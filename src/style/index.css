@@ -177,20 +177,20 @@ p {
 }
 
 .even p {
-    transform: translate(100%, -500%);
+    transform: translate(100%, -480%);
 }
 
 .odd p {
     text-align: right;
-    transform : translate(-100%, -60%)
+    transform : translate(-100%, -100%)
 }
 
 .line-even {
-    transform: translate(870%, -9000%) rotate(-40deg);
+    transform: translate(850%, -8600%) rotate(-40deg);
 }
 
 .line-odd {
-    transform: translate(40%, -1800%) rotate(-40deg);
+    transform: translate(40%, -2500%) rotate(-40deg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -407,5 +407,27 @@ p {
 @media (max-width: 768px) {
     .transition1-scrolled {
         width: 450%;
+    }
+}
+
+/* Technologies */ 
+
+@media (max-width: 768px) {
+    .even {
+        transform: translateX(-20%);
+    }
+    
+    .odd {
+        transform: translate(20%, 0%);
+    }
+
+    .even p {
+        text-align: center;
+        transform: translate(0%);
+    }
+
+    .odd p {
+        text-align: center;
+        transform : translate(0%)
     }
 }
