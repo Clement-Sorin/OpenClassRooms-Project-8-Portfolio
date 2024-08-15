@@ -53,6 +53,7 @@ function Technologies() {
                                     return (
                                         <Beehives
                                             logo={item.logo}
+                                            logo_dark={item.logo_dark}
                                             title={item.title}
                                             key={globalIndex}
                                             className={
@@ -83,13 +84,14 @@ function Technologies() {
                     {groupedTechnologiesBack.map((group, groupIndex) => (
                         <div
                             key={groupIndex}
-                            className="w-full flex justify-center mb-20"
+                            className="chunk-technos flex flex-col md:flex-row relative md:mb-16"
                         >
                             {group.map((item, index) => {
                                 const globalIndex = groupIndex * 3 + index
                                 return (
                                     <Beehives
                                         logo={item.logo}
+                                        logo_dark={item.logo_dark}
                                         title={item.title}
                                         key={globalIndex}
                                         className={

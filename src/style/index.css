@@ -413,6 +413,10 @@ p {
 /* Technologies */ 
 
 @media (max-width: 768px) {
+    .logo-techno {
+        filter: none;
+    }
+
     .even {
         transform: translateX(-20%);
     }

@@ -1,14 +1,17 @@
 [
     {
         "title": "NodeJS",
-        "logo" : "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+        "logo" : "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/node-dark.svg"
     },
     {
         "title": "ExpressJS",
-        "logo" : "https://cdn.buttercms.com/4XpulFfySpWyYTXuaVL2"
+        "logo" : "https://cdn.buttercms.com/4XpulFfySpWyYTXuaVL2",
+        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/express-dark.svg"
     },
     {
         "title": "MongoDB",
-        "logo" : "https://upload.wikimedia.org/wikipedia/fr/4/45/MongoDB-Logo.svg"
+        "logo" : "https://upload.wikimedia.org/wikipedia/fr/4/45/MongoDB-Logo.svg",
+        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/mongo-dark.svg"
     }
 ]

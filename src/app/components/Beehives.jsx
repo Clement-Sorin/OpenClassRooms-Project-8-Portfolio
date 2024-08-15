@@ -1,7 +1,7 @@
 import { ReactComponent as Beehive } from "../../assets/svgs/beehive.svg"
 import { useAppContext } from "../contexts/AppContext"
 
-function Beehives({ logo, title, className, delayAnim, index }) {
+function Beehives({ logo, logo_dark, title, className, delayAnim, index }) {
     const { theme } = useAppContext()
 
     return (
@@ -12,13 +12,13 @@ function Beehives({ logo, title, className, delayAnim, index }) {
             <div className="container-beehive relative flex items-center justify-center">
                 <Beehive
                     className="beehive-techno w-[180px] md:w-[200px]"
-                    fill={theme === "light" ? "#F5F5F5" : "#F5F5F5"}
+                    fill={theme === "light" ? "#F5F5F5" : "#082a35"}
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                 />
                 <img
-                    src={logo}
+                    src={theme === "light" ? logo : logo_dark}
                     alt={title + " logo"}
-                    className="logo-techno absolute max-w-[45%] max-h-[45%]"
+                    className="logo-techno absolute max-w-[45%] max-h-[45%] dark:brightness-[1000%]"
                     style={{ animationDelay: `${delayAnim + index * 280}ms` }}
                 />
             </div>
