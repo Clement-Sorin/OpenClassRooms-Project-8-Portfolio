@@ -4,6 +4,7 @@ import Theme from "./Theme"
 import Navbar from "./Navbar"
 import MenuTablet from "./MenuTablet"
 import MenuMobile from "./MenuMobile"
+import { Link } from "react-router-dom"
 
 function Header() {
     const firstScroll = useScrollAnchor("transition-1")
@@ -15,13 +16,14 @@ function Header() {
             }`}
         >
             <div className="mw-auto h-full flex items-center justify-between">
-                <p
+                <Link
+                    to=""
                     className={`text-2xl text-red dark:text-yellow font-heading ${
                         !firstScroll ? "opa-0" : "opa-100"
                     }`}
                 >
                     Clément Sorin
-                </p>
+                </Link>
                 <div className="hidden md:block lg:block max-w-[50%] w-full">
                     <Navbar navTabDesk={"flex justify-between w-full"} />
                 </div>

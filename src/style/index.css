@@ -7,7 +7,11 @@
 /* --------------------- */
 
 *, button{
-    cursor: url("../assets/icons/cursor.png") 17 17, auto;
+    cursor: url("../assets/icons/cursor-light.png") 17 17, auto;
+}
+
+.dark *, .dark button{
+    cursor: url("../assets/icons/cursor-dark.png") 17 17, auto;
 }
 
 body {
@@ -159,11 +163,13 @@ p {
 }
 
 .logo-techno {
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+    filter: grayscale(100%);
 }
 
 .container-beehive:hover .logo-techno {
     transform: scale(1.1);
+    filter: grayscale(0);
 }
 
 .odd {
@@ -184,11 +190,11 @@ p {
 }
 
 .line-even {
-    transform: translate(870%, -4500%) rotate(-40deg);
+    transform: translate(870%, -9000%) rotate(-40deg);
 }
 
 .line-odd {
-    transform: translate(40%, -900%) rotate(-40deg);
+    transform: translate(40%, -1800%) rotate(-40deg);
 }
 
 @media (prefers-color-scheme: dark) {

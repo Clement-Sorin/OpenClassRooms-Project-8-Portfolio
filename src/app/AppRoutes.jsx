@@ -10,17 +10,22 @@ function AppRoutes() {
     return (
         <AppProvider>
             <BrowserRouter>
-                <Routes>
-                    <Route element={<Default />}>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/legal-notice" element={<LegalNotice />} />
-                        <Route
-                            path="/privacy-policy"
-                            element={<PrivacyPolicy />}
-                        />
-                        <Route path="*" element={<Error404 />} />
-                    </Route>
-                </Routes>
+                <div className="cursor-custom-light dark:cursor-custom-dark">
+                    <Routes>
+                        <Route element={<Default />}>
+                            <Route path="/" element={<Home />} />
+                            <Route
+                                path="/legal-notice"
+                                element={<LegalNotice />}
+                            />
+                            <Route
+                                path="/privacy-policy"
+                                element={<PrivacyPolicy />}
+                            />
+                            <Route path="*" element={<Error404 />} />
+                        </Route>
+                    </Routes>
+                </div>
             </BrowserRouter>
         </AppProvider>
     )

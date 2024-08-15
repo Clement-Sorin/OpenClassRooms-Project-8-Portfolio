@@ -9,10 +9,10 @@ function Beehives({ logo, title, className, delayAnim, index }) {
             className={`mapped-technos ${className} fade-in flex flex-col`}
             style={{ animationDelay: `${delayAnim + index * 280}ms` }}
         >
-            <div className="container-beehive relative flex items-center justify-center grayscale hover:grayscale-0">
+            <div className="container-beehive relative flex items-center justify-center">
                 <Beehive
                     className="beehive-techno w-full"
-                    fill="#F5F5F5"
+                    fill={theme === "light" ? "#F5F5F5" : "#F5F5F5"}
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                 />
                 <img
@@ -22,7 +22,7 @@ function Beehives({ logo, title, className, delayAnim, index }) {
                 />
             </div>
             <div
-                className={`line-${className} + " w-[10%] border border-${
+                className={`line-${className} + " w-[10%] border-b border-${
                     theme === "light" ? "lines-light" : "lines-dark"
                 }`}
             ></div>

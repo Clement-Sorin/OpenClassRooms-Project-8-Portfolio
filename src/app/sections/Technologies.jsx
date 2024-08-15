@@ -12,7 +12,11 @@ function Technologies() {
     return (
         <section>
             <Transition1 />
-            <div className={`${firstScroll ? "technologies" : "hidden"} `}>
+            <div
+                className={`${
+                    firstScroll ? "technologies" : "hidden"
+                } mw-auto left-1/2 transform -translate-x-1/2`}
+            >
                 <div id="front-end">
                     <h2
                         id="title-front-end"

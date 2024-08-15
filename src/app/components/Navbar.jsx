@@ -8,7 +8,7 @@ function Navbar({ navTabDesk, navMob }) {
     return (
         <nav className={`${navTabDesk} ${navMob} dark:text-dark-text`}>
             <Link
-                to="#technologies"
+                to="#"
                 className={
                     theme === "light"
                         ? "transition-hover-light"
