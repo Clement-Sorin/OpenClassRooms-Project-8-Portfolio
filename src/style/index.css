@@ -19,13 +19,16 @@ body {
     user-select: none;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .main-container {
     width: 100%;
     max-width: 1440px;
     min-width: 320px;
     box-sizing: border-box;
     padding: 0;
-    overflow: hidden;
 }
   
 h1, h2, h3, h4, h5, h6 {
@@ -100,6 +103,7 @@ p {
 
 .container-landing {
     align-items: space-around;
+    overflow: hidden;
 }
 
 .container-title {
@@ -128,7 +132,13 @@ p {
 .technologies {
     position: fixed;
     top: 80px;
+    max-height: 100vh;
     width: 100%;
+    overflow-y: auto;
+}
+
+.technologies::-webkit-scrollbar {
+    display: none;
 }
 
 @keyframes fade-in {
@@ -162,14 +172,30 @@ p {
     animation-delay: 3s;
 }
 
-.container-beehive:hover .logo-techno {
+@keyframes grow-in {
+    0% {
+        transform: scale(1);
+        filter: grayscale(100%);
+    }
+    50% {
+        transform: scale(1.1);
+        filter: grayscale(0);
+    }
+    100% {
+        transform: scale(1);
+        filter: grayscale(100%);
+    }
+}
+
+.container-beehive:hover .logo-techno , .grow-in .logo-techno {
     transform: scale(1.1);
     filter: grayscale(0);
 }
 
-.logo-techno {
+.logo-techno  {
     transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
     filter: grayscale(100%);
+    animation: grow-in 0.7s ease-in;
 }
 
 .odd {
@@ -408,15 +434,8 @@ p {
     .transition1-scrolled {
         width: 450%;
     }
-}
 
-/* Technologies */ 
-
-@media (max-width: 768px) {
-    .logo-techno {
-        filter: none;
-    }
-
+    /* Technologies */
     .even {
         transform: translateX(-20%);
     }

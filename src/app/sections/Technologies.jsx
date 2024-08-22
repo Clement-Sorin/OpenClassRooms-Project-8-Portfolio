@@ -31,7 +31,7 @@ function Technologies() {
                     firstScroll ? "technologies" : "hidden"
                 } mw-auto left-1/2 transform -translate-x-1/2`}
             >
-                <div id="front-end">
+                <div id="front-end" className="mb-20 md:mb-0">
                     <h2
                         id="title-front-end"
                         className="fade-in relative left-[8%] top-3 md:top-7 dark:text-dark-text"
@@ -42,7 +42,7 @@ function Technologies() {
                         id="vector-front-end"
                         className="fade-in w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark"
                     />
-                    <div className=" relative flex flex-col md:flex-row md:flex justify-center flex-wrap pt-10">
+                    <div className=" relative w-full flex flex-col md:flex-row md:flex justify-center flex-wrap md:pt-10">
                         {groupedTechnologiesFront.map((group, groupIndex) => (
                             <div
                                 key={groupIndex}
@@ -84,7 +84,7 @@ function Technologies() {
                     {groupedTechnologiesBack.map((group, groupIndex) => (
                         <div
                             key={groupIndex}
-                            className="chunk-technos flex flex-col md:flex-row relative md:mb-16"
+                            className="chunk-technos w-full flex justify-center flex-col md:flex-row relative mb-[150px] md:mb-16"
                         >
                             {group.map((item, index) => {
                                 const globalIndex = groupIndex * 3 + index
