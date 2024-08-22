@@ -2,7 +2,7 @@
 
 # Portfolio V2
 
-<img src="" alt="portfolio-landing page" width="800" />
+<img src="./src/assets/photos/landing-screenshot.png" alt="portfolio-landing page" width="800" />
 
 ## Description
 
