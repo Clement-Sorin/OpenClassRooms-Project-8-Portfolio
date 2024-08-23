@@ -17,6 +17,7 @@
 body {
     font-family: 'Chakra Petch', sans-serif;
     user-select: none;
+    scrollbar-width: none;
 }
 
 body::-webkit-scrollbar {
@@ -135,6 +136,7 @@ p {
     max-height: 100vh;
     width: 100%;
     overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .technologies::-webkit-scrollbar {
@@ -432,7 +434,7 @@ p {
         font-size: 1.625rem;
     }
     .transition1-scrolled {
-        width: 200%;
+        width: 300%;
     }
 }
 
