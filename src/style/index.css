@@ -284,6 +284,22 @@ p {
     transition-delay: 100ms;
 }
 
+/* Transition 2 */
+
+.transition2-unscrolled {
+    transition: margin-bottom 800ms ease-in-out; 
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: -150vh;
+}
+
+.transition2-scrolled {
+    transition: margin-bottom 800ms ease-in-out;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 0;
+}
+
 /* --------------------- */
 /* -----COMPONENTS------ */
 /* --------------------- */

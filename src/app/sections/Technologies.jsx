@@ -5,6 +5,7 @@ import { ReactComponent as VectorBack } from "../../assets/svgs/vector-back-end.
 import technologiesFront from "../../assets/texts/TechnologiesFront.json"
 import technologiesBack from "../../assets/texts/TechnologiesBack.json"
 import Transition1 from "../components/Transition1"
+import Transition2 from "../components/Transition2"
 import Beehives from "../components/Beehives"
 
 function Technologies() {
@@ -24,7 +25,7 @@ function Technologies() {
     const groupedTechnologiesBack = chunkArray(technologiesBack, 3)
 
     return (
-        <section id="technologies">
+        <section id="technologies" className="h-full">
             <Transition1 />
             <div
                 className={`${
@@ -108,6 +109,7 @@ function Technologies() {
                     ))}
                 </div>
             </div>
+            <Transition2 />
         </section>
     )
 }

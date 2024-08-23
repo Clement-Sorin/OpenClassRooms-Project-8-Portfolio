@@ -7,7 +7,7 @@ function Transition1() {
 
     return (
         <div
-            className="mt-[100vh] flex justify-center h-full w-full "
+            className="mt-[100vh] flex justify-center h-full w-full overflow-0"
             id="transition-1"
         >
             <div
