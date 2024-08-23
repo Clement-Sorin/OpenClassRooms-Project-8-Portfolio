@@ -461,4 +461,9 @@ p {
         text-align: center;
         transform : translate(0%)
     }
+
+    .logo-techno-dark-unclicked {
+        filter: brightness(1000%);
+    }
 }
+

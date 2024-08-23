@@ -15,7 +15,6 @@ function Beehives({ logo, logo_dark, title, className, delayAnim, index }) {
 
     return (
         <div
-            onClick={handleToggle}
             className={`mapped-technos ${className} fade-in flex flex-col mb-[-70px] md:mb-0 ${
                 toggleEffect === true ? "grow-in" : ""
             }`}
@@ -28,9 +27,14 @@ function Beehives({ logo, logo_dark, title, className, delayAnim, index }) {
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                 />
                 <img
+                    onClick={handleToggle}
                     src={theme === "light" ? logo : logo_dark}
                     alt={title + " logo"}
-                    className="logo-techno absolute max-w-[72px] max-h-[30%] sm2:max-w-[130px] sm2:max-h-[45%] dark:brightness-[1000%]"
+                    className={`logo-techno absolute max-w-[72px] max-h-[30%] sm2:max-w-[130px] sm2:max-h-[45%]  transition duration-300 dark:${
+                        toggleEffect === true
+                            ? "brightness-[0%]"
+                            : "logo-techno-dark-unclicked dark:brightness-[1000%]"
+                    }`}
                     style={{ animationDelay: `${delayAnim + index * 280}ms` }}
                 />
             </div>
