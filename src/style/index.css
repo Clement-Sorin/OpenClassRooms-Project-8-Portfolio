@@ -187,7 +187,7 @@ p {
     }
 }
 
-.container-beehive:hover .logo-techno , .grow-in .logo-techno {
+.grow-in .logo-techno {
     transform: scale(1.1);
     filter: grayscale(0);
 }
@@ -195,7 +195,7 @@ p {
 .logo-techno  {
     transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
     filter: grayscale(100%);
-    animation: grow-in 0.7s ease-in;
+    animation: grow-in 1s ease-in;
 }
 
 .odd {
@@ -416,7 +416,13 @@ p {
 /* ----Media-Queries---- */
 /* --------------------- */
 
-/* General */
+@media (min-width: 1024px) {
+    .container-beehive:hover .logo-techno {
+        transform: scale(1.1);
+        filter: grayscale(0);
+    }
+
+}
 
 @media (max-width: 1024px)  {
     h1 {

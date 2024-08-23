@@ -24,7 +24,7 @@ function Technologies() {
     const groupedTechnologiesBack = chunkArray(technologiesBack, 3)
 
     return (
-        <section>
+        <section id="technologies">
             <Transition1 />
             <div
                 className={`${

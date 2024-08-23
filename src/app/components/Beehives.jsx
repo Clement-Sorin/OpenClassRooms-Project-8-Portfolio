@@ -30,7 +30,7 @@ function Beehives({ logo, logo_dark, title, className, delayAnim, index }) {
                 <img
                     src={theme === "light" ? logo : logo_dark}
                     alt={title + " logo"}
-                    className="logo-techno absolute max-w-[75px] max-h-[30%] md:max-w-[45%] md:max-h-[45%] dark:brightness-[1000%]"
+                    className="logo-techno absolute max-w-[72px] max-h-[30%] md:max-w-[45%] md:max-h-[45%] dark:brightness-[1000%]"
                     style={{ animationDelay: `${delayAnim + index * 280}ms` }}
                 />
             </div>
