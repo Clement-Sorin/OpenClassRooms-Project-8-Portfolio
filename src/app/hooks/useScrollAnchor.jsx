@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react"
+import { throttle } from "lodash"
 
 const useScrollAnchor = (anchorId) => {
     const [anchorReached, setAnchorReached] = useState(false)
 
     useEffect(() => {
-        const handleScroll = () => {
+        const handleScroll = throttle(() => {
             const anchorElement = document.getElementById(anchorId)
             if (!anchorElement) return
 
@@ -24,7 +25,7 @@ const useScrollAnchor = (anchorId) => {
             ) {
                 setAnchorReached(true)
             }
-        }
+        },1000)
 
         window.addEventListener("scroll", handleScroll)
 
