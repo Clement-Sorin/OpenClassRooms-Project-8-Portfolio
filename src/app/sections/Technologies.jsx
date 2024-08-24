@@ -5,7 +5,7 @@ import { ReactComponent as VectorBack } from "../../assets/svgs/vector-back-end.
 import technologiesFront from "../../assets/texts/TechnologiesFront.json"
 import technologiesBack from "../../assets/texts/TechnologiesBack.json"
 import Transition1 from "../components/Transition1"
-import Transition2 from "../components/Transition2"
+
 import Beehives from "../components/Beehives"
 
 function Technologies() {
@@ -109,7 +109,6 @@ function Technologies() {
                     ))}
                 </div>
             </div>
-            <Transition2 />
         </section>
     )
 }
