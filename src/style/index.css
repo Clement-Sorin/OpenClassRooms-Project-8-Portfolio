@@ -31,6 +31,11 @@ body::-webkit-scrollbar {
     box-sizing: border-box;
     padding: 0;
 }
+
+
+main {
+    scroll-snap-type: y mandatory;
+}
   
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Orbitron', sans-serif;
@@ -129,6 +134,10 @@ p {
 }
 
 /* Technologies */
+
+#technologies {
+    scroll-snap-align: start;
+}
 
 .technologies {
     position: fixed;
@@ -299,6 +308,12 @@ p {
 }
 .mask-delayed-2 {
     transition-delay: 50ms;
+}
+
+/* Projects */ 
+
+#projects {
+    scroll-snap-align: start;
 }
 
 /* --------------------- */
