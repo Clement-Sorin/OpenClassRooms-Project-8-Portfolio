@@ -25,7 +25,7 @@ const useScrollAnchor = (anchorId) => {
             ) {
                 setAnchorReached(true)
             }
-        },1000)
+        })
 
         window.addEventListener("scroll", handleScroll)
 
