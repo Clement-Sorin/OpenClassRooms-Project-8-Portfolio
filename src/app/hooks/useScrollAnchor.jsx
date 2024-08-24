@@ -5,7 +5,7 @@ const useScrollAnchor = (anchorId) => {
     const [anchorReached, setAnchorReached] = useState(false)
 
     useEffect(() => {
-        const handleScroll = throttle(() => {
+        const handleScroll = () => {
             const anchorElement = document.getElementById(anchorId)
             if (!anchorElement) return
 
@@ -25,7 +25,7 @@ const useScrollAnchor = (anchorId) => {
             ) {
                 setAnchorReached(true)
             }
-        })
+        }
 
         window.addEventListener("scroll", handleScroll)
 
