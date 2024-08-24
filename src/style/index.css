@@ -287,17 +287,18 @@ p {
 /* Transition 2 */
 
 .transition2-unscrolled {
-    transition: margin-bottom 800ms ease-in-out; 
-    width: 100%;
+    transition: transform 800ms ease-in-out; 
     aspect-ratio: 1 / 1;
-    margin-bottom: -150vh;
+    transform: translateX(100%);
 }
 
 .transition2-scrolled {
-    transition: margin-bottom 800ms ease-in-out;
-    width: 100%;
+    transition: transform 800ms ease-in-out;
     aspect-ratio: 1 / 1;
-    margin-bottom: 0;
+    transform: translateX(0);
+}
+.mask-delayed-2 {
+    transition-delay: 50ms;
 }
 
 /* --------------------- */

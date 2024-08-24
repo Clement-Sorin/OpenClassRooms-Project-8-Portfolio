@@ -6,12 +6,9 @@ function Transition2() {
     const { theme } = useAppContext()
 
     return (
-        <div
-            className="mt-[100vh] flex justify-center h-full w-full "
-            id="transition-2"
-        >
+        <div className="mt-[20vh] h-full w-full" id="transition-2">
             <div
-                className={`fixed left-1/2 transform -translate-x-1/2 w-full bottom-[-40rem] z-8  ${
+                className={`fixed w-full h-full bottom-0 z-8  ${
                     theme === "light" ? "bg-light-grey+" : "bg-dark-blue"
                 } ${
                     !scrollProjects
@@ -20,12 +17,12 @@ function Transition2() {
                 } `}
             ></div>
             <div
-                className={`fixed left-1/2 transform -translate-x-1/2 w-full bottom-[-44rem] z-9  ${
+                className={`fixed w-full h-full  bottom-0 z-9  ${
                     theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
                 } ${
                     !scrollProjects
                         ? "transition2-unscrolled"
-                        : "transition2-scrolled mask-delayed"
+                        : "transition2-scrolled mask-delayed-2"
                 }`}
             ></div>
         </div>
