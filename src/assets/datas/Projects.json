@@ -1,9 +1,9 @@
 [
     {
-        "title" : "Porfolio",
+        "title" : "Porfolio_V2",
         "tech" : [
             {
-                "logo" : "../icons/figma.svg",
+                "logo" : "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
                 "name" : "Figma"
             },
             {
@@ -21,11 +21,11 @@
         },
         "links" : [
                 {
-                    "logo" : "../icons/github.svg",
+                    "logo" : "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
                     "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-8-Portfolio"
                 },
                 {
-                    "logo" : "../icons/figma.svg",
+                    "logo" : "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
                     "url" : "https://www.figma.com/design/LcuJU4yq9tHdUQMbfPsSxw/Portfolio?node-id=70-51&t=lOEhuGXgvjiXQ13C-1"
                 }
             ],
@@ -33,8 +33,6 @@
             "fr" : "Le passages aux modes FR/EN et light/dark ont étés réalisés grâce à useContext de React.",
             "en" : "The transitions between FR/EN modes and light/dark modes were implemented using React's useContext."
         },
-        "images" : {
-            
-        }
+        "images" : "/images/projects/Porfolio_V2/landing-screenshot.webp"
     }
 ]
