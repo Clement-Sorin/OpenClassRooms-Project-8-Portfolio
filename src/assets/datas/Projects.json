@@ -49,8 +49,8 @@
                 "name" : "NodeJS/ExpressJS"
             },
             {
-                "logo" : "/images/icons/mongo.svg",
-                "logo_dark" : "/images/icons/mongo-dark.svg",
+                "logo" : "/images/icons/mongo-projects.svg",
+                "logo_dark" : "/images/icons/mongo-projects.svg",
                 "name" : "MongoDB"
             }
         ],
