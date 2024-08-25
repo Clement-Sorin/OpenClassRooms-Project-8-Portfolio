@@ -1,17 +1,20 @@
 [
     {
-        "title" : "Porfolio_V2",
+        "title" : "Porfolio V2",
         "tech" : [
             {
-                "logo" : "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+                "logo" : "/images/icons/figma.svg",
+                "logo_dark" : "/images/icons/figma.svg",
                 "name" : "Figma"
             },
             {
-                "logo" : "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+                "logo" : "/images/icons/react.svg",
+                "logo_dark" : "/images/icons/react.svg",
                 "name" : "React"
             },
             {
-                "logo" : "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+                "logo" : "/images/icons/tailwind.svg",
+                "logo_dark" : "/images/icons/tailwind.svg",
                 "name" : "Tailwind"
             }
         ],
@@ -21,11 +24,13 @@
         },
         "links" : [
                 {
-                    "logo" : "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+                    "logo" : "/images/icons/github.svg",
+                    "logo_dark" : "/images/icons/github-dark.svg",
                     "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-8-Portfolio"
                 },
                 {
-                    "logo" : "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+                    "logo" : "/images/icons/figma.svg",
+                    "logo_dark" : "/images/icons/figma.svg",
                     "url" : "https://www.figma.com/design/LcuJU4yq9tHdUQMbfPsSxw/Portfolio?node-id=70-51&t=lOEhuGXgvjiXQ13C-1"
                 }
             ],
@@ -34,5 +39,200 @@
             "en" : "The transitions between FR/EN modes and light/dark modes were implemented using React's useContext."
         },
         "images" : "/images/projects/Porfolio_V2/landing-screenshot.webp"
+    },
+    {
+        "title" : "Mon Vieux Grimoire",
+        "tech" : [
+            {
+                "logo" : "/images/icons/node.svg",
+                "logo_dark" : "/images/icons/node-dark.svg",
+                "name" : "NodeJS/ExpressJS"
+            },
+            {
+                "logo" : "/images/icons/mongo.svg",
+                "logo_dark" : "/images/icons/mongo-dark.svg",
+                "name" : "MongoDB"
+            }
+        ],
+        "description" : {
+            "fr" : "L’un des derniers projets de la formation Développeur Web d’OpenClassroom basé sur l’apprentissage du back-end grâce une stack JS. ",
+            "en" : "One of the final projects of the Web Developer program at OpenClassroom is based on learning back-end development using a JS stack."
+        },
+        "links" : [
+                {
+                    "logo" : "/images/icons/github.svg",
+                    "logo_dark" : "/images/icons/github-dark.svg",
+                    "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-6-Back-end"
+                }
+            ],
+        "challenge" : {
+            "fr" : "La sécurité des identifications relevé par l’utilisation d’un cryptage des mots de passe et en rendant un token d’identification à chaque connexion.",
+            "en" : "The security of identifications is ensured through the use of password encryption and by issuing an identification token for each login."
+        },
+        "images" : [
+            "/images/projects/Mon_Vieux_Grimoire/01-landing.webp",
+            "/images/projects/Mon_Vieux_Grimoire/02-single-book.webp",
+            "/images/projects/Mon_Vieux_Grimoire/03-connection.webp",
+            "/images/projects/Mon_Vieux_Grimoire/04-add-book.webp",
+            "/images/projects/Mon_Vieux_Grimoire/05-modify-book.webp"
+        ]
+    },
+    {
+        "title" : "Kasa",
+        "tech" : [
+            {
+                "logo" : "/images/icons/react.svg",
+                "logo_dark" : "/images/icons/react-dark.svg",
+                "name" : "React"
+            },
+            {
+                "logo" : "/images/icons/sass.svg",
+                "logo_dark" : "/images/icons/sass-dark.svg",
+                "name" : "Sass"
+            }
+        ],
+        "description" : {
+            "fr" : "Projet de la formation d’OpenClassrooms orienté sur le développement front-end avec la technologie React.",
+            "en" : "OpenClassrooms training project focused on front-end development with React technology."
+        },
+        "links" : [
+                {
+                    "logo" : "/images/icons/github.svg",
+                    "logo_dark" : "/images/icons/github-dark.svg",
+                    "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-5-React-Kasa"
+                },
+                {
+                    "logo" : "/images/icons/link.svg",
+                    "logo_dark" : "/images/icons/link-dark.svg",
+                    "url" : "https://open-class-rooms-project-5-react-kasa.vercel.app/"
+                }
+            ],
+        "challenge" : {
+            "fr" : "La création du carroussel fait grâce à un mécanisme de rail avec toutes les photos disposées horizontalement et prenant 100% de largeur du conteneur chacunes. Les boutons suivants et précédents permettent de passer d’une image à l’autre avec ce principe.",
+            "en" : "The carousel is created using a rail mechanism with all the photos arranged horizontally, each taking up 100% of the container's width. The next and previous buttons allow you to move from one image to another using this principle."
+        },
+        "images" : [
+            "/images/projects/Kasa/01-landing.webp",
+            "/images/projects/Kasa/02-single-accomodation.webp",
+            "/images/projects/Kasa/03-about.webp",
+            "/images/projects/Kasa/04-landing-mobile.webp",
+            "/images/projects/Kasa/05-single-mobile.webp"
+        ]
+    },
+    {
+        "title" : "Sophie Bluel",
+        "tech" : [
+            {
+                "logo" : "/images/icons/js.svg",
+                "logo_dark" : "/images/icons/js-dark.svg",
+                "name" : "JavaScript"
+            }
+        ],
+        "description" : {
+            "fr" : "Projet de la formation d’OpenClassrooms basé sur l’apprentissage du langage de programmation JavaScript, dans le but de comprendre l’algorithmie et la manipulation du DOM.",
+            "en" : "OpenClassrooms training project based on learning the JavaScript programming language, with the aim of understanding algorithms and manipulating the DOM."
+        },
+        "links" : [
+                {
+                    "logo" : "/images/icons/github.svg",
+                    "logo_dark" : "/images/icons/github-dark.svg",
+                    "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-3-JavaScript-Sophie_Bluel"
+                }
+            ],
+        "challenge" : {
+            "fr" : "Ecriture d’un code propre et optimisé qui a demandé une refactorisation mais qui aujourd’hui et bien plus simple et lisible.",
+            "en" : "Writing clean and optimized code, which required refactoring, but is now much simpler and more readable"
+        },
+        "images" : [
+            "/images/projects/Sophie_Bluel/01-landing.webp",
+            "/images/projects/Sophie_Bluel/02-connection.webp",
+            "/images/projects/Sophie_Bluel/03-edition.webp",
+            "/images/projects/Sophie_Bluel/04-modify-gallery.webp",
+            "/images/projects/Sophie_Bluel/05-add-photo.webp"
+        ]
+    },
+    {
+        "title" : "Booki",
+        "tech" : [
+            {
+                "logo" : "/images/icons/html.svg",
+                "logo_dark" : "/images/icons/html-dark.svg",
+                "name" : "HTML"
+            },
+            {
+                "logo" : "/images/icons/css.svg",
+                "logo_dark" : "/images/icons/css-dark.svg",
+                "name" : "CSS"
+            }
+        ],
+        "description" : {
+            "fr" : "Premier projet de la formation d’OpenClassrooms basé sur l’apprentissage des langages HTML et CSS en prenant en compte l’adaptation en responsive.",
+            "en" : "First project of the OpenClassrooms course focusing on learning HTML and CSS languages, including responsive design adaptation."
+        },
+        "links" : [
+                {
+                    "logo" : "/images/icons/github.svg",
+                    "logo_dark" : "/images/icons/github-dark.svg",
+                    "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-2-HTML-CSS-Booki"
+                },
+                {
+                    "logo" : "/images/icons/link.svg",
+                    "logo_dark" : "/images/icons/link-dark.svg",
+                    "url" : "https://clement-sorin.github.io/OpenClassRooms-Project-2-HTML-CSS-Booki/"
+                }
+            ],
+        "challenge" : {
+            "fr" : "Adaptation en format responsive mais facilement géré grace à la disposition flex et l’utilisation des media-queries dans le CSS.",
+            "en" : "Responsive adaptation but easily managed thanks to the flex layout and the use of media queries in the CSS"
+        },
+        "images" : [
+            "/images/projects/Booki/01-landing.webp",
+            "/images/projects/Booki/02-activites-footer.webp",
+            "/images/projects/Booki/03-tablet.webp",
+            "/images/projects/Booki/04-landing-mobile.webp",
+            "/images/projects/Booki/05-populars-mobile.webp"
+        ]
+    },
+    {
+        "title" : "Portfolio V1",
+        "tech" : [
+            {
+                "logo" : "/images/icons/html.svg",
+                "logo_dark" : "/images/icons/html-dark.svg",
+                "name" : "HTML"
+            },
+            {
+                "logo" : "/images/icons/css.svg",
+                "logo_dark" : "/images/icons/css-dark.svg",
+                "name" : "CSS"
+            }
+        ],
+        "description" : {
+            "fr" : "Tout premier portfolio fait en HTML et CSS avant la formation. Le but de cette réalisation était, à ce moment-là, de trouver une entreprise pour faire ma formation en alternance.",
+            "en" : "My very first portfolio created with HTML and CSS before the training. The goal of this project at that time was to find a company for my apprenticeship training."
+        },
+        "links" : [
+                {
+                    "logo" : "/images/icons/github.svg",
+                    "logo_dark" : "/images/icons/github-dark.svg",
+                    "url" : "https://github.com/Clement-Sorin/Portfolio-V1"
+                },
+                {
+                    "logo" : "/images/icons/link.svg",
+                    "logo_dark" : "/images/icons/link-dark.svg",
+                    "url" : "https://clement-sorin.github.io/Portfolio-V1/"
+                }
+            ],
+        "challenge" : {
+            "fr" : "Premier site développé en HTML/CSS et déployé sans formation préalables mais grâces aux ressources disponibles gratuitement sur le net, le défi a pu être relevé.",
+            "en" : "First site developed in HTML/CSS and deployed without prior training but thanks to the resources available for free online, the challenge was met."
+        },
+        "images" : [
+            "/images/projects/Portfolio_V1/01-landing.webp",
+            "/images/projects/Portfolio_V1/02-whoami.webp",
+            "/images/projects/Portfolio_V1/03-technos.webp",
+            "/images/projects/Portfolio_V1/04-portfolio.webp",
+            "/images/projects/Portfolio_V1/05-landing-mobile.webp"
+        ]
     }
 ]
