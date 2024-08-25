@@ -82,12 +82,12 @@
         "tech" : [
             {
                 "logo" : "/images/icons/react.svg",
-                "logo_dark" : "/images/icons/react-dark.svg",
+                "logo_dark" : "/images/icons/react.svg",
                 "name" : "React"
             },
             {
                 "logo" : "/images/icons/sass.svg",
-                "logo_dark" : "/images/icons/sass-dark.svg",
+                "logo_dark" : "/images/icons/sass.svg",
                 "name" : "Sass"
             }
         ],
@@ -156,12 +156,12 @@
         "tech" : [
             {
                 "logo" : "/images/icons/html.svg",
-                "logo_dark" : "/images/icons/html-dark.svg",
+                "logo_dark" : "/images/icons/html.svg",
                 "name" : "HTML"
             },
             {
                 "logo" : "/images/icons/css.svg",
-                "logo_dark" : "/images/icons/css-dark.svg",
+                "logo_dark" : "/images/icons/css.svg",
                 "name" : "CSS"
             }
         ],
@@ -198,12 +198,12 @@
         "tech" : [
             {
                 "logo" : "/images/icons/html.svg",
-                "logo_dark" : "/images/icons/html-dark.svg",
+                "logo_dark" : "/images/icons/html.svg",
                 "name" : "HTML"
             },
             {
                 "logo" : "/images/icons/css.svg",
-                "logo_dark" : "/images/icons/css-dark.svg",
+                "logo_dark" : "/images/icons/css.svg",
                 "name" : "CSS"
             }
         ],
