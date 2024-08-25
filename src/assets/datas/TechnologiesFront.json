@@ -2,31 +2,31 @@
     {
         "title": "HTML",
         "logo" : "https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg",
-        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/html-dark.svg"
+        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/icons/html-dark.svg"
     },
     {
         "title": "CSS",
         "logo" : "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg",
-        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/css-dark.svg"
+        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/icons/css-dark.svg"
     },
     {
         "title": "JavaScript",
         "logo" : "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/js.svg"
+        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/icons/js.svg"
     },
     {
         "title": "React",
         "logo" : "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/react.svg"
+        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/icons/react.svg"
     },
     {
         "title": "Tailwind",
         "logo" : "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/tailwind.svg"
+        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/icons/tailwind.svg"
     },
     {
         "title": "Sass",
         "logo" : "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg",
-        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/sass.svg"
+        "logo_dark" : "https://clement-sorin.github.io/public-images/PortfolioV2/icons/sass.svg"
     }
 ]

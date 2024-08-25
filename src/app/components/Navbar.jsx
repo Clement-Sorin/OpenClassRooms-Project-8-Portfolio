@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useAppContext } from "../contexts/AppContext"
-import text from "../../assets/texts/Header.json"
+import text from "../../assets/datas/Header.json"
 
 function Navbar({ navTabDesk, navMob }) {
     const { language, theme } = useAppContext()

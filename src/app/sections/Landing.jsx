@@ -1,4 +1,4 @@
-import text from "../../assets/texts/Landing.json"
+import text from "../../assets/datas/Landing.json"
 import photoLanding from "../../assets/photos/ZFC_3183.webp"
 import { useAppContext } from "../contexts/AppContext"
 import Particles from "../vendors/particles"

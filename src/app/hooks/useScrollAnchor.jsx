@@ -5,15 +5,14 @@ const useScrollAnchor = (anchorId) => {
     const [anchorReached, setAnchorReached] = useState(false)
 
     useEffect(() => {
-        const handleScroll = () => {
+        const handleScroll = throttle(() => {
             const anchorElement = document.getElementById(anchorId)
             if (!anchorElement) return
 
             const anchorPosition = anchorElement.getBoundingClientRect().top
             const viewportHeight = window.innerHeight
 
-            const isMobile = window.innerWidth <= 1024
-            const adjustedViewportHeight = isMobile
+            const adjustedViewportHeight = window.innerWidth
                 ? viewportHeight * 0.9
                 : viewportHeight
 
@@ -25,7 +24,7 @@ const useScrollAnchor = (anchorId) => {
             ) {
                 setAnchorReached(true)
             }
-        }
+        },200)
 
         window.addEventListener("scroll", handleScroll)
 

@@ -2,16 +2,14 @@ import React from "react"
 import useScrollAnchor from "../hooks/useScrollAnchor"
 import { ReactComponent as VectorFront } from "../../assets/svgs/vector-front-end.svg"
 import { ReactComponent as VectorBack } from "../../assets/svgs/vector-back-end.svg"
-import technologiesFront from "../../assets/texts/TechnologiesFront.json"
-import technologiesBack from "../../assets/texts/TechnologiesBack.json"
+import technologiesFront from "../../assets/datas/TechnologiesFront.json"
+import technologiesBack from "../../assets/datas/TechnologiesBack.json"
 import Transition1 from "../components/Transition1"
-
 import Beehives from "../components/Beehives"
 
 function Technologies() {
     const firstScroll = useScrollAnchor("transition-1")
 
-    // Fonction pour diviser les éléments en groupes de taille 3
     const chunkArray = (array, chunkSize) => {
         const result = []
         for (let i = 0; i < array.length; i += chunkSize) {
@@ -20,7 +18,6 @@ function Technologies() {
         return result
     }
 
-    // Divisez les technologies en groupes de 3
     const groupedTechnologiesFront = chunkArray(technologiesFront, 3)
     const groupedTechnologiesBack = chunkArray(technologiesBack, 3)
 

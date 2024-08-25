@@ -1,0 +1,40 @@
+[
+    {
+        "title" : "Porfolio",
+        "tech" : [
+            {
+                "logo" : "../icons/figma.svg",
+                "name" : "Figma"
+            },
+            {
+                "logo" : "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+                "name" : "React"
+            },
+            {
+                "logo" : "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+                "name" : "Tailwind"
+            }
+        ],
+        "description" : {
+            "fr" : "Ce projet sur lequel vous naviguez entièrement designé et développé par moi même.",
+            "en" : "This project you're navigating was entirely designed and developed by me."
+        },
+        "links" : [
+                {
+                    "logo" : "../icons/github.svg",
+                    "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-8-Portfolio"
+                },
+                {
+                    "logo" : "../icons/figma.svg",
+                    "url" : "https://www.figma.com/design/LcuJU4yq9tHdUQMbfPsSxw/Portfolio?node-id=70-51&t=lOEhuGXgvjiXQ13C-1"
+                }
+            ],
+        "challenge" : {
+            "fr" : "Le passages aux modes FR/EN et light/dark ont étés réalisés grâce à useContext de React.",
+            "en" : "The transitions between FR/EN modes and light/dark modes were implemented using React's useContext."
+        },
+        "images" : {
+            
+        }
+    }
+]

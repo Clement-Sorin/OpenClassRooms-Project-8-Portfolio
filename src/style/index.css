@@ -317,6 +317,10 @@ p {
     scroll-snap-align: start;
 }
 
+.projects {
+    position: fixed;
+}
+
 /* --------------------- */
 /* -----COMPONENTS------ */
 /* --------------------- */
