@@ -38,7 +38,9 @@
             "fr" : "Le passages aux modes FR/EN et light/dark ont étés réalisés grâce à useContext de React.",
             "en" : "The transitions between FR/EN modes and light/dark modes were implemented using React's useContext."
         },
-        "images" : "/images/projects/Porfolio_V2/landing-screenshot.webp"
+        "images" : [
+            "/images/projects/Portfolio_V2/landing-screenshot.webp"
+        ]
     },
     {
         "title" : "Mon Vieux Grimoire",

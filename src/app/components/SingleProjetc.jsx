@@ -15,9 +15,9 @@ function SingleProject({
     const { theme, language } = useAppContext()
 
     return (
-        <div id={title}>
+        <div id={title} className="flex w-full">
             <div
-                className={`details ${
+                className={`details w-[50%] ${
                     theme === "light" ? "text-black" : "text-dark-text"
                 }`}
             >
@@ -31,7 +31,11 @@ function SingleProject({
                     {language === "fr" ? challenge.fr : challenge.en}
                 </p>
             </div>
-            <div className="image"></div>
+            <img
+                src={images[0]}
+                className="max-w-[500px] max-h-[500px]"
+                alt={"landing screenshot of " + title}
+            ></img>
         </div>
     )
 }
