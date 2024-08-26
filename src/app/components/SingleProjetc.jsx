@@ -17,11 +17,10 @@ function SingleProject({
     return (
         <div
             id={title}
-            className="flex justify-center items-center w-full h-full"
-            style={{ minWidth: "100vw" }}
+            className="flex single-project gap-20 justify-center items-center w-full h-full"
         >
             <div
-                className={`details flex-col gap-5 ${
+                className={`details flex flex-col gap-2 w-[40%] ${
                     theme === "light" ? "text-black" : "text-dark-text"
                 }`}
             >

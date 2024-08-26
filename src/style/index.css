@@ -312,11 +312,17 @@ p {
 
 /* Projects */ 
 
-#projects {
+#section-projects {
     display: flex;
     overflow-x: auto; 
     height: 100%;
     width: 100%;
+}
+
+.all-projects {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 #track {
@@ -327,18 +333,17 @@ p {
     scroll-snap-type: x mandatory; 
 }
 
-.test {
-    width: 100vw; 
-    flex-shrink: 0; 
-    scroll-snap-align: start; 
-}
-
 .projects {
     position: fixed;
     top: 0; 
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+.single-project {
+    min-width: calc(100vw );
+    scroll-snap-align: start;
 }
 
 

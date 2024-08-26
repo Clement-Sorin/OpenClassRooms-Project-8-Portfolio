@@ -7,10 +7,13 @@ function Projects() {
     const scrollProjects = useScrollAnchor("transition-2")
 
     return (
-        <section id="projects" className="overflow-hidden h-full w-full">
+        <section
+            id="section-projects"
+            className="overflow-hidden h-full w-full"
+        >
             <Transition2 />
             <div
-                className={`w-full h-full overflow-x-auto ${
+                className={`all-projects w-full h-full overflow-x-auto ${
                     scrollProjects ? "projects" : "hidden"
                 } sm:top-16 md:top-20 lg:top-24`}
             >
