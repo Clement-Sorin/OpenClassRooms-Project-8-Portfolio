@@ -7,27 +7,33 @@ function Projects() {
     const scrollProjects = useScrollAnchor("transition-2")
 
     return (
-        <section id="projects">
+        <section id="projects" className="overflow-hidden h-full w-full">
             <Transition2 />
             <div
-                className={`${
+                className={`w-full h-full overflow-x-auto ${
                     scrollProjects ? "projects" : "hidden"
-                } sm:top-16 md:top-20 lg:top-24 h-full w-full`}
+                } sm:top-16 md:top-20 lg:top-24`}
             >
-                {datas.map((item, index) => {
-                    return (
-                        <SingleProject
-                            key={index}
-                            position={index + 1}
-                            title={item.title}
-                            technos={item.tech}
-                            description={item.description}
-                            links={item.links}
-                            challenge={item.challenge}
-                            images={item.images}
-                        />
-                    )
-                })}
+                <div
+                    id="track"
+                    className="flex w-full h-full"
+                    style={{ minWidth: `${100 * datas.length}vw` }}
+                >
+                    {datas.map((item, index) => {
+                        return (
+                            <SingleProject
+                                key={index}
+                                position={index + 1}
+                                title={item.title}
+                                technos={item.tech}
+                                description={item.description}
+                                links={item.links}
+                                challenge={item.challenge}
+                                images={item.images}
+                            />
+                        )
+                    })}
+                </div>
             </div>
         </section>
     )

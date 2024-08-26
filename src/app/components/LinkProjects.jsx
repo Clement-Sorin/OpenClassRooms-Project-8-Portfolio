@@ -4,7 +4,7 @@ function LinkProjects({ links }) {
     const { theme, language } = useAppContext()
 
     return (
-        <div className="flex gap-4 aligns-end h-full">
+        <div className="flex gap-4">
             {links.map((item, index) => {
                 return (
                     <a

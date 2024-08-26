@@ -15,9 +15,13 @@ function SingleProject({
     const { theme, language } = useAppContext()
 
     return (
-        <div id={title} className="flex w-full">
+        <div
+            id={title}
+            className="flex justify-center items-center w-full h-full"
+            style={{ minWidth: "100vw" }}
+        >
             <div
-                className={`details w-[50%] ${
+                className={`details flex-col gap-5 ${
                     theme === "light" ? "text-black" : "text-dark-text"
                 }`}
             >
@@ -33,7 +37,7 @@ function SingleProject({
             </div>
             <img
                 src={images[0]}
-                className="max-w-[500px] max-h-[500px]"
+                className="max-w-[500px] max-h-[300px]"
                 alt={"landing screenshot of " + title}
             ></img>
         </div>

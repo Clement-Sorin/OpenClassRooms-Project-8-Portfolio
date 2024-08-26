@@ -313,12 +313,34 @@ p {
 /* Projects */ 
 
 #projects {
-    scroll-snap-align: start;
+    display: flex;
+    overflow-x: auto; 
+    height: 100%;
+    width: 100%;
+}
+
+#track {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    scroll-snap-type: x mandatory; 
+}
+
+.test {
+    width: 100vw; 
+    flex-shrink: 0; 
+    scroll-snap-align: start; 
 }
 
 .projects {
     position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
+
 
 /* --------------------- */
 /* -----COMPONENTS------ */
