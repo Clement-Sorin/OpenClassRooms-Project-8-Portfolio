@@ -18,7 +18,6 @@ body {
     font-family: 'Chakra Petch', sans-serif;
     user-select: none;
     scrollbar-width: none;
-    overscroll-behavior: none;
 }
 
 body::-webkit-scrollbar {
@@ -326,11 +325,6 @@ p {
 /* --------------------- */
 
 /* Header */ 
-
-header {
-    overflow: hidden;
-    position: relative;
-}
 
 .shadow-head-100 {
     transition: box-shadow 0.5s ease-out;
