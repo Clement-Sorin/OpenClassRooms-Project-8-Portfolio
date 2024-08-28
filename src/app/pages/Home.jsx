@@ -1,6 +1,7 @@
 import Landing from "../sections/Landing"
 import Technologies from "../sections/Technologies"
 import Projects from "../sections/Projects"
+import Profile from "../sections/Profile"
 
 function Home() {
     return (
@@ -8,6 +9,7 @@ function Home() {
             <Landing />
             <Technologies />
             <Projects />
+            <Profile />
         </>
     )
 }

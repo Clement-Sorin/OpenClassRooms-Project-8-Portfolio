@@ -320,32 +320,19 @@ p {
 }
 
 .all-projects {
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
 
 #track {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
     scroll-snap-type: x mandatory; 
-}
-
-.projects {
-    position: fixed;
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
 
 .single-project {
     min-width: calc(100vw );
     scroll-snap-align: start;
 }
-
 
 /* --------------------- */
 /* -----COMPONENTS------ */
