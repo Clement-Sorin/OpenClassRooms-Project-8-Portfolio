@@ -1,4 +1,4 @@
-import React from "react"
+import { useEffect } from "react"
 import useScrollAnchor from "../hooks/useScrollAnchor"
 import { ReactComponent as VectorFront } from "../../assets/svgs/vector-front-end.svg"
 import { ReactComponent as VectorBack } from "../../assets/svgs/vector-back-end.svg"
@@ -20,6 +20,16 @@ function Technologies() {
 
     const groupedTechnologiesFront = chunkArray(technologiesFront, 3)
     const groupedTechnologiesBack = chunkArray(technologiesBack, 3)
+
+    const indexTechs = technologiesFront.length + technologiesBack.length
+    const displayTime = indexTechs * 280
+
+    const body = document.querySelector("body")
+    body.classList.add("overflow-y-hidden")
+
+    setTimeout(() => {
+        body.classList.remove("overflow-y-hidden")
+    }, displayTime)
 
     return (
         <section id="technologies" className="h-full">

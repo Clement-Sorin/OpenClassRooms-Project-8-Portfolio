@@ -14,7 +14,6 @@ function Projects() {
         setScrollLeft((prevScrollLeft) => {
             let newScrollLeft = prevScrollLeft + scrollMove
             const dataLenght = datas.length * 100
-            console.log(newScrollLeft)
 
             if (newScrollLeft < 0) {
                 newScrollLeft = 0
