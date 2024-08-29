@@ -7,12 +7,13 @@ import SingleProject from "../components/SingleProjetc"
 function Projects() {
     const scrollProjects = useScrollAnchor("transition-2")
     const [scrollLeft, setScrollLeft] = useState(0)
+    const [isScrollEnabled, setScrollEnabled] = useState(true)
 
     const handleWheel = (event) => {
         const scrollAmount = event.deltaY * 1.5
-        const mainContainer = document.getElementById("main-scroll")
+        const container = document.getElementById("container-track")
         const trackWidthPx = document.getElementById("track").scrollWidth
-        const containerWidthPx = mainContainer.clientWidth
+        const containerWidthPx = container.clientWidth
 
         setScrollLeft((prevScrollLeft) => {
             let newScrollLeft = prevScrollLeft + scrollAmount
@@ -20,13 +21,26 @@ function Projects() {
 
             newScrollLeft = Math.max(0, Math.min(newScrollLeft, maxScrollLeft))
 
+            console.log(newScrollLeft)
+            if (newScrollLeft === 0) {
+                setScrollEnabled(true)
+            } else {
+                setScrollEnabled(false)
+            }
+
             return newScrollLeft
         })
-        const newScrollLeft = scrollLeft + scrollAmount
-        if (newScrollLeft <= 0) {
-            event.preventDefault()
-        }
     }
+
+    useEffect(() => {
+        const body = document.querySelector("body")
+
+        if (isScrollEnabled) {
+            body.classList.remove("overflow-y-hidden")
+        } else {
+            body.classList.add("overflow-y-hidden")
+        }
+    }, [isScrollEnabled])
 
     return (
         <section
