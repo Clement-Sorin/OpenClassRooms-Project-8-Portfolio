@@ -1,4 +1,5 @@
 import { useAppContext } from "../contexts/AppContext"
+import useScrollAnchor from "../hooks/useScrollAnchor"
 import LinkProjects from "./LinkProjects"
 import Position from "./Position"
 import ProjectsTechnos from "./ProjectsTechnos"
@@ -13,6 +14,7 @@ function SingleProject({
     images,
 }) {
     const { theme, language } = useAppContext()
+    const scrollSingleProject = useScrollAnchor("transition-2")
 
     return (
         <div
@@ -20,9 +22,9 @@ function SingleProject({
             className="flex single-project gap-20 justify-center items-center w-full h-full"
         >
             <div
-                className={`details flex flex-col gap-2 w-[40%] ${
+                className={`flex flex-col gap-2 w-[40%] ${
                     theme === "light" ? "text-black" : "text-dark-text"
-                }`}
+                } ${scrollSingleProject ? "details-projects" : ""}`}
             >
                 <Position position={position} />
                 <h2>{title}</h2>
@@ -36,7 +38,9 @@ function SingleProject({
             </div>
             <img
                 src={images[0]}
-                className="max-w-[500px] max-h-[300px]"
+                className={`images-projects fade-in max-w-[500px] max-h-[300px] ${
+                    scrollSingleProject ? "images-projects" : ""
+                }`}
                 alt={"landing screenshot of " + title}
             ></img>
         </div>

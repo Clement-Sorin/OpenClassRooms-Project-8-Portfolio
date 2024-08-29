@@ -464,6 +464,21 @@ p {
     animation: moveY 1.5s ease-in-out infinite alternate;
 }
 
+/* SingleProject */
+
+.details-projects , .images-projects {
+    opacity: 0;
+    animation: fade-in 0.5s ease-in forwards;
+}
+
+.details-projects {
+    animation-delay: 700ms;
+}
+
+.images-projects {
+    animation-delay: 900ms;
+}
+
 /* --------------------- */
 /* ----Media-Queries---- */
 /* --------------------- */
