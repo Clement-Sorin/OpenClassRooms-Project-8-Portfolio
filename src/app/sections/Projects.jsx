@@ -7,25 +7,19 @@ import SingleProject from "../components/SingleProjetc"
 function Projects() {
     const scrollProjects = useScrollAnchor("transition-2")
     const [scrollLeft, setScrollLeft] = useState(0)
-    const [isScrollEnabled, setScrollEnabled] = useState(true)
 
     const handleWheel = (event) => {
-        const scrollAmount = event.deltaY * 1.5
-        const container = document.getElementById("container-track")
-        const trackWidthPx = document.getElementById("track").scrollWidth
-        const containerWidthPx = container.clientWidth
+        const scrollMove = event.deltaY > 0 ? 100 : -100
 
         setScrollLeft((prevScrollLeft) => {
-            let newScrollLeft = prevScrollLeft + scrollAmount
-            const maxScrollLeft = trackWidthPx - containerWidthPx
-
-            newScrollLeft = Math.max(0, Math.min(newScrollLeft, maxScrollLeft))
-
+            let newScrollLeft = prevScrollLeft + scrollMove
+            const dataLenght = datas.length * 100
             console.log(newScrollLeft)
-            if (newScrollLeft === 0) {
-                setScrollEnabled(true)
-            } else {
-                setScrollEnabled(false)
+
+            if (newScrollLeft < 0) {
+                newScrollLeft = 0
+            } else if (newScrollLeft >= dataLenght - 100) {
+                newScrollLeft = dataLenght - 100
             }
 
             return newScrollLeft
@@ -35,12 +29,12 @@ function Projects() {
     useEffect(() => {
         const body = document.querySelector("body")
 
-        if (isScrollEnabled) {
+        if (scrollLeft === 0) {
             body.classList.remove("overflow-y-hidden")
         } else {
             body.classList.add("overflow-y-hidden")
         }
-    }, [isScrollEnabled])
+    }, [scrollLeft])
 
     return (
         <section
@@ -67,7 +61,8 @@ function Projects() {
                         className="flex w-full h-full"
                         style={{
                             minWidth: `${100 * datas.length}vw`,
-                            transform: `translateX(-${scrollLeft}px)`,
+                            transform: `translateX(-${scrollLeft}vw)`,
+                            transition: "0.3s ease-in",
                         }}
                     >
                         {datas.map((item, index) => (
