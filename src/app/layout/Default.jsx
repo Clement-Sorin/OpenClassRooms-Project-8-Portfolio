@@ -6,7 +6,7 @@ const Default = () => {
     return (
         <div className="main-container">
             <Header />
-            <main>
+            <main id="main-scroll">
                 <Outlet />
             </main>
             <Footer />

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Transition2 from "../components/Transition2"
 import useScrollAnchor from "../hooks/useScrollAnchor"
 import datas from "../../assets/datas/Projects.json"
@@ -9,9 +9,23 @@ function Projects() {
     const [scrollLeft, setScrollLeft] = useState(0)
 
     const handleWheel = (event) => {
-        event.preventDefault()
         const scrollAmount = event.deltaY * 1.5
-        setScrollLeft((prevScrollLeft) => prevScrollLeft + scrollAmount)
+        const mainContainer = document.getElementById("main-scroll")
+        const trackWidthPx = document.getElementById("track").scrollWidth
+        const containerWidthPx = mainContainer.clientWidth
+
+        setScrollLeft((prevScrollLeft) => {
+            let newScrollLeft = prevScrollLeft + scrollAmount
+            const maxScrollLeft = trackWidthPx - containerWidthPx
+
+            newScrollLeft = Math.max(0, Math.min(newScrollLeft, maxScrollLeft))
+
+            return newScrollLeft
+        })
+        const newScrollLeft = scrollLeft + scrollAmount
+        if (newScrollLeft <= 0) {
+            event.preventDefault()
+        }
     }
 
     return (
