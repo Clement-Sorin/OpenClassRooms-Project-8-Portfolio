@@ -5,6 +5,7 @@ import datas from "../../assets/datas/Projects.json"
 import SingleProject from "../components/SingleProjetc"
 
 function Projects() {
+    const firstScroll = useScrollAnchor("transition-1")
     const scrollProjects = useScrollAnchor("transition-2")
     const [scrollLeft, setScrollLeft] = useState(0)
 
@@ -38,7 +39,7 @@ function Projects() {
     return (
         <section
             id="section-projects"
-            className="overflow-hidden h-full w-full"
+            className={`h-full w-full ${!firstScroll ? "hidden" : ""}`}
         >
             <Transition2 />
             <div

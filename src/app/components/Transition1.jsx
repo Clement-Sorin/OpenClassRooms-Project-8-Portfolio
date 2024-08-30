@@ -11,7 +11,7 @@ function Transition1() {
             id="transition-1"
         >
             <div
-                className={`fixed left-1/2 transform -translate-x-1/2 w-full bottom-[-40rem] z-8 rounded-full ${
+                className={`fixed overflow-hidden left-1/2 transform -translate-x-1/2 w-full bottom-[-40rem] z-8 rounded-full ${
                     theme === "light" ? "bg-light-grey+" : "bg-dark-blue"
                 }  ${
                     !firstScroll
@@ -20,7 +20,7 @@ function Transition1() {
                 }`}
             ></div>
             <div
-                className={`fixed left-1/2 transform -translate-x-1/2 w-full bottom-[-44rem] z-9 rounded-full ${
+                className={`fixed overflow-hiddens left-1/2 transform -translate-x-1/2 w-full bottom-[-44rem] z-9 rounded-full ${
                     theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
                 } ${
                     !firstScroll

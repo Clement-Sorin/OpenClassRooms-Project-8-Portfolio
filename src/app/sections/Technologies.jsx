@@ -21,15 +21,18 @@ function Technologies() {
     const groupedTechnologiesFront = chunkArray(technologiesFront, 3)
     const groupedTechnologiesBack = chunkArray(technologiesBack, 3)
 
-    const indexTechs = technologiesFront.length + technologiesBack.length
-    const displayTime = indexTechs * 280
+    useEffect(() => {
+        const indexTechs = technologiesFront.length + technologiesBack.length
+        const displayTime = indexTechs * 280
+        const body = document.querySelector("body")
 
-    const body = document.querySelector("body")
-    body.classList.add("overflow-y-hidden")
+        body.classList.add("overflow-y-hidden")
+        setTimeout(() => {
+            body.classList.remove("overflow-y-hidden")
+        }, displayTime)
 
-    setTimeout(() => {
-        body.classList.remove("overflow-y-hidden")
-    }, displayTime)
+        clearTimeout(displayTime)
+    })
 
     return (
         <section id="technologies" className="h-full">

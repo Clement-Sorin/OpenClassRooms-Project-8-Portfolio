@@ -43,7 +43,7 @@ function Beehives({ logo, logo_dark, title, className, delayAnim, index }) {
                     theme === "light" ? "lines-light" : "lines-dark"
                 } opacity-0 md:opacity-100`}
             ></div>
-            <p className="dark:text-dark-text mt-[-20px] mb-5 sm2:mt-0 sm2:mb-16">
+            <p className="dark:text-dark-text mt-[-20px] mb-5 sm2:mt-0 sm2:mb-16 md:mb-0">
                 {title}
             </p>
         </div>
