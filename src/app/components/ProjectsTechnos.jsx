@@ -11,9 +11,11 @@ function ProjectsTechnos({ technos }) {
                         <img
                             src={theme === "light" ? item.logo : item.logo_dark}
                             alt={"logo" + item.name}
-                            className="max-h-5 "
+                            className="max-h-4 md:max-h-5 "
                         ></img>
-                        <p className="">{item.name}</p>
+                        <p className="sm:text-[14px] md:text-[16px]">
+                            {item.name}
+                        </p>
                     </div>
                 )
             })}

@@ -45,39 +45,30 @@ function Projects() {
             <div
                 className={`all-projects fixed w-full h-full ${
                     scrollProjects ? "projects" : "hidden"
-                } sm:top-16 md:top-20 lg:top-24`}
+                } sm:top-16 md:top-16 lg:top-16`}
                 onWheel={handleWheel}
             >
                 <div
-                    id="container-track"
-                    className="w-full h-full overflow-x-auto"
+                    id="track"
+                    className="flex w-full h-full"
                     style={{
-                        scrollBehavior: "smooth",
-                        overflowX: "auto",
+                        minWidth: `${100 * datas.length}vw`,
+                        transform: `translateX(-${scrollLeft}vw)`,
+                        transition: "0.3s ease-in",
                     }}
                 >
-                    <div
-                        id="track"
-                        className="flex w-full h-full"
-                        style={{
-                            minWidth: `${100 * datas.length}vw`,
-                            transform: `translateX(-${scrollLeft}vw)`,
-                            transition: "0.3s ease-in",
-                        }}
-                    >
-                        {datas.map((item, index) => (
-                            <SingleProject
-                                key={index}
-                                position={index + 1}
-                                title={item.title}
-                                technos={item.tech}
-                                description={item.description}
-                                links={item.links}
-                                challenge={item.challenge}
-                                images={item.images}
-                            />
-                        ))}
-                    </div>
+                    {datas.map((item, index) => (
+                        <SingleProject
+                            key={index}
+                            position={index + 1}
+                            title={item.title}
+                            technos={item.tech}
+                            description={item.description}
+                            links={item.links}
+                            challenge={item.challenge}
+                            images={item.images}
+                        />
+                    ))}
                 </div>
             </div>
         </section>

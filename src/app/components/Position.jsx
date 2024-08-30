@@ -6,11 +6,11 @@ function Position({ position }) {
     return (
         <div className="position flex gap-2 ">
             <div
-                className={`position-line h-4 w-5 border-b-2 ${
+                className={`position-line h-4 w-5 border-b-2  ${
                     theme === "light" ? "border-black" : "border-dark-text"
                 }`}
             ></div>
-            <p className="text-2xl">
+            <p className="sm:text-[20px] md:text-2xl ">
                 {position < 10 ? "0" + position : position}
             </p>
         </div>
