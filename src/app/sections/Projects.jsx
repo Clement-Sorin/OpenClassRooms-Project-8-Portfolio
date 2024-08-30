@@ -9,7 +9,7 @@ function Projects() {
     const scrollProjects = useScrollAnchor("transition-2")
     const [scrollLeft, setScrollLeft] = useState(0)
     const [touchStartY, setTouchStartY] = useState(0)
-    const scrollThreshold = 50
+    const scrollThreshold = 100
 
     const handleWheel = (event) => {
         const scrollMove = event.deltaY > 0 ? 100 : -100
