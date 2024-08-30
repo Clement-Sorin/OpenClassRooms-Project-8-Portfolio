@@ -8,6 +8,8 @@ function Projects() {
     const firstScroll = useScrollAnchor("transition-1")
     const scrollProjects = useScrollAnchor("transition-2")
     const [scrollLeft, setScrollLeft] = useState(0)
+    const [touchStartY, setTouchStartY] = useState(0)
+    const scrollThreshold = 50
 
     const handleWheel = (event) => {
         const scrollMove = event.deltaY > 0 ? 100 : -100
@@ -24,6 +26,35 @@ function Projects() {
 
             return newScrollLeft
         })
+    }
+
+    const handleTouchStart = (event) => {
+        setTouchStartY(event.touches[0].clientY)
+    }
+
+    const handleTouchMove = (event) => {
+        const currentY = event.touches[0].clientY
+        const direction = touchStartY - currentY
+
+        if (Math.abs(direction) > scrollThreshold) {
+            const scrollMove = direction > 0 ? 100 : -100
+
+            setScrollLeft((prevScrollLeft) => {
+                let newScrollLeft = prevScrollLeft + scrollMove
+                const dataLength = datas.length * 100
+
+                if (newScrollLeft < 0) {
+                    newScrollLeft = 0
+                } else if (newScrollLeft >= dataLength - 100) {
+                    newScrollLeft = dataLength - 100
+                }
+
+                return newScrollLeft
+            })
+
+            // Réinitialiser touchStartY pour éviter les défilements successifs sur un seul mouvement
+            setTouchStartY(currentY)
+        }
     }
 
     useEffect(() => {
@@ -47,6 +78,8 @@ function Projects() {
                     scrollProjects ? "projects" : "hidden"
                 } sm:top-16 md:top-16 lg:top-16`}
                 onWheel={handleWheel}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
             >
                 <div
                     id="track"

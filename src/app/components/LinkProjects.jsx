@@ -1,7 +1,7 @@
 import { useAppContext } from "../contexts/AppContext"
 
 function LinkProjects({ links }) {
-    const { theme, language } = useAppContext()
+    const { theme } = useAppContext()
 
     return (
         <div className="flex gap-4">
