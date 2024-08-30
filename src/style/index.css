@@ -479,6 +479,12 @@ p {
     animation-delay: 900ms;
 }
 
+/* ImagesProjects */
+
+.container-image:hover .filter-more .more-left, .container-image:hover .filter-more .more-right , .container-image:hover .filter-more .see-more button{
+    border-color: #E3170A;
+}
+
 /* --------------------- */
 /* ----Media-Queries---- */
 /* --------------------- */
