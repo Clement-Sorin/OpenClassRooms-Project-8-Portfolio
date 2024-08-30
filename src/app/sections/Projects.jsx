@@ -9,7 +9,7 @@ function Projects() {
     const scrollProjects = useScrollAnchor("transition-2")
     const [scrollLeft, setScrollLeft] = useState(0)
     const [touchStartY, setTouchStartY] = useState(0)
-    const scrollThreshold = 100
+    const scrollThreshold = 70
 
     const handleWheel = (event) => {
         const scrollMove = event.deltaY > 0 ? 100 : -100
@@ -51,8 +51,6 @@ function Projects() {
 
                 return newScrollLeft
             })
-
-            // Réinitialiser touchStartY pour éviter les défilements successifs sur un seul mouvement
             setTouchStartY(currentY)
         }
     }
