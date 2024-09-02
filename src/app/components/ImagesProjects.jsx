@@ -13,17 +13,17 @@ function ImagesProjects({ images, title }) {
                 } filter-more absolute z-10 w-full h-full flex justify-center`}
             >
                 <div
-                    className={`more-left absolute top-1/2 left-0 right-1/2 sm:mr-[25px] sm2:mr-[40px] lg:mr-[50px] border-b-2 border-lines-light border-dotted`}
+                    className={`more-left absolute top-1/2 left-0 right-1/2 sm:mr-[25px] sm2:mr-[40px] lg:mr-[50px] border-b-2 border-lines-light border-dotted transition duration-600 ease-linear`}
                 ></div>
                 <div className={`see-more flex flex-col justify-center h-full`}>
                     <button
-                        className={`btn-see-more text-[10px] sm2:text-[14px] bg-light-grey sm:w-[50px] sm:h-[50px] sm2:w-[80px] sm2:h-[80px] lg:w-[100px] lg:h-[100px] rounded-full border border-lines-light`}
+                        className={`btn-see-more text-[10px] sm2:text-[14px] bg-light-grey sm:w-[50px] sm:h-[50px] sm2:w-[80px] sm2:h-[80px] lg:w-[100px] lg:h-[100px] rounded-full border border-lines-light transition duration-400 ease-linear`}
                     >
                         {language === "fr" ? "Voir plus" : "See More"}
                     </button>
                 </div>
                 <div
-                    className={`more-right absolute top-1/2 right-0 left-1/2 sm:ml-[25px] sm2:ml-[40px] lg:ml-[50px] border-b-2  border-lines-light border-dotted`}
+                    className={`more-right absolute top-1/2 right-0 left-1/2 sm:ml-[25px] sm2:ml-[40px] lg:ml-[50px] border-b-2  border-lines-light border-dotted transition duration-600 ease-linear`}
                 ></div>
             </div>
             <img

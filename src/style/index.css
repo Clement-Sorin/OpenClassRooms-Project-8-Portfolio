@@ -484,7 +484,6 @@ p {
 .container-image:hover .more-left, .container-image:hover .more-right , .container-image:hover .see-more button {
     border-color: #E3170A;
     color: #E3170A;
-    font-weight: 600;
 }
 
 /* --------------------- */
