@@ -21,8 +21,8 @@ function SingleProject({
     return (
         <div
             id={title}
-            className={`flex flex-col md:flex-row${
-                position % 2 === 0 ? "-reverse" : ""
+            className={`flex flex-col ${
+                position % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
             } single-project sm:mt-[-40px] gap-8 md:gap-20 mw-auto mr-5 ml-5 sm:overflow-y-hidden justify-center items-center w-full h-full`}
         >
             <div
