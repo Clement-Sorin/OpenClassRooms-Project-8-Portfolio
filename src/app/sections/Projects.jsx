@@ -9,7 +9,6 @@ import { useAppContext } from "../contexts/AppContext"
 function Projects() {
     const firstScroll = useScrollAnchor("transition-1")
     const scrollProjects = useScrollAnchor("transition-2")
-    const { isModalOpen, openModal, closeModal } = useAppContext()
     const [scrollLeft, setScrollLeft] = useState(0)
     const [touchStartY, setTouchStartY] = useState(0)
     const scrollThreshold = 70
@@ -94,6 +93,7 @@ function Projects() {
                     {datas.map((item, index) => (
                         <SingleProject
                             key={index}
+                            index={index}
                             position={index + 1}
                             title={item.title}
                             technos={item.tech}
@@ -106,11 +106,7 @@ function Projects() {
                     ))}
                 </div>
             </div>
-            <ModalGallery
-                isModalOpen={isModalOpen}
-                openModal={openModal}
-                closeModal={closeModal}
-            ></ModalGallery>
+            <ModalGallery></ModalGallery>
         </section>
     )
 }

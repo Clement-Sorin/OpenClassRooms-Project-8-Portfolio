@@ -6,6 +6,7 @@ import Position from "./Position"
 import ProjectsTechnos from "./ProjectsTechnos"
 
 function SingleProject({
+    index,
     position,
     title,
     technos,
@@ -41,7 +42,7 @@ function SingleProject({
                     {language === "fr" ? challenge.fr : challenge.en}
                 </p>
             </div>
-            <ImagesProjects images={images} title={title} />
+            <ImagesProjects images={images} title={title} index={index} />
         </div>
     )
 }

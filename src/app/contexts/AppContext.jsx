@@ -5,7 +5,10 @@ const AppContext = createContext()
 export const AppProvider = ({ children }) => {
     const [language, setLanguage] = useState("fr")
     const [theme, setTheme] = useState("light")
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [modalState, setModalState] = useState({
+        isOpen: false,
+        data: null,
+    })
 
     // Language context
 
@@ -36,8 +39,13 @@ export const AppProvider = ({ children }) => {
 
     // Modal
 
-    const openModal = () => setIsModalOpen(true)
-    const closeModal = () => setIsModalOpen(false)
+    const openModal = (data) => {
+        setModalState({ isOpen: true, data })
+    }
+
+    const closeModal = () => {
+        setModalState({ isOpen: false, data: null })
+    }
 
     // useEffect Application on Language and Theme
 
@@ -73,7 +81,7 @@ export const AppProvider = ({ children }) => {
             value={{
                 language,
                 theme,
-                isModalOpen,
+                modalState,
                 changeLanguage,
                 changeTheme,
                 openModal,
