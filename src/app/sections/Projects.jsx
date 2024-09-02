@@ -3,10 +3,13 @@ import Transition2 from "../components/Transition2"
 import useScrollAnchor from "../hooks/useScrollAnchor"
 import datas from "../../assets/datas/Projects.json"
 import SingleProject from "../components/SingleProjetc"
+import ModalGallery from "../components/ModalGallery"
+import { useAppContext } from "../contexts/AppContext"
 
 function Projects() {
     const firstScroll = useScrollAnchor("transition-1")
     const scrollProjects = useScrollAnchor("transition-2")
+    const { isModalOpen, openModal, closeModal } = useAppContext()
     const [scrollLeft, setScrollLeft] = useState(0)
     const [touchStartY, setTouchStartY] = useState(0)
     const scrollThreshold = 70
@@ -98,10 +101,16 @@ function Projects() {
                             links={item.links}
                             challenge={item.challenge}
                             images={item.images}
+                            scrollLeft={scrollLeft}
                         />
                     ))}
                 </div>
             </div>
+            <ModalGallery
+                isModalOpen={isModalOpen}
+                openModal={openModal}
+                closeModal={closeModal}
+            ></ModalGallery>
         </section>
     )
 }

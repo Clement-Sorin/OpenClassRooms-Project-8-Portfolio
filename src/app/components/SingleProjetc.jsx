@@ -13,6 +13,7 @@ function SingleProject({
     links,
     challenge,
     images,
+    scrollLeft,
 }) {
     const { theme, language } = useAppContext()
     const scrollSingleProject = useScrollAnchor("transition-2")
@@ -39,7 +40,11 @@ function SingleProject({
                     {language === "fr" ? challenge.fr : challenge.en}
                 </p>
             </div>
-            <ImagesProjects images={images} title={title} />
+            <ImagesProjects
+                images={images}
+                title={title}
+                scrollLeft={scrollLeft}
+            />
         </div>
     )
 }

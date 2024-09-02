@@ -17,6 +17,7 @@ Last project of the web developer training from OpenClassrooms made to build my 
 
 -   React Router V6
 -   tsparticles.js
+-   React-Modal
 
 ## Goal
 

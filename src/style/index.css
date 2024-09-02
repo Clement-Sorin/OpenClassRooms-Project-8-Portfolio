@@ -486,6 +486,10 @@ p {
     color: #E3170A;
 }
 
+.container-image:hover .filter-more {
+    background-color: rgba(0, 0, 0, 0);
+}
+
 /* --------------------- */
 /* ----Media-Queries---- */
 /* --------------------- */
