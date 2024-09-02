@@ -1,3 +1,4 @@
+import { isInteger } from "lodash"
 import { useAppContext } from "../contexts/AppContext"
 import useScrollAnchor from "../hooks/useScrollAnchor"
 import ImagesProjects from "./ImagesProjects"
@@ -13,7 +14,6 @@ function SingleProject({
     links,
     challenge,
     images,
-    scrollLeft,
 }) {
     const { theme, language } = useAppContext()
     const scrollSingleProject = useScrollAnchor("transition-2")
@@ -21,7 +21,9 @@ function SingleProject({
     return (
         <div
             id={title}
-            className="flex flex-col md:flex-row single-project sm:mt-[-40px] gap-8 md:gap-20 mw-auto mr-5 ml-5 sm:overflow-y-hidden justify-center items-center w-full h-full"
+            className={`flex flex-col md:flex-row${
+                position % 2 === 0 ? "-reverse" : ""
+            } single-project sm:mt-[-40px] gap-8 md:gap-20 mw-auto mr-5 ml-5 sm:overflow-y-hidden justify-center items-center w-full h-full`}
         >
             <div
                 className={`flex flex-col gap-2 w-[80%] md:w-[40%]  ${
@@ -40,11 +42,7 @@ function SingleProject({
                     {language === "fr" ? challenge.fr : challenge.en}
                 </p>
             </div>
-            <ImagesProjects
-                images={images}
-                title={title}
-                scrollLeft={scrollLeft}
-            />
+            <ImagesProjects images={images} title={title} />
         </div>
     )
 }

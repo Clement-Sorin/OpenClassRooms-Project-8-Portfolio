@@ -4,7 +4,7 @@ function ProjectsTechnos({ technos }) {
     const { theme } = useAppContext()
 
     return (
-        <div className="flex w-full gap-2">
+        <div className="flex gap-2">
             {technos.map((item, index) => {
                 return (
                     <div className="flex gap-1 " key={index}>

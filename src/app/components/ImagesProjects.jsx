@@ -1,15 +1,16 @@
 import useScrollAnchor from "../hooks/useScrollAnchor"
 import { useAppContext } from "../contexts/AppContext"
 
-function ImagesProjects({ images, title, scrollLeft }) {
+function ImagesProjects({ images, title }) {
     const scrollSingleProject = useScrollAnchor("transition-2")
     const { theme, language, openModal } = useAppContext()
 
     return (
         <div className="container-image relative sm:max-w-[250px] sm:max-h-[150px] sm2:max-w-[350px] sm2:max-h-[350px] lg:max-w-[500px] lg:max-h-[500px]">
             <div
-                className={`${
-                    images.length <= 1 ? "hidden" : ""
+                onClick={openModal}
+                className={`${images.length <= 1 ? "hidden" : ""} ${
+                    scrollSingleProject ? "images-projects" : ""
                 } filter-more absolute z-10 w-full h-full flex justify-center bg-[rgba(0,0,0,0.1)] transition duration-800 ease-linear`}
             >
                 <div
@@ -17,7 +18,6 @@ function ImagesProjects({ images, title, scrollLeft }) {
                 ></div>
                 <div className={`see-more flex flex-col justify-center h-full`}>
                     <button
-                        onClick={openModal}
                         className={`btn-see-more text-[10px] sm2:text-[14px] bg-light-grey sm:w-[50px] sm:h-[50px] sm2:w-[80px] sm2:h-[80px] lg:w-[100px] lg:h-[100px] rounded-full border border-lines-light transition duration-400 ease-linear`}
                     >
                         {language === "fr" ? "Voir plus" : "See More"}
@@ -29,9 +29,7 @@ function ImagesProjects({ images, title, scrollLeft }) {
             </div>
             <img
                 src={images[0]}
-                className={`images-projects fade-in w-full h-full ${
-                    scrollSingleProject ? "images-projects" : ""
-                }`}
+                className={`images-projects fade-in w-full h-full`}
                 style={{
                     boxShadow: `${
                         theme === "light"
