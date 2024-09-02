@@ -1,4 +1,3 @@
-import { isInteger } from "lodash"
 import { useAppContext } from "../contexts/AppContext"
 import useScrollAnchor from "../hooks/useScrollAnchor"
 import ImagesProjects from "./ImagesProjects"

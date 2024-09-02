@@ -1,7 +1,25 @@
-function ModalGallery({ isModalOpen, openModal, closeModal }) {
+import { useRef, useEffect } from "react"
+
+function ModalGallery({ isModalOpen, closeModal }) {
+    const divModal = useRef(null)
+
+    const handleOutsideClick = (event) => {
+        if (divModal.current && !divModal.current.contains(event.target)) {
+            closeModal()
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleOutsideClick)
+        return () => {
+            document.removeEventListener("mousedown", handleOutsideClick)
+        }
+    }, [isModalOpen])
+
     return (
         <div
-            className={`modal fixed top-1/2 left-1/2 w-[60vw] h-[60vh] bg-white z-20 ${
+            ref={divModal}
+            className={`modal fixed top-1/2 left-1/2 w-[80vw] md:w-[60vw] h-[60vh] bg-white z-20 ${
                 isModalOpen ? "" : "hidden"
             }`}
             style={{
