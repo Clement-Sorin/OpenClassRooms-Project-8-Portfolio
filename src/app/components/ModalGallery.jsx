@@ -9,6 +9,12 @@ function ModalGallery() {
     const divModal = useRef(null)
     const [imageIndex, setImageIndex] = useState(0)
     const body = document.querySelector("body")
+    const project = projects[modalState.data]
+    const images = project ? project.images : []
+    const pagingIndex = imageIndex + 1
+    const pagingMax = images.length
+
+    console.log("pagingIndex :", pagingIndex)
 
     if (modalState.isOpen) {
         body.classList.add("overflow-y-hidden")
@@ -21,9 +27,6 @@ function ModalGallery() {
     }, [modalState.data])
 
     // Closing modal fonctionnality
-
-    const project = projects[modalState.data]
-    const images = project ? project.images : []
 
     const handleOutsideClick = (event) => {
         if (divModal.current && !divModal.current.contains(event.target)) {
@@ -103,34 +106,39 @@ function ModalGallery() {
                 }}
             >
                 <div
-                    className={`backdrop-blur-sm flex items-center p-4 ${
+                    className={`backdrop-blur-sm flex flex-col items-center p-4 ${
                         theme === "light"
                             ? "bg-[rgba(255,255,255,0.5)]"
                             : "bg-[rgba(255,255,255,0.8)]"
                     } `}
                 >
-                    <PolygonLeft
-                        stroke="black"
-                        onClick={handlePrevClick}
-                        className="sm:hidden md:block"
-                    />
-                    <div className="custom-border-box m-2 flex justify-center">
-                        <img
-                            ref={divModal}
-                            src={images[imageIndex]}
-                            alt={images[imageIndex]}
-                            className="max-w-[90vw] max-h-[80vh] md:max-w-[60vw] md:max-h-[60vh] p-4"
-                            onTouchStart={handleTouchStart}
-                            onTouchMove={handleTouchMove}
-                            onTouchEnd={handleTouchEnd}
-                            onWheel={handleScroll}
-                        ></img>
+                    <div className="flex justify-center items-center">
+                        <PolygonLeft
+                            stroke="black"
+                            onClick={handlePrevClick}
+                            className="sm:hidden md:block"
+                        />
+                        <div className="custom-border-box m-2">
+                            <img
+                                ref={divModal}
+                                src={images[imageIndex]}
+                                alt={images[imageIndex]}
+                                className="max-w-[90vw] max-h-[80vh] md:max-w-[60vw] md:max-h-[60vh] p-4"
+                                onTouchStart={handleTouchStart}
+                                onTouchMove={handleTouchMove}
+                                onTouchEnd={handleTouchEnd}
+                                onWheel={handleScroll}
+                            ></img>
+                        </div>
+                        <PolygonRight
+                            stroke="black"
+                            onClick={handleNextClick}
+                            className="sm:hidden md:block"
+                        />
                     </div>
-                    <PolygonRight
-                        stroke="black"
-                        onClick={handleNextClick}
-                        className="sm:hidden md:block"
-                    />
+                    <p>
+                        {pagingIndex} / {pagingMax}
+                    </p>
                 </div>
             </div>
         </>

@@ -7,33 +7,9 @@ import Theme from "./Theme"
 function MenuMobile() {
     const { theme } = useAppContext()
     const [toggleMenu, setToggleMenu] = useState(false)
-    const body = document.querySelector("body")
 
     const handleToggle = () => {
         setToggleMenu((prevState) => !prevState)
-    }
-
-    let touchStartY = 0
-    let touchEndY = 0
-
-    const handleTouchStart = (e) => {
-        touchStartY = e.targetTouches[0].clientX
-    }
-    const handleTouchEnd = (e) => {
-        if (touchStartY - touchEndY > 10) {
-            setToggleMenu(false)
-        }
-    }
-    const handleTouchMove = (e) => {
-        touchEndY = e.targetTouches[0].clientX
-    }
-
-    if (toggleMenu) {
-        body.classList.add("overflow-y-hidden")
-    } else {
-        setTimeout(() => {
-            body.classList.remove("overflow-y-hidden")
-        }, 200)
     }
 
     return (
@@ -66,9 +42,6 @@ function MenuMobile() {
                 } sm:block md:hidden lg:hidden`}
             >
                 <div
-                    onTouchStart={handleTouchStart}
-                    onTouchMove={handleTouchMove}
-                    onTouchEnd={handleTouchEnd}
                     className={`hidden sm:flex flex-col justify-evenly items-center h-full w-full ${
                         toggleMenu === false
                             ? "opacity-0"

@@ -4,7 +4,6 @@ import useScrollAnchor from "../hooks/useScrollAnchor"
 import datas from "../../assets/datas/Projects.json"
 import SingleProject from "../components/SingleProjetc"
 import ModalGallery from "../components/ModalGallery"
-import { useAppContext } from "../contexts/AppContext"
 
 function Projects() {
     const firstScroll = useScrollAnchor("transition-1")
@@ -12,6 +11,8 @@ function Projects() {
     const [scrollLeft, setScrollLeft] = useState(0)
     const [touchStartY, setTouchStartY] = useState(0)
     const scrollThreshold = 70
+
+    console.log("scrollLeft :", scrollLeft)
 
     const handleWheel = (event) => {
         const scrollMove = event.deltaY > 0 ? 100 : -100
