@@ -8,6 +8,13 @@ function ModalGallery() {
     const { modalState, closeModal, theme } = useAppContext()
     const divModal = useRef(null)
     const [imageIndex, setImageIndex] = useState(0)
+    const body = document.querySelector("body")
+
+    if (modalState.isOpen) {
+        body.classList.add("overflow-y-hidden")
+    } else if (!modalState.isOpen) {
+        body.classList.remove("overflow-y-hidden")
+    }
 
     useEffect(() => {
         setImageIndex(0)
