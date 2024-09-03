@@ -8,7 +8,10 @@ function ModalGallery() {
     const { modalState, closeModal, theme } = useAppContext()
     const divModal = useRef(null)
     const [imageIndex, setImageIndex] = useState(0)
-    const [lastScrollTop, setLastScrollTop] = useState(0)
+
+    useEffect(() => {
+        setImageIndex(0)
+    }, [modalState.data])
 
     // Closing modal fonctionnality
 
