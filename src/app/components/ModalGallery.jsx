@@ -112,7 +112,7 @@ function ModalGallery() {
                             ref={divModal}
                             src={images[imageIndex]}
                             alt={images[imageIndex]}
-                            className="max-w-[80vw] md:max-w-[60vw] max-h-[60vh] p-4"
+                            className="max-w-[90vw] max-h-[80vh] md:max-w-[60vw] md:max-h-[60vh] p-4"
                             onTouchStart={handleTouchStart}
                             onTouchMove={handleTouchMove}
                             onTouchEnd={handleTouchEnd}
