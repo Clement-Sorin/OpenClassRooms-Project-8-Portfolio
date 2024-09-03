@@ -47,7 +47,33 @@ function ModalGallery() {
             setImageIndex(nextImage)
         }
     }
-    d
+
+    const handleScroll = (event) => {
+        const scrollMove = event.deltaY
+        if (scrollMove === -100) {
+            handlePrevClick()
+        } else if (scrollMove === 100) {
+            handleNextClick()
+        }
+    }
+
+    let touchStartX = 0
+    let touchEndX = 0
+
+    const handleTouchStart = (e) => {
+        touchStartX = e.targetTouches[0].clientX
+    }
+    const handleTouchEnd = (e) => {
+        if (touchStartX - touchEndX > 0) {
+            handlePrevClick()
+        } else if (touchEndX - touchStartX > 0) {
+            handleNextClick()
+        }
+    }
+    const handleTouchMove = (e) => {
+        touchEndX = e.targetTouches[0].clientX
+    }
+
     if (!modalState.isOpen && !modalState.data) return null
 
     return (
@@ -73,16 +99,28 @@ function ModalGallery() {
                             : "bg-[rgba(255,255,255,0.8)]"
                     } `}
                 >
-                    <PolygonLeft stroke="black" onClick={handlePrevClick} />
+                    <PolygonLeft
+                        stroke="black"
+                        onClick={handlePrevClick}
+                        className="sm:hidden md:block"
+                    />
                     <div className="custom-border-box m-2 flex justify-center">
                         <img
                             ref={divModal}
                             src={images[imageIndex]}
                             alt={images[imageIndex]}
                             className="max-w-[80vw] md:max-w-[60vw] max-h-[60vh] p-4"
+                            onTouchStart={handleTouchStart}
+                            onTouchMove={handleTouchMove}
+                            onTouchEnd={handleTouchEnd}
+                            onWheel={handleScroll}
                         ></img>
                     </div>
-                    <PolygonRight stroke="black" onClick={handleNextClick} />
+                    <PolygonRight
+                        stroke="black"
+                        onClick={handleNextClick}
+                        className="sm:hidden md:block"
+                    />
                 </div>
             </div>
         </>
