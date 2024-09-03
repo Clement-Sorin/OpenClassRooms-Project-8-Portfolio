@@ -12,8 +12,6 @@ function Projects() {
     const [touchStartY, setTouchStartY] = useState(0)
     const scrollThreshold = 70
 
-    console.log("scrollLeft :", scrollLeft)
-
     const handleWheel = (event) => {
         const scrollMove = event.deltaY > 0 ? 100 : -100
 

@@ -14,8 +14,6 @@ function ModalGallery() {
     const pagingIndex = imageIndex + 1
     const pagingMax = images.length
 
-    console.log("pagingIndex :", pagingIndex)
-
     if (modalState.isOpen) {
         body.classList.add("overflow-y-hidden")
     } else if (!modalState.isOpen) {
