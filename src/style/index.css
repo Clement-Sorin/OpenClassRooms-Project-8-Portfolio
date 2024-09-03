@@ -126,11 +126,11 @@ p {
 .custom-border-box::after {
     content: '';
     position: absolute;
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 30%;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--border-color);
+    border-color: #000000;
 }
 
 /* Technologies */
@@ -229,16 +229,6 @@ p {
 .line-odd {
     transform: translate(40%, -2500%) rotate(-40deg);
 }
-
-@media (prefers-color-scheme: dark) {
-    :root {
-      --border-color: theme('colors.lines-dark');
-    }
-  }
-  
-  :root {
-    --border-color: theme('colors.lines-light');
-  }
 
 .custom-border-box::before {
     top: 0;
