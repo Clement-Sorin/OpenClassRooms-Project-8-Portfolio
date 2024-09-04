@@ -1,13 +1,14 @@
 import useScrollAnchor from "../hooks/useScrollAnchor"
+import { useAppContext } from "../contexts/AppContext"
 import { ReactComponent as VectorFront } from "../../assets/svgs/vector-front-end.svg"
 import { ReactComponent as VectorBack } from "../../assets/svgs/vector-back-end.svg"
 import technologiesFront from "../../assets/datas/TechnologiesFront.json"
 import technologiesBack from "../../assets/datas/TechnologiesBack.json"
-import Transition1 from "../components/Transition1"
 import Beehives from "../components/Beehives"
 
 function Technologies() {
-    const firstScroll = useScrollAnchor("transition-1")
+    const firstScroll = useScrollAnchor("technologies")
+    const { theme } = useAppContext()
 
     const chunkArray = (array, chunkSize) => {
         const result = []
@@ -17,15 +18,18 @@ function Technologies() {
         return result
     }
 
+    console.log(firstScroll)
+
     const groupedTechnologiesFront = chunkArray(technologiesFront, 3)
     const groupedTechnologiesBack = chunkArray(technologiesBack, 3)
 
     return (
         <section
             id="technologies"
-            className="h-full w-full snap-start snap-always"
+            className={`absolute top-0 h-full w-full snap-start snap-always mt-[100vh] ${
+                theme === "light" ? "bg-light-grey" : "bg-dark-blue"
+            }`}
         >
-            <Transition1 id="transition-1" />
             <div
                 className={`${
                     firstScroll ? "technologies" : "hidden"

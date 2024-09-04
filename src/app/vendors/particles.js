@@ -31,7 +31,7 @@ const ParticlesComponent = (props) => {
     const options = useMemo(
         () => ({
             fullScreen: {
-                enable: true,
+                enable: false,
             },
             fps_limit: 60,
             particles: {

@@ -7,7 +7,7 @@ import MenuMobile from "./MenuMobile"
 import { Link } from "react-router-dom"
 
 function Header() {
-    const firstScroll = useScrollAnchor("transition-1")
+    const firstScroll = useScrollAnchor("technologies")
 
     return (
         <header
