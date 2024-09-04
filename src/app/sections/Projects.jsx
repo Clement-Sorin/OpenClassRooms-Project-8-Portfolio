@@ -71,11 +71,11 @@ function Projects() {
             id="section-projects"
             className={`h-full w-full ${!firstScroll ? "hidden" : ""}`}
         >
-            <Transition2 />
+            {/* <Transition2 /> */}
             <div
                 className={`all-projects fixed w-full h-full ${
                     scrollProjects ? "projects" : "hidden"
-                } sm:top-16 md:top-16 lg:top-16`}
+                }`}
                 onWheel={handleWheel}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}

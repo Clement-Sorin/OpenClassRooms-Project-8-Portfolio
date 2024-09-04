@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import useScrollAnchor from "../hooks/useScrollAnchor"
 import { ReactComponent as VectorFront } from "../../assets/svgs/vector-front-end.svg"
 import { ReactComponent as VectorBack } from "../../assets/svgs/vector-back-end.svg"
@@ -21,28 +20,18 @@ function Technologies() {
     const groupedTechnologiesFront = chunkArray(technologiesFront, 3)
     const groupedTechnologiesBack = chunkArray(technologiesBack, 3)
 
-    useEffect(() => {
-        const indexTechs = technologiesFront.length + technologiesBack.length
-        const displayTime = indexTechs * 280
-        const body = document.querySelector("body")
-
-        body.classList.add("overflow-y-hidden")
-        setTimeout(() => {
-            body.classList.remove("overflow-y-hidden")
-        }, displayTime)
-
-        clearTimeout(displayTime)
-    })
-
     return (
-        <section id="technologies" className="h-full">
-            <Transition1 />
+        <section
+            id="technologies"
+            className="h-full w-full snap-start snap-always"
+        >
+            <Transition1 id="transition-1" />
             <div
                 className={`${
                     firstScroll ? "technologies" : "hidden"
-                } mw-auto left-1/2 transform -translate-x-1/2 overflow-x-hidden`}
+                } mw-auto overflow-x-hidden `}
             >
-                <div id="front-end" className="mb-20 md:mb-0">
+                <div id="front-end" className="mb-20 md:mb-0 mt-20">
                     <h2
                         id="title-front-end"
                         className="fade-in relative left-[8%] top-3 md:top-7 dark:text-dark-text"
@@ -72,7 +61,7 @@ function Technologies() {
                                                     ? "even"
                                                     : "odd"
                                             }
-                                            delayAnim={1300}
+                                            delayAnim={800}
                                             index={globalIndex}
                                         />
                                     )
@@ -110,7 +99,7 @@ function Technologies() {
                                                 ? "even"
                                                 : "odd"
                                         }
-                                        delayAnim={3000}
+                                        delayAnim={2800}
                                         index={globalIndex}
                                     />
                                 )

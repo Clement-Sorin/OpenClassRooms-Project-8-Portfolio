@@ -6,7 +6,7 @@ function Transition2() {
     const { theme } = useAppContext()
 
     return (
-        <div className="mt-[150vh] h-full w-full" id="transition-2">
+        <div className="h-full w-full" id="transition-2">
             <div
                 className={`fixed w-full h-full bottom-0 z-8  ${
                     theme === "light" ? "bg-light-grey+" : "bg-dark-blue"

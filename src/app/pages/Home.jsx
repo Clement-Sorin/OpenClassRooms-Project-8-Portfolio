@@ -8,6 +8,8 @@ function Home() {
         <>
             <Landing />
             <Technologies />
+            <Technologies />
+            <Technologies />
             <Projects />
             <Profile />
         </>
