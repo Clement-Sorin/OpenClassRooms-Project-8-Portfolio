@@ -27,13 +27,13 @@ function Technologies() {
         <section
             id="technologies"
             className={`absolute top-0 h-full w-full snap-start snap-always mt-[100vh] ${
-                theme === "light" ? "bg-light-grey" : "bg-dark-blue"
+                theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
             <div
                 className={`${
                     firstScroll ? "technologies" : "hidden"
-                } mw-auto overflow-x-hidden `}
+                } mw-auto overflow-x-hidden h-full`}
             >
                 <div id="front-end" className="mb-20 md:mb-0 mt-20">
                     <h2

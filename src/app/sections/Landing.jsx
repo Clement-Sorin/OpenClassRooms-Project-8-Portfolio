@@ -24,9 +24,7 @@ function Landing() {
             className={`absolute h-screen w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+ snap-start`}
         >
             <div className="fixed">
-                <Particles
-                    className={`${firstScroll ? "hidden" : ""} particles top-0`}
-                />
+                <Particles className={`particles top-0`} />
             </div>
             <div className="content-landing fixed sm:top-3 md:top-0 h-screen mw-auto flex-col justify-center pb-24">
                 <div className="flex md:flex-nowrap flex-wrap md:gap-10 gap-5  justify-center items-center md:justify-evenly  w-full h-full sm:p-6 sm:mb-20 sm:mt-10">
