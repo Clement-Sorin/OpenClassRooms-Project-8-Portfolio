@@ -2,7 +2,7 @@ import useScrollAnchor from "../hooks/useScrollAnchor"
 import { useAppContext } from "../contexts/AppContext"
 
 function ImagesProjects({ images, title, index }) {
-    const scrollSingleProject = useScrollAnchor("transition-2")
+    const scrollSingleProject = useScrollAnchor(`${title}`)
     const { theme, language, openModal } = useAppContext()
 
     const handleOpenModal = (event) => {
@@ -10,12 +10,16 @@ function ImagesProjects({ images, title, index }) {
     }
 
     return (
-        <div className="container-image relative sm:max-w-[250px] sm:max-h-[150px] sm2:max-w-[350px] sm2:max-h-[350px] lg:max-w-[500px] lg:max-h-[500px]">
+        <div
+            className={`container-image relative sm:max-w-[250px] sm:max-h-[150px] sm2:max-w-[350px] sm2:max-h-[350px] lg:max-w-[500px] lg:max-h-[500px] ${
+                scrollSingleProject ? "images-projects" : ""
+            }`}
+        >
             <div
                 onClick={handleOpenModal}
                 id={index}
-                className={`${images.length <= 1 ? "hidden" : ""} ${
-                    scrollSingleProject ? "images-projects" : ""
+                className={`${
+                    images.length <= 1 ? "hidden" : ""
                 } filter-more absolute z-10 w-full h-full flex justify-center bg-[rgba(0,0,0,0.1)] transition duration-800 ease-linear`}
             >
                 <div

@@ -32,7 +32,7 @@ function Landing() {
                             </p>
                         </div>
                         <div className="container-photo-landing md:mr-10">
-                            <div className="custom-border-box">
+                            <div className="custom-border-box before:border-lines-light before:dark:border-lines-dark after:border-lines-light after:dark:border-lines-dark">
                                 <img
                                     src={photoLanding}
                                     alt="Clement Sorin holding a laptop in his hands"

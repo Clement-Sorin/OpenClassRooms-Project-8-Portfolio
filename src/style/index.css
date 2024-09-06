@@ -22,17 +22,17 @@ html {
 body {
     font-family: 'Chakra Petch', sans-serif;
     user-select: none;
-
-    
 }
+
+::-webkit-scrollbar {
+    display: none;
+  }
 
 .main-container {
     width: 100%;
     min-width: 320px;
     box-sizing: border-box;
     padding: 0;
-
-
 }
   
 h1, h2, h3, h4, h5, h6 {
@@ -127,7 +127,6 @@ p {
     height: 30%;
     border-width: 1px;
     border-style: solid;
-    border-color: #000000;
 }
 
 /* Technologies */
@@ -393,11 +392,11 @@ p {
 }
 
 .details-projects {
-    animation-delay: 700ms;
+    animation-delay: 200ms;
 }
 
 .images-projects {
-    animation-delay: 900ms;
+    animation-delay: 400ms;
 }
 
 /* ImagesProjects */

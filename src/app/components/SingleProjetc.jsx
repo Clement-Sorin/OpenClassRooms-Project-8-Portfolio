@@ -15,10 +15,9 @@ function SingleProject({
     links,
     challenge,
     images,
-    scrollLeft,
 }) {
     const { theme, language } = useAppContext()
-    const scrollSingleProject = useScrollAnchor("transition-2")
+    const scrollSingleProject = useScrollAnchor(`${title}`)
 
     return (
         <div

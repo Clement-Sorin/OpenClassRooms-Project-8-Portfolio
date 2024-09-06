@@ -116,7 +116,7 @@ function ModalGallery() {
                             onClick={handlePrevClick}
                             className="sm:hidden md:block"
                         />
-                        <div className="custom-border-box m-2">
+                        <div className="custom-border-box m-2 before:border-black before:dark:border-black after:border-black after:dark:border-black">
                             <img
                                 ref={divModal}
                                 src={images[imageIndex]}

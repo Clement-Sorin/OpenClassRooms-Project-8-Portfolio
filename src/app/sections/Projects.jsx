@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import { useAppContext } from "../contexts/AppContext"
 import datas from "../../assets/datas/Projects.json"
 import SingleProject from "../components/SingleProjetc"
@@ -6,8 +6,6 @@ import ModalGallery from "../components/ModalGallery"
 
 function Projects() {
     const { theme } = useAppContext()
-    const trackRef = useRef(null)
-    const [scrollLeft, setScrollLeft] = useState(0)
     const [touchStartY, setTouchStartY] = useState(0)
     const scrollThreshold = 70
 
@@ -20,20 +18,6 @@ function Projects() {
         const direction = touchStartY - currentY
 
         if (Math.abs(direction) > scrollThreshold) {
-            const scrollMove = direction > 0 ? 100 : -100
-
-            setScrollLeft((prevScrollLeft) => {
-                let newScrollLeft = prevScrollLeft + scrollMove
-                const dataLength = datas.length * 100
-
-                if (newScrollLeft < 0) {
-                    newScrollLeft = 0
-                } else if (newScrollLeft >= dataLength - 100) {
-                    newScrollLeft = dataLength - 100
-                }
-
-                return newScrollLeft
-            })
             setTouchStartY(currentY)
         }
     }
@@ -62,7 +46,6 @@ function Projects() {
                         links={item.links}
                         challenge={item.challenge}
                         images={item.images}
-                        scrollLeft={scrollLeft}
                     />
                 ))}
             </div>
