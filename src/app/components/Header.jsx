@@ -16,14 +16,14 @@ function Header() {
             }`}
         >
             <div className="h-full flex items-center justify-between">
-                <Link
-                    to=""
+                <a
+                    href="#landing"
                     className={`text-2xl text-red dark:text-yellow font-heading ${
                         !firstScroll ? "opa-0" : "opa-100"
                     }`}
                 >
                     Clément Sorin
-                </Link>
+                </a>
                 <div className="hidden md:block lg:block max-w-[50%] w-full">
                     <Navbar navTabDesk={"flex justify-between w-full"} />
                 </div>
