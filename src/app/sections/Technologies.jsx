@@ -110,7 +110,6 @@ function Technologies() {
                     ))}
                 </div>
             </div>
-            <div className="transition-2"></div>
         </section>
     )
 }

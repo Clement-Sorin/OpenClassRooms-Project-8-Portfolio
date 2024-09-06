@@ -25,7 +25,7 @@ function Projects() {
     return (
         <section
             id="section-projects"
-            className={`h-full w-full snap-start snap-always ${
+            className={`h-full w-full ${
                 theme === "light" ? "bg-light-grey+" : "bg-dark-blue+"
             }`}
         >
