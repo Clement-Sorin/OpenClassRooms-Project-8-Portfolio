@@ -238,8 +238,8 @@ p {
     transition: filter 0.2s ease-in-out;
 }
 
-.custom-border-box:hover .photo-landing {
-    filter: grayscale(0%);
+.photo-landing:hover {
+    filter: grayscale(0);
 }
 
 #tsparticles {
@@ -427,6 +427,10 @@ p {
     }
     h2 {
         font-size: 1.625rem;
+    }
+
+    .photo-landing {
+        filter: grayscale(0);
     }
 }
 
