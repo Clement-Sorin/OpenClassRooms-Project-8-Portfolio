@@ -9,6 +9,7 @@ function LinkProjects({ links }) {
                 return (
                     <a
                         href={item.url}
+                        target="_blank"
                         key={index}
                         className="h-full transition-transform duration-500 transform hover:scale-110 "
                     >

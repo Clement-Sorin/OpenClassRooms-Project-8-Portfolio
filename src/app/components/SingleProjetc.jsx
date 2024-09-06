@@ -37,7 +37,14 @@ function SingleProject({
                 <p className="sm:text-[14px] md:text-[16px]">
                     {language === "fr" ? description.fr : description.en}
                 </p>
-                <LinkProjects links={links} />
+                <div className="container-links-projects flex items-end gap-2">
+                    <p className="font-bold">
+                        {language === "fr"
+                            ? `Lien${links.length > 1 ? "s" : ""} :`
+                            : `Link${links.length > 1 ? "s" : ""} :`}
+                    </p>
+                    <LinkProjects links={links} />
+                </div>
                 <p className="sm:text-[14px] md:text-[16px]">
                     <span className="font-bold">Challenge : </span>
                     {language === "fr" ? challenge.fr : challenge.en}

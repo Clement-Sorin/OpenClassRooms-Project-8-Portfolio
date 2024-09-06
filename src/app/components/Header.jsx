@@ -11,11 +11,11 @@ function Header() {
 
     return (
         <header
-            className={`sm:h-16 md:h-20 lg:h-24 z-20 fixed top-0 left-0 right-0 w-full p-5 bg-light-grey+ dark:bg-dark-blue ${
+            className={`sm:h-16 md:h-20 lg:h-24 z-20 fixed top-0 left-0 right-0 p-5 bg-light-grey+ dark:bg-dark-blue ${
                 !firstScroll ? "shadow-head-0" : "shadow-head-100"
             }`}
         >
-            <div className="mw-auto h-full flex items-center justify-between">
+            <div className="h-full flex items-center justify-between">
                 <Link
                     to=""
                     className={`text-2xl text-red dark:text-yellow font-heading ${

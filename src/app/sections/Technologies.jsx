@@ -24,7 +24,7 @@ function Technologies() {
     return (
         <section
             id="technologies"
-            className={`h-full min-h-[100vh] w-full snap-start snap-always scroll-mt-8 ${
+            className={`h-full min-h-[100vh] w-full overflow-x-hidden snap-start snap-always scroll-mt-8 ${
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
@@ -48,7 +48,7 @@ function Technologies() {
                         {groupedTechnologiesFront.map((group, groupIndex) => (
                             <div
                                 key={groupIndex}
-                                className="chunk-technos flex flex-col md:flex-row relative md:mb-16"
+                                className="chunk-technos flex flex-col md:flex-row md:mb-16"
                             >
                                 {group.map((item, index) => {
                                     const globalIndex = groupIndex * 3 + index

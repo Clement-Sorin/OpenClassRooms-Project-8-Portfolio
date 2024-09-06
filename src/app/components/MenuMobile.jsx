@@ -39,7 +39,7 @@ function MenuMobile() {
                     toggleMenu === true
                         ? "menu-mobile-open dark:bg-dark-blue"
                         : "menu-mobile-close dark:bg-dark-blue"
-                } sm:block md:hidden lg:hidden`}
+                } sm:"" md:hidden lg:hidden`}
             >
                 <div
                     className={`hidden sm:flex flex-col justify-evenly items-center h-full w-full ${
