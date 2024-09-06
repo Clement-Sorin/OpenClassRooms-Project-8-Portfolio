@@ -15,25 +15,19 @@
 }
 
 html {
-    overflow-y: scroll;
+    overflow: scroll;
     scroll-snap-type: y mandatory;
 }
 
 body {
     font-family: 'Chakra Petch', sans-serif;
     user-select: none;
-    scrollbar-width: none;
 
     
 }
 
-*::-webkit-scrollbar {
-    display: none;
-}
-
 .main-container {
     width: 100%;
-    max-width: 1440px;
     min-width: 320px;
     box-sizing: border-box;
     padding: 0;
@@ -113,7 +107,6 @@ p {
 
 .container-landing {
     align-items: space-around;
-    overflow: hidden;
 }
 
 .container-title {
@@ -139,19 +132,11 @@ p {
 
 /* Technologies */
 
-#technologies {
-    scroll-snap-align: start;
-}
 
 .technologies {
     width: 100%;
-    overflow-y: auto;
-    scrollbar-width: none;
 }
 
-.technologies::-webkit-scrollbar {
-    display: none;
-}
 
 @keyframes fade-in {
     0% {
@@ -264,51 +249,10 @@ p {
     
 }
 
-/* Transition 1 */
-
-.mask-delayed {
-    transition-delay: 100ms;
-}
-
-/* Transition 2 */
-
-.transition2-unscrolled {
-    transition: transform 800ms ease-in-out; 
-    aspect-ratio: 1 / 1;
-    transform: translateX(100%);
-}
-
-.transition2-scrolled {
-    transition: transform 800ms ease-in-out;
-    aspect-ratio: 1 / 1;
-    transform: translateX(0);
-}
-.mask-delayed-2 {
-    transition-delay: 50ms;
-}
-
 /* Projects */ 
 
 #section-projects {
     display: flex;
-    overflow-x: auto; 
-    height: 100%;
-    width: 100%;
-}
-
-.all-projects {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
-#track {
-    scroll-snap-type: x mandatory; 
-}
-
-.single-project {
-    min-width: calc(100vw );
-    scroll-snap-align: start;
 }
 
 /* --------------------- */
@@ -408,7 +352,7 @@ p {
     position: fixed;
     z-index: -1;
     top: 3rem;
-    right: 0;
+    left: 0;
     height: 500px;
     width: 100%;
     background-color: #f5f5f5;

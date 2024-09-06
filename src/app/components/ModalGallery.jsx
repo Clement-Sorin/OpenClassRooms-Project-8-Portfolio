@@ -8,16 +8,16 @@ function ModalGallery() {
     const { modalState, closeModal, theme } = useAppContext()
     const divModal = useRef(null)
     const [imageIndex, setImageIndex] = useState(0)
-    const body = document.querySelector("body")
+    const html = document.querySelector("html")
     const project = projects[modalState.data]
     const images = project ? project.images : []
     const pagingIndex = imageIndex + 1
     const pagingMax = images.length
 
     if (modalState.isOpen) {
-        body.classList.add("overflow-y-hidden")
+        html.classList.add("overflow-y-hidden")
     } else if (!modalState.isOpen) {
-        body.classList.remove("overflow-y-hidden")
+        html.classList.remove("overflow-y-hidden")
     }
 
     useEffect(() => {
@@ -76,9 +76,9 @@ function ModalGallery() {
     }
     const handleTouchEnd = (e) => {
         if (touchStartX - touchEndX > 0) {
-            handlePrevClick()
-        } else if (touchEndX - touchStartX > 0) {
             handleNextClick()
+        } else if (touchEndX - touchStartX > 0) {
+            handlePrevClick()
         }
     }
     const handleTouchMove = (e) => {

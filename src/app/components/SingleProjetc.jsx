@@ -1,4 +1,5 @@
 import { useAppContext } from "../contexts/AppContext"
+import { useEffect } from "react"
 import useScrollAnchor from "../hooks/useScrollAnchor"
 import ImagesProjects from "./ImagesProjects"
 import LinkProjects from "./LinkProjects"
@@ -22,9 +23,9 @@ function SingleProject({
     return (
         <div
             id={title}
-            className={`flex flex-col ${
+            className={`flex flex-col snap-start snap-always ${
                 position % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-            } single-project sm:mt-[-40px] gap-8 md:gap-20 mw-auto mr-5 ml-5 sm:overflow-y-hidden justify-center items-center w-full h-full`}
+            } single-project h-[100vh] sm:mt-[-40px] gap-8 md:gap-20 mw-auto mr-5 ml-5 justify-center items-center w-full h-full`}
         >
             <div
                 className={`flex flex-col gap-2 w-[80%] md:w-[40%]  ${

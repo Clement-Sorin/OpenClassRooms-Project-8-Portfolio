@@ -17,9 +17,7 @@ function Transition2() {
                 } `}
             ></div>
             <div
-                className={`fixed w-full h-full  bottom-0 z-9  ${
-                    theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
-                } ${
+                className={`fixed w-full h-full  bottom-0 z-9   ${
                     !scrollProjects
                         ? "transition2-unscrolled"
                         : "transition2-scrolled mask-delayed-2"

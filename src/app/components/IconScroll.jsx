@@ -3,14 +3,16 @@ import { useAppContext } from "../contexts/AppContext"
 import useScrollAnchor from "../hooks/useScrollAnchor"
 
 function IconScroll() {
-    const { theme } = useAppContext()
-    const firstScroll = useScrollAnchor("transition-1")
+    const { theme, modalState } = useAppContext()
+    const firstScroll = useScrollAnchor("technologies")
+
+    console.log(modalState.isOpen)
 
     return (
         <div
             className={`fixed bottom-6 flex justify-center right-0 w-full mx-auto ${
-                !firstScroll ? "opa-100" : "opa-0"
-            }`}
+                !modalState.isOpen ? "opa-0" : "opa-100"
+            } ${firstScroll ? "opa-0" : "opa-100"}`}
         >
             <div
                 className={`w-[20px] h-[40px] md:w-[30px] md:h-[60px] border rounded-full opacity-90 ${

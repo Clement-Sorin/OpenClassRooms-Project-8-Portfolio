@@ -1,33 +1,15 @@
-import { useState, useEffect } from "react"
-import Transition2 from "../components/Transition2"
-import useScrollAnchor from "../hooks/useScrollAnchor"
+import { useState, useEffect, useRef } from "react"
+import { useAppContext } from "../contexts/AppContext"
 import datas from "../../assets/datas/Projects.json"
 import SingleProject from "../components/SingleProjetc"
 import ModalGallery from "../components/ModalGallery"
 
 function Projects() {
-    const firstScroll = useScrollAnchor("transition-1")
-    const scrollProjects = useScrollAnchor("transition-2")
+    const { theme } = useAppContext()
+    const trackRef = useRef(null)
     const [scrollLeft, setScrollLeft] = useState(0)
     const [touchStartY, setTouchStartY] = useState(0)
     const scrollThreshold = 70
-
-    const handleWheel = (event) => {
-        const scrollMove = event.deltaY > 0 ? 100 : -100
-
-        setScrollLeft((prevScrollLeft) => {
-            let newScrollLeft = prevScrollLeft + scrollMove
-            const dataLenght = datas.length * 100
-
-            if (newScrollLeft < 0) {
-                newScrollLeft = 0
-            } else if (newScrollLeft >= dataLenght - 100) {
-                newScrollLeft = dataLenght - 100
-            }
-
-            return newScrollLeft
-        })
-    }
 
     const handleTouchStart = (event) => {
         setTouchStartY(event.touches[0].clientY)
@@ -56,54 +38,33 @@ function Projects() {
         }
     }
 
-    useEffect(() => {
-        const body = document.querySelector("body")
-
-        if (scrollLeft === 0) {
-            body.classList.remove("overflow-y-hidden")
-        } else {
-            body.classList.add("overflow-y-hidden")
-        }
-    }, [scrollLeft])
-
     return (
         <section
             id="section-projects"
-            className={`h-full w-full ${!firstScroll ? "hidden" : ""}`}
+            className={`h-full w-full snap-start snap-always ${
+                theme === "light" ? "bg-light-grey+" : "bg-dark-blue+"
+            }`}
         >
-            {/* <Transition2 /> */}
             <div
-                className={`all-projects fixed w-full h-full ${
-                    scrollProjects ? "projects" : "hidden"
-                }`}
-                onWheel={handleWheel}
+                className={`all-projects flex flex-col w-full `}
+                style={{ minHeight: `${100 * datas.length}vh` }}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
             >
-                <div
-                    id="track"
-                    className="flex w-full h-full"
-                    style={{
-                        minWidth: `${100 * datas.length}vw`,
-                        transform: `translateX(-${scrollLeft}vw)`,
-                        transition: "0.3s ease-in",
-                    }}
-                >
-                    {datas.map((item, index) => (
-                        <SingleProject
-                            key={index}
-                            index={index}
-                            position={index + 1}
-                            title={item.title}
-                            technos={item.tech}
-                            description={item.description}
-                            links={item.links}
-                            challenge={item.challenge}
-                            images={item.images}
-                            scrollLeft={scrollLeft}
-                        />
-                    ))}
-                </div>
+                {datas.map((item, index) => (
+                    <SingleProject
+                        key={index}
+                        index={index}
+                        position={index + 1}
+                        title={item.title}
+                        technos={item.tech}
+                        description={item.description}
+                        links={item.links}
+                        challenge={item.challenge}
+                        images={item.images}
+                        scrollLeft={scrollLeft}
+                    />
+                ))}
             </div>
             <ModalGallery></ModalGallery>
         </section>

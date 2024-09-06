@@ -18,27 +18,25 @@ function Technologies() {
         return result
     }
 
-    console.log(firstScroll)
-
     const groupedTechnologiesFront = chunkArray(technologiesFront, 3)
     const groupedTechnologiesBack = chunkArray(technologiesBack, 3)
 
     return (
         <section
             id="technologies"
-            className={`absolute top-0 h-full w-full snap-start snap-always mt-[100vh] ${
+            className={`h-full min-h-[100vh] w-full snap-start snap-always scroll-mt-8 ${
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
             <div
                 className={`${
                     firstScroll ? "technologies" : "hidden"
-                } mw-auto overflow-x-hidden h-full`}
+                } mw-auto h-full`}
             >
-                <div id="front-end" className="mb-20 md:mb-0 mt-20">
+                <div id="front-end" className="pb-20 md:pb-0 pt-20">
                     <h2
                         id="title-front-end"
-                        className="fade-in relative left-[8%] top-3 md:top-7 dark:text-dark-text"
+                        className="fade-in ml-[8%] top-3 md:top-7 dark:text-dark-text"
                     >
                         Front-end
                     </h2>
@@ -112,6 +110,7 @@ function Technologies() {
                     ))}
                 </div>
             </div>
+            <div className="transition-2"></div>
         </section>
     )
 }
