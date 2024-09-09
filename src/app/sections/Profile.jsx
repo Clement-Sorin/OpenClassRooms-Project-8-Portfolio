@@ -4,6 +4,7 @@ import { useAppContext } from "../contexts/AppContext"
 import datas from "../../assets/datas/Profile.json"
 import ContentProfile from "../components/ContentProfile"
 import ContentCertifications from "../components/ContentCertifications"
+import ContentSoftSkills from "../components/ContentSoftSkills"
 
 function Profile() {
     const { theme } = useAppContext()
@@ -35,12 +36,13 @@ function Profile() {
                         ></FrameSmall>
                         <ContentCertifications datas={datas} />
                     </div>
-                    <div className="soft-skills">
+                    <div className="soft-skills relative">
                         <FrameSmall
                             fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             className={theme === "dark" ? "drop-shadow-lg" : ""}
                         ></FrameSmall>
+                        <ContentSoftSkills datas={datas} />
                     </div>
                 </div>
                 <div className="hard-skills">
