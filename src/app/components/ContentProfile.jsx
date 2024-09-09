@@ -36,9 +36,9 @@ function ContentProfile({ datas }) {
                     ? `${dataProfile.title.fr}`
                     : `${dataProfile.title.en}`}
             </h2>
-            <div className="flex justify-center relative h-[170px]">
+            <div className="container-photo-profile flex justify-center relative h-[170px]">
                 <BeehiveLarge
-                    className="absolute"
+                    className="frame-photo-profile absolute"
                     width="170px"
                     height="170px"
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
@@ -46,18 +46,22 @@ function ContentProfile({ datas }) {
                 <img
                     src={photoProfile}
                     alt="Clément Sorin profile"
-                    className="absolute top-1/2 translate-y-[-50%] w-[155px] h-[155px]"
+                    className="photo-profile absolute top-1/2 translate-y-[-50%] w-[155px] h-[155px]"
                 ></img>
             </div>
             <div className=" flex flex-col gap-1 pr-1">
                 {Object.entries(profileDetails).map(([key, value], index) => (
-                    <div key={index} className="flex gap-2 items-start text-sm">
+                    <div
+                        key={index}
+                        className="text-content-profile flex gap-2 items-start text-sm"
+                    >
                         <Beehive
-                            className="min-w-5 mt-[4px]"
+                            className="beehive-sm min-w-[17px] mt-[4px]"
+                            width="17px"
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         />
-                        <p>
-                            <span className="font-bold">
+                        <p className="text-content-profile">
+                            <span className="font-bold ">
                                 {language === "fr" ? value?.title?.fr : ""}
                                 {language === "en" ? value?.title?.en : ""}
                             </span>

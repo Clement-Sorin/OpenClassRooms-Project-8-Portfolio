@@ -9,7 +9,7 @@ function Rates({ rateValue }) {
             {Array.from({ length: rateValue }).map((index) => (
                 <Beehive
                     key={index}
-                    className="min-w-5"
+                    className="beehive-sm w-[17px]"
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                     fill={theme === "light" ? "#757780" : "#E7DAE0"}
                 />
@@ -17,7 +17,7 @@ function Rates({ rateValue }) {
             {Array.from({ length: 5 - rateValue }).map((index) => (
                 <Beehive
                     key={index}
-                    className="min-w-5"
+                    className="beehive-sm w-[17px]"
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                 />
             ))}

@@ -8,7 +8,7 @@ function ContentSoftSkills({ datas }) {
 
     return (
         <div
-            className={`content-profile absolute top-0 pt-5 pl-9 pr-7 flex flex-col gap-6 w-full ${
+            className={`content-soft absolute top-0 pt-5 pl-9 pr-7 flex flex-col gap-6 w-full ${
                 theme === "light" ? "" : "text-dark-text"
             }`}
         >
@@ -16,7 +16,7 @@ function ContentSoftSkills({ datas }) {
             <div className="flex flex-col gap-2">
                 {Object.entries(softDetails).map(([key, value], index) => (
                     <div key={index} className="flex justify-between">
-                        <p className="text-sm">
+                        <p className="text-content-profile text-sm">
                             {language === "fr" ? value?.title.fr : ""}
                             {language === "en" ? value?.title.en : ""}
                         </p>

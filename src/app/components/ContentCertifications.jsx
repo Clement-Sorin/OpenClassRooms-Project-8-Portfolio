@@ -7,7 +7,7 @@ function Certifications({ datas }) {
 
     return (
         <div
-            className={`content-profile absolute top-0 pt-3 pl-9 pr-7 flex flex-col gap-3 ${
+            className={`content-certif absolute top-0 pt-3 pl-9 pr-7 flex flex-col gap-3 ${
                 theme === "light" ? "" : "text-dark-text"
             }`}
         >
@@ -21,21 +21,31 @@ function Certifications({ datas }) {
                                 {Array.isArray(value?.certificate.fr) &&
                                     language === "fr" &&
                                     value.certificate.fr.map((cert, idx) => (
-                                        <p key={`fr-${idx}`}>{cert}</p>
+                                        <p
+                                            key={`fr-${idx}`}
+                                            className="text-content-profile"
+                                        >
+                                            {cert}
+                                        </p>
                                     ))}
                                 {Array.isArray(value?.certificate.en) &&
                                     language === "en" &&
                                     value.certificate.en.map((cert, idx) => (
-                                        <p key={`en-${idx}`}>{cert}</p>
+                                        <p
+                                            key={`en-${idx}`}
+                                            className="text-content-profile"
+                                        >
+                                            {cert}
+                                        </p>
                                     ))}
                             </>
                         ) : (
-                            <p>
+                            <p className="text-content-profile">
                                 {language === "fr" ? value?.certificate.fr : ""}
                                 {language === "en" ? value?.certificate.en : ""}
                             </p>
                         )}
-                        <p className="font-bold">
+                        <p className="font-bold text-content-profile">
                             {language === "fr" ? value?.school.fr : ""}
                             {language === "en" ? value?.school.en : ""}
                         </p>

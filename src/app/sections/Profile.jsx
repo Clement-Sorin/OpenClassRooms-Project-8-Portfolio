@@ -13,16 +13,17 @@ function Profile() {
     return (
         <section
             id="profile"
-            className={`snap-start snap-always h-screen w-full pt-24 ${
+            className={`snap-start snap-always min-h-screen w-full pt-24 ${
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
-            <div className="all-frames h-full flex flex-wrap justify-between items-center pl-10 pr-10">
+            <div className="all-frames h-full flex flex-wrap justify-evenly items-center ">
                 <div className="profile relative">
                     <FrameLarge
                         fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
-                        className={`${
+                        width="382"
+                        className={`frame-lg ${
                             theme === "dark" ? "drop-shadow-lg" : ""
                         }`}
                     ></FrameLarge>
@@ -33,7 +34,10 @@ function Profile() {
                         <FrameSmall
                             fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
-                            className={theme === "dark" ? "drop-shadow-lg" : ""}
+                            width="382"
+                            className={`frame-sm ${
+                                theme === "dark" ? "drop-shadow-lg" : ""
+                            }`}
                         ></FrameSmall>
                         <ContentCertifications datas={datas} />
                     </div>
@@ -41,7 +45,10 @@ function Profile() {
                         <FrameSmall
                             fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
-                            className={theme === "dark" ? "drop-shadow-lg" : ""}
+                            width="382"
+                            className={`frame-sm ${
+                                theme === "dark" ? "drop-shadow-lg" : ""
+                            }`}
                         ></FrameSmall>
                         <ContentSoftSkills datas={datas} />
                     </div>
@@ -50,7 +57,10 @@ function Profile() {
                     <FrameLarge
                         fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
-                        className={theme === "dark" ? "drop-shadow-lg" : ""}
+                        width="382"
+                        className={`frame-lg ${
+                            theme === "dark" ? "drop-shadow-lg" : ""
+                        }`}
                     ></FrameLarge>
                     <ContentHardSkills datas={datas} />
                 </div>
