@@ -4,7 +4,6 @@ import Theme from "./Theme"
 import Navbar from "./Navbar"
 import MenuTablet from "./MenuTablet"
 import MenuMobile from "./MenuMobile"
-import { Link } from "react-router-dom"
 
 function Header() {
     const firstScroll = useScrollAnchor("technologies")

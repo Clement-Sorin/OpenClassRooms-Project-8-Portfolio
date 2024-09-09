@@ -1,5 +1,4 @@
 import { useAppContext } from "../contexts/AppContext"
-import { useEffect } from "react"
 import useScrollAnchor from "../hooks/useScrollAnchor"
 import ImagesProjects from "./ImagesProjects"
 import LinkProjects from "./LinkProjects"

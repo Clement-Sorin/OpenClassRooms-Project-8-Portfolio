@@ -10,6 +10,7 @@ function LinkProjects({ links }) {
                     <a
                         href={item.url}
                         target="_blank"
+                        rel="noreferrer"
                         key={index}
                         className="h-full transition-transform duration-500 transform hover:scale-110 "
                     >

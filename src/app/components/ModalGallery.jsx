@@ -37,7 +37,7 @@ function ModalGallery() {
         return () => {
             document.removeEventListener("mousedown", handleOutsideClick)
         }
-    }, [modalState.isOpen])
+    }, [])
 
     // Carrousel fonctionnality
 
