@@ -37,7 +37,7 @@ function ModalGallery() {
         return () => {
             document.removeEventListener("mousedown", handleOutsideClick)
         }
-    }, [])
+    })
 
     // Carrousel fonctionnality
 
@@ -61,9 +61,9 @@ function ModalGallery() {
 
     const handleScroll = (event) => {
         const scrollMove = event.deltaY
-        if (scrollMove === -100) {
+        if (scrollMove <= -100) {
             handlePrevClick()
-        } else if (scrollMove === 100) {
+        } else if (scrollMove >= 100) {
             handleNextClick()
         }
     }

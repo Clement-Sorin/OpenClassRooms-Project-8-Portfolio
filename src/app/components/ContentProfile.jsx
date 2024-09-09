@@ -27,7 +27,7 @@ function ContentProfile({ datas }) {
 
     return (
         <div
-            className={`content-profile absolute top-0 p-5 flex flex-col gap-2 ${
+            className={`content-profile absolute top-0 p-5 flex flex-col gap-4 ${
                 theme === "light" ? "" : "text-dark-text"
             }`}
         >
@@ -51,7 +51,7 @@ function ContentProfile({ datas }) {
             </div>
             <div className=" flex flex-col gap-1 pr-1">
                 {Object.entries(profileDetails).map(([key, value], index) => (
-                    <div key={index} className="flex gap-2 items-start">
+                    <div key={index} className="flex gap-2 items-start text-sm">
                         <Beehive
                             className="min-w-5 mt-[4px]"
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}

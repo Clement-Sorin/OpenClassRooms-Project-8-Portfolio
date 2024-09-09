@@ -1,8 +1,9 @@
 import { ReactComponent as FrameLarge } from "../../assets/svgs/profile-frame-big.svg"
 import { ReactComponent as FrameSmall } from "../../assets/svgs/profile-frame-small.svg"
 import { useAppContext } from "../contexts/AppContext"
-import ContentProfile from "../components/ContentProfile"
 import datas from "../../assets/datas/Profile.json"
+import ContentProfile from "../components/ContentProfile"
+import ContentCertifications from "../components/ContentCertifications"
 
 function Profile() {
     const { theme } = useAppContext()
@@ -26,12 +27,13 @@ function Profile() {
                     <ContentProfile datas={datas} />
                 </div>
                 <div className="middle flex flex-col justify-between">
-                    <div className="certifications">
+                    <div className="certifications relative">
                         <FrameSmall
                             fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             className={theme === "dark" ? "drop-shadow-lg" : ""}
                         ></FrameSmall>
+                        <ContentCertifications datas={datas} />
                     </div>
                     <div className="soft-skills">
                         <FrameSmall
