@@ -1,84 +1,89 @@
 {
-    "Profile": {
+    "profile": {
         "title": {
             "fr": "Profil",
             "en": "Profile"
         },
-        "age": {
-            "title": {
-                "fr": "Âge :",
-                "en": "Age:"
+        "data" : {
+            "age": {
+                "title": {
+                    "fr": "Âge : ",
+                    "en": "Age : "
+                },
+                "data": {
+                    "fr": "ans",
+                    "en": "years old"
+                }
             },
-            "data": {
-                "fr": "ans",
-                "en": "years old"
-            }
-        },
-        "location": {
-            "title": {
-                "fr": "Lieu :",
-                "en": "Location :"
+            "location": {
+                "title": {
+                    "fr": "Lieu : ",
+                    "en": "Location : "
+                },
+                "data": {
+                    "fr": "Reignier-Esery, France",
+                    "en": "Reignier-Esery, France"
+                }
             },
-            "data": "Reignier-Esery, France"
-        },
-        "nationalities": {
-            "title": {
-                "fr": "Nationalités :",
-                "en": "Nationalities :"
+            "nationalities": {
+                "title": {
+                    "fr": "Nationalités : ",
+                    "en": "Nationalities : "
+                },
+                "data": {
+                    "fr": "suisse, française",
+                    "en": "Swiss, French"
+                }
             },
-            "data": {
-                "fr": "suisse, française",
-                "en": "Swiss, French"
-            }
-        },
-        "career": {
-            "title": {
-                "fr": "Carrière :",
-                "en": "Career :"
+            "career": {
+                "title": {
+                    "fr": "Carrière : ",
+                    "en": "Career : "
+                },
+                "data": {
+                    "fr": "reconversion professionnelle, précédemment en restauration de luxe et à l'international",
+                    "en": "career change, previously in luxury hospitality and internationally"
+                }
             },
-            "data": {
-                "fr": "reconversion professionnelle, précédemment en restauration de luxe et à l'international",
-                "en": "career change, previously in luxury hospitality and internationally"
-            }
-        },
-        "french": {
-            "title": {
-                "fr": "Français :",
-                "en": "French :"
+            "french": {
+                "title": {
+                    "fr": "Français : ",
+                    "en": "French : "
+                },
+                "data": {
+                    "fr": "langue maternelle",
+                    "en": "native language"
+                }
             },
-            "data": {
-                "fr": "langue maternelle",
-                "en": "native language"
-            }
-        },
-        "english": {
-            "title": {
-                "fr": "Anglais :",
-                "en": "English :"
+            "english": {
+                "title": {
+                    "fr": "Anglais : ",
+                    "en": "English : "
+                },
+                "data": {
+                    "fr": "niveau C1 à l'oral et à l'écrit",
+                    "en": "C1 level in speaking and writing"
+                }
             },
-            "data": {
-                "fr": "niveau C1 à l'oral et à l'écrit",
-                "en": "C1 level in speaking and writing"
-            }
-        },
-        "thai": {
-            "title": {
-                "fr": "Thaïlandais :",
-                "en": "Thai :"
+            "thai": {
+                "title": {
+                    "fr": "Thaïlandais : ",
+                    "en": "Thai : "
+                },
+                "data": {
+                    "fr": "niveau B1 à l'oral",
+                    "en": "B1 level in speaking"
+                }
             },
-            "data": {
-                "fr": "niveau B1 à l'oral",
-                "en": "B1 level in speaking"
-            }
-        },
-        "hobbies": {
-            "title": {
-                "fr": "Centres d'intérêt :",
-                "en": "Hobbies:"
-            },
-            "data": {
-                "fr": "développement personnel, voyages, travaux créatifs",
-                "en": "personal development, travel, creative projects"
+            "hobbies": {
+                "title": {
+                    "fr": "Centres d'intérêt : ",
+                    "en": "Hobbies : "
+                },
+                "data": {
+                    "fr": "développement personnel, voyages, travaux créatifs",
+                    "en": "personal development, travel, creative projects"
+                }
             }
         }
     },

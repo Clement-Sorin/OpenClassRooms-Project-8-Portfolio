@@ -6,8 +6,6 @@ function IconScroll() {
     const { theme, modalState } = useAppContext()
     const firstScroll = useScrollAnchor("technologies")
 
-    console.log(modalState.isOpen)
-
     return (
         <div
             className={`fixed bottom-6 flex justify-center right-0 w-full mx-auto ${
