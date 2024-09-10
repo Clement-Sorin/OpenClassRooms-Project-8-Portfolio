@@ -513,7 +513,6 @@ p {
 
 @media (max-width: 768px) {
 
-
     /* Technologies */
     .even {
         transform: translateX(-20%);
@@ -535,6 +534,89 @@ p {
 
     .logo-techno-dark-unclicked {
         filter: brightness(1000%);
+    }
+
+    /* Contact */
+    .container-form {
+        width: 350px;
+    }
+    .input-name {
+        width: 200px;
+    }
+    .contact-name, .contact-email , .contact-message {
+        width:350px;
+        justify-content: start;
+    }
+    .frame-contact-name {
+        width: 200px;
+    }
+    .frame-contact-message {
+        width: 250px;
+        height: 92px;
+    }
+    .contact-message {
+        gap:10px;
+    }
+    .container-message {
+        width: 250px;
+    }
+    .label {
+        width: 100px;
+    }
+    #input-name, #input-email {
+        width: 200px;
+    }
+    #area-message {
+        top:5px;
+        width: 250px;
+        height: 85px;
+    }
+    .frame-submit {
+        width: 100px;
+    }
+}
+
+@media (max-width: 450px) {
+    /* Contact */
+    .container-form {
+        width: 280px;
+    }
+    .input-name {
+        width: 180px;
+    }
+    .contact-name, .contact-email , .contact-message {
+        width:280px;
+        justify-content: start;
+    }
+    .frame-contact-name {
+        width: 180px;
+    }
+    .frame-contact-message {
+        width: 200px;
+        height: 92px;
+    }
+    .contact-message {
+        gap:14px;
+    }
+    .container-message {
+        width: 250px;
+    }
+    .label {
+        width: 80px;
+        padding-top: 10px;
+    }
+    #input-name, #input-email {
+        width: 180px;
+        font-size: 12px;
+    }
+    #area-message {
+        top : 10px;
+        width: 200px;
+        height: 70px;
+        font-size: 12px;
+    }
+    .frame-submit {
+        width: 80px;
     }
 }
 
