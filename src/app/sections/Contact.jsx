@@ -25,7 +25,7 @@ function Contact() {
                     >
                         <div className="contact-name flex justify-between">
                             <label
-                                for="input-name"
+                                htmlFor="input-name"
                                 className="label sm:text-sm sm2:text-lg md:text-xl"
                             >
                                 {language === "fr"
@@ -42,20 +42,18 @@ function Contact() {
                                     aria-required="true"
                                 ></input>
                                 <FrameName
-                                    width="302"
-                                    height="52"
                                     stroke={
                                         theme === "light"
                                             ? "#757780"
                                             : "#E7DAE0"
                                     }
-                                    className="frame-contact-name"
+                                    className="frame-contact-name sm:w-[180px] sm2:w-[200px] md:w-[302px]"
                                 />
                             </div>
                         </div>
                         <div className="contact-email flex justify-between">
                             <label
-                                for="input-email"
+                                htmlFor="input-email"
                                 className="label sm:text-sm sm2:text-lg md:text-xl"
                             >
                                 {language === "fr"
@@ -72,20 +70,18 @@ function Contact() {
                                     aria-required="true"
                                 ></input>
                                 <FrameName
-                                    width="302"
-                                    height="52"
                                     stroke={
                                         theme === "light"
                                             ? "#757780"
                                             : "#E7DAE0"
                                     }
-                                    className="frame-contact-name"
+                                    className="frame-contact-name sm:w-[180px] sm2:w-[200px] md:w-[302px]"
                                 />
                             </div>
                         </div>
                         <div className="contact-message flex justify-between gap-10">
                             <label
-                                for="area-message"
+                                htmlFor="area-message"
                                 className="label sm:text-sm sm2:text-lg md:text-xl"
                             >
                                 {language === "fr"
@@ -102,14 +98,12 @@ function Contact() {
                                     aria-required="true"
                                 ></textarea>
                                 <FrameMessage
-                                    width="499"
-                                    height="182"
                                     stroke={
                                         theme === "light"
                                             ? "#757780"
                                             : "#E7DAE0"
                                     }
-                                    className="frame-contact-message"
+                                    className="frame-contact-message sm:w-[200px] sm2:w-[250px] md:w-[499px]"
                                 />
                             </div>
                         </div>
@@ -125,9 +119,7 @@ function Contact() {
                                 className="input-submit sm:text-xs sm2:text-sm md:text-xl absolute w-[124px] h-[36px]"
                             ></input>
                             <FrameSubmit
-                                className="frame-submit"
-                                width="124"
-                                height="36"
+                                className="frame-submit sm:w-[80px] sm2:w-[100px] md:w-[124px]"
                                 stroke={
                                     theme === "light" ? "#757780" : "#E7DAE0"
                                 }

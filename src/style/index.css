@@ -547,13 +547,6 @@ p {
         width:350px;
         justify-content: start;
     }
-    .frame-contact-name {
-        width: 200px;
-    }
-    .frame-contact-message {
-        width: 250px;
-        height: 92px;
-    }
     .contact-message {
         gap:10px;
     }
@@ -571,9 +564,6 @@ p {
         width: 250px;
         height: 85px;
     }
-    .frame-submit {
-        width: 100px;
-    }
 }
 
 @media (max-width: 450px) {
@@ -588,13 +578,7 @@ p {
         width:280px;
         justify-content: start;
     }
-    .frame-contact-name {
-        width: 180px;
-    }
-    .frame-contact-message {
-        width: 200px;
-        height: 92px;
-    }
+
     .contact-message {
         gap:14px;
     }
@@ -615,8 +599,6 @@ p {
         height: 70px;
         font-size: 12px;
     }
-    .frame-submit {
-        width: 80px;
-    }
+
 }
 

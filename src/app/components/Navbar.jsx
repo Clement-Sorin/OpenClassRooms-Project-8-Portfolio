@@ -12,7 +12,7 @@ function Navbar({ navTabDesk, navMob }) {
     return (
         <nav className={`${navTabDesk} ${navMob} dark:text-dark-text`}>
             <a
-                href="#technologies"
+                href="/#technologies"
                 className={`${
                     theme === "light"
                         ? "transition-hover-light"
@@ -22,7 +22,7 @@ function Navbar({ navTabDesk, navMob }) {
                 {language === "fr" ? text.techno.fr : text.techno.en}
             </a>
             <a
-                href="#section-projects"
+                href="/#section-projects"
                 className={`${
                     theme === "light"
                         ? "transition-hover-light"
@@ -32,7 +32,7 @@ function Navbar({ navTabDesk, navMob }) {
                 {language === "fr" ? text.projects.fr : text.projects.en}
             </a>
             <a
-                href="#profile"
+                href="/#profile"
                 className={`${
                     theme === "light"
                         ? "transition-hover-light"
@@ -42,7 +42,7 @@ function Navbar({ navTabDesk, navMob }) {
                 {language === "fr" ? text.profile.fr : text.profile.en}
             </a>
             <a
-                href="#contact"
+                href="/#contact"
                 className={`${
                     theme === "light"
                         ? "transition-hover-light"

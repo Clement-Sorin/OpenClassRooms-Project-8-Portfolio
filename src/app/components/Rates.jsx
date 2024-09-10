@@ -6,7 +6,7 @@ function Rates({ rateValue }) {
 
     return (
         <div className="flex gap-1">
-            {Array.from({ length: rateValue }).map((index) => (
+            {Array.from({ length: rateValue }).map((_, index) => (
                 <Beehive
                     key={index}
                     className="beehive-sm w-[17px]"
@@ -14,7 +14,7 @@ function Rates({ rateValue }) {
                     fill={theme === "light" ? "#757780" : "#E7DAE0"}
                 />
             ))}
-            {Array.from({ length: 5 - rateValue }).map((index) => (
+            {Array.from({ length: 5 - rateValue }).map((_, index) => (
                 <Beehive
                     key={index}
                     className="beehive-sm w-[17px]"

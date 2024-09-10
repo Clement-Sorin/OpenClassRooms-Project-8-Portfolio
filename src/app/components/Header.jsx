@@ -21,7 +21,7 @@ function Header() {
                         !firstScroll ? "opa-0" : "opa-100"
                     }`}
                 >
-                    Clément Sorin
+                    Clément_Sorin
                 </a>
                 <div className="hidden md:block lg:block max-w-[50%] w-full">
                     <Navbar navTabDesk={"flex justify-between w-full"} />
