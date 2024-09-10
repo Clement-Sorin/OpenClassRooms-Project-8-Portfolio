@@ -11,7 +11,7 @@ function Footer() {
         >
             <a
                 href="/#landing"
-                className={`text-2xl text-dark-text font-heading`}
+                className={`text-xl sm2:text-2xl text-dark-text font-heading`}
             >
                 Clément_Sorin
             </a>

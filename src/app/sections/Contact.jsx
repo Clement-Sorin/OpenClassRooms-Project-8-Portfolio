@@ -37,7 +37,7 @@ function Contact() {
                                     type="text"
                                     id="input-name"
                                     required
-                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
+                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2 sm:h-[31px] sm2:h-[34px]"
                                     aria-label="name input field"
                                     aria-required="true"
                                 ></input>
@@ -65,7 +65,7 @@ function Contact() {
                                     type="email"
                                     id="input-email"
                                     required
-                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
+                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2 sm:h-[31px] sm2:h-[34px]"
                                     aria-label="email input field"
                                     aria-required="true"
                                 ></input>
@@ -116,7 +116,7 @@ function Contact() {
                                         : datas.submit.en
                                 }
                                 aria-label="send message form"
-                                className="input-submit sm:text-xs sm2:text-sm md:text-xl absolute w-[124px] h-[36px]"
+                                className="input-submit sm:text-xs sm2:text-sm md:text-xl absolute sm:w-[80px] sm:h-[23px] sm2:w-[100px] sm2:h-[29px] md:w-[124px] md:h-[36px]"
                             ></input>
                             <FrameSubmit
                                 className="frame-submit sm:w-[80px] sm2:w-[100px] md:w-[124px]"

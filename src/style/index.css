@@ -560,9 +560,8 @@ p {
         width: 200px;
     }
     #area-message {
-        top:5px;
         width: 250px;
-        height: 85px;
+        height: 90px;
     }
 }
 
@@ -587,14 +586,12 @@ p {
     }
     .label {
         width: 80px;
-        padding-top: 10px;
     }
     #input-name, #input-email {
         width: 180px;
         font-size: 12px;
     }
     #area-message {
-        top : 10px;
         width: 200px;
         height: 70px;
         font-size: 12px;

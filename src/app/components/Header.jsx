@@ -17,7 +17,7 @@ function Header() {
             <div className="h-full flex items-center justify-between">
                 <a
                     href="#landing"
-                    className={`text-2xl text-red dark:text-yellow font-heading ${
+                    className={`text-xl sm2:text-2xl text-red dark:text-yellow font-heading ${
                         !firstScroll ? "opa-0" : "opa-100"
                     }`}
                 >
