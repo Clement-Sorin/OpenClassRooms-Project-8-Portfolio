@@ -325,6 +325,12 @@ p {
     }
 }
 
+/* Contact */ 
+
+.contact-sumbit {
+    font-family:'Orbitron', sans-serif;
+}
+
 /* --------------------- */
 /* -----COMPONENTS------ */
 /* --------------------- */
@@ -340,13 +346,6 @@ p {
 .shadow-head-0 {
     transition: filter 0.3s ease-out;
     filter: drop-shadow(0px 0px 0px #000000);
-}
-
-/* Navbar */
-
-.transition-font-weight {
-    font-weight: bold;
-    transition : font-weight 0.3s ease
 }
 
 /* Tablet Menu */ 

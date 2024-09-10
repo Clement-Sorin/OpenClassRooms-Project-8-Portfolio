@@ -13,11 +13,11 @@ function Profile() {
     return (
         <section
             id="profile"
-            className={`snap-start snap-always min-h-screen w-full pt-24 ${
+            className={`snap-start snap-always min-h-screen h-full w-full ${
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
-            <div className="all-frames h-full flex flex-wrap justify-evenly items-center ">
+            <div className="all-frames min-h-screen pt-24 flex flex-wrap justify-evenly items-center ">
                 <div className="profile relative">
                     <FrameLarge
                         fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
