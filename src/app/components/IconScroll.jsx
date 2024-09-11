@@ -1,16 +1,20 @@
 import { ReactComponent as ArrowScroll } from "../../assets/icons/arrow-scroll.svg"
 import { useAppContext } from "../contexts/AppContext"
-import useScrollAnchor from "../hooks/useScrollAnchor"
+import useIntersectionObserver from "../hooks/useIntersectionObserver"
+import { useRef } from "react"
 
 function IconScroll() {
     const { theme, modalState } = useAppContext()
-    const firstScroll = useScrollAnchor("technologies")
+    const landingScroll = useIntersectionObserver("landing")
+    const contactScroll = useIntersectionObserver("contact")
+    const divRef = useRef(null)
 
     return (
         <div
+            ref={divRef}
             className={`fixed bottom-6 flex justify-center right-0 w-full mx-auto ${
-                !modalState.isOpen ? "opa-0" : "opa-100"
-            } ${firstScroll ? "opa-0" : "opa-100"}`}
+                modalState.isOpen || landingScroll ? "opa-100" : "opa-0"
+            } ${contactScroll ? "hidden" : ""}`}
         >
             <div
                 className={`w-[20px] h-[40px] md:w-[30px] md:h-[60px] border rounded-full opacity-90 ${

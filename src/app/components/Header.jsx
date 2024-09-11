@@ -1,4 +1,5 @@
-import useScrollAnchor from "../hooks/useScrollAnchor"
+import useIntersectionObserver from "../hooks/useIntersectionObserver"
+import { useState, useEffect } from "react"
 import Language from "./Language"
 import Theme from "./Theme"
 import Navbar from "./Navbar"
@@ -6,19 +7,28 @@ import MenuTablet from "./MenuTablet"
 import MenuMobile from "./MenuMobile"
 
 function Header() {
-    const firstScroll = useScrollAnchor("technologies")
+    const landingScroll = useIntersectionObserver("landing")
+    const [loaded, setLoaded] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => setLoaded(true), 100)
+    }, [])
 
     return (
         <header
             className={`sm:h-16 md:h-20 lg:h-24 z-20 fixed top-0 left-0 right-0 p-5 bg-light-grey+ dark:bg-dark-blue ${
-                !firstScroll ? "shadow-head-0" : "shadow-head-100"
+                loaded
+                    ? landingScroll
+                        ? "shadow-head-0"
+                        : "shadow-head-100"
+                    : "shadow-head-0"
             }`}
         >
             <div className="h-full flex items-center justify-between">
                 <a
                     href="#landing"
                     className={`text-xl sm2:text-2xl text-red dark:text-yellow font-heading ${
-                        !firstScroll ? "opa-0" : "opa-100"
+                        loaded ? (landingScroll ? "opa-0" : "opa-100") : "opa-0"
                     }`}
                 >
                     Clément_Sorin
