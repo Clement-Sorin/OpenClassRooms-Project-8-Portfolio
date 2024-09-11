@@ -55,11 +55,16 @@ function ContentProfile({ datas }) {
                         key={index}
                         className="text-content-profile flex gap-2 items-start text-sm"
                     >
-                        <Beehive
-                            className="beehive-sm min-w-[17px] mt-[4px]"
-                            width="17px"
-                            stroke={theme === "light" ? "#757780" : "#E7DAE0"}
-                        />
+                        <div className="sm:w-[13px] sm2:w-[17px]">
+                            <Beehive
+                                className="beehive-sm  mt-[4px]"
+                                width="17px"
+                                height="17"
+                                stroke={
+                                    theme === "light" ? "#757780" : "#E7DAE0"
+                                }
+                            />
+                        </div>
                         <p className="text-content-profile">
                             <span className="font-bold ">
                                 {language === "fr" ? value?.title?.fr : ""}
