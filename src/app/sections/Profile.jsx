@@ -23,6 +23,7 @@ function Profile() {
                         fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="382"
+                        height="581"
                         className={`frame-lg ${
                             theme === "dark" ? "drop-shadow-lg" : ""
                         }`}

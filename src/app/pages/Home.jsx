@@ -10,7 +10,7 @@ function Home() {
             <Landing />
             <Technologies />
             <Projects />
-
+            <Profile />
             <Contact />
         </>
     )

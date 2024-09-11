@@ -1,8 +1,8 @@
-import useScrollAnchor from "../hooks/useScrollAnchor"
+import useIntersectionObserver from "../hooks/useIntersectionObserver"
 import { useAppContext } from "../contexts/AppContext"
 
 function ImagesProjects({ images, title, index }) {
-    const scrollSingleProject = useScrollAnchor(`${title}`)
+    const scrollSingleProject = useIntersectionObserver(`${title}`)
     const { theme, language, openModal } = useAppContext()
 
     const handleOpenModal = (event) => {

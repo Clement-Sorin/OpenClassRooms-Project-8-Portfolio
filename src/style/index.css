@@ -536,66 +536,10 @@ p {
         filter: brightness(1000%);
     }
 
-    /* Contact */
-    .container-form {
-        width: 350px;
-    }
-    .input-name {
-        width: 200px;
-    }
-    .contact-name, .contact-email , .contact-message {
-        width:350px;
-        justify-content: start;
-    }
-    .contact-message {
-        gap:10px;
-    }
-    .container-message {
-        width: 250px;
-    }
-    .label {
-        width: 100px;
-    }
-    #input-name, #input-email {
-        width: 200px;
-    }
-    #area-message {
-        width: 250px;
-        height: 90px;
-    }
 }
 
 @media (max-width: 450px) {
-    /* Contact */
-    .container-form {
-        width: 280px;
-    }
-    .input-name {
-        width: 180px;
-    }
-    .contact-name, .contact-email , .contact-message {
-        width:280px;
-        justify-content: start;
-    }
 
-    .contact-message {
-        gap:14px;
-    }
-    .container-message {
-        width: 250px;
-    }
-    .label {
-        width: 80px;
-    }
-    #input-name, #input-email {
-        width: 180px;
-        font-size: 12px;
-    }
-    #area-message {
-        width: 200px;
-        height: 70px;
-        font-size: 12px;
-    }
 
 }
 

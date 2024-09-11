@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { useAppContext } from "../contexts/AppContext"
 import datas from "../../assets/datas/Projects.json"
 import SingleProject from "../components/SingleProjetc"
@@ -6,21 +5,6 @@ import ModalGallery from "../components/ModalGallery"
 
 function Projects() {
     const { theme } = useAppContext()
-    const [touchStartY, setTouchStartY] = useState(0)
-    const scrollThreshold = 70
-
-    const handleTouchStart = (event) => {
-        setTouchStartY(event.touches[0].clientY)
-    }
-
-    const handleTouchMove = (event) => {
-        const currentY = event.touches[0].clientY
-        const direction = touchStartY - currentY
-
-        if (Math.abs(direction) > scrollThreshold) {
-            setTouchStartY(currentY)
-        }
-    }
 
     return (
         <section
@@ -32,8 +16,6 @@ function Projects() {
             <div
                 className={`all-projects flex flex-col w-full `}
                 style={{ minHeight: `${100 * datas.length}vh` }}
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
             >
                 {datas.map((item, index) => (
                     <SingleProject

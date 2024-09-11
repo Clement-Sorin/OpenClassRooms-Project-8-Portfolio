@@ -1,5 +1,5 @@
 import { useAppContext } from "../contexts/AppContext"
-import useScrollAnchor from "../hooks/useScrollAnchor"
+import useIntersectionObserver from "../hooks/useIntersectionObserver"
 import ImagesProjects from "./ImagesProjects"
 import LinkProjects from "./LinkProjects"
 import Position from "./Position"
@@ -16,7 +16,7 @@ function SingleProject({
     images,
 }) {
     const { theme, language } = useAppContext()
-    const scrollSingleProject = useScrollAnchor(`${title}`)
+    const scrollSingleProject = useIntersectionObserver(`${title}`)
 
     return (
         <div
