@@ -492,6 +492,40 @@ p {
     background-color: rgba(0, 0, 0, 0);
 }
 
+/* Collapse */
+
+.collapse-closed {
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.collapse-open {
+    max-height: 300px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.content-collapse-closed {
+    transform: translateY(-100%);
+    transition: transform 0.25s ease-in-out;
+}
+
+.content-collapse-open {
+    transform: translateY(0);
+    transition: transform 0.25s ease-out;
+}
+
+.arrow-collapse-open {
+    transform: rotate(540deg);
+    transition: transform 0.45s ease-in;
+}
+
+.arrow-collapse-closed {
+    transform: rotate(0deg);
+    transition: transform 0.45s ease-out;
+}
+
 /* --------------------- */
 /* ----Media-Queries---- */
 /* --------------------- */
@@ -541,7 +575,6 @@ p {
     .logo-techno-dark-unclicked {
         filter: brightness(1000%);
     }
-
 }
 
 @media (max-width: 450px) {

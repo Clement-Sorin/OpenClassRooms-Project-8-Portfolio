@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useAppContext } from "../contexts/AppContext"
 import { ReactComponent as ArrowCollapse } from "../../assets/icons/arrow-collapse.svg"
 
-function Collapse({ key, value, index }) {
+function Collapse({ propKey, value }) {
     const { theme, language } = useAppContext()
     const [isOpen, setIsOpen] = useState(false)
 
@@ -14,36 +14,50 @@ function Collapse({ key, value, index }) {
         }
     }
     return (
-        <div key={index} id={key} className={!isOpen ? "h-[50px]" : ""}>
+        <div
+            id={propKey}
+            className={`${!isOpen ? "collapse-closed" : "collapse-open"}`}
+        >
             <div
-                onClick={toggleCollapse}
-                className={`title-collapse relative w-[400px] flex items-center justify-between p-2 border-2 z-10 ${
+                className={`relative z-10 ${
                     theme === "light"
-                        ? "border-lines-light bg-light-grey+"
-                        : "border-lines-dark bg-dark-blue"
-                } rounded-md`}
+                        ? "bg-light-grey text-black"
+                        : "bg-dark-blue+ text-dark-text"
+                }`}
             >
-                <p className="text-[20px]">
-                    {language === "fr" ? value?.title.fr : value?.title.en}
-                </p>
-                <ArrowCollapse
-                    fill={theme === "light" ? "#757780" : "#E7DAE0"}
-                />
+                <div
+                    onClick={toggleCollapse}
+                    className={`title-collapse w-[300px] md:w-[400px] flex items-center justify-between p-2 border-2 ${
+                        theme === "light"
+                            ? "border-lines-light bg-light-grey+"
+                            : "border-lines-dark bg-dark-blue"
+                    } rounded-md`}
+                >
+                    <p className="text-[16px] md:text-[20px]">
+                        {language === "fr" ? value?.title.fr : value?.title.en}
+                    </p>
+                    <ArrowCollapse
+                        fill={theme === "light" ? "#757780" : "#E7DAE0"}
+                        className={
+                            isOpen
+                                ? "arrow-collapse-open"
+                                : "arrow-collapse-closed"
+                        }
+                    />
+                </div>
             </div>
             <div
-                className={`content-collapse pl-1 pt-3 z-0 ${
-                    isOpen
-                        ? "collapse-open"
-                        : "collapse-closed translate-y-[-100%] "
+                className={`content-collapse pl-1 pt-3  ${
+                    isOpen ? "content-collapse-open" : "content-collapse-closed"
                 }`}
             >
                 {Object.entries(value?.data).map(([key, value], index) => (
-                    <p key={index} className="flex gap-1">
+                    <p key={index} className="text-[14px] md:text-[16px]">
                         {value?.subtitle ? (
                             <span className="font-bold">
                                 {language === "fr"
                                     ? value?.subtitle.fr
-                                    : value?.subtitle.en}
+                                    : value?.subtitle.en}{" "}
                             </span>
                         ) : (
                             ""
