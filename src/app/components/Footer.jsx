@@ -7,7 +7,7 @@ function Footer() {
 
     return (
         <footer
-            className={`snap-proximity lg:snap-mandatory snap-start snap-always min-h-[20vh] w-full bg-black flex flex-col justify-center items-center`}
+            className={`snap-none lg:snap-mandatory snap-start snap-always min-h-[20vh] w-full bg-black flex flex-col justify-center items-center`}
         >
             <a
                 href="/#landing"
@@ -23,7 +23,7 @@ function Footer() {
                     className="h-full transition-transform duration-500 transform hover:scale-110 "
                 >
                     <img
-                        src="/images/icons/github-dark.svg"
+                        src="/images/icons/github-dark.png"
                         alt="link to Clément Sorin Github page"
                         className="sm:max-h-5 md:max-h-8"
                     ></img>
@@ -35,7 +35,7 @@ function Footer() {
                     className="h-full transition-transform duration-500 transform hover:scale-110 "
                 >
                     <img
-                        src="/images/icons/linkedin-dark.svg"
+                        src="/images/icons/linkedin-dark.png"
                         alt="link to Clément Sorin Linked-in page"
                         className="sm:max-h-5 md:max-h-8"
                     ></img>
