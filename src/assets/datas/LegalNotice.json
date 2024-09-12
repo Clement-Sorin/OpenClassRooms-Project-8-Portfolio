@@ -1,0 +1,168 @@
+{
+    "title": {
+        "fr": "Mentions Légales",
+        "en": "Legal Notice"
+    },
+    "data": {
+        "owner": {
+            "title": {
+                "fr": "Propriétaire du site",
+                "en": "Site Owner"
+            },
+            "data": {
+                "name": {
+                    "subtitle": {
+                        "fr": "Nom :",
+                        "en": "Name :"
+                    },
+                    "value": {
+                        "fr": "Clément Sorin",
+                        "en": "Clément Sorin"
+                    }
+                },
+                "address": {
+                    "subtitle": {
+                        "fr": "Adresse :",
+                        "en": "Address :"
+                    },
+                    "value": {
+                        "fr": "274 rue de Boringes, 74930 Reignier-Esery",
+                        "en": "274 rue de Boringes, 74930 Reignier-Esery"
+                    }
+                },
+                "phone_number": {
+                    "subtitle": {
+                        "fr": "Téléphone :",
+                        "en": "Phone Number :"
+                    },
+                    "value": {
+                        "fr": "+33 6 43 80 41 02",
+                        "en": "+33 6 43 80 41 02"
+                    }
+                },
+                "email": {
+                    "subtitle": {
+                        "fr": "Email :",
+                        "en": "Email :"
+                    },
+                    "value": {
+                        "fr": "info@sorinweb.site",
+                        "en": "info@sorinweb.site"
+                    }
+                }
+            }
+        },
+        "host": {
+            "title": {
+                "fr": "Hébergeur",
+                "en": "Host"
+            },
+            "data": {
+                "name": {
+                    "subtitle": {
+                        "fr": "Nom :",
+                        "en": "Name :"
+                    },
+                    "value": {
+                        "fr": "Vercel",
+                        "en": "Vercel"
+                    }
+                },
+                "address": {
+                    "subtitle": {
+                        "fr": "Adresse :",
+                        "en": "Address :"
+                    },
+                    "value": {
+                        "fr": "Vercel Inc, 650 California St, San Francisco, CA 94108, US",
+                        "en": "Vercel Inc, 650 California St, San Francisco, CA 94108, US"
+                    }
+                },
+                "contact": {
+                    "subtitle": {
+                        "fr": "Contact :",
+                        "en": "Contact :"
+                    },
+                    "value": {
+                        "fr": "legal@vercel.com",
+                        "en": "legal@vercel.com"
+                    }
+                }
+            }
+        },
+        "director": {
+            "title": {
+                "fr": "Directeur de publication",
+                "en": "Publication Director"
+            },
+            "data": {
+                "name": {
+                    "subtitle": {
+                        "fr": "Nom :",
+                        "en": "Name :"
+                    },
+                    "value": {
+                        "fr": "Clément Sorin",
+                        "en": "Clément Sorin"
+                    }
+                }
+            }
+        },
+        "intel_property": {
+            "title": {
+                "fr": "Propriété intellectuelle",
+                "en": "Intellectual Property"
+            },
+            "data": {
+                "text": {
+                    "value": {
+                        "fr": "Le contenu de ce site (textes, images, code source, etc.) est la propriété exclusive de Clément Sorin. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de Clément Sorin.",
+                        "en": "The content of this website (texts, images, source code, etc.) is the exclusive property of Clément Sorin. Any reproduction, representation, modification, publication, adaptation of any part of the website, by any means or process, is prohibited without prior written authorization from Clément Sorin."
+                    }
+                }
+            }
+        },
+        "responsibilities": {
+            "title": {
+                "fr": "Limitations de responsabilités",
+                "en": "Limitation of Liability"
+            },
+            "data": {
+                "text": {
+                    "value": {
+                        "fr": "Clément Sorin ne pourra être tenu responsable des dommages directs et indirects causés au matériel de l’utilisateur, lors de l’accès au site Clément Sorin Portfolio, et résultant soit de l’utilisation d’un matériel ne répondant pas aux spécifications indiquées, soit de l’apparition d’un bug ou d’une incompatibilité.",
+                        "en": "Clément Sorin shall not be held liable for any direct or indirect damage caused to the user's equipment during access to the Clément Sorin Portfolio website, resulting either from the use of equipment that does not meet the specified requirements, or from the appearance of a bug or incompatibility."
+                    }
+                }
+            }
+        },
+        "personnal_data": {
+            "title": {
+                "fr": "Collecte de données personnelles",
+                "en": "Collection of Personal Data"
+            },
+            "data": {
+                "text": {
+                    "value": {
+                        "fr": "Les informations recueillies via le formulaire de contact sont enregistrées dans un fichier informatisé par Clément Sorin pour la gestion des demandes de contact. Elles sont conservées pendant 1 an et sont destinées à Clément Sorin. Conformément à la loi « informatique et libertés », vous pouvez exercer votre droit d’accès aux données vous concernant et les faire rectifier en contactant : Clément Sorin, info@sorinweb.site.",
+                        "en": "The information collected via the contact form is stored in a computerized file by Clément Sorin for managing contact requests. They are kept for 1 year and are intended for Clément Sorin. In accordance with the 'Data Protection Act', you can exercise your right to access and correct your data by contacting: Clément Sorin, info@sorinweb.site."
+                    }
+                }
+            }
+        },
+        "cookies": {
+            "title": {
+                "fr": "Cookies",
+                "en": "Cookies"
+            },
+            "data": {
+                "text": {
+                    "value": {
+                        "fr": "Le site Clément Sorin Portfolio utilise des cookies pour analyser le trafic et améliorer votre expérience sur le site. Vous pouvez gérer vos préférences de cookies en accédant aux paramètres de votre navigateur.",
+                        "en": "The Clément Sorin Portfolio website uses cookies to analyze traffic and improve your experience on the site. You can manage your cookie preferences by accessing your browser settings."
+                    }
+                }
+            }
+        }
+    }
+}

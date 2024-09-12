@@ -7,7 +7,7 @@ function Footer() {
 
     return (
         <footer
-            className={`snap-none lg:snap-mandatory snap-start snap-always min-h-[20vh] w-full bg-black flex flex-col justify-center items-center`}
+            className={`min-h-[20vh] w-full bg-black flex flex-col justify-center items-center`}
         >
             <a
                 href="/#landing"
