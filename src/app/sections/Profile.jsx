@@ -13,7 +13,7 @@ function Profile() {
     return (
         <section
             id="profile"
-            className={`snap-start snap-always min-h-screen h-full w-full ${
+            className={`snap-proximity lg:snap-mandatory snap-start snap-always min-h-screen h-full w-full ${
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
