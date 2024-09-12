@@ -1,5 +1,6 @@
 import useIntersectionObserver from "../hooks/useIntersectionObserver"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import Language from "./Language"
 import Theme from "./Theme"
 import Navbar from "./Navbar"
@@ -25,14 +26,14 @@ function Header() {
             }`}
         >
             <div className="h-full flex items-center justify-between">
-                <a
-                    href="#landing"
+                <Link
+                    to="/"
                     className={`text-xl sm2:text-2xl text-red dark:text-yellow font-heading ${
                         loaded ? (landingScroll ? "opa-0" : "opa-100") : "opa-0"
                     }`}
                 >
                     Clément_Sorin
-                </a>
+                </Link>
                 <div className="hidden md:block lg:block max-w-[50%] w-full">
                     <Navbar navTabDesk={"flex justify-between w-full"} />
                 </div>
