@@ -1,0 +1,172 @@
+{
+    "title": {
+        "fr": "Politique de confidentialité",
+        "en": "Privacy Policy"
+    },
+    "data": {
+        "intro": {
+            "title": {
+                "fr": "Introduction",
+                "en": "Introduction"
+            },
+            "text": {
+                "fr": [
+                    "Clément Sorin, situé au 274 rue de Boringes, 74930 Reignier-Esery, France, est responsable du traitement des données collectées sur le site sorinweb.site."
+                ],
+                "en": [
+                    "Clément Sorin, located at 274 rue de Boringes, 74930 Reignier-Esery, France, is responsible for processing the data collected on the sorinweb.site website."
+                ]
+            }
+        },
+        "collected_data": {
+            "title": {
+                "fr": "Données collectées",
+                "en": "Collected Data"
+            },
+            "text": {
+                "fr": [
+                    "Nous collectons les données personnelles suivantes :",
+                    "- Nom",
+                    "- Adresse e-mail",
+                    "- Données de navigation (cookies)",
+                    "Les données sont collectées via les formulaires de contact et les cookies utilisés sur notre site."
+                ],
+                "en": [
+                    "We collect the following personal data:",
+                    "- Name",
+                    "- Email address",
+                    "- Browsing data (cookies)",
+                    "The data is collected through contact forms and cookies used on our site."
+                ]
+            }
+        },
+        "final_treatment": {
+            "title": {
+                "fr": "Finalité du traitement",
+                "en": "Purpose of Data Processing"
+            },
+            "text": {
+                "fr": [
+                    "Les données collectées sont utilisées pour :",
+                    "- Répondre à vos demandes de contact",
+                    "- Analyser le trafic et les comportements des utilisateurs"
+                ],
+                "en": [
+                    "The collected data is used for:",
+                    "- Responding to your contact requests",
+                    "- Analyzing traffic and user behavior"
+                ]
+            }
+        },
+        "legal_treatment": {
+            "title": {
+                "fr": "Base juridique du traitement",
+                "en": "Legal Basis for Data Processing"
+            },
+            "text": {
+                "fr": [
+                    "Le traitement des données est basé sur votre consentement explicite lorsque vous soumettez un formulaire de contact ou acceptez les cookies."
+                ],
+                "en": [
+                    "Data processing is based on your explicit consent when you submit a contact form or accept cookies."
+                ]
+            }
+        },
+        "data_reveiver": {
+            "title": {
+                "fr": "Destinataire des données",
+                "en": "Data Recipient"
+            },
+            "text": {
+                "fr": [
+                    "Les données sont accessibles uniquement par Clément Sorin et son prestataire de services (hébergement) dans le cadre de leurs missions."
+                ],
+                "en": [
+                    "The data is accessible only to Clément Sorin and his service provider (hosting) as part of their duties."
+                ]
+            }
+        },
+        "data_duration": {
+            "title": {
+                "fr": "Durée de conservation des données",
+                "en": "Data Retention Period"
+            },
+            "text": {
+                "fr": [
+                    "Les données personnelles sont conservées pendant une durée maximale d'un an après le dernier contact pour les demandes de contact, et selon les durées légales pour les cookies."
+                ],
+                "en": [
+                    "Personal data is retained for a maximum of one year after the last contact request, and according to legal retention periods for cookies."
+                ]
+            }
+        },
+        "users_rights": {
+            "title": {
+                "fr": "Droits des utilisateurs",
+                "en": "User Rights"
+            },
+            "text": {
+                "fr": [
+                    "Vous avez le droit de :",
+                    "- Accéder à vos données personnelles",
+                    "- Demander la rectification de vos données",
+                    "- Demander la suppression de vos données",
+                    "- Demander la portabilité de vos données",
+                    "- Vous opposer ou demander la limitation du traitement de vos données",
+                    "Pour exercer ces droits, vous pouvez nous contacter à : info@sorinweb.site."
+                ],
+                "en": [
+                    "You have the right to:",
+                    "- Access your personal data",
+                    "- Request the correction of your data",
+                    "- Request the deletion of your data",
+                    "- Request the portability of your data",
+                    "- Object to or request the limitation of your data processing",
+                    "To exercise these rights, you can contact us at: info@sorinweb.site."
+                ]
+            }
+        },
+        "data_transfer": {
+            "title": {
+                "fr": "Transferts des données hors de l’UE",
+                "en": "Data Transfers Outside the EU"
+            },
+            "text": {
+                "fr": [
+                    "Nous ne transférons pas vos données en dehors de l'Union Européenne."
+                ],
+                "en": [
+                    "We do not transfer your data outside the European Union."
+                ]
+            }
+        },
+        "data_security": {
+            "title": {
+                "fr": "Sécurité des données",
+                "en": "Data Security"
+            },
+            "text": {
+                "fr": [
+                    "Nous prenons des mesures de sécurité appropriées pour protéger vos données personnelles contre la perte, l'utilisation abusive, et l'accès non autorisé."
+                ],
+                "en": [
+                    "We take appropriate security measures to protect your personal data against loss, misuse, and unauthorized access."
+                ]
+            }
+        },
+        "policy_modification": {
+            "title": {
+                "fr": "Modifications de la politique de confidentialité",
+                "en": "Changes to the Privacy Policy"
+            },
+            "text": {
+                "fr": [
+                    "Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment."
+                ],
+                "en": [
+                    "We reserve the right to modify this privacy policy at any time."
+                ]
+            }
+        }
+    }
+}
