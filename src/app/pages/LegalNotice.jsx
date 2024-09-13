@@ -7,7 +7,7 @@ function LegalNotice() {
 
     return (
         <section
-            className={`h-full mt-16 md:mt-20 lg:mt-24 ${
+            className={`snap-proximity lg:snap-mandatory snap-start scroll-mt-24 snap-always h-full mt-16 md:mt-20 lg:mt-24 ${
                 theme === "light"
                     ? "bg-light-grey text-black"
                     : "bg-dark-blue+ text-dark-text"

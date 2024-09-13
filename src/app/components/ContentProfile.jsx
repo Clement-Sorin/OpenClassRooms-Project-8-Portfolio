@@ -31,7 +31,7 @@ function ContentProfile({ datas }) {
                 theme === "light" ? "" : "text-dark-text"
             }`}
         >
-            <h2>
+            <h2 className="pl-5">
                 {language === "fr"
                     ? `${dataProfile.title.fr}`
                     : `${dataProfile.title.en}`}

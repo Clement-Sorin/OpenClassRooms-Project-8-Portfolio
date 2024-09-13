@@ -34,11 +34,19 @@ function Contact() {
         const data = await response.json()
 
         if (data.success) {
-            setResult("Form Submitted Successfully")
+            setResult(
+                language === "fr"
+                    ? "Votre message a bien été envoyé"
+                    : "Form Submitted Successfully"
+            )
             event.target.reset()
         } else {
             console.log("Error", data)
-            setResult(data.message)
+            setResult(
+                language === "fr"
+                    ? "Il y a eu une erreur dans l'envoi de votre message"
+                    : "Form Submition failed"
+            )
         }
     }
 
@@ -197,7 +205,7 @@ function Contact() {
                                 } w-[124px]`}
                             />
                         </div>
-                        <span>{result}</span>
+                        <p className="w-full text-center">{result}</p>
                     </div>
                 </form>
             </div>
