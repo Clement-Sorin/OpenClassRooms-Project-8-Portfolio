@@ -1,5 +1,9 @@
 import { ReactComponent as FrameLarge } from "../../assets/svgs/profile-frame-big.svg"
 import { ReactComponent as FrameSmall } from "../../assets/svgs/profile-frame-small.svg"
+import { ReactComponent as FrameProfileSm } from "../../assets/svgs/frame-profile-sm.svg"
+import { ReactComponent as FrameCertifSm } from "../../assets/svgs/frame-certif-sm.svg"
+import { ReactComponent as FrameSoftSm } from "../../assets/svgs/frame-soft-sm.svg"
+import { ReactComponent as FrameHardSm } from "../../assets/svgs/frame-hard-sm.svg"
 import { useAppContext } from "../contexts/AppContext"
 import datas from "../../assets/datas/Profile.json"
 import ContentProfile from "../components/ContentProfile"
@@ -24,10 +28,18 @@ function Profile() {
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="382"
                         height="581"
-                        className={`frame-lg ${
+                        className={`frame-lg sm:hidden sm2:block ${
                             theme === "dark" ? "drop-shadow-lg" : ""
                         }`}
                     ></FrameLarge>
+                    <FrameProfileSm
+                        fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
+                        stroke={theme === "light" ? "#757780" : "#E7DAE0"}
+                        width="300"
+                        className={`sm2:hidden ${
+                            theme === "dark" ? "drop-shadow-lg" : ""
+                        }`}
+                    ></FrameProfileSm>
                     <ContentProfile datas={datas} />
                 </div>
                 <div className="middle flex flex-col justify-between">
@@ -37,10 +49,18 @@ function Profile() {
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="382"
                             height="290"
-                            className={`frame-sm ${
+                            className={`frame-sm sm:hidden sm2:block ${
                                 theme === "dark" ? "drop-shadow-lg" : ""
                             }`}
                         ></FrameSmall>
+                        <FrameCertifSm
+                            fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
+                            stroke={theme === "light" ? "#757780" : "#E7DAE0"}
+                            width="300"
+                            className={`sm2:hidden ${
+                                theme === "dark" ? "drop-shadow-lg" : ""
+                            }`}
+                        />
                         <ContentCertifications datas={datas} />
                     </div>
                     <div className="soft-skills relative">
@@ -49,10 +69,18 @@ function Profile() {
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="382"
                             height="290"
-                            className={`frame-sm ${
+                            className={`frame-sm sm:hidden sm2:block ${
                                 theme === "dark" ? "drop-shadow-lg" : ""
                             }`}
                         ></FrameSmall>
+                        <FrameSoftSm
+                            fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
+                            stroke={theme === "light" ? "#757780" : "#E7DAE0"}
+                            width="300"
+                            className={`sm2:hidden ${
+                                theme === "dark" ? "drop-shadow-lg" : ""
+                            }`}
+                        />
                         <ContentSoftSkills datas={datas} />
                     </div>
                 </div>
@@ -62,10 +90,18 @@ function Profile() {
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="382"
                         height="581"
-                        className={`frame-lg ${
+                        className={`frame-lg sm:hidden sm2:block ${
                             theme === "dark" ? "drop-shadow-lg" : ""
                         }`}
                     ></FrameLarge>
+                    <FrameHardSm
+                        fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
+                        stroke={theme === "light" ? "#757780" : "#E7DAE0"}
+                        width="300"
+                        className={` sm2:hidden ${
+                            theme === "dark" ? "drop-shadow-lg" : ""
+                        }`}
+                    />
                     <ContentHardSkills datas={datas} />
                 </div>
             </div>

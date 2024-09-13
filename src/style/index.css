@@ -287,7 +287,7 @@ p {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 450px) {
     .frame-lg, .frame-sm {
         width: 300px;
     }
@@ -301,10 +301,10 @@ p {
         font-size: 22px;
     }
     .text-content-profile {
-        font-size: 10px;
+        font-size: 14px;
     }
     .content-profile {
-        gap:8px
+        gap:30px
     }
     .container-photo-profile {
         height: 120px;
@@ -318,10 +318,10 @@ p {
         height: 100px;
     }
     .content-certif {
-        gap:8px;
+        gap:5px;
     }
     .content-certif div {
-        gap:0
+        gap:5px
     }
     .content-soft {
         gap: 10px

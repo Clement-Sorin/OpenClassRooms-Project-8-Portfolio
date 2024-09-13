@@ -27,7 +27,7 @@ function ContentProfile({ datas }) {
 
     return (
         <div
-            className={`content-profile absolute top-0 p-5 flex flex-col gap-4 ${
+            className={`content-profile h-full absolute top-3 sm2:top-0 p-5 flex flex-col gap-4 ${
                 theme === "light" ? "" : "text-dark-text"
             }`}
         >

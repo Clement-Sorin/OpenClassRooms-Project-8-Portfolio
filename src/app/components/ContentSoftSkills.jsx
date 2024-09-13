@@ -8,7 +8,7 @@ function ContentSoftSkills({ datas }) {
 
     return (
         <div
-            className={`content-soft absolute top-0 pt-5 pl-9 pr-7 flex flex-col gap-6 w-full ${
+            className={`content-soft absolute top-3 sm2:top-0 pt-5 pl-9 pr-7 flex flex-col gap-6 w-full ${
                 theme === "light" ? "" : "text-dark-text"
             }`}
         >

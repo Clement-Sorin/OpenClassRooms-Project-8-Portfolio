@@ -205,7 +205,7 @@ function Contact() {
                                 } w-[124px]`}
                             />
                         </div>
-                        <p className="w-full text-center">{result}</p>
+                        <p className="text-center">{result}</p>
                     </div>
                 </form>
             </div>

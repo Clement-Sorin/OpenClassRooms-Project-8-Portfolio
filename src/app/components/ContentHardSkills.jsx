@@ -8,7 +8,7 @@ function ContentHardSkills({ datas }) {
 
     return (
         <div
-            className={`content-hard absolute top-0 pt-5 pl-9 pr-7 flex flex-col gap-8 w-full ${
+            className={`content-hard absolute sm:top-3 sm2:top-0 pt-5 pl-9 pr-7 flex flex-col gap-8 w-full ${
                 theme === "light" ? "" : "text-dark-text"
             }`}
         >

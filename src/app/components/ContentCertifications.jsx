@@ -7,7 +7,7 @@ function Certifications({ datas }) {
 
     return (
         <div
-            className={`content-certif absolute top-0 pt-3 pl-9 pr-7 flex flex-col gap-3 ${
+            className={`content-certif absolute top-3 sm2:top-0 pt-3 pl-9 pr-7 flex flex-col gap-3 ${
                 theme === "light" ? "" : "text-dark-text"
             }`}
         >
