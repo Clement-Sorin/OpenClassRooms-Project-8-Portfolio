@@ -27,7 +27,7 @@ function Collapse({ propKey, value }) {
             >
                 <div
                     onClick={toggleCollapse}
-                    className={`title-collapse w-[300px] md:w-[400px] flex items-center justify-between p-2 border-2 ${
+                    className={`title-collapse w-full sm2:w-[300px] md:w-[400px] flex items-center justify-between p-2 border-2 ${
                         theme === "light"
                             ? "border-lines-light bg-light-grey+"
                             : "border-lines-dark bg-dark-blue"
