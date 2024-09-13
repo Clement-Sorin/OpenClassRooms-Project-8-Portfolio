@@ -67,7 +67,7 @@ function Contact() {
                         <div className="contact-name flex sm:flex-col sm:gap-2 md:flex-row justify-between">
                             <label
                                 htmlFor="input-name"
-                                className="label text-lg md:text-xl"
+                                className="label text-[16px] md:text-xl"
                             >
                                 {language === "fr"
                                     ? datas.name.fr
@@ -98,7 +98,7 @@ function Contact() {
                         <div className="contact-email flex sm:flex-col sm:gap-2 md:flex-row justify-between">
                             <label
                                 htmlFor="input-email"
-                                className="label text-lg md:text-xl"
+                                className="label text-[16px] md:text-xl"
                             >
                                 {language === "fr"
                                     ? datas.email.fr
@@ -129,7 +129,7 @@ function Contact() {
                         <div className="contact-message flex sm:flex-col sm:gap-2 md:flex-row justify-between md:gap-10">
                             <label
                                 htmlFor="area-message"
-                                className="label text-lg md:text-xl"
+                                className="label text-[16px] md:text-xl"
                             >
                                 {language === "fr"
                                     ? datas.message.fr
@@ -189,7 +189,7 @@ function Contact() {
                                         : theme === "light"
                                         ? "input-submit-lt"
                                         : "input-submit-dk"
-                                } text-md md:text-lg absolute w-[124px] h-[36px]`}
+                                } text-[16px] md:text-lg absolute w-[124px] h-[36px]`}
                                 onMouseEnter={changeButtonColor}
                                 onMouseLeave={removeButtonColor}
                             ></input>
