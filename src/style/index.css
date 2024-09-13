@@ -337,6 +337,41 @@ p {
     font-family:'Orbitron', sans-serif;
 }
 
+.frame-submit-lt, .frame-submit-dk, .frame-submit-hovered-lt, .frame-submit-dk {
+    transition: fill 0.15s ease-in-out, stroke 0.15s ease-in-out;
+}
+.frame-submit-lt {
+    fill: #fafafa;
+    stroke: #757780;
+}
+.frame-submit-dk {
+    fill : #0B3847;
+    stroke : #F7F3F5;
+}
+.frame-submit-hovered-lt {
+    fill: #E3170A;
+    stroke: #E3170A;
+}
+.frame-submit-hovered-dk {
+    fill: #CFD11A;
+    stroke: #CFD11A;
+}
+.input-submit-lt, .input-submit-dk, .input-submit-hovered-lt, .input-submit-hovered-dk {
+    transition: color 0.15s ease-in-out
+}
+.input-submit-lt {
+    color: black;
+}
+.input-submit-dk {
+    color : #F7F3F5;
+}
+.input-submit-hovered-lt {
+    color: #fafafa;
+}
+.input-submit-hovered-dk {
+    color: #0B3847;
+}
+
 /* --------------------- */
 /* -----COMPONENTS------ */
 /* --------------------- */

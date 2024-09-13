@@ -4,12 +4,43 @@ import { ReactComponent as FrameMessage } from "../../assets/svgs/frame-contact-
 import { ReactComponent as FrameSubmit } from "../../assets/svgs/frame-submit.svg"
 import { ReactComponent as FrameMessageSm2 } from "../../assets/svgs/frame-message-sm2.svg"
 import { ReactComponent as FrameMessageSm } from "../../assets/svgs/frame-message-sm.svg"
-import { useRef } from "react"
+import { useState } from "react"
 import datas from "../../assets/datas/Contact.json"
 
 function Contact() {
     const { theme, language } = useAppContext()
-    const formRef = useRef(null)
+    const [isHovered, setIsHovered] = useState()
+    const [result, setResult] = useState("")
+
+    const changeButtonColor = () => {
+        setIsHovered(true)
+    }
+    const removeButtonColor = () => {
+        setIsHovered(false)
+    }
+
+    const onSubmit = async (event) => {
+        event.preventDefault()
+        setResult("Sending....")
+        const formData = new FormData(event.target)
+
+        formData.append("access_key", process.env.REACT_APP_WEB3FORM_KEY)
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData,
+        })
+
+        const data = await response.json()
+
+        if (data.success) {
+            setResult("Form Submitted Successfully")
+            event.target.reset()
+        } else {
+            console.log("Error", data)
+            setResult(data.message)
+        }
+    }
 
     return (
         <section
@@ -19,7 +50,7 @@ function Contact() {
             }`}
         >
             <div className="container-contact min-h-[80vh] w-full flex justify-center items-center pt-24">
-                <form ref={formRef} action="/submit" method="post">
+                <form onSubmit={onSubmit} action="/submit" method="post">
                     <div
                         className={`container-form flex flex-col gap-5 pb-16 md:pb-0 ${
                             theme === "light" ? "text-black" : "text-dark-text"
@@ -37,6 +68,7 @@ function Contact() {
                             <div className="input-name md:w-[500px] relative flex justify-start">
                                 <input
                                     type="text"
+                                    name="name"
                                     id="input-name"
                                     required
                                     className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2 h-[52px]"
@@ -67,6 +99,7 @@ function Contact() {
                             <div className="input-name relative md:w-[500px] flex justify-start">
                                 <input
                                     type="email"
+                                    name="email"
                                     id="input-email"
                                     required
                                     className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2 h-[52px]"
@@ -96,7 +129,7 @@ function Contact() {
                             </label>
                             <div className="container-message relative flex justify-start">
                                 <textarea
-                                    type="text"
+                                    name="message"
                                     id="area-message"
                                     required
                                     className="absolute w-[302px] h-[269px] sm2:w-[383px] sm2:h-[266px] md:w-[499px] md:h-[182px] bg-transparent outline-none p-2 resize-none"
@@ -140,16 +173,31 @@ function Contact() {
                                         : datas.submit.en
                                 }
                                 aria-label="send message form"
-                                className="input-submit text-md md:text-lg absolute w-[124px] h-[36px]"
+                                className={`${
+                                    isHovered
+                                        ? theme === "light"
+                                            ? "input-submit-hovered-lt"
+                                            : "input-submit-hovered-dk"
+                                        : theme === "light"
+                                        ? "input-submit-lt"
+                                        : "input-submit-dk"
+                                } text-md md:text-lg absolute w-[124px] h-[36px]`}
+                                onMouseEnter={changeButtonColor}
+                                onMouseLeave={removeButtonColor}
                             ></input>
                             <FrameSubmit
-                                className="frame-submit w-[124px]"
-                                stroke={
-                                    theme === "light" ? "#757780" : "#E7DAE0"
-                                }
-                                fill={theme === "light" ? "#FAFAFA" : "#0B3847"}
+                                className={`${
+                                    isHovered
+                                        ? theme === "light"
+                                            ? "frame-submit-hovered-lt"
+                                            : "frame-submit-hovered-dk"
+                                        : theme === "light"
+                                        ? "frame-submit-lt"
+                                        : "frame-submit-dk"
+                                } w-[124px]`}
                             />
                         </div>
+                        <span>{result}</span>
                     </div>
                 </form>
             </div>
