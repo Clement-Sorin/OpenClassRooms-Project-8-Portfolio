@@ -491,7 +491,6 @@ p {
   }
 
 .arrow-scroll {
-    position:absolute;
     animation: moveY 1.5s ease-in-out infinite alternate;
 }
 
@@ -519,6 +518,21 @@ p {
 
 .container-image:hover .filter-more {
     background-color: rgba(0, 0, 0, 0);
+}
+
+/* ModalGallery */
+
+@keyframes moveX {
+    from {
+        transform: translateX(-5px)
+    }
+    to {
+      transform: translateX(5px);
+    }
+  }
+
+.finger-swipe {
+    animation: moveX 1.5s ease-in-out infinite alternate
 }
 
 /* Collapse */

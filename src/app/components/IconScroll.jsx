@@ -4,7 +4,7 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver"
 import { useRef } from "react"
 
 function IconScroll() {
-    const { theme, modalState } = useAppContext()
+    const { theme } = useAppContext()
     const landingScroll = useIntersectionObserver("landing")
     const contactScroll = useIntersectionObserver("contact")
     const divRef = useRef(null)
@@ -13,7 +13,7 @@ function IconScroll() {
         <div
             ref={divRef}
             className={`fixed bottom-6 flex justify-center right-0 w-full mx-auto ${
-                modalState.isOpen || landingScroll ? "opa-100" : "opa-0"
+                landingScroll ? "opa-100" : "opa-0"
             } ${contactScroll ? "hidden" : ""}`}
         >
             <div
@@ -21,7 +21,7 @@ function IconScroll() {
                     theme === "light"
                         ? "border-lines-light"
                         : "border-lines-dark"
-                } relative flex justify-center items-center`}
+                } flex justify-center items-center`}
             >
                 <ArrowScroll
                     className="arrow-scroll w-[15px] h-[15px] md:w-[20px] md:h-[20px]"

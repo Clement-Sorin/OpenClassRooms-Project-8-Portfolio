@@ -1,11 +1,12 @@
-import { useRef, useEffect, useState } from "react"
+import { useRef, useEffect, useState, useCallback } from "react"
 import { useAppContext } from "../contexts/AppContext"
 import projects from "../../assets/datas/Projects.json"
-import { ReactComponent as PolygonLeft } from "../../assets/icons/polygon-left.svg"
-import { ReactComponent as PolygonRight } from "../../assets/icons/polygon-right.svg"
+import { ReactComponent as ArrowScroll } from "../../assets/icons/arrow-scroll.svg"
+import { ReactComponent as FingerSwipe } from "../../assets/icons/finger.svg"
+import { ReactComponent as ArrowsSwipe } from "../../assets/icons/arrow.svg"
 
 function ModalGallery() {
-    const { modalState, closeModal, theme } = useAppContext()
+    const { modalState, closeModal, theme, language } = useAppContext()
     const divModal = useRef(null)
     const [imageIndex, setImageIndex] = useState(0)
     const html = document.querySelector("html")
@@ -41,32 +42,40 @@ function ModalGallery() {
 
     // Carrousel fonctionnality
 
-    const handleNextClick = () => {
+    const selectNextImage = useCallback(() => {
         const nextImage = imageIndex + 1
         if (imageIndex >= images.length - 1) {
             setImageIndex(0)
         } else {
             setImageIndex(nextImage)
         }
-    }
+    }, [imageIndex, images.length])
 
-    const handlePrevClick = () => {
+    const selectPrevImage = useCallback(() => {
         const nextImage = imageIndex - 1
         if (imageIndex === 0) {
             setImageIndex(images.length - 1)
         } else {
             setImageIndex(nextImage)
         }
-    }
+    }, [imageIndex, images.length])
 
-    const handleScroll = (event) => {
-        const scrollMove = event.deltaY
-        if (scrollMove < 0) {
-            handlePrevClick()
-        } else if (scrollMove > 0) {
-            handleNextClick()
+    useEffect(() => {
+        const handleWheel = (event) => {
+            const scrollMove = event.deltaY
+            if (scrollMove < 0) {
+                selectPrevImage()
+            } else if (scrollMove > 0) {
+                selectNextImage()
+            }
         }
-    }
+
+        document.addEventListener("wheel", handleWheel, { passive: false })
+
+        return () => {
+            document.removeEventListener("wheel", handleWheel)
+        }
+    }, [selectNextImage, selectPrevImage])
 
     let touchStartX = 0
     let touchEndX = 0
@@ -76,9 +85,9 @@ function ModalGallery() {
     }
     const handleTouchEnd = (e) => {
         if (touchStartX - touchEndX > 0) {
-            handleNextClick()
+            selectNextImage()
         } else if (touchEndX - touchStartX > 0) {
-            handlePrevClick()
+            selectPrevImage()
         }
     }
     const handleTouchMove = (e) => {
@@ -111,11 +120,6 @@ function ModalGallery() {
                     } `}
                 >
                     <div className="flex justify-center items-center">
-                        <PolygonLeft
-                            stroke="black"
-                            onClick={handlePrevClick}
-                            className="sm:hidden md:block"
-                        />
                         <div className="custom-border-box m-2 before:border-black before:dark:border-black after:border-black after:dark:border-black flex justify-center">
                             <img
                                 ref={divModal}
@@ -125,18 +129,37 @@ function ModalGallery() {
                                 onTouchStart={handleTouchStart}
                                 onTouchMove={handleTouchMove}
                                 onTouchEnd={handleTouchEnd}
-                                onWheel={handleScroll}
                             ></img>
                         </div>
-                        <PolygonRight
-                            stroke="black"
-                            onClick={handleNextClick}
-                            className="sm:hidden md:block"
-                        />
                     </div>
                     <p>
                         {pagingIndex} / {pagingMax}
                     </p>
+
+                    <div
+                        className={`w-[25px] h-[40px]  border rounded-full m-2 opacity-90 border-black hidden lg:flex justify-center items-center`}
+                    >
+                        <ArrowScroll
+                            className="arrow-scroll w-[20px] h-[20px]"
+                            color="black"
+                            opacity={0.9}
+                        ></ArrowScroll>
+                    </div>
+                    <div className="lg:hidden flex flex-col items-center mt-2">
+                        <div className="relative top-[3px] arrows-swipe flex gap-3">
+                            <ArrowsSwipe
+                                width="15"
+                                height="15"
+                                className="rotate-180"
+                            />
+                            <ArrowsSwipe width="15" height="15" />
+                        </div>
+                        <FingerSwipe
+                            width="20"
+                            height="20"
+                            className="ml-1 finger-swipe"
+                        />
+                    </div>
                 </div>
             </div>
         </>
