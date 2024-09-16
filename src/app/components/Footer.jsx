@@ -9,7 +9,7 @@ function Footer() {
 
     return (
         <footer
-            className={`snap-proximity lg:snap-mandatory snap-end min-h-[20vh] w-full bg-black flex flex-col justify-center items-center`}
+            className={`snap-none lg:snap-mandatory lg:snap-end min-h-[20vh] w-full bg-black flex flex-col justify-center items-center`}
         >
             <a
                 href="/#landing"
