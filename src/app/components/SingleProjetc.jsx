@@ -21,7 +21,7 @@ function SingleProject({
     return (
         <div
             id={title}
-            className={`flex flex-col snap-proximity lg:snap-mandatory snap-start snap-always ${
+            className={`project flex flex-col snap-proximity lg:snap-mandatory snap-start snap-always ${
                 position % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
             } single-project h-[100vh] sm:mt-[-40px] gap-8 md:gap-20 mw-auto mr-5 ml-5 justify-center items-center w-full h-full`}
         >

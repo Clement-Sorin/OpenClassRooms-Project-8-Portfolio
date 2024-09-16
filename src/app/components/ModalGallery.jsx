@@ -6,10 +6,11 @@ import { ReactComponent as FingerSwipe } from "../../assets/icons/finger.svg"
 import { ReactComponent as ArrowsSwipe } from "../../assets/icons/arrow.svg"
 
 function ModalGallery() {
-    const { modalState, closeModal, theme, language } = useAppContext()
+    const { modalState, closeModal, theme } = useAppContext()
     const divModal = useRef(null)
     const [imageIndex, setImageIndex] = useState(0)
     const html = document.querySelector("html")
+    const containerProject = document.querySelector(".project")
     const project = projects[modalState.data]
     const images = project ? project.images : []
     const pagingIndex = imageIndex + 1
@@ -17,8 +18,10 @@ function ModalGallery() {
 
     if (modalState.isOpen) {
         html.classList.add("overflow-y-hidden")
+        containerProject.classList.add("overflow-y-hidden")
     } else if (!modalState.isOpen) {
         html.classList.remove("overflow-y-hidden")
+        containerProject.classList.remove("overflow-y-hidden")
     }
 
     useEffect(() => {
