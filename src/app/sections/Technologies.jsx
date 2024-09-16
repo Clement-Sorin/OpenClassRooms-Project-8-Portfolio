@@ -31,7 +31,7 @@ function Technologies() {
             <div
                 className={`${
                     firstScroll ? "technologies" : "hidden"
-                } mw-auto h-full pt-28`}
+                } mw-auto h-full pt-28 overflow-x-hidden`}
             >
                 <div id="front-end" className="pb-20 md:pb-0 ">
                     <h2
