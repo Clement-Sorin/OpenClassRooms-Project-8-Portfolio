@@ -21,7 +21,7 @@ function Contact() {
 
     const onSubmit = async (event) => {
         event.preventDefault()
-        setResult("Sending....")
+        setResult(language === "fr" ? "envoi..." : "sending...")
         const formData = new FormData(event.target)
 
         formData.append("access_key", process.env.REACT_APP_WEB3FORM_KEY)

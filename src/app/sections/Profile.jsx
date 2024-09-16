@@ -21,7 +21,7 @@ function Profile() {
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
-            <div className="all-frames min-h-screen pt-24 flex flex-wrap justify-evenly items-center ">
+            <div className="all-frames min-h-screen mw-auto pt-24 flex flex-wrap justify-evenly items-center ">
                 <div className="profile relative">
                     <FrameLarge
                         fill={theme === "light" ? "#FaFaFa" : "#0B3847"}

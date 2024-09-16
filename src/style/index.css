@@ -131,12 +131,6 @@ p {
 
 /* Technologies */
 
-
-.technologies {
-    width: 100%;
-}
-
-
 @keyframes fade-in {
     0% {
         opacity: 0;

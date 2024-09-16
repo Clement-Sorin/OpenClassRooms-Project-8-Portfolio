@@ -24,7 +24,7 @@ function Technologies() {
     return (
         <section
             id="technologies"
-            className={`h-full min-h-screen w-full overflow-x-hidden snap-proximity lg:snap-mandatory snap-start snap-always  ${
+            className={`h-full w-full snap-proximity lg:snap-mandatory snap-start snap-always  ${
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >

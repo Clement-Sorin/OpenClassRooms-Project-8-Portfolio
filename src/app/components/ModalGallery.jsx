@@ -61,9 +61,9 @@ function ModalGallery() {
 
     const handleScroll = (event) => {
         const scrollMove = event.deltaY
-        if (scrollMove <= -100) {
+        if (scrollMove < 0) {
             handlePrevClick()
-        } else if (scrollMove >= 100) {
+        } else if (scrollMove > 0) {
             handleNextClick()
         }
     }
@@ -116,7 +116,7 @@ function ModalGallery() {
                             onClick={handlePrevClick}
                             className="sm:hidden md:block"
                         />
-                        <div className="custom-border-box m-2 before:border-black before:dark:border-black after:border-black after:dark:border-black">
+                        <div className="custom-border-box m-2 before:border-black before:dark:border-black after:border-black after:dark:border-black flex justify-center">
                             <img
                                 ref={divModal}
                                 src={images[imageIndex]}
