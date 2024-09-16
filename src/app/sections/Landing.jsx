@@ -10,7 +10,7 @@ function Landing() {
     return (
         <section
             id="landing"
-            className={`relative snap-proximity lg:snap-mandatory snap-start  snap-always h-screen w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+ snap-start`}
+            className={`relative snap-none lg:snap-mandatory lg:snap-start  lg:snap-always h-screen w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+ snap-start`}
         >
             <Particles className={`particles absolute`} />
             <div className="absolute w-full sm:top-3 md:top-5 ">
