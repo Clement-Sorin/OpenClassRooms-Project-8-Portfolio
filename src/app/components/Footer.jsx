@@ -1,4 +1,6 @@
 import { useAppContext } from "../contexts/AppContext"
+import { ReactComponent as GitHubLogo } from "../../assets/icons/github.svg"
+import { ReactComponent as LinkedInLogo } from "../../assets/icons/linkedin.svg"
 import { Link } from "react-router-dom"
 import datas from "../../assets/datas/Footer.json"
 
@@ -22,11 +24,7 @@ function Footer() {
                     rel="noreferrer"
                     className="h-full transition-transform duration-500 transform hover:scale-110 "
                 >
-                    <img
-                        src="/images/icons/github-dark.png"
-                        alt="link to Clément Sorin Github page"
-                        className="sm:max-h-5 md:max-h-8"
-                    ></img>
+                    <GitHubLogo className="sm:max-h-6 sm:max-w-6  md:max-h-8 md:max-w-8" />
                 </a>
                 <a
                     href="https://linkedin.com/in/clément-sorin"
@@ -34,11 +32,7 @@ function Footer() {
                     rel="noreferrer"
                     className="h-full transition-transform duration-500 transform hover:scale-110 "
                 >
-                    <img
-                        src="/images/icons/linkedin-dark.png"
-                        alt="link to Clément Sorin Linked-in page"
-                        className="sm:max-h-5 md:max-h-8"
-                    ></img>
+                    <LinkedInLogo className="sm:max-h-6 sm:max-w-6  md:max-h-8 md:max-w-8" />
                 </a>
             </div>
             <div className="other-link-footer flex gap-5 mt-5">
