@@ -10,10 +10,10 @@ function Landing() {
     return (
         <section
             id="landing"
-            className={`relative snap-none lg:snap-start  lg:snap-always h-screen w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+ snap-start`}
+            className={`relative h-screen w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+ snap-start`}
         >
             <Particles className={`particles absolute`} />
-            <div className="absolute w-full sm:top-3 md:top-5 ">
+            <div className="absolute  snap-start snap-always w-full sm:top-3 md:top-5 ">
                 <div className="content-landing w-full h-screen mw-auto flex-col justify-center pb-24">
                     <div className=" w-full flex md:flex-nowrap flex-wrap md:gap-10 gap-5  justify-center items-center md:justify-evenly  w-full h-full sm:p-6 sm:mb-20 sm:mt-10">
                         <div className="container-title  flex-col md:ml-10 max-w-96 lg:min-w-80 md:min-w-64">

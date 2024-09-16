@@ -53,7 +53,7 @@ function Contact() {
     return (
         <section
             id="contact"
-            className={`snap-none lg:snap-start lg:snap-always min-h-[80vh] h-full w-full ${
+            className={`snap-start snap-always min-h-[80vh] h-full w-full ${
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >

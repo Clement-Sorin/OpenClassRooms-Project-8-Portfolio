@@ -17,7 +17,7 @@ function Profile() {
     return (
         <section
             id="profile"
-            className={`snap-none lg:snap-start lg:snap-always min-h-screen h-full w-full ${
+            className={`snap-start snap-always min-h-screen h-full w-full ${
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >

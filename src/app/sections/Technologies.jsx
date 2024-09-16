@@ -24,14 +24,14 @@ function Technologies() {
     return (
         <section
             id="technologies"
-            className={`h-full w-full snap-none lg:snap-start lg:snap-always  ${
+            className={`h-full w-full snap-start snap-always  ${
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
             <div
                 className={`${
                     firstScroll ? "technologies" : "hidden"
-                } mw-auto h-full pt-28  overflow-x-hidden `}
+                } mw-auto h-full pt-28`}
             >
                 <div id="front-end" className="pb-20 md:pb-0 ">
                     <h2
