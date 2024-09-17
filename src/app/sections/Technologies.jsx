@@ -28,21 +28,21 @@ function Technologies() {
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
-            <div
-                className={`${
-                    firstScroll ? "technologies" : "hidden"
-                } mw-auto h-full pt-10 lg:pt-28 overflow-hidden`}
-            >
+            <div className={`mw-auto h-full pt-10 lg:pt-28 overflow-hidden`}>
                 <div id="front-end" className="pb-20 md:pb-0 ">
                     <h2
                         id="title-front-end"
-                        className="relative top-3 md:top-6 fade-in ml-[8%] dark:text-dark-text text-[22px] sm2:text-[24px] md:text-[28px] lg:text-[32px]"
+                        className={`relative top-3 md:top-6 ${
+                            firstScroll ? "fade-in" : ""
+                        } ml-[8%] dark:text-dark-text text-[22px] sm2:text-[24px] md:text-[28px] lg:text-[32px]`}
                     >
                         Front-end
                     </h2>
                     <VectorFront
                         id="vector-front-end"
-                        className="relative fade-in w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark"
+                        className={`relative ${
+                            firstScroll ? "fade-in" : ""
+                        } w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark`}
                     />
                     <div className=" relative w-full flex flex-col md:flex-row md:flex justify-center flex-wrap md:pt-10">
                         {groupedTechnologiesFront.map((group, groupIndex) => (
@@ -78,11 +78,15 @@ function Technologies() {
                 >
                     <VectorBack
                         id="vector-back-end"
-                        className="fade-in w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark"
+                        className={`${
+                            firstScroll ? "fade-in" : ""
+                        } w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark`}
                     />
                     <h2
                         id="title-back-end"
-                        className="fade-in relative right-[8%] bottom-3 md:bottom-7 dark:text-dark-text text-[22px] sm2:text-[24px] md:text-[28px] lg:text-[32px]"
+                        className={`${
+                            firstScroll ? "fade-in" : ""
+                        } relative right-[8%] bottom-3 md:bottom-7 dark:text-dark-text text-[22px] sm2:text-[24px] md:text-[28px] lg:text-[32px]`}
                     >
                         Back-end
                     </h2>

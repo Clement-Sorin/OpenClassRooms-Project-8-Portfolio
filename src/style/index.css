@@ -19,7 +19,6 @@ html {
     overscroll-behavior: none;
     touch-action: pan-x pan-y;
     scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
     scrollbar-width: none;
 }
 
@@ -35,7 +34,7 @@ body {
 .main-container {
     width: 100%;
     min-width: 320px;
-    box-sizing: border-box;
+    box-sizing: border-box; 
     padding: 0;
     margin: 0;
 }
@@ -147,9 +146,8 @@ p {
 
 .fade-in {
     opacity: 0;
-    animation: fade-in 0.3s ease-in;
-    animation-fill-mode: forwards;
-}
+    animation: fade-in 0.6s ease-in-out forwards;
+  }
 
 #title-front-end {
     animation-delay: 0.5s;
@@ -388,6 +386,12 @@ p {
     filter: drop-shadow(0px 0px 0px #000000);
 }
 
+/* Navbar */
+
+.transition-font-weight {
+    font-weight: bold;
+}
+
 /* Tablet Menu */ 
 
 .menu-tablet-on {
@@ -611,6 +615,7 @@ p {
 @media (max-width: 768px) {
 
     /* Technologies */
+
     .even {
         transform: translateX(-20%);
     }

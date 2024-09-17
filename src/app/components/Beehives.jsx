@@ -1,9 +1,11 @@
 import { ReactComponent as Beehive } from "../../assets/svgs/beehive.svg"
 import { useAppContext } from "../contexts/AppContext"
 import { useState } from "react"
+import useScrollAnchor from "../hooks/useScrollAnchor"
 
 function Beehives({ logo, logo_dark, title, className, delayAnim, index }) {
     const { theme } = useAppContext()
+    const firstScroll = useScrollAnchor("technologies")
     const [toggleEffect, setToggleEffect] = useState(false)
 
     const handleToggle = () => {
@@ -15,7 +17,9 @@ function Beehives({ logo, logo_dark, title, className, delayAnim, index }) {
 
     return (
         <div
-            className={`mapped-technos ${className}  fade-in flex flex-col mb-[-70px] md:mb-0 ${
+            className={`mapped-technos ${className}  ${
+                firstScroll ? "fade-in" : ""
+            } flex flex-col mb-[-70px] md:mb-0 ${
                 toggleEffect === true ? "grow-in" : ""
             }`}
             style={{ animationDelay: `${delayAnim + index * 280}ms` }}
