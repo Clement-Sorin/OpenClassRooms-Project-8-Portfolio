@@ -18,7 +18,7 @@ function LegalNotice() {
                     {language === "fr" ? datas.title.fr : datas.title.en}
                 </h1>
             </div>
-            <div className="datas flex flex-col gap-5 px-2 pt-5 pb-8 sm2:p-10">
+            <div className="datas flex flex-col items-center gap-5 px-2 pt-5 pb-8 sm2:p-10">
                 {Object.entries(datas.data).map(([key, value], index) => (
                     <Collapse key={index} propKey={key} value={value} />
                 ))}

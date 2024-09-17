@@ -16,10 +16,12 @@ function Collapse({ propKey, value }) {
     return (
         <div
             id={propKey}
-            className={`${!isOpen ? "collapse-closed" : "collapse-open"}`}
+            className={`sm:w-[300px] sm2:w-[450px] md:w-[700px] ${
+                !isOpen ? "collapse-closed" : "collapse-open"
+            }`}
         >
             <div
-                className={`relative z-10 ${
+                className={`relative z-10  ${
                     theme === "light"
                         ? "bg-light-grey text-black"
                         : "bg-dark-blue+ text-dark-text"
@@ -27,7 +29,7 @@ function Collapse({ propKey, value }) {
             >
                 <div
                     onClick={toggleCollapse}
-                    className={`title-collapse w-full sm2:w-[300px] md:w-[400px] flex items-center justify-between p-2 border-2 ${
+                    className={`title-collapse w-full sm2:w-[450px] md:w-[700px] flex items-center justify-between p-2 border-2 ${
                         theme === "light"
                             ? "border-lines-light bg-light-grey+"
                             : "border-lines-dark bg-dark-blue"
