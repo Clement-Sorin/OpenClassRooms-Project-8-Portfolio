@@ -46,7 +46,7 @@ function Header() {
                     <Language />
                     <Theme />
                 </div>
-                <MenuTablet />
+                <MenuTablet landingScroll={landingScroll} />
                 <MenuMobile />
             </div>
         </header>
