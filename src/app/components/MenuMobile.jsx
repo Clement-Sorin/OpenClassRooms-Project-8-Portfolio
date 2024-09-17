@@ -1,5 +1,5 @@
 import { useAppContext } from "../contexts/AppContext"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Navbar from "./Navbar"
 import Language from "./Language"
 import Theme from "./Theme"
@@ -7,10 +7,46 @@ import Theme from "./Theme"
 function MenuMobile() {
     const { theme } = useAppContext()
     const [toggleMenu, setToggleMenu] = useState(false)
+    const [startY, setStartY] = useState(0)
+    const [translateY, setTranslateY] = useState(0)
 
     const handleToggle = () => {
         setToggleMenu((prevState) => !prevState)
     }
+
+    useEffect(() => {
+        const html = document.querySelector("html")
+        if (toggleMenu) {
+            html.classList.toggle("overflow-y-hidden")
+            setTranslateY(0)
+        } else {
+            html.classList.remove("overflow-y-hidden")
+            setTranslateY(-500)
+        }
+    }, [toggleMenu])
+
+    // Swipe to close
+
+    const handleTouchStart = (e) => {
+        const touchStartY = e.touches[0].clientY
+        setStartY(touchStartY)
+    }
+
+    const handleTouchMove = (e) => {
+        const touchCurrentY = e.touches[0].clientY
+        const moveY = (touchCurrentY - startY) * 3
+        setTranslateY(Math.min(0, Math.max(-500, moveY)))
+    }
+
+    const handleTouchEnd = () => {
+        if (translateY === 0) {
+            setToggleMenu(true)
+        } else if (translateY < -400) {
+            setToggleMenu(false)
+        }
+    }
+
+    console.log("toggleMenu", toggleMenu)
 
     return (
         <>
@@ -37,9 +73,16 @@ function MenuMobile() {
             <div
                 className={`${
                     toggleMenu === true
-                        ? "menu-mobile-open dark:bg-dark-blue"
+                        ? `menu-mobile-open dark:bg-dark-blue`
                         : "menu-mobile-close dark:bg-dark-blue"
                 } sm:"" md:hidden lg:hidden`}
+                style={{
+                    transform: `translateY(${translateY}px)`,
+                    transition: "transform 0.3s ease-in-out",
+                }}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
             >
                 <div
                     className={`hidden sm:flex flex-col justify-evenly items-center h-full w-full ${
