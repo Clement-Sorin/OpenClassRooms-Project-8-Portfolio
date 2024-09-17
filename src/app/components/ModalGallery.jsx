@@ -44,7 +44,7 @@ function ModalGallery() {
     // Carrousel fonctionnality
 
     useEffect(() => {
-        if (imgGallery.current) {
+        if (imgGallery.current && window.innerWidth > 1024) {
             imgGallery.current.classList.add("fade-in-gallery")
             const timer = setTimeout(() => {
                 if (imgGallery.current) {
