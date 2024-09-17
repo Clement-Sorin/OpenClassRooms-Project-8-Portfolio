@@ -536,6 +536,11 @@ p {
     animation: moveX 1.5s ease-in-out infinite alternate
 }
 
+.fade-in-gallery {
+    opacity: 0;
+    animation: fade-in 0.6s ease-out forwards;
+}
+
 /* Collapse */
 
 .collapse-closed {
@@ -629,4 +634,3 @@ p {
 
 
 }
-

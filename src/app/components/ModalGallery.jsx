@@ -8,6 +8,7 @@ import { ReactComponent as ArrowsSwipe } from "../../assets/icons/arrow.svg"
 function ModalGallery() {
     const { modalState, closeModal, theme } = useAppContext()
     const divModal = useRef(null)
+    const imgGallery = useRef(null)
     const [imageIndex, setImageIndex] = useState(0)
     const html = document.querySelector("html")
     const project = projects[modalState.data]
@@ -42,22 +43,29 @@ function ModalGallery() {
 
     // Carrousel fonctionnality
 
+    useEffect(() => {
+        if (imgGallery.current) {
+            imgGallery.current.classList.add("fade-in-gallery")
+            const timer = setTimeout(() => {
+                if (imgGallery.current) {
+                    imgGallery.current.classList.remove("fade-in-gallery")
+                }
+            }, 300)
+
+            return () => {
+                clearTimeout(timer)
+            }
+        }
+    }, [imageIndex])
+
     const selectNextImage = useCallback(() => {
         const nextImage = imageIndex + 1
-        if (imageIndex >= images.length - 1) {
-            setImageIndex(0)
-        } else {
-            setImageIndex(nextImage)
-        }
+        setImageIndex(nextImage >= images.length ? 0 : nextImage)
     }, [imageIndex, images.length])
 
     const selectPrevImage = useCallback(() => {
-        const nextImage = imageIndex - 1
-        if (imageIndex === 0) {
-            setImageIndex(images.length - 1)
-        } else {
-            setImageIndex(nextImage)
-        }
+        const prevImage = imageIndex - 1
+        setImageIndex(prevImage < 0 ? images.length - 1 : prevImage)
     }, [imageIndex, images.length])
 
     useEffect(() => {
@@ -122,7 +130,7 @@ function ModalGallery() {
                     <div className="flex justify-center items-center">
                         <div className="custom-border-box m-2 before:border-black before:dark:border-black after:border-black after:dark:border-black flex justify-center">
                             <img
-                                ref={divModal}
+                                ref={imgGallery}
                                 src={images[imageIndex]}
                                 alt={images[imageIndex]}
                                 className="max-w-[90vw] max-h-[80vh] md:max-w-[60vw] md:max-h-[60vh] p-4"
