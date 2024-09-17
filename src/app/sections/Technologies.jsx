@@ -31,7 +31,7 @@ function Technologies() {
             <div
                 className={`${
                     firstScroll ? "technologies" : "hidden"
-                } mw-auto h-full pt-28 overflow-x-hidden`}
+                } mw-auto h-full pt-10 lg:pt-28 overflow-hidden`}
             >
                 <div id="front-end" className="pb-20 md:pb-0 ">
                     <h2
@@ -72,7 +72,10 @@ function Technologies() {
                         ))}
                     </div>
                 </div>
-                <div id="back-end" className="flex flex-col items-end mt-10">
+                <div
+                    id="back-end"
+                    className="flex flex-col items-end md:mt-10 md:mb-16"
+                >
                     <VectorBack
                         id="vector-back-end"
                         className="fade-in w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark"
@@ -86,7 +89,7 @@ function Technologies() {
                     {groupedTechnologiesBack.map((group, groupIndex) => (
                         <div
                             key={groupIndex}
-                            className="chunk-technos w-full flex justify-center flex-col md:flex-row relative mb-[150px] md:mb-16"
+                            className="chunk-technos w-full flex justify-center flex-col md:flex-row relative mb-[100px] md:mb-16"
                         >
                             {group.map((item, index) => {
                                 const globalIndex = groupIndex * 3 + index

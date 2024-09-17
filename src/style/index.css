@@ -17,17 +17,19 @@
 html {
     overflow: auto;
     overscroll-behavior: none;
+    touch-action: pan-x pan-y;
     scroll-snap-type: y proximity;
     scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 body {
     font-family: 'Chakra Petch', sans-serif;
     user-select: none;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
 
 .main-container {
