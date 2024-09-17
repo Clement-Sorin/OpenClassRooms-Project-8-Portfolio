@@ -16,6 +16,7 @@
 
 html {
     overflow: auto;
+    overscroll-behavior: none;
     scroll-snap-type: y proximity;
     scroll-behavior: smooth;
 }
@@ -27,13 +28,14 @@ body {
 
 ::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .main-container {
     width: 100%;
     min-width: 320px;
     box-sizing: border-box;
     padding: 0;
+    margin: 0;
 }
   
 h1, h2, h3, h4, h5, h6 {

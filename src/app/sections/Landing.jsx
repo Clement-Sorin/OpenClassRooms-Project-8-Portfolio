@@ -10,7 +10,7 @@ function Landing() {
     return (
         <section
             id="landing"
-            className={`relative h-screen w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+ snap-start`}
+            className={`relative h-screen w-full bg-gradient-to-tr from-light-grey to-gradient+ dark:bg-gradient-to-tr dark:from-dark-blue dark:to-dark-gradient+ snap-start snap-always`}
         >
             <Particles className={`particles absolute`} />
             <div className="absolute  snap-start snap-always w-full sm:top-3 md:top-5 ">

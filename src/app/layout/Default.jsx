@@ -6,7 +6,7 @@ const Default = () => {
     return (
         <div className="main-container">
             <Header />
-            <main id={`main-scroll w-full`}>
+            <main id="w-full">
                 <Outlet />
             </main>
             <Footer />
