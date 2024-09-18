@@ -36,6 +36,10 @@ function MenuMobile() {
         const touchCurrentY = e.touches[0].clientY
         const moveY = (touchCurrentY - startY) * 5
         setTranslateY(Math.min(0, Math.max(-500, moveY)))
+        if (translateY < -250) {
+            setToggleMenu(false)
+            setTranslateY(-500)
+        }
     }
 
     const handleTouchEnd = () => {
@@ -45,8 +49,6 @@ function MenuMobile() {
             setToggleMenu(false)
         }
     }
-
-    console.log("toggleMenu", toggleMenu)
 
     return (
         <>
