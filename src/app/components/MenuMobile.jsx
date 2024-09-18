@@ -8,7 +8,7 @@ function MenuMobile() {
     const { theme } = useAppContext()
     const [toggleMenu, setToggleMenu] = useState(false)
     const [startY, setStartY] = useState(0)
-    const [translateY, setTranslateY] = useState(0)
+    const [translateY, setTranslateY] = useState(-500)
 
     const handleToggle = () => {
         setToggleMenu((prevState) => !prevState)
@@ -79,7 +79,7 @@ function MenuMobile() {
                     toggleMenu === true
                         ? `menu-mobile-open dark:bg-dark-blue`
                         : "menu-mobile-close dark:bg-dark-blue"
-                } sm:"" md:hidden lg:hidden`}
+                }  sm:"" md:hidden lg:hidden`}
                 style={{
                     transform: `translateY(${translateY}px)`,
                     transition: "transform 0.3s ease-in-out",
