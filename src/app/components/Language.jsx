@@ -41,7 +41,13 @@ function Language({ menuMobileOn }) {
                         ? "transition-hover-light"
                         : "transition-hover-dark"
                 }`}
-                onClick={() => toggleMobileFR()}
+                onClick={() => {
+                    if (window.innerWidth < 768) {
+                        toggleMobileFR()
+                    } else {
+                        changeLanguage("fr")
+                    }
+                }}
             >
                 FR
             </button>
@@ -54,7 +60,13 @@ function Language({ menuMobileOn }) {
                         ? "transition-hover-light"
                         : "transition-hover-dark"
                 }`}
-                onClick={() => toggleMobileEN()}
+                onClick={() => {
+                    if (window.innerWidth < 768) {
+                        toggleMobileEN()
+                    } else {
+                        changeLanguage("en")
+                    }
+                }}
             >
                 EN
             </button>

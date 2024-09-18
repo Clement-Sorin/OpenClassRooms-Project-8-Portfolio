@@ -34,7 +34,9 @@ function Beehives({ logo, logo_dark, title, className, delayAnim, index }) {
                     onClick={handleToggle}
                     src={theme === "light" ? logo : logo_dark}
                     alt={title + " logo"}
-                    className={`logo-techno absolute max-w-[72px] max-h-[30%] sm2:max-w-[120px] sm2:max-h-[45%] transition duration-300 dark:${
+                    className={`${
+                        firstScroll ? "logo-techno" : ""
+                    } absolute max-w-[72px] max-h-[30%] sm2:max-w-[120px] sm2:max-h-[45%] transition duration-300 dark:${
                         toggleEffect
                             ? "brightness-[0%]"
                             : "logo-techno-dark-unclicked dark:brightness-[1000%]"

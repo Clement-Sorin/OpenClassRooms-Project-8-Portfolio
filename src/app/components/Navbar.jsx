@@ -19,7 +19,7 @@ function Navbar({ navTabDesk, navMob, setToggleMenu }) {
                         : "transition-hover-dark"
                 } ${technologies ? "transition-font-weight" : ""}`}
                 onClick={
-                    window.innerWidth < 768 ? () => setToggleMenu(false) : ""
+                    window.innerWidth < 768 ? () => setToggleMenu(false) : null
                 }
             >
                 {language === "fr" ? text.techno.fr : text.techno.en}
@@ -32,7 +32,7 @@ function Navbar({ navTabDesk, navMob, setToggleMenu }) {
                         : "transition-hover-dark"
                 } ${projects ? "transition-font-weight" : ""}`}
                 onClick={
-                    window.innerWidth < 768 ? () => setToggleMenu(false) : ""
+                    window.innerWidth < 768 ? () => setToggleMenu(false) : null
                 }
             >
                 {language === "fr" ? text.projects.fr : text.projects.en}
@@ -45,7 +45,7 @@ function Navbar({ navTabDesk, navMob, setToggleMenu }) {
                         : "transition-hover-dark"
                 } ${profile ? "transition-font-weight" : ""}`}
                 onClick={
-                    window.innerWidth < 768 ? () => setToggleMenu(false) : ""
+                    window.innerWidth < 768 ? () => setToggleMenu(false) : null
                 }
             >
                 {language === "fr" ? text.profile.fr : text.profile.en}
@@ -58,7 +58,7 @@ function Navbar({ navTabDesk, navMob, setToggleMenu }) {
                         : "transition-hover-dark"
                 } ${contact ? "transition-font-weight" : ""}`}
                 onClick={
-                    window.innerWidth < 768 ? () => setToggleMenu(false) : ""
+                    window.innerWidth < 768 ? () => setToggleMenu(false) : null
                 }
             >
                 {language === "fr" ? text.contact.fr : text.contact.en}
