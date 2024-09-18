@@ -4,9 +4,8 @@ import Navbar from "./Navbar"
 import Language from "./Language"
 import Theme from "./Theme"
 
-function MenuMobile() {
+function MenuMobile({ toggleMenu, setToggleMenu }) {
     const { theme } = useAppContext()
-    const [toggleMenu, setToggleMenu] = useState(false)
     const [startY, setStartY] = useState(0)
     const [translateY, setTranslateY] = useState(-500)
 
@@ -97,6 +96,7 @@ function MenuMobile() {
                 >
                     <Navbar
                         navMob={"flex flex-col w-full gap-10 items-center"}
+                        setToggleMenu={setToggleMenu}
                     />
                     <div className="flex flex-col gap-10 items-center options-mob pt-10 border-t-[1px] border-black border-lines-light dark:border-lines-dark">
                         <Language menuMobileOn={toggleMenu} />

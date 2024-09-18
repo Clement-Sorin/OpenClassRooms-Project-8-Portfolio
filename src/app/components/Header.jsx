@@ -9,6 +9,7 @@ import MenuMobile from "./MenuMobile"
 
 function Header() {
     const landingScroll = useIntersectionObserver("landing")
+    const [toggleMenu, setToggleMenu] = useState(false)
     const [loaded, setLoaded] = useState(false)
 
     useEffect(() => {
@@ -17,6 +18,7 @@ function Header() {
 
     const handleClick = () => {
         window.scrollTo(0, 0)
+        setToggleMenu(false)
     }
 
     return (
@@ -47,7 +49,10 @@ function Header() {
                     <Theme />
                 </div>
                 <MenuTablet landingScroll={landingScroll} />
-                <MenuMobile />
+                <MenuMobile
+                    toggleMenu={toggleMenu}
+                    setToggleMenu={setToggleMenu}
+                />
             </div>
         </header>
     )

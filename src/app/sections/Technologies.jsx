@@ -28,7 +28,7 @@ function Technologies() {
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
-            <div className={`mw-auto h-full pt-10 lg:pt-28 overflow-hidden`}>
+            <div className={`mw-auto h-full pt-16 lg:pt-28 overflow-hidden`}>
                 <div id="front-end" className="pb-20 md:pb-0 ">
                     <h2
                         id="title-front-end"

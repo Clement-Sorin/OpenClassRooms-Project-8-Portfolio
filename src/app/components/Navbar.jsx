@@ -2,7 +2,7 @@ import { useAppContext } from "../contexts/AppContext"
 import useIntersectionObserver from "../hooks/useIntersectionObserver"
 import text from "../../assets/datas/Header.json"
 
-function Navbar({ navTabDesk, navMob }) {
+function Navbar({ navTabDesk, navMob, setToggleMenu }) {
     const { language, theme } = useAppContext()
     const technologies = useIntersectionObserver("technologies")
     const projects = useIntersectionObserver("section-projects")
@@ -18,6 +18,9 @@ function Navbar({ navTabDesk, navMob }) {
                         ? "transition-hover-light"
                         : "transition-hover-dark"
                 } ${technologies ? "transition-font-weight" : ""}`}
+                onClick={
+                    window.innerWidth < 768 ? () => setToggleMenu(false) : ""
+                }
             >
                 {language === "fr" ? text.techno.fr : text.techno.en}
             </a>
@@ -28,6 +31,9 @@ function Navbar({ navTabDesk, navMob }) {
                         ? "transition-hover-light"
                         : "transition-hover-dark"
                 } ${projects ? "transition-font-weight" : ""}`}
+                onClick={
+                    window.innerWidth < 768 ? () => setToggleMenu(false) : ""
+                }
             >
                 {language === "fr" ? text.projects.fr : text.projects.en}
             </a>
@@ -38,6 +44,9 @@ function Navbar({ navTabDesk, navMob }) {
                         ? "transition-hover-light"
                         : "transition-hover-dark"
                 } ${profile ? "transition-font-weight" : ""}`}
+                onClick={
+                    window.innerWidth < 768 ? () => setToggleMenu(false) : ""
+                }
             >
                 {language === "fr" ? text.profile.fr : text.profile.en}
             </a>
@@ -48,6 +57,9 @@ function Navbar({ navTabDesk, navMob }) {
                         ? "transition-hover-light"
                         : "transition-hover-dark"
                 } ${contact ? "transition-font-weight" : ""}`}
+                onClick={
+                    window.innerWidth < 768 ? () => setToggleMenu(false) : ""
+                }
             >
                 {language === "fr" ? text.contact.fr : text.contact.en}
             </a>
