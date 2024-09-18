@@ -205,11 +205,11 @@ p {
 }
 
 .line-even {
-    transform: translate(850%, -8600%) rotate(-40deg);
+    transform: translate(172px, -85px) rotate(-40deg);
 }
 
 .line-odd {
-    transform: translate(40%, -2500%) rotate(-40deg);
+    transform: translate(6px, -27px) rotate(-40deg);
 }
 
 .custom-border-box::before {
