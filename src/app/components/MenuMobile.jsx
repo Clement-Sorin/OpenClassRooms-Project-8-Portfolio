@@ -91,7 +91,7 @@ function MenuMobile({ toggleMenu, setToggleMenu }) {
                     className={`hidden sm:flex flex-col justify-evenly items-center h-full w-full ${
                         toggleMenu === false
                             ? "opacity-0"
-                            : "opacity-1 transition-opacity duration-300 ease-in"
+                            : "opacity-1 transition-opacity duration-300 delay-300 ease-in"
                     }`}
                 >
                     <Navbar

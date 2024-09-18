@@ -63,7 +63,7 @@ function Technologies() {
                                                     ? "even"
                                                     : "odd"
                                             }
-                                            delayAnim={800}
+                                            delayAnim={500}
                                             index={globalIndex}
                                         />
                                     )
@@ -108,7 +108,7 @@ function Technologies() {
                                                 ? "even"
                                                 : "odd"
                                         }
-                                        delayAnim={2800}
+                                        delayAnim={2500}
                                         index={globalIndex}
                                     />
                                 )

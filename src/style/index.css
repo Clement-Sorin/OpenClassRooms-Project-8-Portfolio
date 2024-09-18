@@ -150,19 +150,19 @@ p {
   }
 
 #title-front-end {
-    animation-delay: 0.5s;
+    animation-delay: 0.1s;
 }
 
 #vector-front-end {
-    animation-delay: 0.7s;
+    animation-delay: 0.3s;
 }
 
 #vector-back-end {
-    animation-delay: 2.4s;
+    animation-delay: 2.1s;
 }
 
 #title-back-end {
-    animation-delay: 2.6s;
+    animation-delay: 2.3s;
 }
 
 @keyframes grow-in {
@@ -479,7 +479,7 @@ p {
 
 .menu-mobile-open {
     position: fixed;
-    z-index: -1;
+    z-index: -20;
     top: 3rem;
     right: 0;
     height: 500px;
@@ -489,7 +489,7 @@ p {
 
 .menu-mobile-close {
     position: fixed;
-    z-index: -2;
+    z-index: -20;
     top: 3rem;
     right: 0;
     left: 0;
