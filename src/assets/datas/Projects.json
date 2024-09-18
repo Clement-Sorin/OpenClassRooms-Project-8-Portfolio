@@ -19,8 +19,8 @@
             }
         ],
         "description" : {
-            "fr" : "Ce projet sur lequel vous naviguez entièrement designé et développé par moi même.",
-            "en" : "This project you're navigating was entirely designed and developed by me."
+            "fr" : "Projet final de la formation Développeur Web chez OpenClassrooms, entièrement libre de conception. Le design et le développement ont été réalisés par moi-même.",
+            "en" : "Final project of the Web Developer training at OpenClassrooms, entirely open to design choices. The design and development were done by myself."
         },
         "links" : [
                 {
@@ -35,11 +35,15 @@
                 }
             ],
         "challenge" : {
-            "fr" : "Le passages aux modes FR/EN et light/dark ont étés réalisés grâce à useContext de React.",
-            "en" : "The transitions between FR/EN modes and light/dark modes were implemented using React's useContext."
+            "fr" : "L’utilisation de useContext pour gérer les langues et les thèmes, les diverses animations présentes sur tout le site, l'affichage entièrrement dynamique de tous les composants (textes compris), la création de la modale pour les galeries des projets, et la gestion des effets de swipe pour les écrans mobiles.",
+            "en" : "The use of useContext to manage languages and themes, the various animations throughout the site, the creation of the modal for the project galleries, the fully dynamic display of all components (texts included), and the management of swipe effects for mobile screens."
         },
         "images" : [
-            "/images/projects/Portfolio_V2/landing-screenshot.webp"
+            "/images/projects/Portfolio_V2/01-landing.webp",
+            "/images/projects/Portfolio_V2/02-profile.webp",
+            "/images/projects/Portfolio_V2/03-legal-notice.webp",
+            "/images/projects/Portfolio_V2/04-technos-dark.webp",
+            "/images/projects/Portfolio_V2/05-mobile.webp"
         ]
     },
     {
