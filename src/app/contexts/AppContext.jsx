@@ -73,7 +73,12 @@ export const AppProvider = ({ children }) => {
     }, [])
 
     useEffect(() => {
-        document.documentElement.classList.toggle("dark", theme === "dark")
+        const html = document.querySelector("html")
+        if (theme === "dark") {
+            html.classList.add("dark")
+        } else {
+            html.classList.remove("dark", theme === "dark")
+        }
     }, [theme])
 
     return (
