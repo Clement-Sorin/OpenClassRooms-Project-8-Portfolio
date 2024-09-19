@@ -13,7 +13,7 @@ function ContentSoftSkills({ datas, profileScroll }) {
             }`}
         >
             <h2
-                className={`${profileScroll ? "fade-in" : ""}`}
+                className={`${profileScroll ? "fade-in" : "opacity-0"}`}
                 style={{ animationDelay: "1.8s", animationDuration: "0.15s" }}
             >
                 {dataSoft.title}
@@ -23,7 +23,7 @@ function ContentSoftSkills({ datas, profileScroll }) {
                     <div
                         key={index}
                         className={`flex justify-between ${
-                            profileScroll ? "fade-in" : ""
+                            profileScroll ? "fade-in" : "opacity-0"
                         }`}
                         style={{
                             animationDelay: `${1.9 + index * 0.07}s`,

@@ -30,13 +30,15 @@ function Profile() {
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="382"
                         height="581"
-                        stroke-dasharray="2000"
-                        stroke-dashoffset="2000"
+                        strokeDasharray="2000"
+                        strokeDashoffset="2000"
                         className={`sm:hidden sm2:block ${
                             theme === "dark"
                                 ? "drop-shadow-dark"
                                 : "drop-shadow-light"
-                        } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                        } ${
+                            profileScroll ? "svg-path shadow-active" : "opa-0"
+                        }`}
                         style={{
                             animationDelay: "0.2s",
                         }}
@@ -45,13 +47,15 @@ function Profile() {
                         fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="300"
-                        stroke-dasharray="2000"
-                        stroke-dashoffset="2000"
+                        strokeDasharray="2000"
+                        strokeDashoffset="2000"
                         className={`sm2:hidden ${
                             theme === "dark"
                                 ? "drop-shadow-dark"
                                 : "drop-shadow-light "
-                        } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                        } ${
+                            profileScroll ? "svg-path shadow-active" : "opa-0"
+                        }`}
                         style={{ animationDelay: "0s" }}
                     ></FrameProfileSm>
                     <ContentProfile
@@ -66,26 +70,34 @@ function Profile() {
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="382"
                             height="290"
-                            stroke-dasharray="2000"
-                            stroke-dashoffset="2000"
+                            strokeDasharray="2000"
+                            strokeDashoffset="2000"
                             className={`sm:hidden sm2:block ${
                                 theme === "dark"
                                     ? "drop-shadow-dark"
                                     : "drop-shadow-light "
-                            } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                            } ${
+                                profileScroll
+                                    ? "svg-path shadow-active"
+                                    : "opa-0"
+                            }`}
                             style={{ animationDelay: "0.6s" }}
                         ></FrameSmall>
                         <FrameCertifSm
                             fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="300"
-                            stroke-dasharray="2000"
-                            stroke-dashoffset="2000"
+                            strokeDasharray="2000"
+                            strokeDashoffset="2000"
                             className={`sm2:hidden ${
                                 theme === "dark"
                                     ? "drop-shadow-dark"
                                     : "drop-shadow-light "
-                            } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                            } ${
+                                profileScroll
+                                    ? "svg-path shadow-active"
+                                    : "opa-0"
+                            }`}
                             style={{ animationDelay: "0.2s" }}
                         />
                         <ContentCertifications
@@ -99,26 +111,34 @@ function Profile() {
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="382"
                             height="290"
-                            stroke-dasharray="2000"
-                            stroke-dashoffset="2000"
+                            strokeDasharray="2000"
+                            strokeDashoffset="2000"
                             className={`sm:hidden sm2:block ${
                                 theme === "dark"
                                     ? "drop-shadow-dark"
                                     : "drop-shadow-light "
-                            } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                            } ${
+                                profileScroll
+                                    ? "svg-path shadow-active"
+                                    : "opa-0"
+                            }`}
                             style={{ animationDelay: "0.6s" }}
                         ></FrameSmall>
                         <FrameSoftSm
                             fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="300"
-                            stroke-dasharray="2000"
-                            stroke-dashoffset="2000"
+                            strokeDasharray="2000"
+                            strokeDashoffset="2000"
                             className={`sm2:hidden ${
                                 theme === "dark"
                                     ? "drop-shadow-dark"
                                     : "drop-shadow-light "
-                            } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                            } ${
+                                profileScroll
+                                    ? "svg-path shadow-active"
+                                    : "opa-0"
+                            }`}
                             style={{ animationDelay: "0.4s" }}
                         />
                         <ContentSoftSkills
@@ -133,26 +153,30 @@ function Profile() {
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="382"
                         height="581"
-                        stroke-dasharray="2000"
-                        stroke-dashoffset="2000"
+                        strokeDasharray="2000"
+                        strokeDashoffset="2000"
                         className={`sm:hidden sm2:block ${
                             theme === "dark"
                                 ? "drop-shadow-dark"
                                 : "drop-shadow-light "
-                        } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                        } ${
+                            profileScroll ? "svg-path shadow-active" : "opa-0"
+                        }`}
                         style={{ animationDelay: "1s" }}
                     ></FrameLarge>
                     <FrameHardSm
                         fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="300"
-                        stroke-dasharray="2000"
-                        stroke-dashoffset="2000"
+                        strokeDasharray="2000"
+                        strokeDashoffset="2000"
                         className={`sm2:hidden ${
                             theme === "dark"
                                 ? "drop-shadow-dark"
                                 : "drop-shadow-light "
-                        } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                        } ${
+                            profileScroll ? "svg-path shadow-active" : "opa-0"
+                        }`}
                         style={{ animationDelay: "0.6s" }}
                     />
                     <ContentHardSkills

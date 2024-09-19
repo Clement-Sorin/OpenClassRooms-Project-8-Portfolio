@@ -18,7 +18,7 @@ function Beehives({ logo, logo_dark, title, className, delayAnim, index }) {
     return (
         <div
             className={`mapped-technos ${className}  ${
-                firstScroll ? "fade-in" : ""
+                firstScroll ? "fade-in" : "opacity-0"
             } flex flex-col mb-[-70px] md:mb-0 ${
                 toggleEffect ? "grow-in" : ""
             }`}

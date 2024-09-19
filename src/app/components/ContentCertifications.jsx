@@ -12,7 +12,7 @@ function Certifications({ datas, profileScroll }) {
             }`}
         >
             <h2
-                className={`${profileScroll ? "fade-in" : ""}`}
+                className={`${profileScroll ? "fade-in" : "opacity-0"}`}
                 style={{ animationDelay: "1.2s", animationDuration: "0.15s" }}
             >
                 {dataCertif.title}
@@ -29,7 +29,9 @@ function Certifications({ datas, profileScroll }) {
                                         <p
                                             key={`fr-${idx}`}
                                             className={`text-content-profile ${
-                                                profileScroll ? "fade-in" : ""
+                                                profileScroll
+                                                    ? "fade-in"
+                                                    : "opacity-0"
                                             }`}
                                             style={{
                                                 animationDelay: `${
@@ -47,7 +49,9 @@ function Certifications({ datas, profileScroll }) {
                                         <p
                                             key={`en-${idx}`}
                                             className={`text-content-profile ${
-                                                profileScroll ? "fade-in" : ""
+                                                profileScroll
+                                                    ? "fade-in"
+                                                    : "opacity-0"
                                             }`}
                                             style={{
                                                 animationDelay: `${
@@ -63,7 +67,7 @@ function Certifications({ datas, profileScroll }) {
                         ) : (
                             <p
                                 className={`text-content-profile ${
-                                    profileScroll ? "fade-in" : ""
+                                    profileScroll ? "fade-in" : "opacity-0"
                                 }`}
                                 style={{
                                     animationDelay: "1.3s",
@@ -76,7 +80,7 @@ function Certifications({ datas, profileScroll }) {
                         )}
                         <p
                             className={`font-bold text-content-profile ${
-                                profileScroll ? "fade-in" : ""
+                                profileScroll ? "fade-in" : "opacity-0"
                             }`}
                             style={{
                                 animationDelay: `${1.4 + index * 0.2}s`,

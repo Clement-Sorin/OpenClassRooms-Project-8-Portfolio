@@ -10,17 +10,11 @@ function ModalGallery() {
     const divModal = useRef(null)
     const imgGallery = useRef(null)
     const [imageIndex, setImageIndex] = useState(0)
-    const html = document.querySelector("html")
+    const [isLoading, setIsLoading] = useState(false)
     const project = projects[modalState.data]
     const images = project ? project.images : []
     const pagingIndex = imageIndex + 1
     const pagingMax = images.length
-
-    if (modalState.isOpen) {
-        html.classList.add("overflow-y-hidden")
-    } else if (!modalState.isOpen) {
-        html.classList.remove("overflow-y-hidden")
-    }
 
     useEffect(() => {
         setImageIndex(0)
@@ -43,33 +37,24 @@ function ModalGallery() {
 
     // Carrousel fonctionnality
 
-    useEffect(() => {
-        if (imgGallery.current && window.innerWidth > 1024) {
-            imgGallery.current.classList.add("fade-in-gallery")
-            const timer = setTimeout(() => {
-                if (imgGallery.current) {
-                    imgGallery.current.classList.remove("fade-in-gallery")
-                }
-            }, 300)
-
-            return () => {
-                clearTimeout(timer)
-            }
-        }
-    }, [imageIndex])
-
     const selectNextImage = useCallback(() => {
         const nextImage = imageIndex + 1
         setImageIndex(nextImage >= images.length ? 0 : nextImage)
+        setIsLoading(true)
     }, [imageIndex, images.length])
 
     const selectPrevImage = useCallback(() => {
         const prevImage = imageIndex - 1
         setImageIndex(prevImage < 0 ? images.length - 1 : prevImage)
+        setIsLoading(true)
     }, [imageIndex, images.length])
 
     useEffect(() => {
         const handleWheel = (event) => {
+            if (modalState.isOpen) {
+                event.preventDefault()
+            }
+
             const scrollMove = event.deltaY
             if (scrollMove < 0) {
                 selectPrevImage()
@@ -102,6 +87,8 @@ function ModalGallery() {
         touchEndX = e.targetTouches[0].clientX
     }
 
+    console.log("isLoading", isLoading)
+
     if (!modalState.isOpen && !modalState.data) return null
 
     return (
@@ -133,17 +120,19 @@ function ModalGallery() {
                                 ref={imgGallery}
                                 src={images[imageIndex]}
                                 alt={images[imageIndex]}
-                                className="max-w-[90vw] max-h-[80vh] md:max-w-[60vw] md:max-h-[60vh] p-4"
+                                className={`max-w-[90vw] max-h-[80vh] md:max-w-[60vw] md:max-h-[60vh] p-4 ${
+                                    isLoading === true ? "opa-0" : "opa-100"
+                                }`}
                                 onTouchStart={handleTouchStart}
                                 onTouchMove={handleTouchMove}
                                 onTouchEnd={handleTouchEnd}
+                                onLoad={() => setIsLoading(false)}
                             ></img>
                         </div>
                     </div>
                     <p>
                         {pagingIndex} / {pagingMax}
                     </p>
-
                     <div
                         className={`w-[25px] h-[40px]  border rounded-full m-2 opacity-90 border-black hidden lg:flex justify-center items-center`}
                     >

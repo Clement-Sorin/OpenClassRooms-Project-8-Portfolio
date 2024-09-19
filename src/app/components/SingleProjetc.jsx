@@ -28,7 +28,7 @@ function SingleProject({
             <div
                 className={`flex flex-col gap-2 w-[80%] md:w-[40%]  ${
                     theme === "light" ? "text-black" : "text-dark-text"
-                } ${scrollSingleProject ? "details-projects" : ""}`}
+                } ${scrollSingleProject ? "details-projects" : "opacity-0"}`}
             >
                 <Position position={position} />
                 <h2 className="text-[20px] md:text-2xl">{title}</h2>
