@@ -1,6 +1,6 @@
 import { useAppContext } from "../contexts/AppContext"
 
-function Certifications({ datas }) {
+function Certifications({ datas, profileScroll }) {
     const { theme, language } = useAppContext()
     const dataCertif = datas.certifications
     const certifDetails = dataCertif.data
@@ -11,7 +11,12 @@ function Certifications({ datas }) {
                 theme === "light" ? "" : "text-dark-text"
             }`}
         >
-            <h2>{dataCertif.title}</h2>
+            <h2
+                className={`${profileScroll ? "fade-in" : ""}`}
+                style={{ animationDelay: "1.2s", animationDuration: "0.15s" }}
+            >
+                {dataCertif.title}
+            </h2>
             <div className="flex flex-col gap-2">
                 {Object.entries(certifDetails).map(([key, value], index) => (
                     <div key={index} className="text-sm flex flex-col gap-1">
@@ -23,7 +28,15 @@ function Certifications({ datas }) {
                                     value.certificate.fr.map((cert, idx) => (
                                         <p
                                             key={`fr-${idx}`}
-                                            className="text-content-profile"
+                                            className={`text-content-profile ${
+                                                profileScroll ? "fade-in" : ""
+                                            }`}
+                                            style={{
+                                                animationDelay: `${
+                                                    1.4 + index * 0.2
+                                                }s`,
+                                                animationDuration: "0.15s",
+                                            }}
                                         >
                                             {cert}
                                         </p>
@@ -33,19 +46,43 @@ function Certifications({ datas }) {
                                     value.certificate.en.map((cert, idx) => (
                                         <p
                                             key={`en-${idx}`}
-                                            className="text-content-profile"
+                                            className={`text-content-profile ${
+                                                profileScroll ? "fade-in" : ""
+                                            }`}
+                                            style={{
+                                                animationDelay: `${
+                                                    1.4 + index * 0.2
+                                                }s`,
+                                                animationDuration: "0.15s",
+                                            }}
                                         >
                                             {cert}
                                         </p>
                                     ))}
                             </>
                         ) : (
-                            <p className="text-content-profile">
+                            <p
+                                className={`text-content-profile ${
+                                    profileScroll ? "fade-in" : ""
+                                }`}
+                                style={{
+                                    animationDelay: "1.3s",
+                                    animationDuration: "0.15s",
+                                }}
+                            >
                                 {language === "fr" ? value?.certificate.fr : ""}
                                 {language === "en" ? value?.certificate.en : ""}
                             </p>
                         )}
-                        <p className="font-bold text-content-profile">
+                        <p
+                            className={`font-bold text-content-profile ${
+                                profileScroll ? "fade-in" : ""
+                            }`}
+                            style={{
+                                animationDelay: `${1.4 + index * 0.2}s`,
+                                animationDuration: "0.15s",
+                            }}
+                        >
                             {language === "fr" ? value?.school.fr : ""}
                             {language === "en" ? value?.school.en : ""}
                         </p>

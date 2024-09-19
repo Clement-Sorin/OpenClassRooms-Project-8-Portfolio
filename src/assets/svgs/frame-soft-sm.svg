@@ -1,7 +1,8 @@
 <svg width="302" height="245" viewBox="0 0 302 245" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1H266.365L301 35V244H33.5976L1 212V1Z" fill="" 
 stroke=""
-stroke-dasharray="2000"
-stroke-dashoffset="2000"
+stroke-dasharray=""
+stroke-dashoffset=""
+class=""
 />
 </svg>

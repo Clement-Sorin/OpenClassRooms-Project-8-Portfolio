@@ -1,7 +1,7 @@
 import { useAppContext } from "../contexts/AppContext"
 import Rates from "./Rates"
 
-function ContentSoftSkills({ datas }) {
+function ContentSoftSkills({ datas, profileScroll }) {
     const { theme, language } = useAppContext()
     const dataSoft = datas.soft_skills
     const softDetails = dataSoft.data
@@ -12,10 +12,24 @@ function ContentSoftSkills({ datas }) {
                 theme === "light" ? "" : "text-dark-text"
             }`}
         >
-            <h2>{dataSoft.title}</h2>
+            <h2
+                className={`${profileScroll ? "fade-in" : ""}`}
+                style={{ animationDelay: "1.8s", animationDuration: "0.15s" }}
+            >
+                {dataSoft.title}
+            </h2>
             <div className="flex flex-col gap-2">
                 {Object.entries(softDetails).map(([key, value], index) => (
-                    <div key={index} className="flex justify-between">
+                    <div
+                        key={index}
+                        className={`flex justify-between ${
+                            profileScroll ? "fade-in" : ""
+                        }`}
+                        style={{
+                            animationDelay: `${1.9 + index * 0.07}s`,
+                            animationDuration: "0.15s",
+                        }}
+                    >
                         <p className="text-content-profile text-sm">
                             {language === "fr" ? value?.title.fr : ""}
                             {language === "en" ? value?.title.en : ""}

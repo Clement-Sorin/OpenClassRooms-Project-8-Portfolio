@@ -30,23 +30,34 @@ function Profile() {
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="382"
                         height="581"
+                        stroke-dasharray="2000"
+                        stroke-dashoffset="2000"
                         className={`sm:hidden sm2:block ${
                             theme === "dark"
-                                ? "drop-shadow-lg"
-                                : "frame-profile"
-                        } ${profileScroll ? "svg-path" : ""}`}
+                                ? "drop-shadow-dark"
+                                : "drop-shadow-light"
+                        } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                        style={{
+                            animationDelay: "0.2s",
+                        }}
                     ></FrameLarge>
                     <FrameProfileSm
                         fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="300"
+                        stroke-dasharray="2000"
+                        stroke-dashoffset="2000"
                         className={`sm2:hidden ${
                             theme === "dark"
-                                ? "drop-shadow-lg"
-                                : "frame-profile "
-                        }`}
+                                ? "drop-shadow-dark"
+                                : "drop-shadow-light "
+                        } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                        style={{ animationDelay: "0s" }}
                     ></FrameProfileSm>
-                    <ContentProfile datas={datas} />
+                    <ContentProfile
+                        datas={datas}
+                        profileScroll={profileScroll}
+                    />
                 </div>
                 <div className="middle flex flex-col justify-between lg:gap-3">
                     <div className="certifications relative">
@@ -55,23 +66,32 @@ function Profile() {
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="382"
                             height="290"
+                            stroke-dasharray="2000"
+                            stroke-dashoffset="2000"
                             className={`sm:hidden sm2:block ${
                                 theme === "dark"
-                                    ? "drop-shadow-lg"
-                                    : "frame-profile "
-                            }`}
+                                    ? "drop-shadow-dark"
+                                    : "drop-shadow-light "
+                            } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                            style={{ animationDelay: "0.6s" }}
                         ></FrameSmall>
                         <FrameCertifSm
                             fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="300"
+                            stroke-dasharray="2000"
+                            stroke-dashoffset="2000"
                             className={`sm2:hidden ${
                                 theme === "dark"
-                                    ? "drop-shadow-lg"
-                                    : "frame-profile "
-                            }`}
+                                    ? "drop-shadow-dark"
+                                    : "drop-shadow-light "
+                            } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                            style={{ animationDelay: "0.2s" }}
                         />
-                        <ContentCertifications datas={datas} />
+                        <ContentCertifications
+                            datas={datas}
+                            profileScroll={profileScroll}
+                        />
                     </div>
                     <div className="soft-skills relative">
                         <FrameSmall
@@ -79,23 +99,32 @@ function Profile() {
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="382"
                             height="290"
+                            stroke-dasharray="2000"
+                            stroke-dashoffset="2000"
                             className={`sm:hidden sm2:block ${
                                 theme === "dark"
-                                    ? "drop-shadow-lg"
-                                    : "frame-profile "
-                            }`}
+                                    ? "drop-shadow-dark"
+                                    : "drop-shadow-light "
+                            } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                            style={{ animationDelay: "0.6s" }}
                         ></FrameSmall>
                         <FrameSoftSm
                             fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="300"
+                            stroke-dasharray="2000"
+                            stroke-dashoffset="2000"
                             className={`sm2:hidden ${
                                 theme === "dark"
-                                    ? "drop-shadow-lg"
-                                    : "frame-profile "
-                            }`}
+                                    ? "drop-shadow-dark"
+                                    : "drop-shadow-light "
+                            } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                            style={{ animationDelay: "0.4s" }}
                         />
-                        <ContentSoftSkills datas={datas} />
+                        <ContentSoftSkills
+                            datas={datas}
+                            profileScroll={profileScroll}
+                        />
                     </div>
                 </div>
                 <div className="hard-skills relative">
@@ -104,23 +133,32 @@ function Profile() {
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="382"
                         height="581"
+                        stroke-dasharray="2000"
+                        stroke-dashoffset="2000"
                         className={`sm:hidden sm2:block ${
                             theme === "dark"
-                                ? "drop-shadow-lg"
-                                : "frame-profile "
-                        }`}
+                                ? "drop-shadow-dark"
+                                : "drop-shadow-light "
+                        } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                        style={{ animationDelay: "1s" }}
                     ></FrameLarge>
                     <FrameHardSm
                         fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="300"
+                        stroke-dasharray="2000"
+                        stroke-dashoffset="2000"
                         className={`sm2:hidden ${
                             theme === "dark"
-                                ? "drop-shadow-lg"
-                                : "frame-profile "
-                        }`}
+                                ? "drop-shadow-dark"
+                                : "drop-shadow-light "
+                        } ${profileScroll ? "svg-path shadow-active" : ""}`}
+                        style={{ animationDelay: "0.6s" }}
                     />
-                    <ContentHardSkills datas={datas} />
+                    <ContentHardSkills
+                        datas={datas}
+                        profileScroll={profileScroll}
+                    />
                 </div>
             </div>
         </section>

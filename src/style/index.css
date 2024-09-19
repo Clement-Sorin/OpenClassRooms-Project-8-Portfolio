@@ -253,12 +253,20 @@ p {
 
 /* Profile */ 
 
-.frame-profile {
+.drop-shadow-light {
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+}
+.drop-shadow-light.shadow-active {
     filter: drop-shadow(2px 6px 3px rgba(0, 0, 0, 0.5));
+    transition: filter 0.8s ease-in-out 3s;
 }
 
-.drop-shadow-lg {
+.drop-shadow-dark {
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+}
+.drop-shadow-dark.shadow-active {
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 1));
+    transition: filter 0.8s ease-in-out 3s;
 }
 
 @keyframes draw-svg {
@@ -268,7 +276,8 @@ p {
 }
 
 .svg-path {
-    animation: draw-svg 2s ease-in-out forwards;
+    stroke-dashoffset: 2000;
+    animation: draw-svg 1.5s ease-out forwards;
 }
 
 @media (max-width: 1145px) {

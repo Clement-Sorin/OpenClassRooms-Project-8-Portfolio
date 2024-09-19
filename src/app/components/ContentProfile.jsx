@@ -3,7 +3,7 @@ import photoProfile from "../../assets/photos/ZFC_3073.png"
 import { ReactComponent as Beehive } from "../../assets/svgs/vertical-beehive.svg"
 import { ReactComponent as BeehiveLarge } from "../../assets/svgs/vertical-beehive-large.svg"
 
-function ContentProfile({ datas }) {
+function ContentProfile({ datas, profileScroll }) {
     const dataProfile = datas.profile
     const profileDetails = dataProfile.data
     const { theme, language } = useAppContext()
@@ -31,12 +31,20 @@ function ContentProfile({ datas }) {
                 theme === "light" ? "" : "text-dark-text"
             }`}
         >
-            <h2 className="pl-5">
+            <h2
+                className={`pl-5 ${profileScroll ? "fade-in" : ""}`}
+                style={{ animationDelay: "0.5s", animationDuration: "0.15s" }}
+            >
                 {language === "fr"
                     ? `${dataProfile.title.fr}`
                     : `${dataProfile.title.en}`}
             </h2>
-            <div className="container-photo-profile flex justify-center relative h-[170px]">
+            <div
+                className={`container-photo-profile flex justify-center relative h-[170px] ${
+                    profileScroll ? "fade-in" : ""
+                }`}
+                style={{ animationDelay: "0.7s", animationDuration: "0.15s" }}
+            >
                 <BeehiveLarge
                     className="frame-photo-profile absolute"
                     width="170px"
@@ -49,11 +57,17 @@ function ContentProfile({ datas }) {
                     className="photo-profile absolute top-1/2 translate-y-[-50%] w-[155px] h-[155px]"
                 ></img>
             </div>
-            <div className=" flex flex-col gap-1 pr-1">
+            <div className={`flex flex-col gap-1 pr-1`}>
                 {Object.entries(profileDetails).map(([key, value], index) => (
                     <div
                         key={index}
-                        className="text-content-profile flex gap-2 items-start text-sm"
+                        className={`text-content-profile flex gap-2 items-start text-sm ${
+                            profileScroll ? "fade-in" : ""
+                        }`}
+                        style={{
+                            animationDelay: `${0.8 + index * 0.1}s`,
+                            animationDuration: "0.15s",
+                        }}
                     >
                         <div className="sm:w-[13px] sm2:w-[17px]">
                             <Beehive
