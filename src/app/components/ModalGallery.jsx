@@ -62,13 +62,27 @@ function ModalGallery() {
                 selectNextImage()
             }
         }
-
         document.addEventListener("wheel", handleWheel, { passive: false })
 
         return () => {
             document.removeEventListener("wheel", handleWheel)
         }
     }, [selectNextImage, selectPrevImage])
+
+    useEffect(() => {
+        const handleTouchMove = (event) => {
+            if (modalState.isOpen) {
+                event.preventDefault()
+            }
+        }
+        document.addEventListener("touchmove", handleTouchMove, {
+            passive: false,
+        })
+
+        return () => {
+            document.removeEventListener("touchmove", handleTouchMove)
+        }
+    }, [])
 
     let touchStartX = 0
     let touchEndX = 0
@@ -86,8 +100,6 @@ function ModalGallery() {
     const handleTouchMove = (e) => {
         touchEndX = e.targetTouches[0].clientX
     }
-
-    console.log("isLoading", isLoading)
 
     if (!modalState.isOpen && !modalState.data) return null
 
