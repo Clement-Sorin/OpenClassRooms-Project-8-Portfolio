@@ -261,6 +261,16 @@ p {
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 1));
 }
 
+@keyframes draw-svg {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.svg-path {
+    animation: draw-svg 2s ease-in-out forwards;
+}
+
 @media (max-width: 1145px) {
     .profile, .hard-skills {
         margin-bottom: 30px;

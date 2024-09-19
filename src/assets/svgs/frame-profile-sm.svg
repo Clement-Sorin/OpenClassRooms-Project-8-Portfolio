@@ -1,3 +1,7 @@
 <svg width="302" height="545" viewBox="0 0 302 545" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M259.516 1H1V506.5L38.9427 544H301V42L259.516 1Z" fill="" stroke=""/>
+<path d="M1 1H259.516L301 42V544H38.9427L1 506.5V1Z" fill="" 
+stroke=""
+stroke-dasharray="2000"
+stroke-dashoffset="2000"
+/>
 </svg>
