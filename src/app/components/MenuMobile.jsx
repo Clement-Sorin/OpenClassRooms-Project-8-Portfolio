@@ -19,7 +19,9 @@ function MenuMobile({ toggleMenu, setToggleMenu }) {
             html.classList.toggle("overflow-y-hidden")
             setTranslateY(0)
         } else {
-            html.classList.remove("overflow-y-hidden")
+            setTimeout(() => {
+                html.classList.remove("overflow-y-hidden")
+            }, 200)
             setTranslateY(-500)
         }
     }, [toggleMenu])

@@ -253,6 +253,10 @@ p {
 
 /* Profile */ 
 
+.frame-profile {
+    filter: drop-shadow(2px 6px 3px rgba(0, 0, 0, 0.5));
+}
+
 .drop-shadow-lg {
     filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 1));
 }
@@ -285,15 +289,6 @@ p {
 }
 
 @media (max-width: 450px) {
-    .frame-lg, .frame-sm {
-        width: 300px;
-    }
-    .frame-lg {
-        height: 459px;
-    }
-    .frame-sm {
-        height: 216px;
-    }
     .content-profile h2, .content-certif h2, .content-soft h2, .content-hard h2 {
         font-size: 22px;
     }
@@ -590,6 +585,7 @@ p {
     transform: rotate(0deg);
     transition: transform 0.45s ease-out;
 }
+
 
 /* --------------------- */
 /* ----Media-Queries---- */

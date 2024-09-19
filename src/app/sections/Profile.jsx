@@ -28,7 +28,7 @@ function Profile() {
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="382"
                         height="581"
-                        className={`frame-lg sm:hidden sm2:block ${
+                        className={`frame-profile sm:hidden sm2:block ${
                             theme === "dark" ? "drop-shadow-lg" : ""
                         }`}
                     ></FrameLarge>
@@ -36,20 +36,20 @@ function Profile() {
                         fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="300"
-                        className={`sm2:hidden ${
+                        className={`frame-profile sm2:hidden ${
                             theme === "dark" ? "drop-shadow-lg" : ""
                         }`}
                     ></FrameProfileSm>
                     <ContentProfile datas={datas} />
                 </div>
-                <div className="middle flex flex-col justify-between">
+                <div className="middle flex flex-col justify-between lg:gap-2">
                     <div className="certifications relative">
                         <FrameSmall
                             fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="382"
                             height="290"
-                            className={`frame-sm sm:hidden sm2:block ${
+                            className={`frame-profile sm:hidden sm2:block ${
                                 theme === "dark" ? "drop-shadow-lg" : ""
                             }`}
                         ></FrameSmall>
@@ -57,7 +57,7 @@ function Profile() {
                             fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="300"
-                            className={`sm2:hidden ${
+                            className={`frame-profile sm2:hidden ${
                                 theme === "dark" ? "drop-shadow-lg" : ""
                             }`}
                         />
@@ -69,7 +69,7 @@ function Profile() {
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="382"
                             height="290"
-                            className={`frame-sm sm:hidden sm2:block ${
+                            className={`frame-profile sm:hidden sm2:block ${
                                 theme === "dark" ? "drop-shadow-lg" : ""
                             }`}
                         ></FrameSmall>
@@ -77,7 +77,7 @@ function Profile() {
                             fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="300"
-                            className={`sm2:hidden ${
+                            className={`frame-profile sm2:hidden ${
                                 theme === "dark" ? "drop-shadow-lg" : ""
                             }`}
                         />
@@ -90,7 +90,7 @@ function Profile() {
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="382"
                         height="581"
-                        className={`frame-lg sm:hidden sm2:block ${
+                        className={`frame-profile sm:hidden sm2:block ${
                             theme === "dark" ? "drop-shadow-lg" : ""
                         }`}
                     ></FrameLarge>
@@ -98,7 +98,7 @@ function Profile() {
                         fill={theme === "light" ? "#FaFaFa" : "#0B3847"}
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="300"
-                        className={` sm2:hidden ${
+                        className={`frame-profile sm2:hidden ${
                             theme === "dark" ? "drop-shadow-lg" : ""
                         }`}
                     />
