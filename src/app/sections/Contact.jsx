@@ -25,43 +25,6 @@ function Contact() {
         setIsHovered(false)
     }
 
-    const onSubmit = async (event) => {
-        event.preventDefault()
-        setResult(language === "fr" ? "envoi..." : "sending...")
-        const formData = new FormData(event.target)
-
-        formData.append("access_key", process.env.REACT_APP_WEB3FORM_KEY)
-
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData,
-        })
-
-        const data = await response.json()
-
-        if (data.success) {
-            setResult(
-                language === "fr"
-                    ? "Votre message a bien été envoyé"
-                    : "Form Submitted Successfully"
-            )
-            setTimeout(() => {
-                setResult("")
-            }, 5000)
-            event.target.reset()
-        } else {
-            console.log("Error", data)
-            setResult(
-                language === "fr"
-                    ? "Il y a eu une erreur dans l'envoi de votre message"
-                    : "Form Submition failed"
-            )
-            setTimeout(() => {
-                setResult("")
-            }, 5000)
-        }
-    }
-
     // Regex check
 
     const checkInputName = (event) => {
@@ -106,7 +69,7 @@ function Contact() {
 
     const checkInputMessage = (event) => {
         setIsMessageRight(false)
-        const value = event.target.value.trim()
+        const value = event.target.value.trim().replace(/\s+/g, "")
         const regex = new RegExp("[a-zA-Z]{10,}")
         let result = regex.test(value)
         if (!result) {
@@ -120,6 +83,63 @@ function Contact() {
         if (value === "") {
             setIsMessageFilled(false)
             setIsMessageRight(true)
+        }
+    }
+
+    // Submit
+
+    const onSubmit = async (event) => {
+        event.preventDefault()
+
+        if (
+            isNameFilled &&
+            isEmailFilled &&
+            isMessageFilled &&
+            isNameRight &&
+            isEmailRight &&
+            isMessageRight
+        ) {
+            setResult(language === "fr" ? "envoi..." : "sending...")
+            const formData = new FormData(event.target)
+
+            formData.append("access_key", process.env.REACT_APP_WEB3FORM_KEY)
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData,
+            })
+
+            const data = await response.json()
+            if (data.success) {
+                setResult(
+                    language === "fr"
+                        ? "Votre message a bien été envoyé"
+                        : "Form Submitted Successfully"
+                )
+                setTimeout(() => {
+                    setResult("")
+                }, 5000)
+                event.target.reset()
+            } else {
+                console.log("Error", data)
+                setResult(
+                    language === "fr"
+                        ? "Il y a eu une erreur dans l'envoi de votre message"
+                        : "Form Submition failed"
+                )
+                setTimeout(() => {
+                    setResult("")
+                }, 5000)
+            }
+        } else {
+            setResult(
+                language === "fr"
+                    ? datas.wrong_submit_value.fr
+                    : datas.wrong_submit_value.en
+            )
+            setTimeout(() => {
+                setResult("")
+            }, 5000)
         }
     }
 
@@ -156,8 +176,7 @@ function Contact() {
                                     id="input-name"
                                     className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
                                     aria-label="name input field"
-                                    aria-required="true"
-                                    onChange={checkInputName}
+                                    onBlur={checkInputName}
                                 ></input>
                                 <FrameName
                                     stroke={
@@ -206,8 +225,7 @@ function Contact() {
                                     id="input-email"
                                     className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
                                     aria-label="email input field"
-                                    aria-required="true"
-                                    onChange={checkInputEmail}
+                                    onBlur={checkInputEmail}
                                 ></input>
                                 <FrameName
                                     stroke={
@@ -255,7 +273,6 @@ function Contact() {
                                     id="area-message"
                                     className="absolute w-[302px] h-[269px] sm2:w-[383px] sm2:h-[266px] md:w-[499px] md:h-[182px] bg-transparent outline-none p-2 resize-none"
                                     aria-label="message input field"
-                                    aria-required="true"
                                     onBlur={checkInputMessage}
                                 ></textarea>
                                 <FrameMessage
@@ -346,7 +363,19 @@ function Contact() {
                                 } w-[124px]`}
                             />
                         </div>
-                        <p className="text-center pb-5">{result}</p>
+                        <p
+                            className={`text-center h-8 py-5 ${
+                                !isNameFilled ||
+                                !isEmailFilled ||
+                                !isMessageFilled
+                                    ? theme === "light"
+                                        ? "text-red"
+                                        : "text-yellow"
+                                    : ""
+                            } ${result === "" ? "opa-0" : "opa-100"}`}
+                        >
+                            {result}
+                        </p>
                     </div>
                 </form>
             </div>

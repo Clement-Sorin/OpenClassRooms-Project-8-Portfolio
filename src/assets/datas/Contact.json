@@ -27,5 +27,9 @@
     "submit" : {
         "fr" : "Valider",
         "en" : "Submit"
+    },
+    "wrong_submit_value" : {
+        "fr" : "Veuillez remplir les champs concernés",
+        "en" : "Please fill in the required fields"
     }
 }
