@@ -72,9 +72,11 @@ function ModalGallery() {
     useEffect(() => {
         const handleTouchMove = (event) => {
             if (modalState.isOpen) {
+                console.log("Is modal opened?", modalState.isOpen)
                 event.preventDefault()
             }
         }
+
         document.addEventListener("touchmove", handleTouchMove, {
             passive: false,
         })
@@ -82,7 +84,7 @@ function ModalGallery() {
         return () => {
             document.removeEventListener("touchmove", handleTouchMove)
         }
-    }, [])
+    }, [modalState])
 
     let touchStartX = 0
     let touchEndX = 0

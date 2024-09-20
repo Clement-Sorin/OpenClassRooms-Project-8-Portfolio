@@ -33,7 +33,7 @@ function Technologies() {
                     <h2
                         id="title-front-end"
                         className={`relative top-3 md:top-6 ${
-                            firstScroll ? "fade-in" : ""
+                            firstScroll ? "fade-in" : "opacity-0"
                         } ml-[8%] dark:text-dark-text text-[22px] sm2:text-[24px] md:text-[28px] lg:text-[32px]`}
                     >
                         Front-end
@@ -41,7 +41,7 @@ function Technologies() {
                     <VectorFront
                         id="vector-front-end"
                         className={`relative ${
-                            firstScroll ? "fade-in" : ""
+                            firstScroll ? "fade-in" : "opacity-0"
                         } w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark`}
                     />
                     <div className=" relative w-full flex flex-col md:flex-row md:flex justify-center flex-wrap md:pt-10">
@@ -79,13 +79,13 @@ function Technologies() {
                     <VectorBack
                         id="vector-back-end"
                         className={`${
-                            firstScroll ? "fade-in" : ""
+                            firstScroll ? "fade-in" : "opacity-0"
                         } w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark`}
                     />
                     <h2
                         id="title-back-end"
                         className={`${
-                            firstScroll ? "fade-in" : ""
+                            firstScroll ? "fade-in" : "opacity-0"
                         } relative right-[8%] bottom-3 md:bottom-7 dark:text-dark-text text-[22px] sm2:text-[24px] md:text-[28px] lg:text-[32px]`}
                     >
                         Back-end
