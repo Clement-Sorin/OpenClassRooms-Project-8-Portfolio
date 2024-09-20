@@ -13,6 +13,8 @@ function Contact() {
     const [result, setResult] = useState("")
     const [isNameRight, setIsNameRight] = useState(true)
     const [isNameFilled, setIsNameFilled] = useState(false)
+    const [isEmailRight, setIsEmailRight] = useState(true)
+    const [isEmailFilled, setIsEmailFilled] = useState(false)
 
     const changeButtonColor = () => {
         setIsHovered(true)
@@ -79,6 +81,27 @@ function Contact() {
         }
     }
 
+    const checkInputEmail = (event) => {
+        setIsEmailRight(false)
+        const value = event.target.value.trim()
+        const regex = new RegExp(
+            "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$"
+        )
+        let result = regex.test(value)
+        if (!result) {
+            setIsEmailFilled(false)
+            setIsEmailRight(false)
+        }
+        if (result) {
+            setIsEmailFilled(true)
+            setIsEmailRight(true)
+        }
+        if (value === "") {
+            setIsEmailFilled(false)
+            setIsEmailRight(true)
+        }
+    }
+
     return (
         <section
             id="contact"
@@ -129,7 +152,6 @@ function Contact() {
                                     height="52"
                                     className="frame-contact-name "
                                 />
-
                                 <p
                                     className={`min-h-6 text-center w-[302px] ${
                                         !isNameRight ? "opa-100" : "opa-0"
@@ -156,7 +178,7 @@ function Contact() {
                                     ? datas.email.fr
                                     : datas.email.en}
                             </label>
-                            <div className="input-email relative md:w-[500px] flex justify-start">
+                            <div className="input-email relative md:w-[500px] flex flex-col justify-start">
                                 <input
                                     type="email"
                                     name="email"
@@ -164,17 +186,37 @@ function Contact() {
                                     className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
                                     aria-label="email input field"
                                     aria-required="true"
+                                    onBlur={checkInputEmail}
                                 ></input>
                                 <FrameName
                                     stroke={
                                         theme === "light"
-                                            ? "#757780"
-                                            : "#E7DAE0"
+                                            ? isEmailRight
+                                                ? "#757780"
+                                                : "#E3170A"
+                                            : isEmailRight
+                                            ? "#E7DAE0"
+                                            : "#CFD11A"
                                     }
                                     width="302"
                                     height="52"
                                     className="frame-contact-name "
                                 />
+                                <p
+                                    className={`min-h-6 text-center w-[302px] ${
+                                        !isEmailRight ? "opa-100" : "opa-0"
+                                    } ${
+                                        theme === "light"
+                                            ? "text-red"
+                                            : "text-yellow"
+                                    }`}
+                                >
+                                    {!isEmailRight
+                                        ? language === "fr"
+                                            ? datas.wrong_email_value.fr
+                                            : datas.wrong_email_value.en
+                                        : ""}
+                                </p>
                             </div>
                         </div>
                         <div className="contact-message flex sm:flex-col sm:gap-2 md:flex-row justify-between md:gap-10">

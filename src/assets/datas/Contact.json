@@ -12,6 +12,10 @@
         "fr" : "Email :",
         "en" : "E-mail :"
     },
+    "wrong_email_value" : {
+        "fr" : "Votre email n'est pas valide",
+        "en" : "Your email is not valid"
+    },
     "message" : {
         "fr" : "Message :",
         "en" : "Message :"
