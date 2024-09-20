@@ -57,8 +57,11 @@ function Contact() {
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
-            <div className="container-contact min-h-[80vh] w-full flex justify-center items-center pt-24">
+            <div className="container-contact min-h-[80vh] w-full flex justify-center items-center lg:pt-24">
                 <form onSubmit={onSubmit} action="/submit" method="post">
+                    <h2 className="text-center my-8 lg:hidden">
+                        {datas.title}
+                    </h2>
                     <div
                         className={`container-form flex flex-col gap-5 pb-16 md:pb-0 ${
                             theme === "light" ? "text-black" : "text-dark-text"
@@ -78,8 +81,7 @@ function Contact() {
                                     type="text"
                                     name="name"
                                     id="input-name"
-                                    required
-                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2 h-[52px]"
+                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
                                     aria-label="name input field"
                                     aria-required="true"
                                 ></input>
@@ -104,13 +106,12 @@ function Contact() {
                                     ? datas.email.fr
                                     : datas.email.en}
                             </label>
-                            <div className="input-name relative md:w-[500px] flex justify-start">
+                            <div className="input-email relative md:w-[500px] flex justify-start">
                                 <input
                                     type="email"
                                     name="email"
                                     id="input-email"
-                                    required
-                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2 h-[52px]"
+                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
                                     aria-label="email input field"
                                     aria-required="true"
                                 ></input>
@@ -139,7 +140,6 @@ function Contact() {
                                 <textarea
                                     name="message"
                                     id="area-message"
-                                    required
                                     className="absolute w-[302px] h-[269px] sm2:w-[383px] sm2:h-[266px] md:w-[499px] md:h-[182px] bg-transparent outline-none p-2 resize-none"
                                     aria-label="message input field"
                                     aria-required="true"
@@ -205,7 +205,7 @@ function Contact() {
                                 } w-[124px]`}
                             />
                         </div>
-                        <p className="text-center">{result}</p>
+                        <p className="text-center pb-5">{result}</p>
                     </div>
                 </form>
             </div>

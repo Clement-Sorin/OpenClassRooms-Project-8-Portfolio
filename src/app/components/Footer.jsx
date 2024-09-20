@@ -9,7 +9,7 @@ function Footer() {
 
     return (
         <footer
-            className={`min-h-[20vh] w-full bg-black flex flex-col justify-center items-center`}
+            className={`min-h-[150px] w-full bg-black flex flex-col justify-center items-center`}
         >
             <a
                 href="/#landing"
