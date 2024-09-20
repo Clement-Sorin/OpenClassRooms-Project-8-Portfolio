@@ -11,6 +11,8 @@ function Contact() {
     const { theme, language } = useAppContext()
     const [isHovered, setIsHovered] = useState()
     const [result, setResult] = useState("")
+    const [isNameRight, setIsNameRight] = useState(true)
+    const [isNameFilled, setIsNameFilled] = useState(false)
 
     const changeButtonColor = () => {
         setIsHovered(true)
@@ -39,6 +41,9 @@ function Contact() {
                     ? "Votre message a bien été envoyé"
                     : "Form Submitted Successfully"
             )
+            setTimeout(() => {
+                setResult("")
+            }, 5000)
             event.target.reset()
         } else {
             console.log("Error", data)
@@ -47,6 +52,30 @@ function Contact() {
                     ? "Il y a eu une erreur dans l'envoi de votre message"
                     : "Form Submition failed"
             )
+            setTimeout(() => {
+                setResult("")
+            }, 5000)
+        }
+    }
+
+    // Regex checking
+
+    const checkInputName = (event) => {
+        setIsNameRight(false)
+        const value = event.target.value.trim()
+        const regex = new RegExp("[a-z]{4,}")
+        let result = regex.test(value)
+        if (!result) {
+            setIsNameFilled(false)
+            setIsNameRight(false)
+        }
+        if (result) {
+            setIsNameFilled(true)
+            setIsNameRight(true)
+        }
+        if (value === "") {
+            setIsNameFilled(false)
+            setIsNameRight(true)
         }
     }
 
@@ -63,7 +92,7 @@ function Contact() {
                         {datas.title}
                     </h2>
                     <div
-                        className={`container-form flex flex-col gap-5 pb-16 md:pb-0 ${
+                        className={`container-form flex flex-col pb-16 md:pb-0 ${
                             theme === "light" ? "text-black" : "text-dark-text"
                         }`}
                     >
@@ -76,7 +105,7 @@ function Contact() {
                                     ? datas.name.fr
                                     : datas.name.en}
                             </label>
-                            <div className="input-name md:w-[500px] relative flex justify-start">
+                            <div className="input-name md:w-[500px] relative flex flex-col justify-start">
                                 <input
                                     type="text"
                                     name="name"
@@ -84,17 +113,38 @@ function Contact() {
                                     className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
                                     aria-label="name input field"
                                     aria-required="true"
+                                    onBlur={checkInputName}
                                 ></input>
                                 <FrameName
                                     stroke={
                                         theme === "light"
-                                            ? "#757780"
-                                            : "#E7DAE0"
+                                            ? isNameRight
+                                                ? "#757780"
+                                                : "#E3170A"
+                                            : isNameRight
+                                            ? "#E7DAE0"
+                                            : "#CFD11A"
                                     }
                                     width="302"
                                     height="52"
                                     className="frame-contact-name "
                                 />
+
+                                <p
+                                    className={`min-h-6 text-center w-[302px] ${
+                                        !isNameRight ? "opa-100" : "opa-0"
+                                    } ${
+                                        theme === "light"
+                                            ? "text-red"
+                                            : "text-yellow"
+                                    }`}
+                                >
+                                    {!isNameRight
+                                        ? language === "fr"
+                                            ? datas.wrong_name_value.fr
+                                            : datas.wrong_name_value.en
+                                        : ""}
+                                </p>
                             </div>
                         </div>
                         <div className="contact-email flex sm:flex-col sm:gap-2 md:flex-row justify-between">

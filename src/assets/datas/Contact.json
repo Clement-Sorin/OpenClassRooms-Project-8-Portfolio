@@ -4,6 +4,10 @@
         "fr" : "Nom :",
         "en" : "Name :"
     },
+    "wrong_name_value" : {
+        "fr" : "Votre nom n'est pas valide",
+        "en" : "Your name is not valid"
+    },
     "email" : {
         "fr" : "Email :",
         "en" : "E-mail :"
