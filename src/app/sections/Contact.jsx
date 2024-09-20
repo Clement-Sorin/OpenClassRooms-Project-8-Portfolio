@@ -15,6 +15,8 @@ function Contact() {
     const [isNameFilled, setIsNameFilled] = useState(false)
     const [isEmailRight, setIsEmailRight] = useState(true)
     const [isEmailFilled, setIsEmailFilled] = useState(false)
+    const [isMessageRight, setIsMessageRight] = useState(true)
+    const [isMessageFilled, setIsMessageFilled] = useState(false)
 
     const changeButtonColor = () => {
         setIsHovered(true)
@@ -60,7 +62,7 @@ function Contact() {
         }
     }
 
-    // Regex checking
+    // Regex check
 
     const checkInputName = (event) => {
         setIsNameRight(false)
@@ -102,6 +104,25 @@ function Contact() {
         }
     }
 
+    const checkInputMessage = (event) => {
+        setIsMessageRight(false)
+        const value = event.target.value.trim()
+        const regex = new RegExp("[a-zA-Z]{10,}")
+        let result = regex.test(value)
+        if (!result) {
+            setIsMessageFilled(false)
+            setIsMessageRight(false)
+        }
+        if (result) {
+            setIsMessageFilled(true)
+            setIsMessageRight(true)
+        }
+        if (value === "") {
+            setIsMessageFilled(false)
+            setIsMessageRight(true)
+        }
+    }
+
     return (
         <section
             id="contact"
@@ -136,7 +157,7 @@ function Contact() {
                                     className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
                                     aria-label="name input field"
                                     aria-required="true"
-                                    onBlur={checkInputName}
+                                    onChange={checkInputName}
                                 ></input>
                                 <FrameName
                                     stroke={
@@ -153,7 +174,7 @@ function Contact() {
                                     className="frame-contact-name "
                                 />
                                 <p
-                                    className={`min-h-6 text-center w-[302px] ${
+                                    className={`min-h-6 text-center w-[302px] text-sm md:text-base ${
                                         !isNameRight ? "opa-100" : "opa-0"
                                     } ${
                                         theme === "light"
@@ -186,7 +207,7 @@ function Contact() {
                                     className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
                                     aria-label="email input field"
                                     aria-required="true"
-                                    onBlur={checkInputEmail}
+                                    onChange={checkInputEmail}
                                 ></input>
                                 <FrameName
                                     stroke={
@@ -228,19 +249,24 @@ function Contact() {
                                     ? datas.message.fr
                                     : datas.message.en}
                             </label>
-                            <div className="container-message relative flex justify-start">
+                            <div className="container-message relative flex flex-col justify-start">
                                 <textarea
                                     name="message"
                                     id="area-message"
                                     className="absolute w-[302px] h-[269px] sm2:w-[383px] sm2:h-[266px] md:w-[499px] md:h-[182px] bg-transparent outline-none p-2 resize-none"
                                     aria-label="message input field"
                                     aria-required="true"
+                                    onBlur={checkInputMessage}
                                 ></textarea>
                                 <FrameMessage
                                     stroke={
                                         theme === "light"
-                                            ? "#757780"
-                                            : "#E7DAE0"
+                                            ? isMessageRight
+                                                ? "#757780"
+                                                : "#E3170A"
+                                            : isMessageRight
+                                            ? "#E7DAE0"
+                                            : "#CFD11A"
                                     }
                                     width="499"
                                     height="182"
@@ -249,19 +275,42 @@ function Contact() {
                                 <FrameMessageSm2
                                     stroke={
                                         theme === "light"
-                                            ? "#757780"
-                                            : "#E7DAE0"
+                                            ? isMessageRight
+                                                ? "#757780"
+                                                : "#E3170A"
+                                            : isMessageRight
+                                            ? "#E7DAE0"
+                                            : "#CFD11A"
                                     }
                                     className="hidden sm2:block md:hidden"
                                 />
                                 <FrameMessageSm
                                     stroke={
                                         theme === "light"
-                                            ? "#757780"
-                                            : "#E7DAE0"
+                                            ? isMessageRight
+                                                ? "#757780"
+                                                : "#E3170A"
+                                            : isMessageRight
+                                            ? "#E7DAE0"
+                                            : "#CFD11A"
                                     }
                                     className="block sm2:hidden"
                                 />
+                                <p
+                                    className={`min-h-8 text-center w-[302px] ${
+                                        !isMessageRight ? "opa-100" : "opa-0"
+                                    } ${
+                                        theme === "light"
+                                            ? "text-red"
+                                            : "text-yellow"
+                                    }`}
+                                >
+                                    {!isMessageRight
+                                        ? language === "fr"
+                                            ? datas.wrong_message_value.fr
+                                            : datas.wrong_message_value.en
+                                        : ""}
+                                </p>
                             </div>
                         </div>
                         <div className="contact-sumbit relative flex justify-center group">

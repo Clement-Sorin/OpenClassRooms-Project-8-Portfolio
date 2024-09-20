@@ -20,6 +20,10 @@
         "fr" : "Message :",
         "en" : "Message :"
     },
+    "wrong_message_value" : {
+        "fr" : "Votre message n'est pas valide",
+        "en" : "Your message is not valid"
+    },
     "submit" : {
         "fr" : "Valider",
         "en" : "Submit"
