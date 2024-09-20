@@ -280,6 +280,24 @@ p {
     animation: draw-svg 2.5s ease-out forwards;
 }
 
+.drop-shadow-light-image {
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+    transition: filter 0.6s ease-in-out;
+}
+.drop-shadow-light-image.shadow-active {
+    filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.5));
+    transition: filter 0.3s ease-in-out;
+}
+
+.drop-shadow-dark-image {
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+    transition: filter 0.6s ease-in-out;
+}
+.drop-shadow-dark-image.shadow-active {
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 1));
+    transition: filter 0.3s ease-in-out;
+}
+
 @media (max-width: 1145px) {
     .profile, .hard-skills {
         margin-bottom: 30px;

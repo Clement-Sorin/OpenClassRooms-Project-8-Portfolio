@@ -2,11 +2,24 @@ import { useAppContext } from "../contexts/AppContext"
 import photoProfile from "../../assets/photos/ZFC_3073.png"
 import { ReactComponent as Beehive } from "../../assets/svgs/vertical-beehive.svg"
 import { ReactComponent as BeehiveLarge } from "../../assets/svgs/vertical-beehive-large.svg"
+import { useState } from "react"
 
 function ContentProfile({ datas, profileScroll }) {
     const dataProfile = datas.profile
     const profileDetails = dataProfile.data
-    const { theme, language } = useAppContext()
+    const { theme, language, openModal } = useAppContext()
+    const [isImageHovered, setIsImageHovered] = useState()
+
+    const imageHoveredOn = () => {
+        setIsImageHovered(true)
+    }
+    const imageHoveredOff = () => {
+        setIsImageHovered(false)
+    }
+
+    const handleOpenModal = (event) => {
+        openModal(event.currentTarget.id)
+    }
 
     const age = () => {
         const birthday = new Date("1988-08-07")
@@ -46,15 +59,30 @@ function ContentProfile({ datas, profileScroll }) {
                 style={{ animationDelay: "0.7s", animationDuration: "0.15s" }}
             >
                 <BeehiveLarge
-                    className="frame-photo-profile absolute"
+                    className={`frame-photo-profile absolute  ${
+                        isImageHovered
+                            ? theme === "dark"
+                                ? "shadow-active delay-0"
+                                : "shadow-active delay-0"
+                            : ""
+                    } ${
+                        theme === "dark"
+                            ? "drop-shadow-dark-image"
+                            : "drop-shadow-light-image"
+                    }`}
                     width="170px"
                     height="170px"
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
+                    fill={theme === "light" ? "#FAFAFA" : "#0B3847"}
                 />
                 <img
+                    id="profile-picture"
                     src={photoProfile}
                     alt="Clément Sorin profile"
                     className="photo-profile absolute top-1/2 translate-y-[-50%] w-[155px] h-[155px]"
+                    onMouseEnter={imageHoveredOn}
+                    onMouseLeave={imageHoveredOff}
+                    onClick={handleOpenModal}
                 ></img>
             </div>
             <div className={`flex flex-col gap-1 pr-1`}>

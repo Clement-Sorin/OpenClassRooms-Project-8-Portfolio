@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState, useCallback } from "react"
 import { useAppContext } from "../contexts/AppContext"
 import projects from "../../assets/datas/Projects.json"
+import photo_profile from "../../assets/photos/photo_profile.jpg"
 import { ReactComponent as ArrowScroll } from "../../assets/icons/arrow-scroll.svg"
 import { ReactComponent as FingerSwipe } from "../../assets/icons/finger.svg"
 import { ReactComponent as ArrowsSwipe } from "../../assets/icons/arrow.svg"
@@ -11,6 +12,7 @@ function ModalGallery() {
     const imgGallery = useRef(null)
     const [imageIndex, setImageIndex] = useState(0)
     const [isLoading, setIsLoading] = useState(false)
+    const [isPhotoProfile, setIsPhotoProfile] = useState()
     const project = projects[modalState.data]
     const images = project ? project.images : []
     const pagingIndex = imageIndex + 1
@@ -19,6 +21,16 @@ function ModalGallery() {
     useEffect(() => {
         setImageIndex(0)
     }, [modalState.data])
+
+    // Checking if photo profile or not
+
+    useEffect(() => {
+        if (modalState.data === "profile-picture") {
+            setIsPhotoProfile(true)
+        } else {
+            setIsPhotoProfile(false)
+        }
+    }, [modalState])
 
     // Closing modal fonctionnality
 
@@ -132,7 +144,11 @@ function ModalGallery() {
                         <div className="custom-border-box m-2 before:border-black before:dark:border-black after:border-black after:dark:border-black flex justify-center">
                             <img
                                 ref={imgGallery}
-                                src={images[imageIndex]}
+                                src={
+                                    isPhotoProfile
+                                        ? photo_profile
+                                        : images[imageIndex]
+                                }
                                 alt={images[imageIndex]}
                                 className={`max-w-[90vw] max-h-[80vh] md:max-w-[60vw] md:max-h-[60vh] p-4 ${
                                     isLoading === true ? "opa-0" : "opa-100"
@@ -144,32 +160,34 @@ function ModalGallery() {
                             ></img>
                         </div>
                     </div>
-                    <p>
-                        {pagingIndex} / {pagingMax}
-                    </p>
-                    <div
-                        className={`w-[25px] h-[40px]  border rounded-full m-2 opacity-90 border-black hidden lg:flex justify-center items-center`}
-                    >
-                        <ArrowScroll
-                            className="arrow-scroll w-[20px] h-[20px]"
-                            color="black"
-                            opacity={0.9}
-                        ></ArrowScroll>
-                    </div>
-                    <div className="lg:hidden flex flex-col items-center mt-2">
-                        <div className="relative top-[3px] arrows-swipe flex gap-3">
-                            <ArrowsSwipe
-                                width="15"
-                                height="15"
-                                className="rotate-180"
-                            />
-                            <ArrowsSwipe width="15" height="15" />
+                    <div className={isPhotoProfile ? "hidden" : ""}>
+                        <p>
+                            {pagingIndex} / {pagingMax}
+                        </p>
+                        <div
+                            className={`w-[25px] h-[40px]  border rounded-full m-2 opacity-90 border-black hidden lg:flex justify-center items-center`}
+                        >
+                            <ArrowScroll
+                                className="arrow-scroll w-[20px] h-[20px]"
+                                color="black"
+                                opacity={0.9}
+                            ></ArrowScroll>
                         </div>
-                        <FingerSwipe
-                            width="20"
-                            height="20"
-                            className="ml-1 finger-swipe"
-                        />
+                        <div className="lg:hidden flex flex-col items-center mt-2">
+                            <div className="relative top-[3px] arrows-swipe flex gap-3">
+                                <ArrowsSwipe
+                                    width="15"
+                                    height="15"
+                                    className="rotate-180"
+                                />
+                                <ArrowsSwipe width="15" height="15" />
+                            </div>
+                            <FingerSwipe
+                                width="20"
+                                height="20"
+                                className="ml-1 finger-swipe"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
