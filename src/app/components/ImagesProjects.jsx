@@ -38,7 +38,7 @@ function ImagesProjects({ images, title, index }) {
             </div>
             <img
                 src={images[0]}
-                className={`images-projects fade-in w-full h-full`}
+                className={`images-projects w-[500px] fade-in w-full h-full`}
                 style={{
                     boxShadow: `${
                         theme === "light"

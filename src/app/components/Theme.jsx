@@ -35,7 +35,7 @@ function Theme({ menuMobileOn }) {
 
     return (
         <div className="flex gap-2 items-center">
-            <button
+            <div
                 onClick={() => {
                     if (window.innerWidth < 768) {
                         toggleMobileLight()
@@ -56,9 +56,9 @@ function Theme({ menuMobileOn }) {
                             : "transition-hover-svg-dark"
                     }
                 />
-            </button>
+            </div>
             <p className="dark:text-dark-text">/</p>
-            <button
+            <div
                 onClick={() => {
                     if (window.innerWidth < 768) {
                         toggleMobileDark()
@@ -79,7 +79,7 @@ function Theme({ menuMobileOn }) {
                             : "transition-hover-svg-dark"
                     }
                 />
-            </button>
+            </div>
         </div>
     )
 }

@@ -33,7 +33,7 @@ function Language({ menuMobileOn }) {
 
     return (
         <div className="flex gap-2 items-center dark:text-dark-text">
-            <button
+            <div
                 className={`${
                     language === "fr" ? "font-bold" : "font-normal"
                 } ${
@@ -50,9 +50,9 @@ function Language({ menuMobileOn }) {
                 }}
             >
                 FR
-            </button>
+            </div>
             <p>/</p>
-            <button
+            <div
                 className={`${
                     language === "en" ? "font-bold" : "font-normal"
                 } ${
@@ -69,7 +69,7 @@ function Language({ menuMobileOn }) {
                 }}
             >
                 EN
-            </button>
+            </div>
         </div>
     )
 }

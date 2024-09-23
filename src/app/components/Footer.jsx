@@ -22,6 +22,7 @@ function Footer() {
                     href="https://github.com/Clement-Sorin"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="external link to main GitHub page of Clément Sorin"
                     className="h-full transition-transform duration-500 transform hover:scale-110 "
                 >
                     <GitHubLogo className="sm:max-h-6 sm:max-w-6  md:max-h-8 md:max-w-8" />
@@ -30,6 +31,7 @@ function Footer() {
                     href="https://linkedin.com/in/clément-sorin"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="external link to LinkedIn page of Clément Sorin"
                     className="h-full transition-transform duration-500 transform hover:scale-110 "
                 >
                     <LinkedInLogo className="sm:max-h-6 sm:max-w-6  md:max-h-8 md:max-w-8" />

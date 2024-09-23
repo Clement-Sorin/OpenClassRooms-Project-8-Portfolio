@@ -36,7 +36,7 @@ function Landing() {
                                 <img
                                     src={photoLanding}
                                     alt="Clement Sorin holding a laptop in his hands"
-                                    className="p-3 photo-landing"
+                                    className="p-3 photo-landing w-[550px]"
                                 />
                             </div>
                         </div>
