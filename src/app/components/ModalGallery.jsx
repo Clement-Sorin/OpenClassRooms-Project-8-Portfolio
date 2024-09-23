@@ -79,7 +79,7 @@ function ModalGallery() {
         return () => {
             document.removeEventListener("wheel", handleWheel)
         }
-    }, [selectNextImage, selectPrevImage])
+    }, [selectNextImage, selectPrevImage, modalState])
 
     useEffect(() => {
         const handleTouchMove = (event) => {
