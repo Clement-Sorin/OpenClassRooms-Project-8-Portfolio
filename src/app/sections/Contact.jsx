@@ -50,7 +50,7 @@ function Contact() {
         setIsEmailRight(false)
         const value = event.target.value.trim()
         const regex = new RegExp(
-            "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$"
+            "^[a-zA-Z0-9._%+-]+[@]+[a-zA-Z0-9.-]+[.]+[a-zA-Z]{2,}$"
         )
         let result = regex.test(value)
         if (!result) {
