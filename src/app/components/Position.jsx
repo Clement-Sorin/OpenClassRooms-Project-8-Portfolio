@@ -10,9 +10,9 @@ function Position({ position }) {
                     theme === "light" ? "border-black" : "border-dark-text"
                 }`}
             ></div>
-            <p className="sm:text-[20px] md:text-2xl ">
+            <h2 className="sm:text-[20px] md:text-[22px] ">
                 {position < 10 ? "0" + position : position}
-            </p>
+            </h2>
         </div>
     )
 }

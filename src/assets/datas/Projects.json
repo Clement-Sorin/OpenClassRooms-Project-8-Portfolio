@@ -24,11 +24,13 @@
         },
         "links" : [
                 {
+                    "name" : "GitHub",
                     "logo" : "/images/icons/github.svg",
                     "logo_dark" : "/images/icons/github-dark.svg",
                     "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-8-Portfolio"
                 },
                 {
+                    "name" : "Figma",
                     "logo" : "/images/icons/figma.svg",
                     "logo_dark" : "/images/icons/figma.svg",
                     "url" : "https://www.figma.com/design/LcuJU4yq9tHdUQMbfPsSxw/Portfolio?node-id=70-51&t=lOEhuGXgvjiXQ13C-1"
@@ -66,6 +68,7 @@
         },
         "links" : [
                 {
+                    "name" : "GitHub",
                     "logo" : "/images/icons/github.svg",
                     "logo_dark" : "/images/icons/github-dark.svg",
                     "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-6-Back-end"
@@ -103,11 +106,13 @@
         },
         "links" : [
                 {
+                    "name" : "GitHub",
                     "logo" : "/images/icons/github.svg",
                     "logo_dark" : "/images/icons/github-dark.svg",
                     "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-5-React-Kasa"
                 },
                 {
+                    "name" : "Link",
                     "logo" : "/images/icons/link.svg",
                     "logo_dark" : "/images/icons/link-dark.svg",
                     "url" : "https://open-class-rooms-project-5-react-kasa.vercel.app/"
@@ -140,6 +145,7 @@
         },
         "links" : [
                 {
+                    "name" : "GitHub",
                     "logo" : "/images/icons/github.svg",
                     "logo_dark" : "/images/icons/github-dark.svg",
                     "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-3-JavaScript-Sophie_Bluel"
@@ -177,11 +183,13 @@
         },
         "links" : [
                 {
+                    "name" : "GitHub",
                     "logo" : "/images/icons/github.svg",
                     "logo_dark" : "/images/icons/github-dark.svg",
                     "url" : "https://github.com/Clement-Sorin/OpenClassRooms-Project-2-HTML-CSS-Booki"
                 },
                 {
+                    "name" : "Link",
                     "logo" : "/images/icons/link.svg",
                     "logo_dark" : "/images/icons/link-dark.svg",
                     "url" : "https://clement-sorin.github.io/OpenClassRooms-Project-2-HTML-CSS-Booki/"
@@ -219,11 +227,13 @@
         },
         "links" : [
                 {
+                    "name" : "GitHub",
                     "logo" : "/images/icons/github.svg",
                     "logo_dark" : "/images/icons/github-dark.svg",
                     "url" : "https://github.com/Clement-Sorin/Portfolio-V1"
                 },
                 {
+                    "name" : "Link",
                     "logo" : "/images/icons/link.svg",
                     "logo_dark" : "/images/icons/link-dark.svg",
                     "url" : "https://clement-sorin.github.io/Portfolio-V1/"

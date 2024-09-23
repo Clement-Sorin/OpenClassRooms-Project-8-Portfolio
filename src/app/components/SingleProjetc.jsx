@@ -31,7 +31,7 @@ function SingleProject({
                 } ${scrollSingleProject ? "details-projects" : "opacity-0"}`}
             >
                 <Position position={position} />
-                <h2 className="text-[20px] md:text-2xl">{title}</h2>
+                <h3 className="text-[20px] md:text-2xl">{title}</h3>
                 <ProjectsTechnos technos={technos} />
                 <p className="sm:text-[14px] md:text-[16px]">
                     {language === "fr" ? description.fr : description.en}

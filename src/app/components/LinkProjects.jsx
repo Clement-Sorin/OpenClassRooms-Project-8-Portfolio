@@ -16,7 +16,7 @@ function LinkProjects({ links }) {
                     >
                         <img
                             src={theme === "light" ? item.logo : item.logo_dark}
-                            alt={"logo " + item.logo}
+                            alt={"logo " + item.name}
                             className="sm:max-h-5 md:max-h-8"
                         ></img>
                     </a>
