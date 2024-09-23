@@ -147,7 +147,9 @@ function Contact() {
         <section
             id="contact"
             className={`snap-start snap-always min-h-[80vh] h-full w-full ${
-                theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
+                theme === "light"
+                    ? "bg-light-grey"
+                    : "bg-dark-blue+ text-dark-text"
             }`}
         >
             <div className="container-contact min-h-[80vh] w-full flex justify-center items-center lg:pt-24">

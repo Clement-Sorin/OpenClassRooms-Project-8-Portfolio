@@ -1,5 +1,5 @@
 import { useAppContext } from "../contexts/AppContext"
-import photoProfile from "../../assets/photos/ZFC_3073.png"
+import photoProfile from "../../assets/photos/ZFC_3073.webp"
 import { ReactComponent as Beehive } from "../../assets/svgs/vertical-beehive.svg"
 import { ReactComponent as BeehiveLarge } from "../../assets/svgs/vertical-beehive-large.svg"
 import { useState } from "react"

@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState, useCallback } from "react"
 import { useAppContext } from "../contexts/AppContext"
 import projects from "../../assets/datas/Projects.json"
-import photo_profile from "../../assets/photos/photo_profile.jpg"
+import photo_profile from "../../assets/photos/photo_profile.webp"
 import { ReactComponent as ArrowScroll } from "../../assets/icons/arrow-scroll.svg"
 import { ReactComponent as FingerSwipe } from "../../assets/icons/finger.svg"
 import { ReactComponent as ArrowsSwipe } from "../../assets/icons/arrow.svg"
@@ -84,7 +84,6 @@ function ModalGallery() {
     useEffect(() => {
         const handleTouchMove = (event) => {
             if (modalState.isOpen) {
-                console.log("Is modal opened?", modalState.isOpen)
                 event.preventDefault()
             }
         }
@@ -150,7 +149,7 @@ function ModalGallery() {
                                         : images[imageIndex]
                                 }
                                 alt={images[imageIndex]}
-                                className={`max-w-[90vw] max-h-[80vh] md:max-w-[60vw] md:max-h-[60vh] p-4 ${
+                                className={`max-w-[90vw] max-h-[65vh] md:max-w-[60vw] md:max-h-[60vh] p-4 ${
                                     isLoading === true ? "opa-0" : "opa-100"
                                 }`}
                                 onTouchStart={handleTouchStart}
