@@ -57,6 +57,7 @@ function MenuMobile({ toggleMenu, setToggleMenu }) {
         <>
             <button
                 className="flex flex-col md:hidden w-6 gap-1 justify-around h-[25px] mr-5"
+                aria-label="toggle menu button"
                 onClick={handleToggle}
             >
                 <div

@@ -17,6 +17,7 @@ function MenuTablet({ landingScroll }) {
             <button
                 className="hidden md:block lg:hidden"
                 onClick={handleToggle}
+                aria-label="toggle menu button"
             >
                 <IconSetting
                     width={25}
