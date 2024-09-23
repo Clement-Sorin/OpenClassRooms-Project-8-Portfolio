@@ -1,17 +1,21 @@
+import React, { Suspense } from "react"
+
 import Landing from "../sections/Landing"
-import Technologies from "../sections/Technologies"
-import Projects from "../sections/Projects"
-import Profile from "../sections/Profile"
-import Contact from "../sections/Contact"
+const Technologies = React.lazy(() => import("../sections/Technologies"))
+const Projects = React.lazy(() => import("../sections/Projects"))
+const Profile = React.lazy(() => import("../sections/Profile"))
+const Contact = React.lazy(() => import("../sections/Contact"))
 
 function Home() {
     return (
         <>
             <Landing />
-            <Technologies />
-            <Projects />
-            <Profile />
-            <Contact />
+            <Suspense fallback={null}>
+                <Technologies />
+                <Projects />
+                <Profile />
+                <Contact />
+            </Suspense>
         </>
     )
 }
