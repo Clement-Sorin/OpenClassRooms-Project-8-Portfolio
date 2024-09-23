@@ -1,0 +1,14 @@
+{
+    "title" : {
+        "fr" : "Erreur 404",
+        "en" : "Error 404"
+    },
+    "text_1" : {
+        "fr" : "Vous semblez être sur une page inexistante...",
+        "en" : "You seem to be on a non-existent page..."
+    },
+    "text_2" : {
+        "fr" : "L’erreur est humaine et non des machines.",
+        "en" : "The error is human, not of machines."
+    }
+}
