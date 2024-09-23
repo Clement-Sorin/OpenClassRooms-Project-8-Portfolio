@@ -3,12 +3,14 @@ import { ReactComponent as BracketLeft } from "../../assets/svgs/bracket-left.sv
 import { ReactComponent as BracketRight } from "../../assets/svgs/bracket-right.svg"
 import { ReactComponent as FrameSubmit } from "../../assets/svgs/frame-submit.svg"
 import { useAppContext } from "../contexts/AppContext"
+import useIntersectionObserver from "../hooks/useIntersectionObserver"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
 function Error404() {
     const { language, theme } = useAppContext()
     const [isHovered, setIsHovered] = useState()
+    const error404Display = useIntersectionObserver("error-404")
 
     const changeButtonColor = () => {
         setIsHovered(true)
@@ -24,24 +26,44 @@ function Error404() {
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
-            <div className="flex items-center ">
+            <div className="flex items-center justify-center w-[300px] sm2:w-[360px]">
                 <BracketLeft
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
+                    className={`${
+                        error404Display
+                            ? "translate-x-0 transition-transform duration-1000 ease-out"
+                            : "translate-x-[400%] lg:translate-x-[500%]"
+                    }`}
                 />
-                <h1 className={theme === "light" ? "" : "text-dark-text"}>
+                <h1
+                    className={`${theme === "light" ? "" : "text-dark-text"} ${
+                        error404Display
+                            ? "opacity-1 transition-opacity duration-300 ease-out delay-1000"
+                            : "opacity-0 "
+                    }`}
+                >
                     {language === "fr" ? datas.title.fr : datas.title.en}
                 </h1>
                 <BracketRight
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
+                    className={`${
+                        error404Display
+                            ? "translate-x-0 transition-transform duration-1000 ease-out"
+                            : "translate-x-[-400%] lg:translate-x-[-500%]"
+                    }`}
                 />
             </div>
             <div
-                className={`flex flex-col items-center gap-5 ${
+                className={`flex flex-col items-center gap-5 w-[300px] sm2:w-full ${
                     theme === "light" ? "" : "text-dark-text"
                 }`}
             >
-                <p>{language === "fr" ? datas.text_1.fr : datas.text_1.en}</p>
-                <p>{language === "fr" ? datas.text_2.fr : datas.text_2.en}</p>
+                <p className="text-center">
+                    {language === "fr" ? datas.text_1.fr : datas.text_1.en}
+                </p>
+                <p className="text-center">
+                    {language === "fr" ? datas.text_2.fr : datas.text_2.en}
+                </p>
             </div>
             <Link
                 to="/"
