@@ -9,6 +9,8 @@ function IconScroll() {
     const contactScroll = useIntersectionObserver("contact")
     const divRef = useRef(null)
 
+    console.log("contactScroll :", contactScroll)
+
     return (
         <div
             ref={divRef}
