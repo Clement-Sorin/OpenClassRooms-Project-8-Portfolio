@@ -17,7 +17,6 @@ Last project of the web developer training from OpenClassrooms made to build my 
 
 -   React Router V6
 -   tsparticles.js
--   React-Modal
 
 ## Goal
 
@@ -29,8 +28,7 @@ For that, I need to :
 2. Set up the front end environment using React, React Router and Tailwind CSS.
 3. Create a useContext to manage the languages and the themes, record the user preference into localStorage or read browser preference to set the app mode
 4. Make a custom hook for animations on scrolling, taking html tag ids in parameter
-5. Developping the page using the mockup and adapt to responsive. Must be considered the challenge using fixed position and masks executed with scroll instead of a usual top to bottom layout.
-6. Optimizing the code and the cpu ressource (ex: add a throttle on scroll event listener)
+5. Developping the page using the mockup and adapt to responsive. Challenge has been focused on managing swipe control in mobile menu et galleries in modals.
 
 ## Author
 

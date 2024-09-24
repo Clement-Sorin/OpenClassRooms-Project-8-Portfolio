@@ -654,6 +654,9 @@ p {
 }
 
 @media (max-width: 768px) {
+    html {
+        scroll-snap-type: none;
+    }
 
     /* Technologies */
 
@@ -681,6 +684,7 @@ p {
 }
 
 @media (max-width: 450px) {
-
-
+    html {
+        scroll-snap-type: none;
+    }
 }
