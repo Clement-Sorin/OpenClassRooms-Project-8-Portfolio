@@ -9,6 +9,7 @@ function Footer() {
 
     return (
         <footer
+            id="footer"
             className={`min-h-[150px] w-full bg-black flex flex-col justify-center items-center`}
         >
             <a

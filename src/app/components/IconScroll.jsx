@@ -6,17 +6,15 @@ import { useRef } from "react"
 function IconScroll() {
     const { theme } = useAppContext()
     const landingScroll = useIntersectionObserver("landing")
-    const contactScroll = useIntersectionObserver("contact")
+    const footerScroll = useIntersectionObserver("footer")
     const divRef = useRef(null)
-
-    console.log("contactScroll :", contactScroll)
 
     return (
         <div
             ref={divRef}
             className={`fixed bottom-6 flex justify-center right-0 w-full mx-auto ${
                 landingScroll ? "opa-100" : "opa-0"
-            } ${contactScroll ? "hidden" : ""}`}
+            } ${footerScroll ? "hidden" : ""}`}
         >
             <div
                 className={`w-[20px] h-[40px] md:w-[30px] md:h-[60px] border rounded-full opacity-90 ${
