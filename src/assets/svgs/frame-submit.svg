@@ -1,3 +1,8 @@
 <svg viewBox="0 0 124 36" fill="" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 1L0.5 4.5V32L4 35.5H119.5L123 32V4.5L119.5 1H4Z" stroke=""/>
+<path d="M 4 1 H 119.5 L 123 4.5 V 32 L 119.5 35.5 H 4 L 0.5 32 V 4.5 L 4 1 Z" 
+stroke="" 
+stroke-dasharray=""
+stroke-dashoffset=""
+class=""
+/>
 </svg>

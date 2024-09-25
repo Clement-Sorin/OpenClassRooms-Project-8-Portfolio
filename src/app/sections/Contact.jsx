@@ -1,10 +1,15 @@
 import { useAppContext } from "../contexts/AppContext"
-import { ReactComponent as FrameName } from "../../assets/svgs/frame-contact-name.svg"
-import { ReactComponent as FrameMessage } from "../../assets/svgs/frame-contact-message.svg"
 import { ReactComponent as FrameSubmit } from "../../assets/svgs/frame-submit.svg"
-import { ReactComponent as FrameMessageSm2 } from "../../assets/svgs/frame-message-sm2.svg"
-import { ReactComponent as FrameMessageSm } from "../../assets/svgs/frame-message-sm.svg"
+import { ReactComponent as FrameNameLgTL } from "../../assets/svgs/frame-name-lg-tl.svg"
+import { ReactComponent as FrameNameLgBR } from "../../assets/svgs/frame-name-lg-br.svg"
+import { ReactComponent as FrameMessageLgTL } from "../../assets/svgs/frame-message-lg-tl.svg"
+import { ReactComponent as FrameMessageLgBR } from "../../assets/svgs/frame-message-lg-br.svg"
+import { ReactComponent as FrameMessageSm2TL } from "../../assets/svgs/frame-message-sm2-tl.svg"
+import { ReactComponent as FrameMessageSm2BR } from "../../assets/svgs/frame-message-sm2-br.svg"
+import { ReactComponent as FrameMessageSmTL } from "../../assets/svgs/frame-message-sm-tl.svg"
+import { ReactComponent as FrameMessageSmBR } from "../../assets/svgs/frame-message-sm-br.svg"
 import { useState } from "react"
+import useIntersectionObserver from "../hooks/useIntersectionObserver"
 import datas from "../../assets/datas/Contact.json"
 
 function Contact() {
@@ -17,6 +22,7 @@ function Contact() {
     const [isEmailFilled, setIsEmailFilled] = useState(false)
     const [isMessageRight, setIsMessageRight] = useState(true)
     const [isMessageFilled, setIsMessageFilled] = useState(false)
+    const contactScroll = useIntersectionObserver("contact")
 
     const changeButtonColor = () => {
         setIsHovered(true)
@@ -154,7 +160,13 @@ function Contact() {
         >
             <div className="container-contact min-h-[80vh] w-full flex justify-center items-center lg:pt-24">
                 <form onSubmit={onSubmit} action="/submit" method="post">
-                    <h2 className="text-center my-8 lg:hidden">
+                    <h2
+                        className={`text-center my-8 lg:hidden ${
+                            contactScroll
+                                ? "opacity-100 transition-opacity duration-500 delay-200"
+                                : "opacity-0"
+                        }`}
+                    >
                         {datas.title}
                     </h2>
                     <div
@@ -165,7 +177,11 @@ function Contact() {
                         <div className="contact-name flex sm:flex-col sm:gap-2 md:flex-row justify-between">
                             <label
                                 htmlFor="input-name"
-                                className="label text-[16px] md:text-xl"
+                                className={`label text-[16px] md:text-xl ${
+                                    contactScroll
+                                        ? "opacity-100 transition-opacity duration-500 delay-500"
+                                        : "opacity-0"
+                                }`}
                             >
                                 {language === "fr"
                                     ? datas.name.fr
@@ -176,24 +192,56 @@ function Contact() {
                                     type="text"
                                     name="name"
                                     id="input-name"
-                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
+                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2 z-[2]"
                                     aria-label="name input field"
                                     onBlur={checkInputName}
                                 ></input>
-                                <FrameName
-                                    stroke={
-                                        theme === "light"
-                                            ? isNameRight
-                                                ? "#757780"
-                                                : "#E3170A"
-                                            : isNameRight
-                                            ? "#E7DAE0"
-                                            : "#CFD11A"
-                                    }
-                                    width="302"
-                                    height="52"
-                                    className="frame-contact-name "
-                                />
+                                <div className="z-[1]">
+                                    <FrameNameLgTL
+                                        className={`${
+                                            contactScroll
+                                                ? "svg-path shadow-active"
+                                                : "opa-0"
+                                        }`}
+                                        stroke={
+                                            theme === "light"
+                                                ? isNameRight
+                                                    ? "#757780"
+                                                    : "#E3170A"
+                                                : isNameRight
+                                                ? "#E7DAE0"
+                                                : "#CFD11A"
+                                        }
+                                        strokeDasharray="2000"
+                                        strokeDashoffset="2000"
+                                        style={{
+                                            animationDelay: "0.5s",
+                                            animationDuration: "5s",
+                                        }}
+                                    />
+                                    <FrameNameLgBR
+                                        className={`absolute top-0 left-2 ${
+                                            contactScroll
+                                                ? "svg-path shadow-active"
+                                                : "opa-0"
+                                        }`}
+                                        stroke={
+                                            theme === "light"
+                                                ? isNameRight
+                                                    ? "#757780"
+                                                    : "#E3170A"
+                                                : isNameRight
+                                                ? "#E7DAE0"
+                                                : "#CFD11A"
+                                        }
+                                        strokeDasharray="2000"
+                                        strokeDashoffset="2000"
+                                        style={{
+                                            animationDelay: "0.5s",
+                                            animationDuration: "5s",
+                                        }}
+                                    />
+                                </div>
                                 <p
                                     className={`min-h-6 text-center w-[302px] text-sm md:text-base ${
                                         !isNameRight ? "opa-100" : "opa-0"
@@ -214,7 +262,11 @@ function Contact() {
                         <div className="contact-email flex sm:flex-col sm:gap-2 md:flex-row justify-between">
                             <label
                                 htmlFor="input-email"
-                                className="label text-[16px] md:text-xl"
+                                className={`label text-[16px] md:text-xl ${
+                                    contactScroll
+                                        ? "opacity-100 transition-opacity duration-500 delay-[0.8s]"
+                                        : "opacity-0"
+                                }`}
                             >
                                 {language === "fr"
                                     ? datas.email.fr
@@ -225,24 +277,56 @@ function Contact() {
                                     type="email"
                                     name="email"
                                     id="input-email"
-                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2"
+                                    className="absolute w-[302px] h-[52px] bg-transparent outline-none p-2 z-[2]"
                                     aria-label="email input field"
                                     onBlur={checkInputEmail}
                                 ></input>
-                                <FrameName
-                                    stroke={
-                                        theme === "light"
-                                            ? isEmailRight
-                                                ? "#757780"
-                                                : "#E3170A"
-                                            : isEmailRight
-                                            ? "#E7DAE0"
-                                            : "#CFD11A"
-                                    }
-                                    width="302"
-                                    height="52"
-                                    className="frame-contact-name "
-                                />
+                                <div className="z-[1]">
+                                    <FrameNameLgTL
+                                        className={`${
+                                            contactScroll
+                                                ? "svg-path shadow-active"
+                                                : "opa-0"
+                                        }`}
+                                        stroke={
+                                            theme === "light"
+                                                ? isNameRight
+                                                    ? "#757780"
+                                                    : "#E3170A"
+                                                : isNameRight
+                                                ? "#E7DAE0"
+                                                : "#CFD11A"
+                                        }
+                                        strokeDasharray="2000"
+                                        strokeDashoffset="2000"
+                                        style={{
+                                            animationDelay: "0.8s",
+                                            animationDuration: "5s",
+                                        }}
+                                    />
+                                    <FrameNameLgBR
+                                        className={`absolute top-0 left-2 ${
+                                            contactScroll
+                                                ? "svg-path shadow-active"
+                                                : "opa-0"
+                                        }`}
+                                        stroke={
+                                            theme === "light"
+                                                ? isNameRight
+                                                    ? "#757780"
+                                                    : "#E3170A"
+                                                : isNameRight
+                                                ? "#E7DAE0"
+                                                : "#CFD11A"
+                                        }
+                                        strokeDasharray="2000"
+                                        strokeDashoffset="2000"
+                                        style={{
+                                            animationDelay: "0.8s",
+                                            animationDuration: "5s",
+                                        }}
+                                    />
+                                </div>
                                 <p
                                     className={`min-h-6 text-center w-[302px] ${
                                         !isEmailRight ? "opa-100" : "opa-0"
@@ -263,7 +347,11 @@ function Contact() {
                         <div className="contact-message flex sm:flex-col sm:gap-2 md:flex-row justify-between md:gap-10">
                             <label
                                 htmlFor="area-message"
-                                className="label text-[16px] md:text-xl"
+                                className={`label text-[16px] md:text-xl ${
+                                    contactScroll
+                                        ? "opacity-100 transition-opacity duration-500 delay-[1.1s]"
+                                        : "opacity-0"
+                                }`}
                             >
                                 {language === "fr"
                                     ? datas.message.fr
@@ -273,48 +361,148 @@ function Contact() {
                                 <textarea
                                     name="message"
                                     id="area-message"
-                                    className="absolute w-[302px] h-[269px] sm2:w-[383px] sm2:h-[266px] md:w-[499px] md:h-[182px] bg-transparent outline-none p-2 resize-none"
+                                    className="absolute w-[302px] h-[269px] sm2:w-[383px] sm2:h-[266px] md:w-[499px] md:h-[182px] bg-transparent outline-none p-2 resize-none z-[2]"
                                     aria-label="message input field"
                                     onBlur={checkInputMessage}
                                 ></textarea>
-                                <FrameMessage
-                                    stroke={
-                                        theme === "light"
-                                            ? isMessageRight
-                                                ? "#757780"
-                                                : "#E3170A"
-                                            : isMessageRight
-                                            ? "#E7DAE0"
-                                            : "#CFD11A"
-                                    }
-                                    width="499"
-                                    height="182"
-                                    className="frame-contact-message hidden md:block"
-                                />
-                                <FrameMessageSm2
-                                    stroke={
-                                        theme === "light"
-                                            ? isMessageRight
-                                                ? "#757780"
-                                                : "#E3170A"
-                                            : isMessageRight
-                                            ? "#E7DAE0"
-                                            : "#CFD11A"
-                                    }
-                                    className="hidden sm2:block md:hidden"
-                                />
-                                <FrameMessageSm
-                                    stroke={
-                                        theme === "light"
-                                            ? isMessageRight
-                                                ? "#757780"
-                                                : "#E3170A"
-                                            : isMessageRight
-                                            ? "#E7DAE0"
-                                            : "#CFD11A"
-                                    }
-                                    className="block sm2:hidden"
-                                />
+                                <div className="z-[1] hidden md:block relative left-[-10px]">
+                                    <FrameMessageLgTL
+                                        className={`${
+                                            contactScroll
+                                                ? "svg-path shadow-active"
+                                                : "opa-0"
+                                        }`}
+                                        stroke={
+                                            theme === "light"
+                                                ? isNameRight
+                                                    ? "#757780"
+                                                    : "#E3170A"
+                                                : isNameRight
+                                                ? "#E7DAE0"
+                                                : "#CFD11A"
+                                        }
+                                        strokeDasharray="2000"
+                                        strokeDashoffset="2000"
+                                        style={{
+                                            animationDelay: "1.1s",
+                                            animationDuration: "5s",
+                                        }}
+                                    />
+                                    <FrameMessageLgBR
+                                        className={`absolute top-0 left-2 ${
+                                            contactScroll
+                                                ? "svg-path shadow-active"
+                                                : "opa-0"
+                                        }`}
+                                        stroke={
+                                            theme === "light"
+                                                ? isNameRight
+                                                    ? "#757780"
+                                                    : "#E3170A"
+                                                : isNameRight
+                                                ? "#E7DAE0"
+                                                : "#CFD11A"
+                                        }
+                                        strokeDasharray="2000"
+                                        strokeDashoffset="2000"
+                                        style={{
+                                            animationDelay: "1.1s",
+                                            animationDuration: "5s",
+                                        }}
+                                    />
+                                </div>
+                                <div className="z-[1] hidden sm2:block md:hidden ">
+                                    <FrameMessageSm2TL
+                                        className={`${
+                                            contactScroll
+                                                ? "svg-path shadow-active"
+                                                : "opa-0"
+                                        }`}
+                                        stroke={
+                                            theme === "light"
+                                                ? isNameRight
+                                                    ? "#757780"
+                                                    : "#E3170A"
+                                                : isNameRight
+                                                ? "#E7DAE0"
+                                                : "#CFD11A"
+                                        }
+                                        strokeDasharray="2000"
+                                        strokeDashoffset="2000"
+                                        style={{
+                                            animationDelay: "1.1s",
+                                            animationDuration: "5s",
+                                        }}
+                                    />
+                                    <FrameMessageSm2BR
+                                        className={`absolute top-0 left-3 ${
+                                            contactScroll
+                                                ? "svg-path shadow-active"
+                                                : "opa-0"
+                                        }`}
+                                        stroke={
+                                            theme === "light"
+                                                ? isNameRight
+                                                    ? "#757780"
+                                                    : "#E3170A"
+                                                : isNameRight
+                                                ? "#E7DAE0"
+                                                : "#CFD11A"
+                                        }
+                                        strokeDasharray="2000"
+                                        strokeDashoffset="2000"
+                                        style={{
+                                            animationDelay: "1.1s",
+                                            animationDuration: "5s",
+                                        }}
+                                    />
+                                </div>
+                                <div className="z-[1] block sm2:hidden">
+                                    <FrameMessageSmTL
+                                        className={`${
+                                            contactScroll
+                                                ? "svg-path shadow-active"
+                                                : "opa-0"
+                                        }`}
+                                        stroke={
+                                            theme === "light"
+                                                ? isNameRight
+                                                    ? "#757780"
+                                                    : "#E3170A"
+                                                : isNameRight
+                                                ? "#E7DAE0"
+                                                : "#CFD11A"
+                                        }
+                                        strokeDasharray="2000"
+                                        strokeDashoffset="2000"
+                                        style={{
+                                            animationDelay: "1.1s",
+                                            animationDuration: "5s",
+                                        }}
+                                    />
+                                    <FrameMessageSmBR
+                                        className={`absolute top-0 left-3 ${
+                                            contactScroll
+                                                ? "svg-path shadow-active"
+                                                : "opa-0"
+                                        }`}
+                                        stroke={
+                                            theme === "light"
+                                                ? isNameRight
+                                                    ? "#757780"
+                                                    : "#E3170A"
+                                                : isNameRight
+                                                ? "#E7DAE0"
+                                                : "#CFD11A"
+                                        }
+                                        strokeDasharray="2000"
+                                        strokeDashoffset="2000"
+                                        style={{
+                                            animationDelay: "1.1s",
+                                            animationDuration: "5s",
+                                        }}
+                                    />
+                                </div>
                                 <p
                                     className={`min-h-8 text-center w-[302px] ${
                                         !isMessageRight ? "opa-100" : "opa-0"
@@ -333,26 +521,34 @@ function Contact() {
                             </div>
                         </div>
                         <div className="contact-sumbit relative flex justify-center group">
-                            <input
-                                type="submit"
-                                value={
-                                    language === "fr"
-                                        ? datas.submit.fr
-                                        : datas.submit.en
+                            <div
+                                className={
+                                    contactScroll
+                                        ? "opacity-100 transition-opacity duration-500 delay-[2.3s]"
+                                        : "opacity-0"
                                 }
-                                aria-label="send message form"
-                                className={`${
-                                    isHovered
-                                        ? theme === "light"
-                                            ? "input-submit-hovered-lt"
-                                            : "input-submit-hovered-dk"
-                                        : theme === "light"
-                                        ? "input-submit-lt"
-                                        : "input-submit-dk"
-                                } text-[16px] md:text-lg absolute w-[124px] h-[36px]`}
-                                onMouseEnter={changeButtonColor}
-                                onMouseLeave={removeButtonColor}
-                            ></input>
+                            >
+                                <input
+                                    type="submit"
+                                    value={
+                                        language === "fr"
+                                            ? datas.submit.fr
+                                            : datas.submit.en
+                                    }
+                                    aria-label="send message form"
+                                    className={`${
+                                        isHovered
+                                            ? theme === "light"
+                                                ? "input-submit-hovered-lt"
+                                                : "input-submit-hovered-dk"
+                                            : theme === "light"
+                                            ? "input-submit-lt"
+                                            : "input-submit-dk"
+                                    } text-[16px] md:text-lg absolute w-[124px] h-[36px]`}
+                                    onMouseEnter={changeButtonColor}
+                                    onMouseLeave={removeButtonColor}
+                                ></input>
+                            </div>
                             <FrameSubmit
                                 className={`${
                                     isHovered
@@ -362,7 +558,17 @@ function Contact() {
                                         : theme === "light"
                                         ? "frame-submit-lt"
                                         : "frame-submit-dk"
+                                } ${
+                                    contactScroll
+                                        ? "svg-path shadow-active"
+                                        : "opa-0"
                                 } w-[124px]`}
+                                strokeDasharray="2000"
+                                strokeDashoffset="2000"
+                                style={{
+                                    animationDelay: "1.8s",
+                                    animationDuration: "5s",
+                                }}
                             />
                         </div>
                         <p

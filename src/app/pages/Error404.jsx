@@ -31,14 +31,14 @@ function Error404() {
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                     className={`${
                         error404Display
-                            ? "translate-x-0 transition-transform duration-1000 ease-out"
+                            ? "translate-x-0 transition-transform duration-700 ease-out"
                             : "translate-x-[400%] lg:translate-x-[500%]"
                     }`}
                 />
                 <h1
                     className={`${theme === "light" ? "" : "text-dark-text"} ${
                         error404Display
-                            ? "opacity-1 transition-opacity duration-300 ease-out delay-1000"
+                            ? "opacity-1 transition-opacity duration-500 ease-out delay-700"
                             : "opacity-0 "
                     }`}
                 >
@@ -48,7 +48,7 @@ function Error404() {
                     stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                     className={`${
                         error404Display
-                            ? "translate-x-0 transition-transform duration-1000 ease-out"
+                            ? "translate-x-0 transition-transform duration-700 ease-out"
                             : "translate-x-[-400%] lg:translate-x-[-500%]"
                     }`}
                 />
