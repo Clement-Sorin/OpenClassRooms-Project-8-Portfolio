@@ -5,7 +5,7 @@ function Rates({ rateValue }) {
     const { theme } = useAppContext()
 
     return (
-        <div className="flex gap-1">
+        <div className="flex gap-1 ">
             {Array.from({ length: rateValue }).map((_, index) => (
                 <Beehive
                     key={index}

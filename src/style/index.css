@@ -589,6 +589,18 @@ p {
     animation: fade-in 0.6s ease-out forwards;
 }
 
+/* Rates */
+
+.beehive-sm {
+    transform: scale(1);
+    transition: transform 0.7s ease-out;
+}
+
+.beehive-sm:hover {
+    transform: scale(1.25);
+    transition: transform 0.2s ease-out;
+}
+
 /* Collapse */
 
 .collapse-closed {

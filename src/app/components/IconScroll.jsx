@@ -7,13 +7,14 @@ function IconScroll() {
     const { theme } = useAppContext()
     const landingScroll = useIntersectionObserver("landing")
     const footerScroll = useIntersectionObserver("footer")
+    const profileScroll = useIntersectionObserver("profile")
     const divRef = useRef(null)
 
     return (
         <div
             ref={divRef}
             className={`fixed bottom-6 flex justify-center right-0 w-full mx-auto ${
-                landingScroll ? "opa-100" : "opa-0"
+                landingScroll && profileScroll ? "opa-100" : "opa-0"
             } ${footerScroll ? "hidden" : ""}`}
         >
             <div
