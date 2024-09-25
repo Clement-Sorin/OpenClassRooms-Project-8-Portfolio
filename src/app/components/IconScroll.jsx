@@ -14,8 +14,8 @@ function IconScroll() {
         <div
             ref={divRef}
             className={`fixed bottom-6 flex justify-center right-0 w-full mx-auto ${
-                landingScroll && profileScroll ? "opa-100" : "opa-0"
-            } ${footerScroll ? "hidden" : ""}`}
+                landingScroll ? "opa-100" : "opa-0"
+            } ${footerScroll || profileScroll ? "hidden" : ""}`}
         >
             <div
                 className={`w-[20px] h-[40px] md:w-[30px] md:h-[60px] border rounded-full opacity-90 ${

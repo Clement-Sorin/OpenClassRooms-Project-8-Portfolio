@@ -290,10 +290,10 @@ function Contact() {
                                         }`}
                                         stroke={
                                             theme === "light"
-                                                ? isNameRight
+                                                ? isEmailRight
                                                     ? "#757780"
                                                     : "#E3170A"
-                                                : isNameRight
+                                                : isEmailRight
                                                 ? "#E7DAE0"
                                                 : "#CFD11A"
                                         }
@@ -312,10 +312,10 @@ function Contact() {
                                         }`}
                                         stroke={
                                             theme === "light"
-                                                ? isNameRight
+                                                ? isEmailRight
                                                     ? "#757780"
                                                     : "#E3170A"
-                                                : isNameRight
+                                                : isEmailRight
                                                 ? "#E7DAE0"
                                                 : "#CFD11A"
                                         }
@@ -374,10 +374,10 @@ function Contact() {
                                         }`}
                                         stroke={
                                             theme === "light"
-                                                ? isNameRight
+                                                ? isMessageRight
                                                     ? "#757780"
                                                     : "#E3170A"
-                                                : isNameRight
+                                                : isMessageRight
                                                 ? "#E7DAE0"
                                                 : "#CFD11A"
                                         }
@@ -389,17 +389,17 @@ function Contact() {
                                         }}
                                     />
                                     <FrameMessageLgBR
-                                        className={`absolute top-0 left-2 ${
+                                        className={`absolute top-0 left-3 ${
                                             contactScroll
                                                 ? "svg-path shadow-active"
                                                 : "opa-0"
                                         }`}
                                         stroke={
                                             theme === "light"
-                                                ? isNameRight
+                                                ? isMessageRight
                                                     ? "#757780"
                                                     : "#E3170A"
-                                                : isNameRight
+                                                : isMessageRight
                                                 ? "#E7DAE0"
                                                 : "#CFD11A"
                                         }
@@ -420,10 +420,10 @@ function Contact() {
                                         }`}
                                         stroke={
                                             theme === "light"
-                                                ? isNameRight
+                                                ? isMessageRight
                                                     ? "#757780"
                                                     : "#E3170A"
-                                                : isNameRight
+                                                : isMessageRight
                                                 ? "#E7DAE0"
                                                 : "#CFD11A"
                                         }
@@ -442,10 +442,10 @@ function Contact() {
                                         }`}
                                         stroke={
                                             theme === "light"
-                                                ? isNameRight
+                                                ? isMessageRight
                                                     ? "#757780"
                                                     : "#E3170A"
-                                                : isNameRight
+                                                : isMessageRight
                                                 ? "#E7DAE0"
                                                 : "#CFD11A"
                                         }
@@ -466,10 +466,10 @@ function Contact() {
                                         }`}
                                         stroke={
                                             theme === "light"
-                                                ? isNameRight
+                                                ? isMessageRight
                                                     ? "#757780"
                                                     : "#E3170A"
-                                                : isNameRight
+                                                : isMessageRight
                                                 ? "#E7DAE0"
                                                 : "#CFD11A"
                                         }
@@ -488,10 +488,10 @@ function Contact() {
                                         }`}
                                         stroke={
                                             theme === "light"
-                                                ? isNameRight
+                                                ? isMessageRight
                                                     ? "#757780"
                                                     : "#E3170A"
-                                                : isNameRight
+                                                : isMessageRight
                                                 ? "#E7DAE0"
                                                 : "#CFD11A"
                                         }
@@ -561,10 +561,9 @@ function Contact() {
                                 } ${
                                     contactScroll
                                         ? "svg-path shadow-active"
-                                        : "opa-0"
+                                        : "opacity-0"
                                 } w-[124px]`}
                                 strokeDasharray="2000"
-                                strokeDashoffset="2000"
                                 style={{
                                     animationDelay: "1.8s",
                                     animationDuration: "5s",
