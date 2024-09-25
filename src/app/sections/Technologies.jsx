@@ -24,7 +24,7 @@ function Technologies() {
     return (
         <section
             id="technologies"
-            className={`h-full w-full snap-start snap-always  ${
+            className={`h-full w-full min-h-screen snap-start snap-always  ${
                 theme === "light" ? "bg-light-grey" : "bg-dark-blue+"
             }`}
         >
@@ -32,9 +32,9 @@ function Technologies() {
                 <div id="front-end" className="pb-20 md:pb-0 ">
                     <h2
                         id="title-front-end"
-                        className={`relative top-3 md:top-6 ${
+                        className={`relative top-6 ${
                             firstScroll ? "fade-in" : "opacity-0"
-                        } ml-[8%] dark:text-dark-text text-[22px] sm2:text-[24px] md:text-[28px] lg:text-[32px]`}
+                        } ml-[12%] md:ml-[8.5%] dark:text-dark-text text-[22px] sm2:text-[24px] md:text-[28px] lg:text-[32px]`}
                     >
                         Front-end
                     </h2>
@@ -42,7 +42,7 @@ function Technologies() {
                         id="vector-front-end"
                         className={`relative ${
                             firstScroll ? "fade-in" : "opacity-0"
-                        } w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark`}
+                        } w-[300px] sm2:w-[450px] md:w-[500px] lg:w-[800px] stroke-lines-light dark:stroke-lines-dark`}
                     />
                     <div className=" relative w-full flex flex-col md:flex-row md:flex justify-center flex-wrap md:pt-10">
                         {groupedTechnologiesFront.map((group, groupIndex) => (
@@ -80,13 +80,13 @@ function Technologies() {
                         id="vector-back-end"
                         className={`${
                             firstScroll ? "fade-in" : "opacity-0"
-                        } w-[70%] md:w-[50%] stroke-lines-light dark:stroke-lines-dark`}
+                        } w-[300px] sm2:w-[450px] md:w-[500px] lg:w-[800px]  stroke-lines-light dark:stroke-lines-dark`}
                     />
                     <h2
                         id="title-back-end"
                         className={`${
                             firstScroll ? "fade-in" : "opacity-0"
-                        } relative right-[8%] bottom-3 md:bottom-7 dark:text-dark-text text-[22px] sm2:text-[24px] md:text-[28px] lg:text-[32px]`}
+                        } relative mr-[12%] md:mr-[8.5%] bottom-7 dark:text-dark-text text-[22px] sm2:text-[24px] md:text-[28px] lg:text-[32px]`}
                     >
                         Back-end
                     </h2>
