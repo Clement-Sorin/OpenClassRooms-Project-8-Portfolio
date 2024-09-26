@@ -37,7 +37,7 @@
                 }
             ],
         "challenge" : {
-            "fr" : "L’utilisation de useContext pour gérer les langues et les thèmes, les diverses animations présentes sur tout le site, l'affichage entièrrement dynamique de tous les composants (textes compris), la création de la modale pour les galeries des projets, et la gestion des effets de swipe pour les écrans mobiles.",
+            "fr" : "L’utilisation de useContext pour gérer les langues et les thèmes, les diverses animations présentes sur tout le site, l'affichage entièrement dynamique de tous les composants (textes compris), la création de la modale pour les galeries des projets, et la gestion des effets de swipe pour les écrans mobiles.",
             "en" : "The use of useContext to manage languages and themes, the various animations throughout the site, the creation of the modal for the project galleries, the fully dynamic display of all components (texts included), and the management of swipe effects for mobile screens."
         },
         "images" : [
@@ -63,7 +63,7 @@
             }
         ],
         "description" : {
-            "fr" : "L’un des derniers projets de la formation Développeur Web d’OpenClassroom basé sur l’apprentissage du back-end grâce une stack JS. ",
+            "fr" : "L’un des derniers projets de la formation Développeur Web d’OpenClassroom basé sur l’apprentissage du back-end grâce à une stack JS. ",
             "en" : "One of the final projects of the Web Developer program at OpenClassroom is based on learning back-end development using a JS stack."
         },
         "links" : [
@@ -75,8 +75,8 @@
                 }
             ],
         "challenge" : {
-            "fr" : "La sécurité des identifications relevé par l’utilisation d’un cryptage des mots de passe et en rendant un token d’identification à chaque connexion.",
-            "en" : "The security of identifications is ensured through the use of password encryption and by issuing an identification token for each login."
+            "fr" : "Sécuriser l'identification relevé par le cryptage des mots de passe et en rendant un token d’identification pour chaque connexion.",
+            "en" : "Secure identification by encrypting passwords and issuing an authentication token for each login."
         },
         "images" : [
             "/images/projects/Mon_Vieux_Grimoire/01-landing.webp",
@@ -119,7 +119,7 @@
                 }
             ],
         "challenge" : {
-            "fr" : "La création du carroussel fait grâce à un mécanisme de rail avec toutes les photos disposées horizontalement et prenant 100% de largeur du conteneur chacunes.",
+            "fr" : "Création du carrousel via un mécanisme de rail. Toutes les photos sont disposées horizontalement et chacune prend 100% de la largeur du conteneur.",
             "en" : "The carousel is created using a rail mechanism with all the photos arranged horizontally, each taking up 100% of the container's width."
         },
         "images" : [
@@ -152,7 +152,7 @@
                 }
             ],
         "challenge" : {
-            "fr" : "Ecriture d’un code propre et optimisé qui a demandé une refactorisation mais qui aujourd’hui et bien plus simple et lisible.",
+            "fr" : "Ecriture d’un code propre et optimisé qui a demandé une refactorisation mais qui aujourd’hui est bien plus simple et lisible.",
             "en" : "Writing clean and optimized code, which required refactoring, but is now much simpler and more readable"
         },
         "images" : [
@@ -222,8 +222,8 @@
             }
         ],
         "description" : {
-            "fr" : "Tout premier portfolio fait en HTML et CSS avant la formation. Le but de cette réalisation était, à ce moment-là, de trouver une entreprise pour faire ma formation en alternance.",
-            "en" : "My very first portfolio created with HTML and CSS before the training. The goal of this project at that time was to find a company for my apprenticeship training."
+            "fr" : "Première version du portfolio fait en HTML et CSS avant la formation Open Classrooms. Le but était de faire un premier site par moi-même.",
+            "en" : "First version of the portfolio made in HTML and CSS before the OpenClassrooms course. The goal was to create my first website on my own."
         },
         "links" : [
                 {
@@ -240,7 +240,7 @@
                 }
             ],
         "challenge" : {
-            "fr" : "Premier site développé en HTML/CSS et déployé sans formation préalables mais grâces aux ressources disponibles gratuitement sur le net, le défi a pu être relevé.",
+            "fr" : "Premier site développé en HTML/CSS et déployé sans formation préalable mais grâce aux ressources disponibles gratuitement sur le net, le défi a pu être relevé.",
             "en" : "First site developed in HTML/CSS and deployed without prior training but thanks to the resources available for free online, the challenge was met."
         },
         "images" : [

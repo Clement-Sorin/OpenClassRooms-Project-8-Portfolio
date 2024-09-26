@@ -2,6 +2,7 @@ import { useRef, useEffect, useState, useCallback } from "react"
 import { useAppContext } from "../contexts/AppContext"
 import projects from "../../assets/datas/Projects.json"
 import photo_profile from "../../assets/photos/photo_profile.webp"
+import iconClose from "../../assets/icons/iconClose.svg"
 import { ReactComponent as ArrowScroll } from "../../assets/icons/arrow-scroll.svg"
 import { ReactComponent as FingerSwipe } from "../../assets/icons/finger.svg"
 import { ReactComponent as ArrowsSwipe } from "../../assets/icons/arrow.svg"
@@ -139,8 +140,15 @@ function ModalGallery() {
                             : "bg-[rgba(255,255,255,0.8)]"
                     } `}
                 >
+                    <div className="w-[26px] self-end" onClick={closeModal}>
+                        <img
+                            src={iconClose}
+                            alt="icon to close modal"
+                            className="hover:rotate-180 transition-transform ease-in-out duration-300"
+                        ></img>
+                    </div>
                     <div className="flex justify-center items-center">
-                        <div className="custom-border-box m-2 before:border-black before:dark:border-black after:border-black after:dark:border-black flex justify-center">
+                        <div className="custom-border-box before:border-black before:dark:border-black after:border-black after:dark:border-black flex justify-center">
                             <img
                                 ref={imgGallery}
                                 src={
@@ -159,7 +167,11 @@ function ModalGallery() {
                             ></img>
                         </div>
                     </div>
-                    <div className={isPhotoProfile ? "hidden" : ""}>
+                    <div
+                        className={`${
+                            isPhotoProfile ? "hidden" : ""
+                        } flex flex-col items-center`}
+                    >
                         <p>
                             {pagingIndex} / {pagingMax}
                         </p>

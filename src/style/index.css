@@ -69,6 +69,10 @@ p {
     margin: auto;
 }
 
+img {
+    image-rendering: -webkit-optimize-contrast; 
+  }
+
 /*Color Theme Transition*/ 
 
 .transition-hover-light, .transition-hover-dark, .transition-hover-svg-light, .transition-hover-svg-dark {
