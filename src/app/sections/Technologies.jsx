@@ -90,31 +90,33 @@ function Technologies() {
                     >
                         Back-end
                     </h2>
-                    {groupedTechnologiesBack.map((group, groupIndex) => (
-                        <div
-                            key={groupIndex}
-                            className="chunk-technos w-full flex justify-center flex-col md:flex-row relative mb-[100px] md:mb-16"
-                        >
-                            {group.map((item, index) => {
-                                const globalIndex = groupIndex * 3 + index
-                                return (
-                                    <Beehives
-                                        logo={item.logo}
-                                        logo_dark={item.logo_dark}
-                                        title={item.title}
-                                        key={globalIndex}
-                                        className={
-                                            globalIndex % 2 === 0
-                                                ? "even"
-                                                : "odd"
-                                        }
-                                        delayAnim={2500}
-                                        index={globalIndex}
-                                    />
-                                )
-                            })}
-                        </div>
-                    ))}
+                    <div className="relative w-full flex flex-col md:flex-row md:flex justify-center flex-wrap pb-20 md:pb-0 md:pt-10">
+                        {groupedTechnologiesBack.map((group, groupIndex) => (
+                            <div
+                                key={groupIndex}
+                                className="chunk-technos flex flex-col md:flex-row md:mb-16"
+                            >
+                                {group.map((item, index) => {
+                                    const globalIndex = groupIndex * 3 + index
+                                    return (
+                                        <Beehives
+                                            logo={item.logo}
+                                            logo_dark={item.logo_dark}
+                                            title={item.title}
+                                            key={globalIndex}
+                                            className={
+                                                globalIndex % 2 === 0
+                                                    ? "even"
+                                                    : "odd"
+                                            }
+                                            delayAnim={2500}
+                                            index={globalIndex}
+                                        />
+                                    )
+                                })}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
