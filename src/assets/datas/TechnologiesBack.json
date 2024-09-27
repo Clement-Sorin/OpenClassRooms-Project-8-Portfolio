@@ -13,15 +13,5 @@
         "title": "MongoDB",
         "logo" : "/images/icons/mongo.svg",
         "logo_dark" : "/images/icons/mongo-dark.svg"
-    },
-    {
-        "title": "PHP",
-        "logo" : "/images/icons/php.svg",
-        "logo_dark" : "/images/icons/php.svg"
-    },
-    {
-        "title": "Symphony",
-        "logo" : "/images/icons/symfony.svg",
-        "logo_dark" : "/images/icons/symfony-dark.svg"
     }
 ]

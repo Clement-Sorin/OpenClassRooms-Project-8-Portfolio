@@ -1,5 +1,5 @@
 import text from "../../assets/datas/Landing.json"
-import photoLanding from "../../assets/photos/ZFC_3183.webp"
+import photoLandingLoading from "../../assets/photos/ZFC_3183_loading.webp"
 import { useAppContext } from "../contexts/AppContext"
 import Particles from "../vendors/particles"
 import IconScroll from "../components/IconScroll"
@@ -34,7 +34,7 @@ function Landing() {
                         <div className="container-photo-landing md:mr-10">
                             <div className="custom-border-box before:border-lines-light before:dark:border-lines-dark after:border-lines-light after:dark:border-lines-dark">
                                 <img
-                                    src={photoLanding}
+                                    src={photoLandingLoading}
                                     alt="Clement Sorin holding a laptop in his hands"
                                     className="p-3 photo-landing w-[550px]"
                                 />
