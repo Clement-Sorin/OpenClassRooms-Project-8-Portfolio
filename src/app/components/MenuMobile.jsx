@@ -39,9 +39,7 @@ function MenuMobile({ toggleMenu, setToggleMenu }) {
         setTranslateY(Math.min(0, Math.max(-500, moveY)))
         if (translateY < -250) {
             setTranslateY(-500)
-            setTimeout(() => {
-                setToggleMenu(false)
-            }, 100)
+            setToggleMenu(false)
         }
     }
 

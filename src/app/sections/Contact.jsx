@@ -158,7 +158,7 @@ function Contact() {
                     : "bg-dark-blue+ text-dark-text"
             }`}
         >
-            <div className="container-contact min-h-[80vh] w-full flex justify-center items-center lg:pt-24">
+            <div className="container-contact min-h-[80vh] w-full flex flex-col justify-center items-center lg:pt-24">
                 <form onSubmit={onSubmit} action="/submit" method="post">
                     <h2
                         className={`text-center my-8 lg:hidden ${
@@ -607,7 +607,7 @@ function Contact() {
                     </div>
                 </form>
                 <div className="m-8">
-                    <p>
+                    <p className="sm2:hidden">
                         <span className="font-bold">Note : </span>
                         {language === "fr"
                             ? datas.mobile_note.fr
