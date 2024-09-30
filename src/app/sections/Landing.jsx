@@ -1,11 +1,59 @@
 import text from "../../assets/datas/Landing.json"
-import photoLandingLoading from "../../assets/photos/ZFC_3183_loading.webp"
+import photoLandingLarge from "../../assets/photos/ZFC_3183_large.webp"
+import photoLandingMedium2 from "../../assets/photos/ZFC_3183_medium2.webp"
+import photoLandingMedium1 from "../../assets/photos/ZFC_3183_medium1.webp"
 import { useAppContext } from "../contexts/AppContext"
 import Particles from "../vendors/particles"
 import IconScroll from "../components/IconScroll"
+import { useState, useEffect } from "react"
 
 function Landing() {
     const { language } = useAppContext()
+    const [size, setSize] = useState("")
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth
+
+            if (width < 450) {
+                setSize("small1")
+            } else if (width < 768) {
+                setSize("small2")
+            } else if (width < 900) {
+                setSize("medium1")
+            } else if (width < 1024) {
+                setSize("medium2")
+            } else {
+                setSize("large")
+            }
+        }
+        handleResize()
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    }, [])
+
+    useEffect(() => {
+        const link = document.createElement("link")
+        link.rel = "preload"
+        link.as = "image"
+
+        // Déterminer quelle image précharger en fonction de la largeur de la fenêtre
+        if (window.innerWidth < 450) {
+            link.href = photoLandingMedium1
+            document.head.appendChild(link)
+        }
+
+        // Fonction de nettoyage pour retirer le lien au démontage du composant
+        return () => {
+            if (link.href) {
+                document.head.removeChild(link)
+            }
+        }
+    }, [photoLandingMedium1])
 
     return (
         <section
@@ -34,9 +82,19 @@ function Landing() {
                         <div className="container-photo-landing md:mr-10">
                             <div className="custom-border-box before:border-lines-light before:dark:border-lines-dark after:border-lines-light after:dark:border-lines-dark">
                                 <img
-                                    src={photoLandingLoading}
+                                    src={
+                                        size === "small1"
+                                            ? photoLandingMedium1
+                                            : size === "small2"
+                                            ? photoLandingLarge
+                                            : size === "medium1"
+                                            ? photoLandingMedium1
+                                            : size === "medium2"
+                                            ? photoLandingMedium2
+                                            : photoLandingLarge
+                                    }
                                     alt="Clement Sorin holding a laptop in his hands"
-                                    className="p-3 photo-landing w-[550px]"
+                                    className="p-3 photo-landing sm:w-[400px] md:w-[550px]"
                                 />
                             </div>
                         </div>
