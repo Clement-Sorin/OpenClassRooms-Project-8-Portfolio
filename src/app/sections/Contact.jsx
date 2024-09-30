@@ -607,7 +607,7 @@ function Contact() {
                     </div>
                 </form>
                 <div className="m-8">
-                    <p className="sm2:hidden">
+                    <p className="sm2:hidden text-red dark:text-yellow">
                         <span className="font-bold">Note : </span>
                         {language === "fr"
                             ? datas.mobile_note.fr
