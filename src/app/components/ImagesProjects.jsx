@@ -12,7 +12,11 @@ function ImagesProjects({ images, title, index }) {
     return (
         <div
             className={`container-image relative sm:max-w-[250px] sm:max-h-[150px] sm2:max-w-[350px] sm2:max-h-[350px] lg:max-w-[500px] lg:max-h-[500px] ${
-                scrollSingleProject ? "images-projects" : "opacity-0"
+                window.innerWidth > 450
+                    ? scrollSingleProject
+                        ? "images-projects"
+                        : "opacity-0"
+                    : ""
             }`}
         >
             <div

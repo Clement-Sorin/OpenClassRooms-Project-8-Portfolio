@@ -162,15 +162,17 @@ function Contact() {
                 <form onSubmit={onSubmit} action="/submit" method="post">
                     <h2
                         className={`text-center my-8 lg:hidden ${
-                            contactScroll
-                                ? "opacity-100 transition-opacity duration-500 delay-200"
-                                : "opacity-0"
+                            window.innerWidth > 450
+                                ? contactScroll
+                                    ? "opacity-100 transition-opacity duration-500 delay-200"
+                                    : "opacity-0"
+                                : ""
                         }`}
                     >
                         {datas.title}
                     </h2>
                     <div
-                        className={`container-form flex flex-col pb-16 md:pb-0 ${
+                        className={`container-form flex flex-col ${
                             theme === "light" ? "text-black" : "text-dark-text"
                         }`}
                     >
@@ -178,9 +180,11 @@ function Contact() {
                             <label
                                 htmlFor="input-name"
                                 className={`label text-[16px] md:text-xl ${
-                                    contactScroll
-                                        ? "opacity-100 transition-opacity duration-500 delay-500"
-                                        : "opacity-0"
+                                    window.innerWidth > 450
+                                        ? contactScroll
+                                            ? "opacity-100 transition-opacity duration-500 delay-500"
+                                            : "opacity-0"
+                                        : ""
                                 }`}
                             >
                                 {language === "fr"
@@ -199,9 +203,11 @@ function Contact() {
                                 <div className="z-[1]">
                                     <FrameNameLgTL
                                         className={`${
-                                            contactScroll
-                                                ? "svg-path shadow-active"
-                                                : "opa-0"
+                                            window.innerWidth > 450
+                                                ? contactScroll
+                                                    ? "svg-path shadow-active"
+                                                    : "opa-0"
+                                                : ""
                                         }`}
                                         stroke={
                                             theme === "light"
@@ -213,7 +219,11 @@ function Contact() {
                                                 : "#CFD11A"
                                         }
                                         strokeDasharray="2000"
-                                        strokeDashoffset="2000"
+                                        strokeDashoffset={
+                                            window.innerWidth > 450
+                                                ? "2000"
+                                                : "0"
+                                        }
                                         style={{
                                             animationDelay: "0.5s",
                                             animationDuration: "5s",
@@ -221,9 +231,11 @@ function Contact() {
                                     />
                                     <FrameNameLgBR
                                         className={`absolute top-0 left-2 ${
-                                            contactScroll
-                                                ? "svg-path shadow-active"
-                                                : "opa-0"
+                                            window.innerWidth > 450
+                                                ? contactScroll
+                                                    ? "svg-path shadow-active"
+                                                    : "opa-0"
+                                                : ""
                                         }`}
                                         stroke={
                                             theme === "light"
@@ -235,7 +247,11 @@ function Contact() {
                                                 : "#CFD11A"
                                         }
                                         strokeDasharray="2000"
-                                        strokeDashoffset="2000"
+                                        strokeDashoffset={
+                                            window.innerWidth > 450
+                                                ? "2000"
+                                                : "0"
+                                        }
                                         style={{
                                             animationDelay: "0.5s",
                                             animationDuration: "5s",
@@ -263,9 +279,11 @@ function Contact() {
                             <label
                                 htmlFor="input-email"
                                 className={`label text-[16px] md:text-xl ${
-                                    contactScroll
-                                        ? "opacity-100 transition-opacity duration-500 delay-[0.8s]"
-                                        : "opacity-0"
+                                    window.innerWidth > 450
+                                        ? contactScroll
+                                            ? "opacity-100 transition-opacity duration-500 delay-[0.8s]"
+                                            : "opacity-0"
+                                        : ""
                                 }`}
                             >
                                 {language === "fr"
@@ -284,9 +302,11 @@ function Contact() {
                                 <div className="z-[1]">
                                     <FrameNameLgTL
                                         className={`${
-                                            contactScroll
-                                                ? "svg-path shadow-active"
-                                                : "opa-0"
+                                            window.innerWidth > 450
+                                                ? contactScroll
+                                                    ? "svg-path shadow-active"
+                                                    : "opa-0"
+                                                : ""
                                         }`}
                                         stroke={
                                             theme === "light"
@@ -298,7 +318,11 @@ function Contact() {
                                                 : "#CFD11A"
                                         }
                                         strokeDasharray="2000"
-                                        strokeDashoffset="2000"
+                                        strokeDashoffset={
+                                            window.innerWidth > 450
+                                                ? "2000"
+                                                : "0"
+                                        }
                                         style={{
                                             animationDelay: "0.8s",
                                             animationDuration: "5s",
@@ -306,9 +330,11 @@ function Contact() {
                                     />
                                     <FrameNameLgBR
                                         className={`absolute top-0 left-2 ${
-                                            contactScroll
-                                                ? "svg-path shadow-active"
-                                                : "opa-0"
+                                            window.innerWidth > 450
+                                                ? contactScroll
+                                                    ? "svg-path shadow-active"
+                                                    : "opa-0"
+                                                : ""
                                         }`}
                                         stroke={
                                             theme === "light"
@@ -320,7 +346,11 @@ function Contact() {
                                                 : "#CFD11A"
                                         }
                                         strokeDasharray="2000"
-                                        strokeDashoffset="2000"
+                                        strokeDashoffset={
+                                            window.innerWidth > 450
+                                                ? "2000"
+                                                : "0"
+                                        }
                                         style={{
                                             animationDelay: "0.8s",
                                             animationDuration: "5s",
@@ -348,9 +378,11 @@ function Contact() {
                             <label
                                 htmlFor="area-message"
                                 className={`label text-[16px] md:text-xl ${
-                                    contactScroll
-                                        ? "opacity-100 transition-opacity duration-500 delay-[1.1s]"
-                                        : "opacity-0"
+                                    window.innerWidth > 450
+                                        ? contactScroll
+                                            ? "opacity-100 transition-opacity duration-500 delay-[1.1s]"
+                                            : "opacity-0"
+                                        : ""
                                 }`}
                             >
                                 {language === "fr"
@@ -459,11 +491,6 @@ function Contact() {
                                 </div>
                                 <div className="z-[1] block sm2:hidden">
                                     <FrameMessageSmTL
-                                        className={`${
-                                            contactScroll
-                                                ? "svg-path shadow-active"
-                                                : "opa-0"
-                                        }`}
                                         stroke={
                                             theme === "light"
                                                 ? isMessageRight
@@ -474,18 +501,10 @@ function Contact() {
                                                 : "#CFD11A"
                                         }
                                         strokeDasharray="2000"
-                                        strokeDashoffset="2000"
-                                        style={{
-                                            animationDelay: "1.1s",
-                                            animationDuration: "5s",
-                                        }}
+                                        strokeDashoffset="0"
                                     />
                                     <FrameMessageSmBR
-                                        className={`absolute top-0 left-3 ${
-                                            contactScroll
-                                                ? "svg-path shadow-active"
-                                                : "opa-0"
-                                        }`}
+                                        className={`absolute top-0 left-3`}
                                         stroke={
                                             theme === "light"
                                                 ? isMessageRight
@@ -496,11 +515,7 @@ function Contact() {
                                                 : "#CFD11A"
                                         }
                                         strokeDasharray="2000"
-                                        strokeDashoffset="2000"
-                                        style={{
-                                            animationDelay: "1.1s",
-                                            animationDuration: "5s",
-                                        }}
+                                        strokeDashoffset="0"
                                     />
                                 </div>
                                 <p
@@ -523,9 +538,11 @@ function Contact() {
                         <div className="contact-sumbit relative flex justify-center group">
                             <div
                                 className={
-                                    contactScroll
-                                        ? "opacity-100 transition-opacity duration-500 delay-[2.3s]"
-                                        : "opacity-0"
+                                    window.innerWidth > 450
+                                        ? contactScroll
+                                            ? "opacity-100 transition-opacity duration-500 delay-[2.3s]"
+                                            : "opacity-0"
+                                        : ""
                                 }
                             >
                                 <input
@@ -559,11 +576,15 @@ function Contact() {
                                         ? "frame-submit-lt"
                                         : "frame-submit-dk"
                                 } ${
-                                    contactScroll
-                                        ? "svg-path shadow-active"
-                                        : "opacity-0"
+                                    window.innerWidth > 450
+                                        ? contactScroll
+                                            ? "svg-path shadow-active"
+                                            : "opa-0"
+                                        : ""
                                 } w-[124px]`}
-                                strokeDasharray="2000"
+                                strokeDasharray={
+                                    window.innerWidth > 450 ? "2000" : "0"
+                                }
                                 style={{
                                     animationDelay: "1.8s",
                                     animationDuration: "5s",
@@ -585,6 +606,14 @@ function Contact() {
                         </p>
                     </div>
                 </form>
+                <div className="m-8">
+                    <p>
+                        <span className="font-bold">Note : </span>
+                        {language === "fr"
+                            ? datas.mobile_note.fr
+                            : datas.mobile_note.en}
+                    </p>
+                </div>
             </div>
         </section>
     )

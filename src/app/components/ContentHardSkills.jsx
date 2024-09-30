@@ -13,7 +13,13 @@ function ContentHardSkills({ datas, profileScroll }) {
             }`}
         >
             <h2
-                className={`${profileScroll ? "fade-in" : "opacity-0"}`}
+                className={`${
+                    window.innerWidth > 450
+                        ? profileScroll
+                            ? "fade-in"
+                            : "opacity-0"
+                        : ""
+                }`}
                 style={{ animationDelay: "2.3s", animationDuration: "0.15s" }}
             >
                 {dataHard.title}
@@ -23,7 +29,11 @@ function ContentHardSkills({ datas, profileScroll }) {
                     <div
                         key={index}
                         className={`flex justify-between ${
-                            profileScroll ? "fade-in" : "opacity-0"
+                            window.innerWidth > 450
+                                ? profileScroll
+                                    ? "fade-in"
+                                    : "opacity-0"
+                                : ""
                         }`}
                         style={{
                             animationDelay: `${2.4 + index * 0.07}s`,

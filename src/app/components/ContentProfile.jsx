@@ -45,7 +45,13 @@ function ContentProfile({ datas, profileScroll }) {
             }`}
         >
             <h2
-                className={`pl-5 ${profileScroll ? "fade-in" : "opacity-0"}`}
+                className={`pl-5 ${
+                    window.innerWidth > 450
+                        ? profileScroll
+                            ? "fade-in"
+                            : "opacity-0"
+                        : ""
+                }`}
                 style={{ animationDelay: "0.5s", animationDuration: "0.15s" }}
             >
                 {language === "fr"
@@ -54,7 +60,11 @@ function ContentProfile({ datas, profileScroll }) {
             </h2>
             <div
                 className={`container-photo-profile flex justify-center relative h-[170px] ${
-                    profileScroll ? "fade-in" : "opacity-0"
+                    window.innerWidth > 450
+                        ? profileScroll
+                            ? "fade-in"
+                            : "opacity-0"
+                        : ""
                 }`}
                 style={{ animationDelay: "0.7s", animationDuration: "0.15s" }}
             >
@@ -90,7 +100,11 @@ function ContentProfile({ datas, profileScroll }) {
                     <div
                         key={index}
                         className={`text-content-profile flex gap-2 items-start text-sm ${
-                            profileScroll ? "fade-in" : "opacity-0"
+                            window.innerWidth > 450
+                                ? profileScroll
+                                    ? "fade-in"
+                                    : "opacity-0"
+                                : ""
                         }`}
                         style={{
                             animationDelay: `${0.8 + index * 0.1}s`,

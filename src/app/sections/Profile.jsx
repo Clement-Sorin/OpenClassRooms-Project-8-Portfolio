@@ -48,15 +48,12 @@ function Profile() {
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="300"
                         strokeDasharray="2000"
-                        strokeDashoffset="2000"
+                        strokeDashoffset="0"
                         className={`sm2:hidden ${
                             theme === "dark"
-                                ? "drop-shadow-dark"
-                                : "drop-shadow-light "
-                        } ${
-                            profileScroll ? "svg-path shadow-active" : "opa-0"
-                        }`}
-                        style={{ animationDelay: "0s" }}
+                                ? "drop-shadow-dark shadow-active"
+                                : "drop-shadow-light shadow-active"
+                        } `}
                     ></FrameProfileSm>
                     <ContentProfile
                         datas={datas}
@@ -88,17 +85,12 @@ function Profile() {
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="300"
                             strokeDasharray="2000"
-                            strokeDashoffset="2000"
+                            strokeDashoffset="0"
                             className={`sm2:hidden ${
                                 theme === "dark"
-                                    ? "drop-shadow-dark"
-                                    : "drop-shadow-light "
-                            } ${
-                                profileScroll
-                                    ? "svg-path shadow-active"
-                                    : "opa-0"
+                                    ? "drop-shadow-dark shadow-active"
+                                    : "drop-shadow-light shadow-active"
                             }`}
-                            style={{ animationDelay: "0.2s" }}
                         />
                         <ContentCertifications
                             datas={datas}
@@ -129,17 +121,12 @@ function Profile() {
                             stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                             width="300"
                             strokeDasharray="2000"
-                            strokeDashoffset="2000"
+                            strokeDashoffset="0"
                             className={`sm2:hidden ${
                                 theme === "dark"
-                                    ? "drop-shadow-dark"
-                                    : "drop-shadow-light "
-                            } ${
-                                profileScroll
-                                    ? "svg-path shadow-active"
-                                    : "opa-0"
-                            }`}
-                            style={{ animationDelay: "0.4s" }}
+                                    ? "drop-shadow-dark shadow-active"
+                                    : "drop-shadow-light shadow-active"
+                            } `}
                         />
                         <ContentSoftSkills
                             datas={datas}
@@ -169,15 +156,12 @@ function Profile() {
                         stroke={theme === "light" ? "#757780" : "#E7DAE0"}
                         width="300"
                         strokeDasharray="2000"
-                        strokeDashoffset="2000"
+                        strokeDashoffset="0"
                         className={`sm2:hidden ${
                             theme === "dark"
-                                ? "drop-shadow-dark"
-                                : "drop-shadow-light "
-                        } ${
-                            profileScroll ? "svg-path shadow-active" : "opa-0"
+                                ? "drop-shadow-dark shadow-active"
+                                : "drop-shadow-light shadow-active"
                         }`}
-                        style={{ animationDelay: "0.6s" }}
                     />
                     <ContentHardSkills
                         datas={datas}

@@ -31,5 +31,9 @@
     "wrong_submit_value" : {
         "fr" : "Veuillez remplir les champs concernés",
         "en" : "Please fill in the required fields"
+    },
+    "mobile_note" : {
+        "fr" : "Pour une expérience complète et dynamique du site, rendez-vous sur la version bureau !",
+        "en" : "For a comprehensive and dynamic experience of the site, visit the desktop version !"
     }
 }

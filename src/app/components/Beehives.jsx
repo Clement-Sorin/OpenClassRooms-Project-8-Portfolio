@@ -18,7 +18,11 @@ function Beehives({ logo, logo_dark, title, className, delayAnim, index }) {
     return (
         <div
             className={`mapped-technos ${className}  ${
-                firstScroll ? "fade-in" : "opacity-0"
+                window.innerWidth > 450
+                    ? firstScroll
+                        ? "fade-in"
+                        : "opacity-0"
+                    : ""
             } flex flex-col mb-[-70px] md:mb-0 ${
                 toggleEffect ? "grow-in" : ""
             }`}
@@ -35,7 +39,11 @@ function Beehives({ logo, logo_dark, title, className, delayAnim, index }) {
                     src={theme === "light" ? logo : logo_dark}
                     alt={title + " logo"}
                     className={`${
-                        firstScroll ? "logo-techno" : ""
+                        window.innerWidth > 450
+                            ? firstScroll
+                                ? "logo-techno"
+                                : ""
+                            : ""
                     } absolute max-w-[72px] max-h-[30%] sm2:max-w-[120px] sm2:max-h-[45%] transition duration-300 dark:${
                         toggleEffect
                             ? "brightness-[0%]"

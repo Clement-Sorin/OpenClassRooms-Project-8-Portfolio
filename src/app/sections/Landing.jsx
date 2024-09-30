@@ -53,7 +53,7 @@ function Landing() {
                 document.head.removeChild(link)
             }
         }
-    }, [photoLandingMedium1])
+    }, [])
 
     return (
         <section
@@ -68,7 +68,7 @@ function Landing() {
                             <h1 className="text-4xl lg:text-5xl text-red dark:text-yellow">
                                 {text.title}
                             </h1>
-                            <h2 className="dark:text-dark-text flex md:justify-end">
+                            <h2 className="dark:text-dark-text flex md:justify-end text-[22px]">
                                 {language === "fr"
                                     ? text.subtitle.fr
                                     : text.subtitle.en}
