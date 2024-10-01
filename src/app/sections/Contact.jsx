@@ -152,13 +152,13 @@ function Contact() {
     return (
         <section
             id="contact"
-            className={`snap-start snap-always pt-24 min-h-[80vh] h-full w-full ${
+            className={`snap-start snap-always pt-24 h-full min-h-[80vh] w-full flex flex-col justify-center ${
                 theme === "light"
                     ? "bg-light-grey"
                     : "bg-dark-blue+ text-dark-text"
             }`}
         >
-            <div className="container-contact min-h-[80vh] w-full flex flex-col justify-center items-center lg:pt-24">
+            <div className="container-contact h-full w-full flex flex-col justify-end items-center">
                 <form onSubmit={onSubmit} action="/submit" method="post">
                     <h2
                         className={`text-center my-8 lg:hidden ${
@@ -606,7 +606,7 @@ function Contact() {
                         </p>
                     </div>
                 </form>
-                <div className="m-8">
+                <div className="sm:m-8 sm2:hidden">
                     <p className="sm2:hidden text-red dark:text-yellow">
                         <span className="font-bold">Note : </span>
                         {language === "fr"
