@@ -6,6 +6,7 @@ import LegalNotice from "./pages/LegalNotice"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
 import Error404 from "./pages/Error404"
 import ScrollToTop from "./components/ScrollToTop"
+import Toolbox from "./pages/Toolbox"
 
 function AppRoutes() {
     return (
@@ -16,6 +17,7 @@ function AppRoutes() {
                     <Routes>
                         <Route element={<Default />}>
                             <Route path="/" element={<Home />} />
+                            <Route path="/toolbox" element={<Toolbox />} />
                             <Route
                                 path="/legal-notice"
                                 element={<LegalNotice />}

@@ -1,0 +1,245 @@
+{
+    "title": {
+        "fr": "Boîte à outils",
+        "en": "Toolbox"
+    },
+    "menu": {
+        "qr_code": {
+            "fr": "QR Code",
+            "en": "QR Code"
+        },
+        "css_cheatsheet": {
+            "fr": "Aide-mémoire CSS",
+            "en": "CSS Cheat Sheet"
+        }
+    },
+    "content": {
+        "qr_code": {
+            "general_settings": {
+                "title": {
+                    "fr": "Options générales",
+                    "en": "General settings"
+                },
+                "url_data": {
+                    "fr": "URL/données",
+                    "en": "URL/data"
+                },
+                "size": {
+                    "fr": "Dimension",
+                    "en": "Size"
+                },
+                "logo": {
+                    "fr": "Logo",
+                    "en": "Logo"
+                }
+            },
+            "other_settings": {
+                "title": {
+                    "fr": "Autres options",
+                    "en": "Other settings"
+                },
+                "dots": {
+                    "title_collapse": {
+                        "fr": "Points",
+                        "en": "Dots"
+                    },
+                    "style": {
+                        "title": {
+                            "fr": "Points",
+                            "en": "Dots"
+                        },
+                        "set_style": [
+                            "square",
+                            "dots",
+                            "rounded",
+                            "extra-rounded",
+                            "classy",
+                            "classy-rounded"
+                        ]
+                    },
+                    "color": {
+                        "title": {
+                            "fr": "Couleur",
+                            "en": "Color"
+                        },
+                        "set_color": {
+                            "single": {
+                                "fr": "unique",
+                                "en": "single"
+                            },
+                            "gradient": {
+                                "fr": "multiple",
+                                "en": "multiple"
+                            }
+                        },
+                        "select": {
+                            "fr": "Sélectionnez",
+                            "en": "Select"
+                        },
+                        "style": {
+                            "title": {
+                                "fr": "Style",
+                                "en": "Style"
+                            },
+                            "linear": {
+                                "fr": "linéaire",
+                                "en": "linear"
+                            },
+                            "radial": {
+                                "fr": "radial",
+                                "en": "radial"
+                            }
+                        },
+                        "rotation": {
+                            "fr": "Rotation",
+                            "en": "Rotation"
+                        }
+                    }
+                },
+                "corner_square": {
+                    "title_collapse": {
+                        "fr": "Carrés d'angles",
+                        "en": "Corner square"
+                    },
+                    "style": {
+                        "title": {
+                            "fr": "Style de l'angle",
+                            "en": "Corner style"
+                        },
+                        "set_style": [
+                            "none",
+                            "square",
+                            "dot",
+                            "extra-rounded"
+                        ]
+                    },
+                    "color": {
+                        "title": {
+                            "fr": "Couleur",
+                            "en": "Color"
+                        },
+                        "set_color": {
+                            "single": {
+                                "fr": "unique",
+                                "en": "single"
+                            },
+                            "gradient": {
+                                "fr": "multiple",
+                                "en": "multiple"
+                            }
+                        },
+                        "select": {
+                            "fr": "Sélectionnez",
+                            "en": "Select"
+                        },
+                        "style": {
+                            "title": {
+                                "fr": "Style",
+                                "en": "Style"
+                            },
+                            "linear": {
+                                "fr": "linéaire",
+                                "en": "linear"
+                            },
+                            "radial": {
+                                "fr": "radial",
+                                "en": "radial"
+                            }
+                        },
+                        "rotation": {
+                            "fr": "Rotation",
+                            "en": "Rotation"
+                        }
+                    }
+                },
+                "corner_dots": {
+                    "title_collapse": {
+                        "fr": "Points dans les angles",
+                        "en": "Corner dots"
+                    },
+                    "style": {
+                        "title": {
+                            "fr": "Style des points",
+                            "en": "Dots style"
+                        },
+                        "set_style": [
+                            "none",
+                            "square",
+                            "dot"
+                        ]
+                    },
+                    "color": {
+                        "title": {
+                            "fr": "Couleur",
+                            "en": "Color"
+                        },
+                        "set_color": {
+                            "single": {
+                                "fr": "unique",
+                                "en": "single"
+                            },
+                            "gradient": {
+                                "fr": "multiple",
+                                "en": "multiple"
+                            }
+                        },
+                        "select": {
+                            "fr": "Sélectionnez",
+                            "en": "Select"
+                        },
+                        "style": {
+                            "title": {
+                                "fr": "Style",
+                                "en": "Style"
+                            },
+                            "linear": {
+                                "fr": "linéaire",
+                                "en": "linear"
+                            },
+                            "radial": {
+                                "fr": "radial",
+                                "en": "radial"
+                            }
+                        },
+                        "rotation": {
+                            "fr": "Rotation",
+                            "en": "Rotation"
+                        }
+                    }
+                },
+                "logo": {
+                    "title_collapse": {
+                        "fr": "Logo",
+                        "en": "Logo"
+                    },
+                    "size": {
+                        "title": {
+                            "fr": "Taille",
+                            "en": "Size"
+                        },
+                        "set_style": [
+                            "0.1",
+                            "0.2",
+                            "0.3",
+                            "0.4",
+                            "0.5"
+                        ]
+                    },
+                    "margin": {
+                        "title": {
+                            "fr": "Marge",
+                            "en": "Margin"
+                        },
+                        "set_style": [
+                            "0.1",
+                            "0.2",
+                            "0.3",
+                            "0.4",
+                            "0.5"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
