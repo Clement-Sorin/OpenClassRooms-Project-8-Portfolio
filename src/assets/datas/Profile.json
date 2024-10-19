@@ -126,14 +126,14 @@
                     "fr": "Communication",
                     "en": "Communication"
                 },
-                "rate": 3
+                "rate": 5
             },
             "teamwork": {
                 "title": {
                     "fr": "Travail en équipe",
                     "en": "Teamwork"
                 },
-                "rate": 4
+                "rate": 5
             },
             "problem_solving": {
                 "title": {
@@ -147,7 +147,7 @@
                     "fr": "Adaptabilité",
                     "en": "Adaptability"
                 },
-                "rate": 4
+                "rate": 5
             },
             "time_management": {
                 "title": {
@@ -163,11 +163,11 @@
         "data" : {
             "html_css": {
                 "title": "HTML/CSS",
-                "rate": 4
+                "rate": 5
             },
             "js": {
                 "title": "JavaScript",
-                "rate": 3
+                "rate": 4
             },
             "react": {
                 "title": "React",
@@ -187,11 +187,11 @@
             },
             "sass": {
                 "title": "Sass",
-                "rate": 4
+                "rate": 5
             },
             "tailwind": {
                 "title": "Tailwind",
-                "rate": 4
+                "rate": 5
             },
             "figma": {
                 "title": "Figma",

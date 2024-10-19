@@ -19,8 +19,8 @@
             }
         ],
         "description" : {
-            "fr" : "Projet final de la formation Développeur Web chez OpenClassrooms, entièrement libre de conception. Le design et le développement ont été réalisés par moi-même.",
-            "en" : "Final project of the Web Developer training at OpenClassrooms, entirely open to design choices. The design and development were done by myself."
+            "fr" : "Mon portfolio, designé et développé par moi-même, présente mes compétences en design et développement web à travers mes projets.",
+            "en" : "My portfolio, designed and developed by me, showcases my web design and development skills through various projects."
         },
         "links" : [
                 {
@@ -63,8 +63,8 @@
             }
         ],
         "description" : {
-            "fr" : "L’un des derniers projets de la formation Développeur Web d’OpenClassroom basé sur l’apprentissage du back-end grâce à une stack JS. ",
-            "en" : "One of the final projects of the Web Developer program at OpenClassroom is based on learning back-end development using a JS stack."
+            "fr" : "Ce projet orienté back-end, développé en Node.js par mes soins, gère efficacement les API et la base de données, assurant performance et scalabilité.",
+            "en" : "This back-end oriented project, developed by me using Node.js, efficiently handles APIs and the database, ensuring performance and scalability."
         },
         "links" : [
                 {
@@ -101,8 +101,8 @@
             }
         ],
         "description" : {
-            "fr" : "Projet de la formation d’OpenClassrooms orienté sur le développement front-end avec la technologie React.",
-            "en" : "OpenClassrooms training project focused on front-end development with React technology."
+            "fr" : "Ce projet de location immobilière, développé en React par mes soins, présente une interface intuitive pour afficher et explorer les logements disponibles.",
+            "en" : "This real estate rental project, developed by me in React, features an intuitive interface for displaying and exploring available properties."
         },
         "links" : [
                 {
@@ -140,8 +140,8 @@
             }
         ],
         "description" : {
-            "fr" : "Projet de la formation d’OpenClassrooms basé sur l’apprentissage du langage de programmation JavaScript, dans le but de comprendre l’algorithmie et la manipulation du DOM.",
-            "en" : "OpenClassrooms training project based on learning the JavaScript programming language, with the aim of understanding algorithms and manipulating the DOM."
+            "fr" : "Ce portfolio d'architecte, développé en HTML, CSS et JavaScript, offre une interface dynamique pour afficher les projets architecturaux, tout en incluant une gestion de connexion pour l'administrateur.",
+            "en" : "This architect portfolio, developed using HTML, CSS, and JavaScript, provides a dynamic interface for showcasing architectural projects, along with an admin login management feature."
         },
         "links" : [
                 {
@@ -178,8 +178,8 @@
             }
         ],
         "description" : {
-            "fr" : "Premier projet de la formation d’OpenClassrooms basé sur l’apprentissage des langages HTML et CSS en prenant en compte l’adaptation en responsive.",
-            "en" : "First project of the OpenClassrooms course focusing on learning HTML and CSS languages, including responsive design adaptation."
+            "fr" : "Ce site touristique, développé en HTML et CSS, présente les activités à Marseille avec une mise en page attrayante et informative pour découvrir la ville.",
+            "en" : "This tourism website, developed using HTML and CSS, showcases activities in Marseille with an appealing and informative layout to explore the city."
         },
         "links" : [
                 {
@@ -222,8 +222,8 @@
             }
         ],
         "description" : {
-            "fr" : "Première version du portfolio fait en HTML et CSS avant la formation Open Classrooms. Le but était de faire un premier site par moi-même.",
-            "en" : "First version of the portfolio made in HTML and CSS before the OpenClassrooms course. The goal was to create my first website on my own."
+            "fr" : "Première version du portfolio fait en HTML et CSS. Le but était de faire un premier site par moi-même.",
+            "en" : "First version of the portfolio made in HTML and CSS. The goal was to create my first website on my own."
         },
         "links" : [
                 {
@@ -240,8 +240,8 @@
                 }
             ],
         "challenge" : {
-            "fr" : "Premier site développé en HTML/CSS et déployé sans formation préalable mais grâce aux ressources disponibles gratuitement sur le net, le défi a pu être relevé.",
-            "en" : "First site developed in HTML/CSS and deployed without prior training but thanks to the resources available for free online, the challenge was met."
+            "fr" : "Site développé et déployé sans formation préalable mais grâce aux ressources disponibles gratuitement sur le net.",
+            "en" : "Site developed and deployed without prior training but thanks to the resources available for free online."
         },
         "images" : [
             "/images/projects/Portfolio_V1/01-landing.webp",
