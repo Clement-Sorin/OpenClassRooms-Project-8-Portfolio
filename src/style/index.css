@@ -639,6 +639,94 @@ img {
     transition: transform 0.45s ease-out;
 }
 
+/* MenuToolbox */
+
+@keyframes hoveredButtonLight {
+    0% {
+        background : linear-gradient(45deg, #F5F5F5 , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA, #FAFAFA)
+    }
+    10% {
+        background : linear-gradient(45deg, #F5F5F5 , #F5F5F5, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA, #FAFAFA)
+    }
+    20% {
+        background : linear-gradient(45deg, #FAFAFA , #F5F5F5, #F5F5F5 , #F5F5F5, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA, #FAFAFA)
+    }
+    30% {
+        background : linear-gradient(45deg, #FAFAFA , #FAFAFA, #F5F5F5 , #F5F5F5, #F5F5F5 , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA, #FAFAFA)
+    }
+    40% {
+        background : linear-gradient(45deg, #FAFAFA , #FAFAFA, #FAFAFA , #F5F5F5, #F5F5F5 , #F5F5F5, #FAFAFA , #FAFAFA, #FAFAFA, #FAFAFA)
+    }
+    50% {
+        background : linear-gradient(45deg, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #F5F5F5 , #F5F5F5, #F5F5F5 , #FAFAFA, #FAFAFA, #FAFAFA)
+    }
+    60% {
+        background : linear-gradient(45deg, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA , #F5F5F5, #F5F5F5 , #F5F5F5, #FAFAFA, #FAFAFA)
+    }
+    70% {
+        background : linear-gradient(45deg, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #F5F5F5 , #F5F5F5, #F5F5F5, #FAFAFA)
+    }
+    80% {
+        background : linear-gradient(45deg, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA , #F5F5F5, #F5F5F5, #F5F5F5)
+    }
+    90% {
+        background : linear-gradient(45deg, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #F5F5F5, #F5F5F5)
+    }
+    100% {
+        background : linear-gradient(45deg, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA , #FAFAFA, #FAFAFA, #F5F5F5)
+    }
+}
+
+@keyframes hoveredButtonDark {
+    0% {
+        background : linear-gradient(45deg, #082a35 , #0B3847, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847, #0B3847)
+    }
+    10% {
+        background : linear-gradient(45deg, #082a35 , #082a35, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847, #0B3847)
+    }
+    20% {
+        background : linear-gradient(45deg, #0B3847 , #082a35, #082a35 , #082a35, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847, #0B3847)
+    }
+    30% {
+        background : linear-gradient(45deg, #0B3847 , #0B3847, #082a35 , #082a35, #082a35 , #0B3847, #0B3847 , #0B3847, #0B3847, #0B3847)
+    }
+    40% {
+        background : linear-gradient(45deg, #0B3847 , #0B3847, #0B3847 , #082a35, #082a35 , #082a35, #0B3847 , #0B3847, #0B3847, #0B3847)
+    }
+    50% {
+        background : linear-gradient(45deg, #0B3847 , #0B3847, #0B3847 , #0B3847, #082a35 , #082a35, #082a35 , #0B3847, #0B3847, #0B3847)
+    }
+    60% {
+        background : linear-gradient(45deg, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847 , #082a35, #082a35 , #082a35, #0B3847, #0B3847)
+    }
+    70% {
+        background : linear-gradient(45deg, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847 , #0B3847, #082a35 , #082a35, #082a35, #0B3847)
+    }
+    80% {
+        background : linear-gradient(45deg, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847 , #082a35, #082a35, #082a35)
+    }
+    90% {
+        background : linear-gradient(45deg, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847 , #0B3847, #082a35, #082a35)
+    }
+    100% {
+        background : linear-gradient(45deg, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847 , #0B3847, #0B3847, #082a35)
+    }
+}
+
+.toolbox-button {
+    transition: box-shadow 0.3s ease;
+}
+
+.hovered-toolbox-button-light {
+    animation: hoveredButtonLight 0.25s alternate; 
+    box-shadow: 2px 3px 4px 0px rgba(0,0,0,0.2);
+}
+
+.hovered-toolbox-button-dark {
+    animation: hoveredButtonDark 0.25s alternate; 
+    box-shadow: 2px 5px 10px 0px #000;
+}
+
 
 /* --------------------- */
 /* ----Media-Queries---- */
