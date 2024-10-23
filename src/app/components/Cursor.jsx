@@ -10,14 +10,14 @@ function Cursor({
 }) {
     const { theme } = useAppContext()
     const [value, setValue] = useState(defaultValue)
-    const [dataValue, setDataValue] = useState(dataArray[defaultValue - 1])
+    const [dataValue, setDataValue] = useState(dataArray[value - 1])
 
     useEffect(() => {
         setRangeValue({
-            name: dataName,
+            dataName: dataName,
             value: dataValue,
         })
-    }, [setRangeValue, dataName, dataValue])
+    }, [setRangeValue, dataValue, dataName])
 
     const handleChangeValue = (event) => {
         setValue(event.target.value)
@@ -27,6 +27,7 @@ function Cursor({
     return (
         <input
             type="range"
+            name="canvas_size"
             min="1"
             max={maxLength}
             value={value}
