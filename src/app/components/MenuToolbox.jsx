@@ -6,8 +6,6 @@ function MenuToolbox({ datas, selectedTool, setSelectedTool }) {
     const menuData = datas.menu
     const [hoverButton, setHoverButton] = useState({ hovered: false, index: 0 })
 
-    console.log(hoverButton)
-
     return (
         <div className="h-full p-4">
             <div

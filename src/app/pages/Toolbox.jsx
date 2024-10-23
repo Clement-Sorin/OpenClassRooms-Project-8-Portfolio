@@ -2,6 +2,8 @@ import { useState } from "react"
 import { useAppContext } from "../contexts/AppContext"
 import datas from "../../assets/datas/Toolbox.json"
 import MenuToolbox from "../components/MenuToolbox"
+import QrCode from "../components/QrCode"
+import CssCheatSheet from "../components/CssCheatSheet"
 
 function Toolbox() {
     const { theme, language } = useAppContext()
@@ -35,7 +37,13 @@ function Toolbox() {
                                 ? "border-black"
                                 : "border-lines-dark"
                         }`}
-                    ></div>
+                    >
+                        <QrCode selectedTool={selectedTool} datas={datas} />
+                        <CssCheatSheet
+                            selectedTool={selectedTool}
+                            datas={datas}
+                        />
+                    </div>
                 </div>
             </div>
         </section>

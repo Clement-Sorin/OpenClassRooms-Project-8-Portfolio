@@ -21,16 +21,25 @@
                     "en": "General settings"
                 },
                 "url_data": {
-                    "fr": "URL/données",
-                    "en": "URL/data"
+                    "fr": "URL/données :",
+                    "en": "URL/data :"
                 },
                 "size": {
-                    "fr": "Dimension",
-                    "en": "Size"
+                    "title"  :{
+                        "fr": "Dimension :",
+                        "en": "Size :"
+                    },
+                    "set_size" : [
+                        100,
+                        200,
+                        300,
+                        400,
+                        500
+                    ]
                 },
                 "logo": {
-                    "fr": "Logo",
-                    "en": "Logo"
+                    "fr": "Logo :",
+                    "en": "Logo :"
                 }
             },
             "other_settings": {
@@ -45,8 +54,8 @@
                     },
                     "style": {
                         "title": {
-                            "fr": "Points",
-                            "en": "Dots"
+                            "fr": "Points :",
+                            "en": "Dots :"
                         },
                         "set_style": [
                             "square",
@@ -59,8 +68,8 @@
                     },
                     "color": {
                         "title": {
-                            "fr": "Couleur",
-                            "en": "Color"
+                            "fr": "Couleur :",
+                            "en": "Color :"
                         },
                         "set_color": {
                             "single": {
@@ -73,13 +82,13 @@
                             }
                         },
                         "select": {
-                            "fr": "Sélectionnez",
-                            "en": "Select"
+                            "fr": "Sélectionnez :",
+                            "en": "Select :"
                         },
                         "style": {
                             "title": {
-                                "fr": "Style",
-                                "en": "Style"
+                                "fr": "Style :",
+                                "en": "Style :"
                             },
                             "linear": {
                                 "fr": "linéaire",
@@ -91,8 +100,8 @@
                             }
                         },
                         "rotation": {
-                            "fr": "Rotation",
-                            "en": "Rotation"
+                            "fr": "Rotation :",
+                            "en": "Rotation :"
                         }
                     }
                 },
@@ -103,8 +112,8 @@
                     },
                     "style": {
                         "title": {
-                            "fr": "Style de l'angle",
-                            "en": "Corner style"
+                            "fr": "Style de l'angle :",
+                            "en": "Corner style :"
                         },
                         "set_style": [
                             "none",
@@ -115,8 +124,8 @@
                     },
                     "color": {
                         "title": {
-                            "fr": "Couleur",
-                            "en": "Color"
+                            "fr": "Couleur :",
+                            "en": "Color :"
                         },
                         "set_color": {
                             "single": {
@@ -129,13 +138,13 @@
                             }
                         },
                         "select": {
-                            "fr": "Sélectionnez",
-                            "en": "Select"
+                            "fr": "Sélectionnez :",
+                            "en": "Select :"
                         },
                         "style": {
                             "title": {
-                                "fr": "Style",
-                                "en": "Style"
+                                "fr": "Style :",
+                                "en": "Style :"
                             },
                             "linear": {
                                 "fr": "linéaire",
@@ -159,8 +168,8 @@
                     },
                     "style": {
                         "title": {
-                            "fr": "Style des points",
-                            "en": "Dots style"
+                            "fr": "Style des points :",
+                            "en": "Dots style :"
                         },
                         "set_style": [
                             "none",
@@ -170,8 +179,8 @@
                     },
                     "color": {
                         "title": {
-                            "fr": "Couleur",
-                            "en": "Color"
+                            "fr": "Couleur :",
+                            "en": "Color :"
                         },
                         "set_color": {
                             "single": {
@@ -184,13 +193,13 @@
                             }
                         },
                         "select": {
-                            "fr": "Sélectionnez",
-                            "en": "Select"
+                            "fr": "Sélectionnez :",
+                            "en": "Select :"
                         },
                         "style": {
                             "title": {
-                                "fr": "Style",
-                                "en": "Style"
+                                "fr": "Style :",
+                                "en": "Style :"
                             },
                             "linear": {
                                 "fr": "linéaire",
@@ -202,8 +211,8 @@
                             }
                         },
                         "rotation": {
-                            "fr": "Rotation",
-                            "en": "Rotation"
+                            "fr": "Rotation :",
+                            "en": "Rotation :"
                         }
                     }
                 },
@@ -214,8 +223,8 @@
                     },
                     "size": {
                         "title": {
-                            "fr": "Taille",
-                            "en": "Size"
+                            "fr": "Taille :",
+                            "en": "Size :"
                         },
                         "set_style": [
                             "0.1",
@@ -227,8 +236,8 @@
                     },
                     "margin": {
                         "title": {
-                            "fr": "Marge",
-                            "en": "Margin"
+                            "fr": "Marge :",
+                            "en": "Margin :"
                         },
                         "set_style": [
                             "0.1",
