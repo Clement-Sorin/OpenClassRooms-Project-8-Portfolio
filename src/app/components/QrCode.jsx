@@ -2,12 +2,14 @@ import { useAppContext } from "../contexts/AppContext"
 import { ReactComponent as FrameNameLgTL } from "../../assets/svgs/frame-name-lg-tl.svg"
 import { ReactComponent as FrameNameLgBR } from "../../assets/svgs/frame-name-lg-br.svg"
 import Cursor from "./Cursor"
+import { useState } from "react"
 
 function QrCode({ selectedTool, datas }) {
     const { language, theme } = useAppContext()
     const generalSettingsData = datas.content.qr_code.general_settings
+    const [rangeValue, setRangeValue] = useState("")
 
-    console.log(generalSettingsData.size.set_size.length)
+    console.log(rangeValue)
 
     return (
         <div className={`${selectedTool === 0 ? "" : "hidden"} p-8`}>
@@ -87,10 +89,13 @@ function QrCode({ selectedTool, datas }) {
                                     : generalSettingsData.size.title.en}
                             </label>
                             <Cursor
+                                dataName={generalSettingsData.size.id}
                                 maxLength={
                                     generalSettingsData.size.set_size.length
                                 }
                                 defaultValue={3}
+                                dataArray={generalSettingsData.size.set_size}
+                                setRangeValue={setRangeValue}
                             />
                         </div>
                         <div className="flex items-center">

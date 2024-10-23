@@ -25,16 +25,17 @@
                     "en": "URL/data :"
                 },
                 "size": {
+                    "id" : "canvas_size",
                     "title"  :{
                         "fr": "Dimension :",
                         "en": "Size :"
                     },
                     "set_size" : [
-                        100,
-                        200,
-                        300,
-                        400,
-                        500
+                        {"width" : 100, "heigh" : 100},
+                        {"width" : 200, "heigh" : 200},
+                        {"width" : 300, "heigh" : 300},
+                        {"width" : 400, "heigh" : 400},
+                        {"width" : 500, "heigh" : 500}
                     ]
                 },
                 "logo": {
@@ -53,6 +54,7 @@
                         "en": "Dots"
                     },
                     "style": {
+                        "id" : "dots_style",
                         "title": {
                             "fr": "Points :",
                             "en": "Dots :"
@@ -111,6 +113,7 @@
                         "en": "Corner square"
                     },
                     "style": {
+                        "id" : "corner_square_style",
                         "title": {
                             "fr": "Style de l'angle :",
                             "en": "Corner style :"
@@ -167,6 +170,7 @@
                         "en": "Corner dots"
                     },
                     "style": {
+                        "id" : "corner_dots_style",
                         "title": {
                             "fr": "Style des points :",
                             "en": "Dots style :"
@@ -222,6 +226,7 @@
                         "en": "Logo"
                     },
                     "size": {
+                        "id" : "logo_size",
                         "title": {
                             "fr": "Taille :",
                             "en": "Size :"
@@ -235,6 +240,7 @@
                         ]
                     },
                     "margin": {
+                        "id" : "logo_margin",
                         "title": {
                             "fr": "Marge :",
                             "en": "Margin :"
